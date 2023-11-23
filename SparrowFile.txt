@@ -1,1 +1,2817 @@
-local a=string.char;local b=string.byte;local c=string.sub;local d=bit32 or bit;local e=d.bxor;local f=table.concat;local g=table.insert;local function h(i,j)local k={}for l=1,#i do g(k,a(e(b(c(i,l,l+1)),b(c(j,1+l%#j,1+l%#j+1)))%256))end;return f(k)end;local m=tonumber;local n=string.byte;local o=string.char;local p=string.sub;local q=string.gsub;local r=string.rep;local s=table.concat;local t=table.insert;local u=math.ldexp;local v=getfenv or function()return _ENV end;local w=setmetatable;local x=pcall;local y=select;local z=unpack or table.unpack;local A=tonumber;local function B(C,D,...)local E=1;local F;C=q(p(C,5),h("\149\197","\175\187\235\113\149\217\188"),function(G)if n(G,2)==79 then local H=0;while true do if H==0 then F=m(p(G,1,1))return""end end else local I=0;local J;while true do if I==0 then J=o(m(G,16))if F then local K=r(J,F)F=nil;return K else return J end;break end end end end)local function L(M,N,O)if O then local P=0;local Q;while true do if P==0 then Q=M/2^(N-(2-1))%2^(O-1-(N-1)+2-1)return Q-Q%1 end end else local R=0;local S;while true do if R==0 then S=2^(N-1)return M%(S+S)>=S and 1 or 0 end end end end;local function T()local U=n(C,E,E)E=E+1;return U end;local function V()local W=0;local X;local Y;while true do if W==0 then X,Y=n(C,E,E+2)E=E+2;W=1 end;if W==1 then return Y*256+X end end end;local function Z()local _=0;local a0;local a1;local a2;local a3;while true do if _==1 then return a3*16777216+a2*65536+a1*256+a0 end;if _==0 then a0,a1,a2,a3=n(C,E,E+3)E=E+4;_=1 end end end;local function a4()local a5=Z()local a6=Z()local a7=1;local a8=L(a6,1,20)*2^32+a5;local a9=L(a6,21,31)local aa=L(a6,32)==1 and-1 or 1;if a9==0 then if a8==0 then return aa*0 else a9=1;a7=0 end elseif a9==2047 then return a8==0-0 and aa*1/0 or aa*NaN end;return u(aa,a9-1023)*(a7+a8/2^(133-81))end;local function ab(ac)local ad;if not ac then local ae=0;while true do if ae==0 then ac=Z()if ac==0 then return""end;break end end end;ad=p(C,E,E+ac-(620-(555+64)))E=E+ac;local af={}for ag=1,#ad do af[ag]=o(n(p(ad,ag,ag)))end;return s(af)end;local ah=Z;local function ai(...)return{...},y("#",...)end;local function aj()local ak=0;local al;local am;local an;local ao;local ap;local aq;while true do if ak==0 then al={}am={}an={}ao={al,am,nil,an}ak=1 end;if ak==1 then ap=Z()aq={}for ar=569-(367+201),ap do local as=0;local at;local au;while true do if as==1 then if at==1 then au=T()~=0 elseif at==2 then au=a4()elseif at==3 then au=ab()end;aq[ar]=au;break end;if as==0 then at=T()au=nil;as=1 end end end;ao[3]=T()ak=2 end;if 2==ak then for av=1,Z()do local aw=0;local ax;while true do if aw==0 then ax=T()if L(ax,1,1)==0 then local ay=L(ax,2,930-(214+713))local az=L(ax,4,6)local aA={V(),V(),nil,nil}if ay==0 then aA[3]=V()aA[4]=V()elseif ay==1 then aA[1+2]=Z()elseif ay==2 then aA[880-(282+595)]=Z()-2^(1653-(1523+114))elseif ay==3 then aA[3+0]=Z()-(2-0)^16;aA[4]=V()end;if L(az,1066-(68+997),1)==1 then aA[2]=aq[aA[2]]end;if L(az,2,2)==1 then aA[3]=aq[aA[3]]end;if L(az,3,3)==1 then aA[4]=aq[aA[4]]end;al[av]=aA end;break end end end;for aB=1,Z()do am[aB-1]=aj()end;return ao end end end;local function aC(aD,aE,aF)local aG=aD[1]local aH=aD[2]local aI=aD[3]return function(...)local aJ=aG;local aK=aH;local aL=aI;local aM=ai;local aN=1271-(226+1044)local aO=-1;local aP={}local aQ={...}local aR=y("#",...)-1;local aS={}local aT={}for aU=0,aR do if aU>=aL then aP[aU-aL]=aQ[aU+1]else aT[aU]=aQ[aU+1]end end;local aV=aR-aL+1;local aW;local aX;while true do local aY=0;while true do if 1==aY then if aX<=47-36 then if aX<=5 then if aX<=2 then if aX<=0 then aT[aW[119-(32+85)]]={}elseif aX==1 then aT[aW[2]]=aW[3]else local aZ=0;local a_;local b0;local b1;local b2;local b3;while true do if aZ==2 then b2=aT[aW[3]]aT[b3+1]=b2;aT[b3]=b2[aW[4]]aN=aN+1;aZ=3 end;if 4==aZ then b3=aW[2]b0,b1=aM(aT[b3](z(aT,b3+1,aW[7-4])))aO=b1+b3-1;a_=0;aZ=5 end;if aZ==1 then if aW[3]==h("\3\138\175\122","\24\92\207\225\44\131\25")or aW[3]==h("\76\214\172\74\30\115\93","\29\43\179\216\44\123")then aT[aW[2]]=aF else aT[aW[2+0]]=aF[aW[3]]end;aN=aN+1;aW=aJ[aN]b3=aW[2]aZ=2 end;if 5==aZ then for b4=b3,aO do a_=a_+1-0;aT[b4]=b0[a_]end;aN=aN+1-0;aW=aJ[aN]b3=aW[2]aZ=6 end;if aZ==0 then a_=nil;b0,b1=nil;b2=nil;b3=nil;aZ=1 end;if 7==aZ then aN=aN+1;aW=aJ[aN]aN=aW[3]break end;if aZ==3 then aW=aJ[aN]aT[aW[1+1]]=aW[960-(892+65)]aN=aN+1;aW=aJ[aN]aZ=4 end;if aZ==6 then aT[b3]=aT[b3](z(aT,b3+1,aO))aN=aN+1;aW=aJ[aN]aT[aW[2]]()aZ=7 end end end elseif aX<=3 then local b5=aW[2]aT[b5]=aT[b5](z(aT,b5+1,aW[3]))elseif aX>4 then if aW[3]==h("\130\252\14\122","\44\221\185\64")or aW[3]==h("\6\226\92\89\118\15\241","\19\97\135\40\63")then aT[aW[2]]=aF else aT[aW[2]]=aF[aW[3]]end else local b6=0;local b7;while true do if b6==0 then b7=aW[2]do return aT[b7](z(aT,b7+1,aW[3]))end;break end end end elseif aX<=358-(87+263)then if aX<=6 then local b8;local b9;local ba,bb;local bc;aT[aW[182-(67+113)]]=aE[aW[3+0]]aN=aN+1;aW=aJ[aN]aT[aW[2]]=aE[aW[3]]aN=aN+1;aW=aJ[aN]aT[aW[2]]=aE[aW[3]]aN=aN+1;aW=aJ[aN]aT[aW[2]]={}aN=aN+2-1;aW=aJ[aN]aT[aW[2+0]]=aE[aW[3]]aN=aN+1;aW=aJ[aN]aT[aW[2]]=aT[aW[3]]aN=aN+3-2;aW=aJ[aN]for bd=aW[2],aW[3]do aT[bd]=nil end;aN=aN+1;aW=aJ[aN]bc=aW[2]ba,bb=aM(aT[bc](z(aT,bc+1,aW[3])))aO=bb+bc-1;b9=0;for be=bc,aO do local bf=0;while true do if bf==0 then b9=b9+1;aT[be]=ba[b9]break end end end;aN=aN+1;aW=aJ[aN]bc=aW[2]b8=aT[bc]for bg=bc+1,aO do t(b8,aT[bg])end elseif aX==7 then for bh=aW[2],aW[3]do aT[bh]=nil end else local bi=0;local bj;while true do if bi==0 then bj=aW[954-(802+150)]aT[bj]=aT[bj](z(aT,bj+1,aO))break end end end elseif aX<=23-14 then local bk=aW[2]local bl=aT[bk]for bm=bk+1,aO do t(bl,aT[bm])end elseif aX==18-8 then if aT[aW[2]]==aW[3+1]then aN=aN+1 else aN=aW[1000-(915+82)]end else aT[aW[2]]=aC(aK[aW[8-5]],nil,aF)end elseif aX<=10+7 then if aX<=14 then if aX<=12 then local bn=0;local bo;local bp;local bq;while true do if bn==2 then for br=1,aW[4]do local bs=0;local bt;while true do if bs==1 then if bt[2-1]==16 then bq[br-1]={aT,bt[3]}else bq[br-1]={aE,bt[3]}end;aS[#aS+1]=bq;break end;if bs==0 then aN=aN+1188-(1069+118)bt=aJ[aN]bs=1 end end end;aT[aW[2]]=aC(bo,bp,aF)break end;if bn==0 then bo=aK[aW[3]]bp=nil;bn=1 end;if bn==1 then bq={}bp=w({},{[h("\145\99\58\53\43\52\182","\81\206\60\83\91\79")]=function(bu,bv)local bw=0;local bx;while true do if 0==bw then bx=bq[bv]return bx[1][bx[2]]end end end,[h("\113\148\222\119\56\202\67\160\75\179","\196\46\203\176\18\79\163\45")]=function(by,bz,bA)local bB=0;local bC;while true do if bB==0 then bC=bq[bz]bC[1][bC[2-0]]=bA;break end end end})bn=2 end end elseif aX==13 then aT[aW[2]]=aE[aW[3]]else local bD=0;local bE;while true do if 0==bD then bE=aW[2]do return z(aT,bE,aO)end;break end end end elseif aX<=15 then aN=aW[3]elseif aX==3+13 then aT[aW[2]]=aT[aW[4-1]]else local bF=0;local bG;local bH;local bI;local bJ;while true do if bF==0 then bG=aW[2]bH,bI=aM(aT[bG](z(aT,bG+1,aW[3])))bF=1 end;if bF==1 then aO=bI+bG-1;bJ=0;bF=2 end;if 2==bF then for bK=bG,aO do local bL=0;while true do if bL==0 then bJ=bJ+1;aT[bK]=bH[bJ]break end end end;break end end end elseif aX<=20 then if aX<=18 then do return aT[aW[2+0]]()end elseif aX>19 then aT[aW[2]]()else local bM=aW[2]local bN=aT[aW[3]]aT[bM+1]=bN;aT[bM]=bN[aW[4]]end elseif aX<=22 then if aX==21 then do return end else local bO=0;local bP;local bQ;local bR;local bS;while true do if bO==7 then aT[bS]=aT[bS](z(aT,bS+1,aO))aN=aN+1;aW=aJ[aN]bO=8 end;if bO==5 then aO=bR+bS-1;bP=0;for bT=bS,aO do bP=bP+1;aT[bT]=bQ[bP]end;bO=6 end;if bO==4 then aW=aJ[aN]bS=aW[2]bQ,bR=aM(aT[bS](z(aT,bS+1,aW[3])))bO=5 end;if bO==2 then bS=aW[6-4]aT[bS]=aT[bS](z(aT,bS+1,aW[3]))aN=aN+1;bO=3 end;if bO==0 then bP=nil;bQ,bR=nil;bS=nil;bO=1 end;if bO==6 then aN=aN+1;aW=aJ[aN]bS=aW[2]bO=7 end;if bO==1 then aT[aW[2]]=aW[3]aN=aN+792-(368+423)aW=aJ[aN]bO=2 end;if 3==bO then aW=aJ[aN]aT[aW[2]]=aW[3]aN=aN+1;bO=4 end;if bO==8 then if aT[aW[2]]==aW[4]then aN=aN+1 else aN=aW[3]end;break end end end elseif aX==23 then if aT[aW[2]]then aN=aN+1 else aN=aW[3]end else aT[aW[2]]=aT[aW[3]][aW[22-(10+8)]]end;aN=aN+1;break end;if aY==0 then aW=aJ[aN]aX=aW[1]aY=1 end end end end end;return aC(aj(),{},D)(...)end;B(h("\148\13\82\95\116\175\188\151\114\46\78\119\171\185\235\13\46\78\115\168\184\236\117\44\72\125\173\202\238\117\46\77\116\174\188\151\114\46\72\0\173\190\239\118\40\77\114\163\191\235\114\38\77\11\171\191\239\118\40\56\114\222\184\237\116\90\72\118\173\186\239\112\46\77\116\174\188\151\114\46\73\116\173\188\238\115\44\49\114\216\191\232\114\90\77\11\171\191\233\112\46\75\119\212\191\232\114\47\77\11\171\191\234\114\47\70\113\212\191\232\114\44\78\116\170\189\232\119\46\78\116\170\191\232\114\45\77\11\171\191\233\112\46\75\116\171\191\234\114\46\78\112\168\192\232\114\46\72\116\216\191\232\114\45\77\11\171\191\232\115\46\78\116\175\189\151\114\46\79\116\168\192\232\114\46\79\112\212\191\232\115\46\70\11\171\191\233\114\45\49\116\171\191\234\118\81\78\116\170\191\235\13\46\78\116\168\187\151\114\46\79\116\171\191\232\118\46\78\116\168\187\151\114\46\79\118\171\191\232\118\46\78\116\170\187\151\114\46\78\1\171\191\232\118\40\49\116\171\190\237\113\81\78\116\171\190\235\13\46\78\116\170\188\151\114\46\78\112\168\192\232\114\46\76\115\212\191\232\118\46\78\119\171\186\235\13\46\78\119\218\189\237\116\42\76\6\168\206\234\13\46\77\119\212\191\232\112\43\72\112\169\205\232\112\40\49\116\171\201\232\113\88\78\116\170\205\235\13\46\78\116\169\191\154\122\81\78\116\171\185\232\114\46\79\124\212\191\232\114\44\78\116\171\190\238\13\46\78\116\168\191\232\114\47\72\11\171\191\232\118\38\49\116\171\191\237\114\46\78\118\173\192\232\114\46\72\124\212\191\232\114\41\78\116\171\184\238\13\46\78\116\174\191\232\114\41\72\11\171\191\232\118\45\49\116\171\191\233\114\46\76\116\170\183\232\114\46\74\116\171\191\236\114\46\78\117\171\191\233\112\47\72\116\171\191\237\114\46\78\118\173\192\232\114\46\77\116\171\191\237\114\46\78\118\171\191\233\112\44\49\116\171\191\236\114\46\78\119\173\192\232\114\46\76\116\171\191\236\116\81\78\116\171\190\235\13\46\78\116\169\191\232\112\40\76\11\171\191\232\115\46\78\117\172\191\232\114\47\78\116\171\187\232\114\46\74\116\221\188\151\114\46\79\115\171\191\232\115\44\49\116\171\190\232\114\46\78\117\163\192\232\114\46\76\114\212\191\232\114\42\78\116\171\190\232\114\46\76\112\212\191\232\114\91\78\116\171\190\237\13\46\78\116\175\191\158\113\81\78\116\170\206\232\114\46\79\118\212\191\232\114\90\78\116\171\190\232\114\46\77\112\212\191\232\115\44\78\116\171\190\232\114\46\79\112\212\191\232\114\91\78\116\171\190\238\13\46\78\117\174\188\151\114\46\78\117\168\192\232\114\46\79\119\212\191\232\114\43\77\11\171\191\232\113\46\63\119\212\191\232\116\93\72\2\173\190\238\118\41\77\115\175\184\234\116\39\72\1\173\184\232\113\46\74\119\212\191\232\116\41\72\117\173\203\238\119\46\77\116\172\188\151\114\46\74\124\169\192\239\118\41\78\112\172\185\237\117\42\78\119\169\190\235\13\46\78\114\163\189\151\117\42\73\116\172\188\235\3\44\49\118\221\184\232\116\47\73\119\172\187\238\119\40\76\114\162\185\157\112\91\72\119\173\201\238\6\44\56\115\169\185\233\117\41\76\2\174\186\239\118\40\73\114\223\185\233\119\95\72\0\172\191\232\112\40\49\116\171\201\232\113\88\78\117\171\204\235\13\46\78\116\173\190\239\113\81\78\116\171\206\232\114\46\79\119\212\191\232\114\42\78\2\168\192\232\114\46\63\116\171\191\233\114\46\79\118\171\186\232\114\46\79\116\171\191\233\113\81\78\116\170\189\232\112\46\78\116\169\191\232\114\44\77\11\171\191\234\114\44\49\116\171\191\234\114\46\78\118\171\191\232\113\46\78\117\169\189\151\114\46\78\112\171\191\232\118\40\49\116\171\191\234\114\46\78\112\173\192\232\114\46\79\119\212\191\232\114\44\74\11\171\191\232\115\46\78\116\170\191\232\114\47\78\116\171\187\236\13\46\78\116\217\191\232\114\47\78\116\169\191\233\122\46\78\116\170\188\151\114\46\78\113\169\192\232\114\47\75\119\212\191\232\114\47\73\11\171\191","\143\216\66\30\126\68\155"),v(),...)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+--makefolder("Sparrow")
+
+local Sparrow = {
+	Sparrow = Instance.new("ScreenGui"),
+	main = Instance.new("Frame"),
+	frames = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	executor = Instance.new("Frame"),
+	UICorner_2 = Instance.new("UICorner"),
+	Frame = Instance.new("Frame"),
+	TextBox = Instance.new("TextBox"),
+	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
+	buttons = Instance.new("Frame"),
+	load = Instance.new("TextButton"),
+	UICorner_3 = Instance.new("UICorner"),
+	UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
+	Frame_2 = Instance.new("Frame"),
+	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
+	TextButton = Instance.new("TextButton"),
+	UICorner_4 = Instance.new("UICorner"),
+	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
+	copy = Instance.new("TextButton"),
+	UICorner_5 = Instance.new("UICorner"),
+	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
+	clear = Instance.new("TextButton"),
+	UICorner_6 = Instance.new("UICorner"),
+	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
+	settings = Instance.new("Frame"),
+	UICorner_7 = Instance.new("UICorner"),
+	Frame_3 = Instance.new("Frame"),
+	UICorner_8 = Instance.new("UICorner"),
+	UICorner_18 = Instance.new("UICorner"),
+	Scripthub = Instance.new("Frame"),
+	UICorner_19 = Instance.new("UICorner"),
+	scriptlist = Instance.new("Frame"),
+	ScrollingFrame = Instance.new("ScrollingFrame"),
+	UICorner_20 = Instance.new("UICorner"),
+	UIListLayout = Instance.new("UIListLayout"),
+	Folder = Instance.new("Folder"),
+	Frame_4 = Instance.new("Frame"),
+	del = Instance.new("TextButton"),
+	UICorner_21 = Instance.new("UICorner"),
+	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
+	UICorner_22 = Instance.new("UICorner"),
+	TextLabel_12 = Instance.new("TextLabel"),
+	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
+	load_2 = Instance.new("TextButton"),
+	UICorner_23 = Instance.new("UICorner"),
+	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint"),
+	UICorner_24 = Instance.new("UICorner"),
+	Frame_5 = Instance.new("Frame"),
+	UICorner_25 = Instance.new("UICorner"),
+	TextButton_2 = Instance.new("TextButton"),
+	UICorner_26 = Instance.new("UICorner"),
+	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint"),
+	txt = Instance.new("TextBox"),
+	UICorner_27 = Instance.new("UICorner"),
+	UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint"),
+	sr = Instance.new("TextBox"),
+	UICorner_28 = Instance.new("UICorner"),
+	UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint"),
+	TextLabel_13 = Instance.new("TextLabel"),
+	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint"),
+	TextLabel_14 = Instance.new("TextLabel"),
+	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint"),
+	home = Instance.new("Frame"),
+	UICorner_29 = Instance.new("UICorner"),
+	playerinfo = Instance.new("Frame"),
+	UICorner_30 = Instance.new("UICorner"),
+	TextLabel_15 = Instance.new("TextLabel"),
+	ImageLabel = Instance.new("ImageLabel"),
+	UICorner_31 = Instance.new("UICorner"),
+	UICorner_32 = Instance.new("UICorner"),
+	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint"),
+	TextLabel_16 = Instance.new("TextLabel"),
+	UICorner_33 = Instance.new("UICorner"),
+	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint"),
+	TextLabel_17 = Instance.new("TextLabel"),
+	UICorner_34 = Instance.new("UICorner"),
+	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint"),
+	owner = Instance.new("Frame"),
+	UICorner_35 = Instance.new("UICorner"),
+	TextLabel_18 = Instance.new("TextLabel"),
+	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint"),
+	devlopers = Instance.new("Frame"),
+	UICorner_36 = Instance.new("UICorner"),
+	TextLabel_19 = Instance.new("TextLabel"),
+	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint"),
+	uidesigner = Instance.new("Frame"),
+	UICorner_37 = Instance.new("UICorner"),
+	TextLabel_20 = Instance.new("TextLabel"),
+	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint"),
+	list2 = Instance.new("Frame"),
+	UICorner_38 = Instance.new("UICorner"),
+	TextLabel_21 = Instance.new("TextLabel"),
+	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint"),
+	TextLabel_22 = Instance.new("TextLabel"),
+	UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint"),
+	TextLabel_23 = Instance.new("TextLabel"),
+	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint"),
+	TextLabel_24 = Instance.new("TextLabel"),
+	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint"),
+	list1 = Instance.new("Frame"),
+	UICorner_39 = Instance.new("UICorner"),
+	TextLabel_25 = Instance.new("TextLabel"),
+	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint"),
+	list3 = Instance.new("Frame"),
+	UICorner_40 = Instance.new("UICorner"),
+	TextLabel_26 = Instance.new("TextLabel"),
+	UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint"),
+	TextLabel_27 = Instance.new("TextLabel"),
+	UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint"),
+	scriptfinder = Instance.new("Frame"),
+	UICorner_41 = Instance.new("UICorner"),
+	scriptlist_2 = Instance.new("Frame"),
+	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
+	UICorner_42 = Instance.new("UICorner"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	Folder_2 = Instance.new("Folder"),
+	Frame_6 = Instance.new("Frame"),
+	UICorner_43 = Instance.new("UICorner"),
+	ImageLabel_2 = Instance.new("ImageLabel"),
+	TextLabel_28 = Instance.new("TextLabel"),
+	load_3 = Instance.new("TextButton"),
+	UICorner_44 = Instance.new("UICorner"),
+	UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint"),
+	cp = Instance.new("TextButton"),
+	UICorner_45 = Instance.new("UICorner"),
+	UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint"),
+	del_2 = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint"),
+	UICorner_47 = Instance.new("UICorner"),
+	search = Instance.new("Frame"),
+	search_2 = Instance.new("TextButton"),
+	UICorner_48 = Instance.new("UICorner"),
+	TextBox_2 = Instance.new("TextBox"),
+	UICorner_49 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint"),
+	up = Instance.new("Frame"),
+	UICorner_50 = Instance.new("UICorner"),
+	ImageButton = Instance.new("ImageButton"),
+	UICorner_51 = Instance.new("UICorner"),
+	TextLabel_29 = Instance.new("TextLabel"),
+	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_52 = Instance.new("UICorner"),
+	Left = Instance.new("Frame"),
+	UICorner_53 = Instance.new("UICorner"),
+	Left_2 = Instance.new("Frame"),
+	UICorner_54 = Instance.new("UICorner"),
+	main_2 = Instance.new("TextButton"),
+	UICorner_55 = Instance.new("UICorner"),
+	executor_2 = Instance.new("TextButton"),
+	UICorner_56 = Instance.new("UICorner"),
+	scripthub = Instance.new("TextButton"),
+	UICorner_57 = Instance.new("UICorner"),
+	settings_2 = Instance.new("TextButton"),
+	UICorner_58 = Instance.new("UICorner"),
+	scriptfinder_2 = Instance.new("TextButton"),
+	UICorner_59 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
+	ImageLabel_3 = Instance.new("ImageLabel"),
+	UICorner_60 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
+	Status = Instance.new("TextLabel"),
+	welcome = Instance.new("Frame"),
+	ImageLabel_4 = Instance.new("ImageLabel"),
+	UICorner_61 = Instance.new("UICorner"),
+	welcome_2 = Instance.new("TextLabel"),
+	to = Instance.new("TextLabel"),
+	UIGradient = Instance.new("UIGradient"),
+	open = Instance.new("ImageButton"),
+	UICorner_62 = Instance.new("UICorner"),
+	TextLabel_30 = Instance.new("TextLabel"),
+	UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint"),
+}
+
+--Properties:
+
+Sparrow.Sparrow.Name = "Sparrow"
+Sparrow.Sparrow.Parent = game.CoreGui
+Sparrow.Sparrow.DisplayOrder = 9999
+Sparrow.Sparrow.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Sparrow.main.Name = "main"
+Sparrow.main.Parent = Sparrow.Sparrow
+Sparrow.main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.main.BackgroundTransparency = 0.100
+Sparrow.main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.main.BorderSizePixel = 0
+Sparrow.main.Position = UDim2.new(0.157000005, 0, 2, 0)
+Sparrow.main.Size = UDim2.new(0, 506, 0, 278)
+
+Sparrow.frames.Name = "frames"
+Sparrow.frames.Parent = Sparrow.main
+Sparrow.frames.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.frames.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.frames.BorderSizePixel = 0
+Sparrow.frames.Position = UDim2.new(0.239130437, 0, 0.207343996, 0)
+Sparrow.frames.Size = UDim2.new(0, 377, 0, 214)
+
+Sparrow.UICorner.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner.Parent = Sparrow.frames
+
+Sparrow.executor.Name = "executor"
+Sparrow.executor.Parent = Sparrow.frames
+Sparrow.executor.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.executor.BorderSizePixel = 0
+Sparrow.executor.Position = UDim2.new(-0.000583335757, 0, -0.00209090114, 0)
+Sparrow.executor.Size = UDim2.new(0, 377, 0, 214)
+Sparrow.executor.Visible = false
+
+Sparrow.UICorner_2.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_2.Parent = Sparrow.executor
+
+Sparrow.Frame.Parent = Sparrow.executor
+Sparrow.Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Frame.BorderSizePixel = 0
+Sparrow.Frame.Position = UDim2.new(0.02180315, 0, 0.00209088181, 0)
+Sparrow.Frame.Size = UDim2.new(0, 358, 0, 213)
+
+Sparrow.TextBox.Parent = Sparrow.Frame
+Sparrow.TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextBox.BorderSizePixel = 0
+Sparrow.TextBox.ClipsDescendants = true
+Sparrow.TextBox.Position = UDim2.new(0.023845993, 0, 0.0245908648, 0)
+Sparrow.TextBox.Size = UDim2.new(0, 341, 0, 144)
+Sparrow.TextBox.Font = Enum.Font.SourceSans
+Sparrow.TextBox.PlaceholderText = "Script Here..."
+Sparrow.TextBox.Text = ""
+Sparrow.TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextBox.TextSize = 18.000
+Sparrow.TextBox.TextXAlignment = Enum.TextXAlignment.Left
+Sparrow.TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+Sparrow.UIAspectRatioConstraint.Parent = Sparrow.Frame
+Sparrow.UIAspectRatioConstraint.AspectRatio = 1.681
+
+Sparrow.buttons.Name = "buttons"
+Sparrow.buttons.Parent = Sparrow.executor
+Sparrow.buttons.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.buttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.buttons.BorderSizePixel = 0
+Sparrow.buttons.Position = UDim2.new(0.044447355, 0, 0.740408659, 0)
+Sparrow.buttons.Size = UDim2.new(0, 340, 0, 47)
+
+Sparrow.load.Name = "load"
+Sparrow.load.Parent = Sparrow.buttons
+Sparrow.load.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.load.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.load.BorderSizePixel = 0
+Sparrow.load.Position = UDim2.new(0.0176470596, 0, 0.106382981, 0)
+Sparrow.load.Size = UDim2.new(0, 56, 0, 37)
+Sparrow.load.Font = Enum.Font.SourceSans
+Sparrow.load.Text = "Load"
+Sparrow.load.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.load.TextScaled = true
+Sparrow.load.TextSize = 20.000
+Sparrow.load.TextWrapped = true
+
+local function ExecuteScript(script)
+	local f, err = loadstring(script)
+	if f then
+		f()
+	else
+		print("Script execution error:", err)
+	end
+end
+
+-- Connect the execute button to the script execution function
+Sparrow.load.MouseButton1Click:Connect(function()
+	local script = Sparrow.TextBox.Text
+	ExecuteScript(script)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Script";
+		Text = "Script Executed";
+		Duration = 3;
+	})
+end)
+
+Sparrow.load.TextScaled = true
+Sparrow.UICorner_4.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_4.Parent = Sparrow.TextButton
+
+Sparrow.UICorner_3.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_3.Parent = Sparrow.load
+
+Sparrow.UITextSizeConstraint.Parent = Sparrow.load
+Sparrow.UITextSizeConstraint.MaxTextSize = 20
+
+Sparrow.Frame_2.Parent = Sparrow.buttons
+Sparrow.Frame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Frame_2.BorderSizePixel = 0
+Sparrow.Frame_2.Position = UDim2.new(0.613127232, 0, 0, 0)
+Sparrow.Frame_2.Size = UDim2.new(0, 16, 0, 47)
+
+Sparrow.UIAspectRatioConstraint_2.Parent = Sparrow.Frame_2
+Sparrow.UIAspectRatioConstraint_2.AspectRatio = 0.340
+
+Sparrow.TextButton.Parent = Sparrow.buttons
+Sparrow.TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextButton.BorderSizePixel = 0
+Sparrow.TextButton.Position = UDim2.new(0.679411769, 0, 0.106382981, 0)
+Sparrow.TextButton.Size = UDim2.new(0, 102, 0, 37)
+Sparrow.TextButton.Font = Enum.Font.SourceSans
+Sparrow.TextButton.Text = "Load from clibboard"
+Sparrow.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextButton.TextScaled = true
+Sparrow.TextButton.TextSize = 14.000
+Sparrow.TextButton.TextWrapped = true
+
+Sparrow.TextButton.MouseButton1Click:Connect(function()
+	local clipboardText = getclipboard()
+	if clipboardText then
+		local success, result = pcall(loadstring(clipboardText))
+		if not success then
+			print("Error executing clipboard content: " .. result)
+		end
+	end
+end)
+
+Sparrow.TextButton.TextScaled = true
+Sparrow.UITextSizeConstraint_2.Parent = Sparrow.TextButton
+Sparrow.UITextSizeConstraint_2.MaxTextSize = 14
+
+Sparrow.copy.Name = "copy"
+Sparrow.copy.Parent = Sparrow.buttons
+Sparrow.copy.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.copy.BorderSizePixel = 0
+Sparrow.copy.Position = UDim2.new(0.214705899, 0, 0.106382981, 0)
+Sparrow.copy.Size = UDim2.new(0, 56, 0, 37)
+Sparrow.copy.Font = Enum.Font.SourceSans
+Sparrow.copy.Text = "Copy"
+Sparrow.copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.copy.TextScaled = true
+Sparrow.copy.TextSize = 20.000
+Sparrow.copy.TextWrapped = true
+
+Sparrow.copy.TextScaled = true
+Sparrow.UICorner_5.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_5.Parent = Sparrow.copy
+
+Sparrow.UITextSizeConstraint_3.Parent = Sparrow.copy
+Sparrow.UITextSizeConstraint_3.MaxTextSize = 20
+
+Sparrow.clear.Name = "clear"
+Sparrow.clear.Parent = Sparrow.buttons
+Sparrow.clear.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.clear.BorderSizePixel = 0
+Sparrow.clear.Position = UDim2.new(0.417647064, 0, 0.106382981, 0)
+Sparrow.clear.Size = UDim2.new(0, 56, 0, 37)
+Sparrow.clear.Font = Enum.Font.SourceSans
+Sparrow.clear.Text = "Clear"
+Sparrow.clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.clear.TextScaled = true
+Sparrow.clear.TextSize = 20.000
+Sparrow.clear.TextWrapped = true
+
+Sparrow.clear.MouseButton1Click:Connect(function()
+	Sparrow.TextBox.Text = ""
+end)
+
+Sparrow.clear.TextScaled = true
+Sparrow.UICorner_6.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_6.Parent = Sparrow.clear
+
+Sparrow.UITextSizeConstraint_4.Parent = Sparrow.clear
+Sparrow.UITextSizeConstraint_4.MaxTextSize = 20
+
+Sparrow.UIAspectRatioConstraint_3.Parent = Sparrow.buttons
+Sparrow.UIAspectRatioConstraint_3.AspectRatio = 7.234
+
+Sparrow.UIAspectRatioConstraint_4.Parent = Sparrow.executor
+Sparrow.UIAspectRatioConstraint_4.AspectRatio = 1.762
+
+Sparrow.settings.Name = "settings"
+Sparrow.settings.Parent = Sparrow.frames
+Sparrow.settings.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.settings.BorderSizePixel = 0
+Sparrow.settings.Position = UDim2.new(-0.000583335757, 0, -0.00209090114, 0)
+Sparrow.settings.Size = UDim2.new(1, 0, 1, 0)
+Sparrow.settings.Visible = false
+
+Sparrow.UICorner_7.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_7.Parent = Sparrow.settings
+
+local ScrollingFrame = Instance.new("ScrollingFrame")
+ScrollingFrame.Name = "ScrollingFrame"
+ScrollingFrame.Parent = Sparrow.settings
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+ScrollingFrame.Position = UDim2.new(-0.000583335757, 0, -0.00209090114, 0)
+ScrollingFrame.Size = UDim2.new(1, 0, 1, 0)
+ScrollingFrame.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.Always
+ScrollingFrame.ScrollBarThickness = 10
+
+local Frame = Instance.new("Frame")
+Frame.BackgroundTransparency = 1
+Frame.Size = UDim2.new(1, -10, 1, 0) -- Subtract 10 pixels for the width of the scroll bar
+Frame.Position = UDim2.new(0, 0, 0, 0)
+Frame.Parent = ScrollingFrame
+
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Parent = Frame
+
+local function AddTextLine(text, textColor)
+	local TextLabel = Instance.new("TextLabel")
+	TextLabel.Size = UDim2.new(1, 0, 0, 0) -- Set initial height to 0
+	TextLabel.BackgroundTransparency = 1
+	TextLabel.Text = text
+	TextLabel.TextWrapped = true
+	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+	TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+	TextLabel.TextSize = 14
+	TextLabel.TextColor3 = textColor or Color3.new(0, 0, 0) -- Set text color to black by default
+	TextLabel.Parent = Frame
+
+	-- Function to update TextLabel size based on text bounds
+	local function UpdateTextLabelSize()
+		TextLabel.Size = UDim2.new(1, 0, 0, TextLabel.TextBounds.Y)
+		ScrollingFrame.CanvasSize = UDim2.new(0, UIListLayout.AbsoluteContentSize.X, 0, UIListLayout.AbsoluteContentSize.Y)
+	end
+
+	-- Update size initially
+	UpdateTextLabelSize()
+
+	-- Update size whenever text content changes
+	TextLabel:GetPropertyChangedSignal("Text"):Connect(UpdateTextLabelSize)
+
+	-- Update size whenever the UIListLayout resizes
+	UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(UpdateTextLabelSize)
+end
+
+-- Redirect console output to the ScrollingFrame
+local function ConsoleOutput(message, messageType)
+	local time = os.date("%H:%M:%S") -- Get the current time
+	local formattedMessage = "[" .. time .. "] " .. message
+
+	if messageType == Enum.MessageType.MessageOutput then
+		AddTextLine(formattedMessage) -- Add time prefix to the message
+	elseif messageType == Enum.MessageType.MessageInfo then
+		AddTextLine("[INFO] " .. formattedMessage, Color3.fromRGB(0, 255, 0)) -- Green text for INFO
+	elseif messageType == Enum.MessageType.MessageWarning then
+		AddTextLine("[WARNING] " .. formattedMessage, Color3.fromRGB(255, 255, 0)) -- Yellow text for WARNING
+	elseif messageType == Enum.MessageType.MessageError then
+		AddTextLine("[ERROR] " .. formattedMessage, Color3.fromRGB(255, 0, 0)) -- Red text for ERROR
+	end
+end
+
+game:GetService("LogService").MessageOut:Connect(ConsoleOutput)
+
+Sparrow.UICorner_18.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_18.Parent = Sparrow.idk10
+
+Sparrow.Scripthub.Name = "Scripthub"
+Sparrow.Scripthub.Parent = Sparrow.frames
+Sparrow.Scripthub.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.Scripthub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Scripthub.BorderSizePixel = 0
+Sparrow.Scripthub.Position = UDim2.new(-0.000583335757, 0, -0.00209090114, 0)
+Sparrow.Scripthub.Size = UDim2.new(1, 0, 1, 0)
+Sparrow.Scripthub.Visible = false
+
+Sparrow.UICorner_19.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_19.Parent = Sparrow.Scripthub
+
+Sparrow.scriptlist.Name = "scriptlist"
+Sparrow.scriptlist.Parent = Sparrow.Scripthub
+Sparrow.scriptlist.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.scriptlist.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.scriptlist.BorderSizePixel = 0
+Sparrow.scriptlist.Position = UDim2.new(0.573559642, 0, 0.0280000214, 0)
+Sparrow.scriptlist.Size = UDim2.new(0.405835539, 0, 0.967289746, 0)
+Sparrow.scriptlist.ZIndex = 0
+
+Sparrow.ScrollingFrame.Parent = Sparrow.scriptlist
+Sparrow.ScrollingFrame.Active = true
+Sparrow.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Sparrow.ScrollingFrame.BackgroundTransparency = 1.000
+Sparrow.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ScrollingFrame.BorderSizePixel = 0
+Sparrow.ScrollingFrame.Position = UDim2.new(0.0608891509, 0, -0.000948108907, 0)
+Sparrow.ScrollingFrame.Size = UDim2.new(0.934640527, 0, 1, 0)
+Sparrow.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 11, 0)
+Sparrow.ScrollingFrame.ScrollBarThickness = 5
+
+Sparrow.UICorner_20.Parent = Sparrow.ScrollingFrame
+
+Sparrow.UIListLayout.Parent = Sparrow.ScrollingFrame
+Sparrow.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+Sparrow.UIListLayout.Padding = UDim.new(0, 15)
+
+Sparrow.Folder.Parent = Sparrow.ScrollingFrame
+
+Sparrow.Frame_4.Parent = Sparrow.Folder
+Sparrow.Frame_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Frame_4.BorderSizePixel = 0
+Sparrow.Frame_4.Position = UDim2.new(0.0667896122, 0, 0.0317621641, 0)
+Sparrow.Frame_4.Size = UDim2.new(0, 131, 0, 61)
+Sparrow.Frame_4.Visible = false
+
+Sparrow.del.Name = "del"
+Sparrow.del.Parent = Sparrow.Frame_4
+Sparrow.del.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.del.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.del.BorderSizePixel = 0
+Sparrow.del.Position = UDim2.new(0.610687017, 0, 0.497001261, 0)
+Sparrow.del.Size = UDim2.new(0, 45, 0, 26)
+Sparrow.del.Font = Enum.Font.SourceSans
+Sparrow.del.Text = "Delete"
+Sparrow.del.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.del.TextScaled = true
+Sparrow.del.TextSize = 20.000
+Sparrow.del.TextWrapped = true
+
+Sparrow.del.TextScaled = true
+Sparrow.UICorner_21.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_21.Parent = Sparrow.del
+
+Sparrow.UITextSizeConstraint_15.Parent = Sparrow.del
+Sparrow.UITextSizeConstraint_15.MaxTextSize = 20
+
+Sparrow.UICorner_22.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_22.Parent = Sparrow.Frame_4
+
+Sparrow.TextLabel_12.Parent = Sparrow.Frame_4
+Sparrow.TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_12.BackgroundTransparency = 1.000
+Sparrow.TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_12.BorderSizePixel = 0
+Sparrow.TextLabel_12.Position = UDim2.new(-0.267175585, 0, 0, 0)
+Sparrow.TextLabel_12.Size = UDim2.new(0, 200, 0, 25)
+Sparrow.TextLabel_12.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_12.Text = "Name"
+Sparrow.TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_12.TextScaled = true
+Sparrow.TextLabel_12.TextSize = 20.000
+Sparrow.TextLabel_12.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_16.Parent = Sparrow.TextLabel_12
+Sparrow.UITextSizeConstraint_16.MaxTextSize = 20
+
+Sparrow.load_2.Name = "load"
+Sparrow.load_2.Parent = Sparrow.Frame_4
+Sparrow.load_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.load_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.load_2.BorderSizePixel = 0
+Sparrow.load_2.Position = UDim2.new(0.0305343512, 0, 0.497001261, 0)
+Sparrow.load_2.Size = UDim2.new(0, 45, 0, 26)
+Sparrow.load_2.Font = Enum.Font.SourceSans
+Sparrow.load_2.Text = "Load"
+Sparrow.load_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.load_2.TextScaled = true
+Sparrow.load_2.TextSize = 20.000
+Sparrow.load_2.TextWrapped = true
+
+Sparrow.load_2.TextScaled = true
+Sparrow.UICorner_23.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_23.Parent = Sparrow.load_2
+
+Sparrow.UITextSizeConstraint_17.Parent = Sparrow.load_2
+Sparrow.UITextSizeConstraint_17.MaxTextSize = 20
+
+Sparrow.UICorner_24.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_24.Parent = Sparrow.scriptlist
+
+Sparrow.Frame_5.Parent = Sparrow.Scripthub
+Sparrow.Frame_5.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Frame_5.BorderSizePixel = 0
+Sparrow.Frame_5.Position = UDim2.new(0.0265250374, 0, 0.0233644862, 0)
+Sparrow.Frame_5.Size = UDim2.new(0.477453589, 0, 0.967289746, 0)
+
+Sparrow.UICorner_25.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_25.Parent = Sparrow.Frame_5
+
+Sparrow.TextButton_2.Parent = Sparrow.Frame_5
+Sparrow.TextButton_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextButton_2.BorderSizePixel = 0
+Sparrow.TextButton_2.Position = UDim2.new(0.336130112, 0, 0.821256042, 0)
+Sparrow.TextButton_2.Size = UDim2.new(0.316666663, 0, 0.12077295, 0)
+Sparrow.TextButton_2.Font = Enum.Font.SourceSans
+Sparrow.TextButton_2.Text = "Add"
+Sparrow.TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextButton_2.TextScaled = true
+Sparrow.TextButton_2.TextSize = 20.000
+Sparrow.TextButton_2.TextWrapped = true
+
+Sparrow.TextButton_2.TextScaled = true
+Sparrow.UICorner_26.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_26.Parent = Sparrow.TextButton_2
+
+Sparrow.UITextSizeConstraint_18.Parent = Sparrow.TextButton_2
+Sparrow.UITextSizeConstraint_18.MaxTextSize = 20
+
+Sparrow.txt.Name = "txt"
+Sparrow.txt.Parent = Sparrow.Frame_5
+Sparrow.txt.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.txt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.txt.BorderSizePixel = 0
+Sparrow.txt.ClipsDescendants = true
+Sparrow.txt.Position = UDim2.new(0.216666669, 0, 0.562548041, 0)
+Sparrow.txt.Size = UDim2.new(0.555555582, 0, 0.164251208, 0)
+Sparrow.txt.Font = Enum.Font.SourceSans
+Sparrow.txt.Text = ""
+Sparrow.txt.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.txt.TextScaled = true
+Sparrow.txt.TextSize = 14.000
+Sparrow.txt.TextWrapped = true
+
+Sparrow.UICorner_27.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_27.Parent = Sparrow.txt
+
+Sparrow.UITextSizeConstraint_19.Parent = Sparrow.txt
+Sparrow.UITextSizeConstraint_19.MaxTextSize = 14
+
+Sparrow.sr.Name = "sr"
+Sparrow.sr.Parent = Sparrow.Frame_5
+Sparrow.sr.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.sr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.sr.BorderSizePixel = 0
+Sparrow.sr.ClipsDescendants = true
+Sparrow.sr.Position = UDim2.new(0.222222224, 0, 0.205060139, 0)
+Sparrow.sr.Size = UDim2.new(0.555555582, 0, 0.164251208, 0)
+Sparrow.sr.Font = Enum.Font.SourceSans
+Sparrow.sr.Text = ""
+Sparrow.sr.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.sr.TextScaled = true
+Sparrow.sr.TextSize = 14.000
+Sparrow.sr.TextWrapped = true
+
+Sparrow.UICorner_28.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_28.Parent = Sparrow.sr
+
+Sparrow.UITextSizeConstraint_20.Parent = Sparrow.sr
+Sparrow.UITextSizeConstraint_20.MaxTextSize = 14
+
+Sparrow.TextLabel_13.Parent = Sparrow.Scripthub
+Sparrow.TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_13.BackgroundTransparency = 1.000
+Sparrow.TextLabel_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_13.BorderSizePixel = 0
+Sparrow.TextLabel_13.Position = UDim2.new(0.0265250374, 0, 0.0887850448, 0)
+Sparrow.TextLabel_13.Size = UDim2.new(0.477453589, 0, 0.0887850448, 0)
+Sparrow.TextLabel_13.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_13.Text = "Script Code:"
+Sparrow.TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_13.TextScaled = true
+Sparrow.TextLabel_13.TextSize = 20.000
+Sparrow.TextLabel_13.TextWrapped = true
+
+Sparrow.TextLabel_13.TextScaled = true
+Sparrow.UITextSizeConstraint_21.Parent = Sparrow.TextLabel_13
+Sparrow.UITextSizeConstraint_21.MaxTextSize = 20
+
+Sparrow.TextLabel_14.Parent = Sparrow.Scripthub
+Sparrow.TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_14.BackgroundTransparency = 1.000
+Sparrow.TextLabel_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_14.BorderSizePixel = 0
+Sparrow.TextLabel_14.Position = UDim2.new(0.0265250374, 0, 0.434579432, 0)
+Sparrow.TextLabel_14.Size = UDim2.new(0.477453589, 0, 0.0887850448, 0)
+Sparrow.TextLabel_14.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_14.Text = "Script Name:"
+Sparrow.TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_14.TextScaled = true
+Sparrow.TextLabel_14.TextSize = 20.000
+Sparrow.TextLabel_14.TextWrapped = true
+
+Sparrow.TextLabel_14.TextScaled = true
+Sparrow.UITextSizeConstraint_22.Parent = Sparrow.TextLabel_14
+Sparrow.UITextSizeConstraint_22.MaxTextSize = 20
+
+Sparrow.home.Name = "home"
+Sparrow.home.Parent = Sparrow.frames
+Sparrow.home.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.home.BorderSizePixel = 0
+Sparrow.home.Position = UDim2.new(-0.00058333081, 0, -0.00209087017, 0)
+Sparrow.home.Size = UDim2.new(0, 377, 0, 214)
+
+Sparrow.UICorner_29.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_29.Parent = Sparrow.home
+
+Sparrow.playerinfo.Name = "playerinfo"
+Sparrow.playerinfo.Parent = Sparrow.home
+Sparrow.playerinfo.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Sparrow.playerinfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.playerinfo.BorderSizePixel = 0
+Sparrow.playerinfo.Position = UDim2.new(0.0232893638, 0, 0.0306193978, 0)
+Sparrow.playerinfo.Size = UDim2.new(0, 359, 0, 90)
+
+Sparrow.UICorner_30.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_30.Parent = Sparrow.playerinfo
+
+Sparrow.TextLabel_15.Parent = Sparrow.playerinfo
+Sparrow.TextLabel_15.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.TextLabel_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_15.BorderSizePixel = 0
+Sparrow.TextLabel_15.Size = UDim2.new(0, 138, 0, 90)
+Sparrow.TextLabel_15.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_15.Text = "Welcome"
+Sparrow.TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_15.TextScaled = true
+Sparrow.TextLabel_15.TextSize = 25.000
+Sparrow.TextLabel_15.TextWrapped = true
+Sparrow.TextLabel_15.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Sparrow.ImageLabel.Parent = Sparrow.TextLabel_15
+Sparrow.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.ImageLabel.BackgroundTransparency = 1.000
+Sparrow.ImageLabel.Position = UDim2.new(0, 35, 0, 0)
+Sparrow.ImageLabel.Size = UDim2.new(0, 67, 0, 68)
+Sparrow.ImageLabel.Image = "rbxassetid://924320031"
+
+Sparrow.UICorner_31.CornerRadius = UDim.new(1, 5)
+Sparrow.UICorner_31.Parent = Sparrow.ImageLabel
+
+Sparrow.UICorner_32.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_32.Parent = Sparrow.TextLabel_15
+
+Sparrow.UITextSizeConstraint_23.Parent = Sparrow.TextLabel_15
+Sparrow.UITextSizeConstraint_23.MaxTextSize = 25
+
+Sparrow.TextLabel_16.Parent = Sparrow.playerinfo
+Sparrow.TextLabel_16.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_16.BorderSizePixel = 0
+Sparrow.TextLabel_16.Position = UDim2.new(0.448500603, 0, 0.0777777806, 0)
+Sparrow.TextLabel_16.Size = UDim2.new(0, 197, 0, 33)
+Sparrow.TextLabel_16.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_16.Text = "loading"
+Sparrow.TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_16.TextScaled = true
+Sparrow.TextLabel_16.TextSize = 25.000
+Sparrow.TextLabel_16.TextWrapped = true
+
+Sparrow.UICorner_33.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_33.Parent = Sparrow.TextLabel_16
+
+Sparrow.UITextSizeConstraint_24.Parent = Sparrow.TextLabel_16
+Sparrow.UITextSizeConstraint_24.MaxTextSize = 25
+
+Sparrow.TextLabel_17.Parent = Sparrow.playerinfo
+Sparrow.TextLabel_17.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.TextLabel_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_17.BorderSizePixel = 0
+Sparrow.TextLabel_17.Position = UDim2.new(0.448500603, 0, 0.546461165, 0)
+Sparrow.TextLabel_17.Size = UDim2.new(0, 197, 0, 33)
+Sparrow.TextLabel_17.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_17.Text = "loading"
+Sparrow.TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_17.TextScaled = true
+Sparrow.TextLabel_17.TextSize = 25.000
+Sparrow.TextLabel_17.TextWrapped = true
+
+Sparrow.UICorner_34.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_34.Parent = Sparrow.TextLabel_17
+
+Sparrow.UITextSizeConstraint_25.Parent = Sparrow.TextLabel_17
+Sparrow.UITextSizeConstraint_25.MaxTextSize = 25
+
+Sparrow.UIAspectRatioConstraint_5.Parent = Sparrow.playerinfo
+Sparrow.UIAspectRatioConstraint_5.AspectRatio = 3.989
+
+Sparrow.owner.Name = "owner"
+Sparrow.owner.Parent = Sparrow.home
+Sparrow.owner.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.owner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.owner.BorderSizePixel = 0
+Sparrow.owner.Position = UDim2.new(0.0232893638, 0, 0.493236214, 0)
+Sparrow.owner.Size = UDim2.new(0, 112, 0, 20)
+
+Sparrow.UICorner_35.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_35.Parent = Sparrow.owner
+
+Sparrow.TextLabel_18.Parent = Sparrow.owner
+Sparrow.TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_18.BackgroundTransparency = 1.000
+Sparrow.TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_18.BorderSizePixel = 0
+Sparrow.TextLabel_18.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_18.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_18.Text = "Owner"
+Sparrow.TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_18.TextScaled = true
+Sparrow.TextLabel_18.TextSize = 18.000
+Sparrow.TextLabel_18.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_26.Parent = Sparrow.TextLabel_18
+Sparrow.UITextSizeConstraint_26.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_6.Parent = Sparrow.owner
+Sparrow.UIAspectRatioConstraint_6.AspectRatio = 5.600
+
+Sparrow.devlopers.Name = "devlopers"
+Sparrow.devlopers.Parent = Sparrow.home
+Sparrow.devlopers.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.devlopers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.devlopers.BorderSizePixel = 0
+Sparrow.devlopers.Position = UDim2.new(0.349549294, 0, 0.493236214, 0)
+Sparrow.devlopers.Size = UDim2.new(0, 112, 0, 20)
+
+Sparrow.UICorner_36.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_36.Parent = Sparrow.devlopers
+
+Sparrow.TextLabel_19.Parent = Sparrow.devlopers
+Sparrow.TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_19.BackgroundTransparency = 1.000
+Sparrow.TextLabel_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_19.BorderSizePixel = 0
+Sparrow.TextLabel_19.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_19.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_19.Text = "Devlopers"
+Sparrow.TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_19.TextScaled = true
+Sparrow.TextLabel_19.TextSize = 18.000
+Sparrow.TextLabel_19.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_27.Parent = Sparrow.TextLabel_19
+Sparrow.UITextSizeConstraint_27.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_7.Parent = Sparrow.devlopers
+Sparrow.UIAspectRatioConstraint_7.AspectRatio = 5.600
+
+Sparrow.uidesigner.Name = "uidesigner"
+Sparrow.uidesigner.Parent = Sparrow.home
+Sparrow.uidesigner.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.uidesigner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.uidesigner.BorderSizePixel = 0
+Sparrow.uidesigner.Position = UDim2.new(0.67846179, 0, 0.493236214, 0)
+Sparrow.uidesigner.Size = UDim2.new(0, 112, 0, 20)
+
+Sparrow.UICorner_37.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_37.Parent = Sparrow.uidesigner
+
+Sparrow.TextLabel_20.Parent = Sparrow.uidesigner
+Sparrow.TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_20.BackgroundTransparency = 1.000
+Sparrow.TextLabel_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_20.BorderSizePixel = 0
+Sparrow.TextLabel_20.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_20.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_20.Text = "Ui designer"
+Sparrow.TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_20.TextScaled = true
+Sparrow.TextLabel_20.TextSize = 18.000
+Sparrow.TextLabel_20.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_28.Parent = Sparrow.TextLabel_20
+Sparrow.UITextSizeConstraint_28.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_8.Parent = Sparrow.uidesigner
+Sparrow.UIAspectRatioConstraint_8.AspectRatio = 5.600
+
+Sparrow.list2.Name = "list2"
+Sparrow.list2.Parent = Sparrow.home
+Sparrow.list2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.list2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.list2.BorderSizePixel = 0
+Sparrow.list2.Position = UDim2.new(0.349549323, 0, 0.62407732, 0)
+Sparrow.list2.Size = UDim2.new(0, 112, 0, 80)
+
+Sparrow.UICorner_38.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_38.Parent = Sparrow.list2
+
+Sparrow.TextLabel_21.Parent = Sparrow.list2
+Sparrow.TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_21.BackgroundTransparency = 1.000
+Sparrow.TextLabel_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_21.BorderSizePixel = 0
+Sparrow.TextLabel_21.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_21.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_21.Text = "cluckmaster10"
+Sparrow.TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_21.TextScaled = true
+Sparrow.TextLabel_21.TextSize = 18.000
+Sparrow.TextLabel_21.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_29.Parent = Sparrow.TextLabel_21
+Sparrow.UITextSizeConstraint_29.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_9.Parent = Sparrow.list2
+Sparrow.UIAspectRatioConstraint_9.AspectRatio = 1.400
+
+Sparrow.TextLabel_22.Parent = Sparrow.list2
+Sparrow.TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_22.BackgroundTransparency = 1.000
+Sparrow.TextLabel_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_22.BorderSizePixel = 0
+Sparrow.TextLabel_22.Position = UDim2.new(0, 0, 0.25, 0)
+Sparrow.TextLabel_22.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_22.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_22.Text = ".arkirius"
+Sparrow.TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_22.TextScaled = true
+Sparrow.TextLabel_22.TextSize = 18.000
+Sparrow.TextLabel_22.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_30.Parent = Sparrow.TextLabel_22
+Sparrow.UITextSizeConstraint_30.MaxTextSize = 18
+
+Sparrow.TextLabel_23.Parent = Sparrow.list2
+Sparrow.TextLabel_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_23.BackgroundTransparency = 1.000
+Sparrow.TextLabel_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_23.BorderSizePixel = 0
+Sparrow.TextLabel_23.Position = UDim2.new(0, 0, 0.5, 0)
+Sparrow.TextLabel_23.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_23.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_23.Text = "_theslain"
+Sparrow.TextLabel_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_23.TextScaled = true
+Sparrow.TextLabel_23.TextSize = 18.000
+Sparrow.TextLabel_23.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_31.Parent = Sparrow.TextLabel_23
+Sparrow.UITextSizeConstraint_31.MaxTextSize = 18
+
+Sparrow.TextLabel_24.Parent = Sparrow.list2
+Sparrow.TextLabel_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_24.BackgroundTransparency = 1.000
+Sparrow.TextLabel_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_24.BorderSizePixel = 0
+Sparrow.TextLabel_24.Position = UDim2.new(0, 0, 0.737500012, 0)
+Sparrow.TextLabel_24.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_24.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_24.Text = "syctro"
+Sparrow.TextLabel_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_24.TextScaled = true
+Sparrow.TextLabel_24.TextSize = 18.000
+Sparrow.TextLabel_24.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_32.Parent = Sparrow.TextLabel_24
+Sparrow.UITextSizeConstraint_32.MaxTextSize = 18
+
+Sparrow.list1.Name = "list1"
+Sparrow.list1.Parent = Sparrow.home
+Sparrow.list1.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.list1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.list1.BorderSizePixel = 0
+Sparrow.list1.Position = UDim2.new(0.0232893825, 0, 0.62407732, 0)
+Sparrow.list1.Size = UDim2.new(0, 112, 0, 80)
+
+Sparrow.UICorner_39.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_39.Parent = Sparrow.list1
+
+Sparrow.TextLabel_25.Parent = Sparrow.list1
+Sparrow.TextLabel_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_25.BackgroundTransparency = 1.000
+Sparrow.TextLabel_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_25.BorderSizePixel = 0
+Sparrow.TextLabel_25.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_25.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_25.Text = "cluckmaster10"
+Sparrow.TextLabel_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_25.TextScaled = true
+Sparrow.TextLabel_25.TextSize = 18.000
+Sparrow.TextLabel_25.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_33.Parent = Sparrow.TextLabel_25
+Sparrow.UITextSizeConstraint_33.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_10.Parent = Sparrow.list1
+Sparrow.UIAspectRatioConstraint_10.AspectRatio = 1.400
+
+Sparrow.list3.Name = "list3"
+Sparrow.list3.Parent = Sparrow.home
+Sparrow.list3.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.list3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.list3.BorderSizePixel = 0
+Sparrow.list3.Position = UDim2.new(0.67846179, 0, 0.62407732, 0)
+Sparrow.list3.Size = UDim2.new(0, 112, 0, 80)
+
+Sparrow.UICorner_40.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_40.Parent = Sparrow.list3
+
+Sparrow.TextLabel_26.Parent = Sparrow.list3
+Sparrow.TextLabel_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_26.BackgroundTransparency = 1.000
+Sparrow.TextLabel_26.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_26.BorderSizePixel = 0
+Sparrow.TextLabel_26.Position = UDim2.new(0, 0, 0.375, 0)
+Sparrow.TextLabel_26.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_26.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_26.Text = "batus__"
+Sparrow.TextLabel_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_26.TextScaled = true
+Sparrow.TextLabel_26.TextSize = 18.000
+Sparrow.TextLabel_26.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_34.Parent = Sparrow.TextLabel_26
+Sparrow.UITextSizeConstraint_34.MaxTextSize = 18
+
+Sparrow.TextLabel_27.Parent = Sparrow.list3
+Sparrow.TextLabel_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_27.BackgroundTransparency = 1.000
+Sparrow.TextLabel_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_27.BorderSizePixel = 0
+Sparrow.TextLabel_27.Position = UDim2.new(0, 0, 0.0500000007, 0)
+Sparrow.TextLabel_27.Size = UDim2.new(0, 112, 0, 20)
+Sparrow.TextLabel_27.Font = Enum.Font.SourceSans
+Sparrow.TextLabel_27.Text = "(SUS) sa.dev"
+Sparrow.TextLabel_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_27.TextScaled = true
+Sparrow.TextLabel_27.TextSize = 18.000
+Sparrow.TextLabel_27.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_35.Parent = Sparrow.TextLabel_27
+Sparrow.UITextSizeConstraint_35.MaxTextSize = 18
+
+Sparrow.UIAspectRatioConstraint_11.Parent = Sparrow.list3
+Sparrow.UIAspectRatioConstraint_11.AspectRatio = 1.400
+
+Sparrow.UIAspectRatioConstraint_12.Parent = Sparrow.home
+Sparrow.UIAspectRatioConstraint_12.AspectRatio = 1.762
+
+Sparrow.scriptfinder.Name = "scriptfinder"
+Sparrow.scriptfinder.Parent = Sparrow.frames
+Sparrow.scriptfinder.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.scriptfinder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.scriptfinder.BorderSizePixel = 0
+Sparrow.scriptfinder.Position = UDim2.new(-0.000583335757, 0, -0.00209090114, 0)
+Sparrow.scriptfinder.Size = UDim2.new(1, 0, 1, 0)
+Sparrow.scriptfinder.Visible = false
+
+Sparrow.UICorner_41.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_41.Parent = Sparrow.scriptfinder
+
+Sparrow.scriptlist_2.Name = "scriptlist"
+Sparrow.scriptlist_2.Parent = Sparrow.scriptfinder
+Sparrow.scriptlist_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.scriptlist_2.BackgroundTransparency = 1.000
+Sparrow.scriptlist_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.scriptlist_2.BorderSizePixel = 0
+Sparrow.scriptlist_2.Position = UDim2.new(0.000583314744, 0, 0.224261701, 0)
+Sparrow.scriptlist_2.Size = UDim2.new(0.99941659, 0, 0.771028101, 0)
+Sparrow.scriptlist_2.ZIndex = 0
+
+Sparrow.ScrollingFrame_2.Parent = Sparrow.scriptlist_2
+Sparrow.ScrollingFrame_2.Active = true
+Sparrow.ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Sparrow.ScrollingFrame_2.BackgroundTransparency = 1.000
+Sparrow.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ScrollingFrame_2.BorderSizePixel = 0
+Sparrow.ScrollingFrame_2.Position = UDim2.new(0, 0, -0.000948079338, 0)
+Sparrow.ScrollingFrame_2.Size = UDim2.new(1.01916218, 0, 1.00606048, 0)
+Sparrow.ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 11, 0)
+Sparrow.ScrollingFrame_2.ScrollBarThickness = 5
+
+Sparrow.UICorner_42.Parent = Sparrow.ScrollingFrame_2
+
+Sparrow.UIListLayout_2.Parent = Sparrow.ScrollingFrame_2
+Sparrow.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+Sparrow.UIListLayout_2.Padding = UDim.new(0, 15)
+
+Sparrow.Folder_2.Parent = Sparrow.ScrollingFrame_2
+
+Sparrow.Frame_6.Parent = Sparrow.Folder_2
+Sparrow.Frame_6.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Frame_6.BorderSizePixel = 0
+Sparrow.Frame_6.Position = UDim2.new(0, 0, 1.83840825e-07, 0)
+Sparrow.Frame_6.Size = UDim2.new(0, 376, 0, 100)
+Sparrow.Frame_6.Visible = false
+
+Sparrow.UICorner_43.Parent = Sparrow.Frame_6
+
+Sparrow.ImageLabel_2.Parent = Sparrow.Frame_6
+Sparrow.ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ImageLabel_2.BorderSizePixel = 0
+Sparrow.ImageLabel_2.Size = UDim2.new(0.265957445, 0, 1, 0)
+Sparrow.ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Sparrow.TextLabel_28.Parent = Sparrow.Frame_6
+Sparrow.TextLabel_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_28.BackgroundTransparency = 1.000
+Sparrow.TextLabel_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_28.BorderSizePixel = 0
+Sparrow.TextLabel_28.ClipsDescendants = true
+Sparrow.TextLabel_28.Position = UDim2.new(0.284574479, 0, 0.0799999982, 0)
+Sparrow.TextLabel_28.Size = UDim2.new(0.699468076, 0, 0.180000007, 0)
+Sparrow.TextLabel_28.Font = Enum.Font.SourceSansBold
+Sparrow.TextLabel_28.Text = "Script Name : Pla Pla Pla Pla"
+Sparrow.TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_28.TextSize = 20.000
+Sparrow.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
+
+Sparrow.load_3.Name = "load"
+Sparrow.load_3.Parent = Sparrow.Frame_6
+Sparrow.load_3.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Sparrow.load_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.load_3.BorderSizePixel = 0
+Sparrow.load_3.Position = UDim2.new(0.81382978, 0, 0.660000026, 0)
+Sparrow.load_3.Size = UDim2.new(0.154255316, 0, 0.280000001, 0)
+Sparrow.load_3.Font = Enum.Font.SourceSansBold
+Sparrow.load_3.Text = "Load"
+Sparrow.load_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.load_3.TextScaled = true
+Sparrow.load_3.TextSize = 20.000
+Sparrow.load_3.TextWrapped = true
+
+Sparrow.UICorner_44.Parent = Sparrow.load_3
+
+Sparrow.load_3.TextScaled = true
+Sparrow.UITextSizeConstraint_36.Parent = Sparrow.load_3
+Sparrow.UITextSizeConstraint_36.MaxTextSize = 20
+
+Sparrow.cp.Name = "cp"
+Sparrow.cp.Parent = Sparrow.Frame_6
+Sparrow.cp.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Sparrow.cp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.cp.BorderSizePixel = 0
+Sparrow.cp.Position = UDim2.new(0.617021263, 0, 0.660000026, 0)
+Sparrow.cp.Size = UDim2.new(0.154255316, 0, 0.280000001, 0)
+Sparrow.cp.Font = Enum.Font.SourceSansBold
+Sparrow.cp.Text = "Copy"
+Sparrow.cp.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.cp.TextScaled = true
+Sparrow.cp.TextSize = 20.000
+Sparrow.cp.TextWrapped = true
+
+Sparrow.UICorner_45.Parent = Sparrow.cp
+
+Sparrow.cp.TextScaled = true
+Sparrow.UITextSizeConstraint_37.Parent = Sparrow.cp
+Sparrow.UITextSizeConstraint_37.MaxTextSize = 20
+
+Sparrow.del_2.Name = "del"
+Sparrow.del_2.Parent = Sparrow.Frame_6
+Sparrow.del_2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Sparrow.del_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.del_2.BorderSizePixel = 0
+Sparrow.del_2.Position = UDim2.new(0.422872335, 0, 0.660000026, 0)
+Sparrow.del_2.Size = UDim2.new(0.154255316, 0, 0.280000001, 0)
+Sparrow.del_2.Font = Enum.Font.SourceSansBold
+Sparrow.del_2.Text = "Delete"
+Sparrow.del_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.del_2.TextScaled = true
+Sparrow.del_2.TextSize = 20.000
+Sparrow.del_2.TextWrapped = true
+
+Sparrow.UICorner_46.Parent = Sparrow.del_2
+
+Sparrow.del_2.TextScaled = true
+Sparrow.UITextSizeConstraint_38.Parent = Sparrow.del_2
+Sparrow.UITextSizeConstraint_38.MaxTextSize = 20
+
+Sparrow.UICorner_47.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_47.Parent = Sparrow.scriptlist_2
+
+Sparrow.search.Name = "search"
+Sparrow.search.Parent = Sparrow.scriptfinder
+Sparrow.search.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Sparrow.search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.search.BorderSizePixel = 0
+Sparrow.search.Position = UDim2.new(-8.09484817e-08, 0, 0, 0)
+Sparrow.search.Size = UDim2.new(1, 0, 0.17757009, 0)
+
+Sparrow.search_2.Name = "search"
+Sparrow.search_2.Parent = Sparrow.search
+Sparrow.search_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Sparrow.search_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.search_2.BorderSizePixel = 0
+Sparrow.search_2.Position = UDim2.new(0.867374003, 0, 0, 0)
+Sparrow.search_2.Size = UDim2.new(0.132625997, 0, 1, 0)
+Sparrow.search_2.Font = Enum.Font.SourceSans
+Sparrow.search_2.Text = "Search"
+Sparrow.search_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.search_2.TextSize = 20.000
+
+Sparrow.search_2.TextScaled = true
+Sparrow.UICorner_48.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_48.Parent = Sparrow.search_2
+
+Sparrow.TextBox_2.Parent = Sparrow.search
+Sparrow.TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextBox_2.BackgroundTransparency = 1.000
+Sparrow.TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextBox_2.BorderSizePixel = 0
+Sparrow.TextBox_2.ClipsDescendants = true
+Sparrow.TextBox_2.Size = UDim2.new(0, 311, 0, 38)
+Sparrow.TextBox_2.Font = Enum.Font.SourceSans
+Sparrow.TextBox_2.PlaceholderText = "Type GameName Or scriptName Here:"
+Sparrow.TextBox_2.Text = ""
+Sparrow.TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextBox_2.TextSize = 14.000
+
+Sparrow.UICorner_49.CornerRadius = UDim.new(0, 5)
+Sparrow.UICorner_49.Parent = Sparrow.search
+
+Sparrow.UIAspectRatioConstraint_13.Parent = Sparrow.frames
+Sparrow.UIAspectRatioConstraint_13.AspectRatio = 1.762
+
+Sparrow.up.Name = "up"
+Sparrow.up.Parent = Sparrow.main
+Sparrow.up.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.up.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.up.BorderSizePixel = 0
+Sparrow.up.Position = UDim2.new(0, 0, -0.00128909328, 0)
+Sparrow.up.Size = UDim2.new(0, 505, 0, 52)
+
+Sparrow.UICorner_50.Parent = Sparrow.up
+
+Sparrow.ImageButton.Parent = Sparrow.up
+Sparrow.ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.ImageButton.BackgroundTransparency = 1.000
+Sparrow.ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ImageButton.BorderSizePixel = 0
+Sparrow.ImageButton.Position = UDim2.new(0.918811858, 0, 0.15384616, 0)
+Sparrow.ImageButton.Size = UDim2.new(0, 34, 0, 35)
+Sparrow.ImageButton.Image = "rbxassetid://13972680396"
+
+Sparrow.UICorner_51.Parent = Sparrow.ImageButton
+
+Sparrow.TextLabel_29.Parent = Sparrow.up
+Sparrow.TextLabel_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_29.BackgroundTransparency = 1.000
+Sparrow.TextLabel_29.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_29.BorderSizePixel = 0
+Sparrow.TextLabel_29.Position = UDim2.new(0.30297029, 0, 0, 0)
+Sparrow.TextLabel_29.Size = UDim2.new(0, 200, 0, 50)
+Sparrow.TextLabel_29.Font = Enum.Font.SourceSansBold
+Sparrow.TextLabel_29.Text = "Sparrow"
+Sparrow.TextLabel_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_29.TextSize = 35.000
+Sparrow.TextLabel_29.TextStrokeColor3 = Color3.fromRGB(65, 65, 65)
+Sparrow.TextLabel_29.TextStrokeTransparency = 0.000
+
+Sparrow.UIAspectRatioConstraint_14.Parent = Sparrow.up
+Sparrow.UIAspectRatioConstraint_14.AspectRatio = 9.712
+
+Sparrow.UICorner_52.Parent = Sparrow.main
+
+Sparrow.Left.Name = "Left"
+Sparrow.Left.Parent = Sparrow.main
+Sparrow.Left.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.Left.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Left.BorderSizePixel = 0
+Sparrow.Left.Position = UDim2.new(0, 0, 0.16058141, 0)
+Sparrow.Left.Size = UDim2.new(0, 115, 0, 233)
+
+Sparrow.UICorner_53.Parent = Sparrow.Left
+
+Sparrow.Left_2.Name = "Left"
+Sparrow.Left_2.Parent = Sparrow.Left
+Sparrow.Left_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Sparrow.Left_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.Left_2.BorderSizePixel = 0
+Sparrow.Left_2.Position = UDim2.new(0.0608695634, 0, 0.0214592274, 0)
+Sparrow.Left_2.Size = UDim2.new(0, 101, 0, 221)
+
+Sparrow.UICorner_54.Parent = Sparrow.Left_2
+
+Sparrow.main_2.Name = "main"
+Sparrow.main_2.Parent = Sparrow.Left_2
+Sparrow.main_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.main_2.BorderSizePixel = 0
+Sparrow.main_2.Position = UDim2.new(0, 0, 0.00904977508, 0)
+Sparrow.main_2.Size = UDim2.new(0, 101, 0, 36)
+Sparrow.main_2.Font = Enum.Font.SourceSans
+Sparrow.main_2.Text = "main"
+Sparrow.main_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.main_2.TextSize = 20.000
+
+Sparrow.main_2.TextScaled = true
+Sparrow.UICorner_55.Parent = Sparrow.main_2
+
+Sparrow.executor_2.Name = "executor"
+Sparrow.executor_2.Parent = Sparrow.Left_2
+Sparrow.executor_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.executor_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.executor_2.BorderSizePixel = 0
+Sparrow.executor_2.Position = UDim2.new(0, 0, 0.208144799, 0)
+Sparrow.executor_2.Size = UDim2.new(0, 101, 0, 36)
+Sparrow.executor_2.Font = Enum.Font.SourceSans
+Sparrow.executor_2.Text = "Executor"
+Sparrow.executor_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.executor_2.TextSize = 20.000
+
+Sparrow.executor_2.TextScaled = true
+Sparrow.UICorner_56.Parent = Sparrow.executor_2
+
+Sparrow.scripthub.Name = "scripthub"
+Sparrow.scripthub.Parent = Sparrow.Left_2
+Sparrow.scripthub.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.scripthub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.scripthub.BorderSizePixel = 0
+Sparrow.scripthub.Position = UDim2.new(0, 0, 0.420814484, 0)
+Sparrow.scripthub.Size = UDim2.new(0, 101, 0, 36)
+Sparrow.scripthub.Font = Enum.Font.SourceSans
+Sparrow.scripthub.Text = "scripthub"
+Sparrow.scripthub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.scripthub.TextSize = 20.000
+
+Sparrow.scripthub.TextScaled = true
+Sparrow.UICorner_57.Parent = Sparrow.scripthub
+
+Sparrow.settings_2.Name = "settings"
+Sparrow.settings_2.Parent = Sparrow.Left_2
+Sparrow.settings_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.settings_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.settings_2.BorderSizePixel = 0
+Sparrow.settings_2.Position = UDim2.new(0, 0, 0.837104082, 0)
+Sparrow.settings_2.Size = UDim2.new(0, 101, 0, 36)
+Sparrow.settings_2.Font = Enum.Font.SourceSans
+Sparrow.settings_2.Text = "Console"
+Sparrow.settings_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.settings_2.TextSize = 20.000
+
+Sparrow.settings_2.TextScaled = true
+Sparrow.UICorner_58.Parent = Sparrow.settings_2
+
+Sparrow.scriptfinder_2.Name = "scriptfinder"
+Sparrow.scriptfinder_2.Parent = Sparrow.Left_2
+Sparrow.scriptfinder_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.scriptfinder_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.scriptfinder_2.BorderSizePixel = 0
+Sparrow.scriptfinder_2.Position = UDim2.new(0, 0, 0.638009071, 0)
+Sparrow.scriptfinder_2.Size = UDim2.new(0, 101, 0, 36)
+Sparrow.scriptfinder_2.Font = Enum.Font.SourceSans
+Sparrow.scriptfinder_2.Text = "script finder"
+Sparrow.scriptfinder_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.scriptfinder_2.TextSize = 20.000
+
+Sparrow.scriptfinder_2.TextScaled = true
+Sparrow.UICorner_59.Parent = Sparrow.scriptfinder_2
+
+Sparrow.UIAspectRatioConstraint_15.Parent = Sparrow.Left
+Sparrow.UIAspectRatioConstraint_15.AspectRatio = 0.494
+
+Sparrow.ImageLabel_3.Parent = Sparrow.main
+Sparrow.ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.ImageLabel_3.BackgroundTransparency = 1.000
+Sparrow.ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ImageLabel_3.BorderSizePixel = 0
+Sparrow.ImageLabel_3.Position = UDim2.new(-0.0672145486, 0, -0.0751561224, 0)
+Sparrow.ImageLabel_3.Size = UDim2.new(0, 573, 0, 319)
+Sparrow.ImageLabel_3.ZIndex = 0
+Sparrow.ImageLabel_3.Image = "rbxassetid://13972922888"
+Sparrow.ImageLabel_3.ImageColor3 = Color3.fromRGB(25, 25, 25)
+Sparrow.ImageLabel_3.ImageTransparency = 0.600
+
+Sparrow.UICorner_60.Parent = Sparrow.ImageLabel_3
+
+Sparrow.UIAspectRatioConstraint_16.Parent = Sparrow.main
+Sparrow.UIAspectRatioConstraint_16.AspectRatio = 1.820
+
+Sparrow.welcome.Name = "welcome"
+Sparrow.welcome.Parent = Sparrow.Sparrow
+Sparrow.welcome.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Sparrow.welcome.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.welcome.BorderSizePixel = 0
+Sparrow.welcome.Size = UDim2.new(1, 0, 1, 0)
+Sparrow.welcome.Visible = false
+
+Sparrow.ImageLabel_4.Parent = Sparrow.welcome
+Sparrow.ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.ImageLabel_4.BackgroundTransparency = 1.000
+Sparrow.ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.ImageLabel_4.BorderSizePixel = 0
+Sparrow.ImageLabel_4.Position = UDim2.new(-2, 0, 0.35800001, 0)
+Sparrow.ImageLabel_4.Size = UDim2.new(0, 178, 0, 172)
+Sparrow.ImageLabel_4.Image = "rbxassetid://13987073344"
+
+Sparrow.UICorner_61.CornerRadius = UDim.new(0, 24)
+Sparrow.UICorner_61.Parent = Sparrow.ImageLabel_4
+
+Sparrow.welcome_2.Name = "welcome"
+Sparrow.welcome_2.Parent = Sparrow.welcome
+Sparrow.welcome_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.welcome_2.BackgroundTransparency = 1.000
+Sparrow.welcome_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.welcome_2.BorderSizePixel = 0
+Sparrow.welcome_2.Position = UDim2.new(2, 0, 0.411000013, 0)
+Sparrow.welcome_2.Size = UDim2.new(0, 311, 0, 50)
+Sparrow.welcome_2.Font = Enum.Font.SourceSans
+Sparrow.welcome_2.Text = "Welcome AKM_97"
+Sparrow.welcome_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.welcome_2.TextSize = 50.000
+
+Sparrow.to.Name = "to"
+Sparrow.to.Parent = Sparrow.welcome
+Sparrow.to.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.to.BackgroundTransparency = 1.000
+Sparrow.to.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.to.BorderSizePixel = 0
+Sparrow.to.Position = UDim2.new(2, 0, 0.507000029, 0)
+Sparrow.to.Size = UDim2.new(0, 311, 0, 50)
+Sparrow.to.Font = Enum.Font.SourceSans
+Sparrow.to.Text = "To Sparrow"
+Sparrow.to.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.to.TextSize = 50.000
+Sparrow.to.TextXAlignment = Enum.TextXAlignment.Left
+
+Sparrow.UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(159, 159, 159)), ColorSequenceKeypoint.new(0.66, Color3.fromRGB(156, 156, 156)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(39, 39, 39))}
+Sparrow.UIGradient.Parent = Sparrow.welcome
+
+Sparrow.open.Name = "open"
+Sparrow.open.Parent = Sparrow.Sparrow
+Sparrow.open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.open.BackgroundTransparency = 0.900
+Sparrow.open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.open.BorderSizePixel = 0
+Sparrow.open.Position = UDim2.new(0.463999987, 0, 2, 0)
+Sparrow.open.Size = UDim2.new(0.0753617734, 0, 0.131066516, 0)
+Sparrow.open.Image = "rbxassetid://13987073344"
+
+Sparrow.UICorner_62.CornerRadius = UDim.new(1, 8)
+Sparrow.UICorner_62.Parent = Sparrow.open
+
+Sparrow.TextLabel_30.Parent = Sparrow.open
+Sparrow.TextLabel_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_30.BackgroundTransparency = 1.000
+Sparrow.TextLabel_30.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sparrow.TextLabel_30.BorderSizePixel = 0
+Sparrow.TextLabel_30.Position = UDim2.new(-0.0115483152, 0, 0.995836079, 0)
+Sparrow.TextLabel_30.Size = UDim2.new(0.963568985, 0, 0.338015079, 0)
+Sparrow.TextLabel_30.Font = Enum.Font.SourceSansBold
+Sparrow.TextLabel_30.Text = "Sparrow"
+Sparrow.TextLabel_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sparrow.TextLabel_30.TextScaled = true
+Sparrow.TextLabel_30.TextSize = 20.000
+Sparrow.TextLabel_30.TextWrapped = true
+
+Sparrow.UITextSizeConstraint_39.Parent = Sparrow.TextLabel_30
+Sparrow.UITextSizeConstraint_39.MaxTextSize = 20
+
+-- Scripts:
+
+local function QJCR_fake_script() -- Sparrow.TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.TextButton_2)
+
+	local btn = script.Parent
+	local function AddScript(name, source)
+		makefolder("Sparrow")
+		writefile("Sparrow/" .. name, source)
+		local parent = script.Parent.Parent.Parent.scriptlist.ScrollingFrame
+		local hub = parent.Folder.Frame
+		local newhub = hub:Clone()
+
+		local scriptname = newhub.TextLabel
+		local execbutton = newhub.load
+		local delbutton = newhub.del
+
+		newhub.Parent = parent
+		newhub.Visible = true
+		scriptname.Text = name -- Set the script name
+		execbutton.MouseButton1Click:Connect(function()
+			local success, err = pcall(loadstring(source))
+			if not success then
+				warn("Error executing script:", err)
+			end
+		end)
+		delbutton.MouseButton1Click:Connect(function()
+			newhub:Destroy()
+			delfile("Sparrow/" .. name)
+		end)
+	end
+	for _, file in ipairs(listfiles("Sparrow")) do
+		local name = file:sub(9) -- Change this to extract the correct part of the file name
+		local source = readfile(file)
+		AddScript(name, source) -- Pass both name and source to AddScript
+	end
+	btn.MouseButton1Click:Connect(function()
+		local scriptName = script.Parent.Parent.txt.Text
+		local sourceCode = script.Parent.Parent.sr.Text
+		AddScript(scriptName, sourceCode)
+		script.Parent.Parent.sr.Text = ""
+		script.Parent.Parent.txt.Text = ""
+	end)
+end
+
+coroutine.wrap(QJCR_fake_script)()
+
+local function AIYPN_fake_script() -- Sparrow.TextLabel_15.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.TextLabel_15)
+
+	--Made by TimmyLikesChez
+
+	repeat wait() until game.Players.LocalPlayer.Character ~= nil
+
+	local Player = game.Players.LocalPlayer
+
+	local UserId = game.Players.LocalPlayer.UserId
+	local ThumbType = Enum.ThumbnailType.HeadShot
+	local ThumbSize = Enum.ThumbnailSize.Size420x420
+
+	script.Parent.ImageLabel.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
+end
+coroutine.wrap(AIYPN_fake_script)()
+local function VVWZUGL_fake_script() -- Sparrow.TextLabel_16.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.TextLabel_16)
+
+	local username = game.Players.LocalPlayer.Name
+
+	script.Parent.Text = username
+end
+coroutine.wrap(VVWZUGL_fake_script)()
+local function KHOUD_fake_script() -- Sparrow.TextLabel_17.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.TextLabel_17)
+
+	local disname = game.Players.LocalPlayer.DisplayName
+
+	script.Parent.Text = disname
+end
+coroutine.wrap(KHOUD_fake_script)()
+local function AONX_fake_script() -- Sparrow.search_2.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.search_2)
+
+	local btn = script.Parent
+
+	local function AddTab(imageTab, scriptname, source)
+		local scriptFrame = script.Parent.Parent.Parent.scriptlist.ScrollingFrame
+		local newList = scriptFrame.Folder.Frame:Clone()
+
+		local execute = newList.load
+		local copy = newList.cp
+		local delete = newList.del
+
+		local scname = newList.TextLabel
+		local img = newList.ImageLabel
+
+		newList.Name = scriptname
+		newList.Parent = scriptFrame
+		newList.Visible = true
+
+		img.Image = imageTab
+
+		scname.Text = scriptname
+
+		execute.MouseButton1Click:Connect(function()
+			loadstring(source)()
+		end)
+		copy.MouseButton1Click:Connect(function()
+			setclipboard(source)
+		end)
+		delete.MouseButton1Click:Connect(function()
+			script.Parent.Parent:Destroy()
+		end)
+	end
+
+
+	local http = game:GetService("HttpService")
+	btn.MouseButton1Click:Connect(function()
+		for _, child in ipairs(script.Parent.Parent.Parent.scriptlist.ScrollingFrame:GetChildren()) do
+			if child:IsA("Frame") then
+				child:Destroy()
+			end
+		end
+
+
+		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.Parent.search.TextBox.Text
+		local response = game:HttpGetAsync(url)
+		local decoded = http:JSONDecode(response)
+		for _, script in pairs(decoded.result.scripts) do
+			if(script.isUniversal == true) then
+				AddTab("rbxassetid://13987073344", script.title, script.script)
+			else
+				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+			end
+
+		end
+
+	end)
+
+
+end
+coroutine.wrap(AONX_fake_script)()
+local function VDBOCX_fake_script() -- Sparrow.ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.ImageButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		Sparrow.open.Position = UDim2.new(0.462, 0,0, 0)
+		Sparrow.main.Position = UDim2.new(0.284, 0,-5, 0)
+	end)
+
+end
+coroutine.wrap(VDBOCX_fake_script)()
+local function ZJEI_fake_script() -- Sparrow.Left_2.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.Left_2)
+
+	local b1 = script.Parent.main
+	local b2 = script.Parent.executor
+	local b3 = script.Parent.scripthub
+	local b4 = script.Parent.scriptfinder
+	local b5 = script.Parent.settings
+	local f1 = script.Parent.Parent.Parent.frames.home
+	local f2 = script.Parent.Parent.Parent.frames.executor
+	local f3 = script.Parent.Parent.Parent.frames.Scripthub
+	local f4 = script.Parent.Parent.Parent.frames.scriptfinder
+	local f5 = script.Parent.Parent.Parent.frames.settings
+
+	b1.MouseButton1Click:Connect(function()
+		f1.Visible = true
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b2.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = true
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b3.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = true
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b4.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = true
+		f5.Visible = false
+	end)
+	b5.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = true
+	end)
+end
+coroutine.wrap(ZJEI_fake_script)()
+local function NKVUN_fake_script() -- Sparrow.main.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.main)
+
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end
+coroutine.wrap(NKVUN_fake_script)()
+local function BZDDD_fake_script() -- Sparrow.Status.LocalScript 
+	local script = Instance.new('LocalScript', Sparrow.Status)
+
+	local RunService = game:GetService("RunService")
+	local Workspace = game:GetService("Workspace")
+	local ST = game:GetService("Stats")
+	local lol = script.Parent
+	local A = RunService.RenderStepped:Connect(function(frame)
+		script.Parent.Text = ("Sparrow Status I FPS: "..math.round(1/frame) .. " I date: " ..os.date("%B %d, %Y") ) 
+	end)
+end
+coroutine.wrap(BZDDD_fake_script)()
+local function TSXDIPO_fake_script() -- Sparrow.open.open 
+	local script = Instance.new('LocalScript', Sparrow.open)
+
+	--draggable
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	--open close
+	script.Parent.MouseButton1Click:Connect(function()
+		Sparrow.main.Position = UDim2.new(0.157, 0,0.163, 0)
+		Sparrow.open.Position = UDim2.new(0,284,-5,0)
+	end)
+	local tweenService = game:GetService("TweenService");
+	-- animations
+	if game:GetService("RunService"):IsStudio() then
+		task.wait(1);
+	end
+	script.Parent.Parent.welcome.welcome.Text = "Welcome " .. game.Players.LocalPlayer.Name
+	local function animatedText()
+		local txt = script.Parent.TextLabel
+		wait(1)
+		txt.Text = "Welcome"
+		wait(1.5)
+		txt.Text = "To"
+		wait(1.5)
+		txt.Text = "Sparrow"
+	end
+
+	-- tween ball on center
+	local function animatedloadbutton()
+		game:GetService("TweenService"):Create(script.Parent.Parent.open,TweenInfo.new(2),{Position=UDim2.new(0.462, 0, 0.05, 0)}):Play()
+		--game:GetService("TweenService"):Create(script.Parent,TweenInfo.new(3),{Rotation = 360*2,}):Play()
+		animatedText()
+	end
+	local function animatedload()
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.ImageLabel,TweenInfo.new(1.5),{Position=UDim2.new(0.274, 0,0.358, 0)}):Play()
+		wait(1)
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.welcome,TweenInfo.new(1.5),{Position=UDim2.new(0.438, 0,0.411, 0)}):Play()
+		wait(1)
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.to,TweenInfo.new(1.5),{Position=UDim2.new(0.438, 0,0.507, 0)}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.UIGradient,TweenInfo.new(4),{Rotation = 360,}):Play()
+		wait(3)
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome,TweenInfo.new(3),{Transparency = 1,}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.ImageLabel,TweenInfo.new(3),{Transparency = 1,}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.welcome,TweenInfo.new(3),{Transparency = 1,}):Play()
+		game:GetService("TweenService"):Create(script.Parent.Parent.welcome.to,TweenInfo.new(3),{Transparency = 1,}):Play()
+		wait(2)
+		script.Parent.Parent.welcome:Destroy()
+		animatedloadbutton()
+	end
+	--animatedload()
+
+	animatedloadbutton()
+
+end
+coroutine.wrap(TSXDIPO_fake_script)()
+
+-- Sparrow Settings
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+	if cht:match("/settings") then
+		-- Instances
+
+		local ScreenGui = Instance.new("ScreenGui")
+		local Frame = Instance.new("Frame")
+		local UICorner = Instance.new("UICorner")
+		local Frame_2 = Instance.new("Frame")
+		local UICorner_2 = Instance.new("UICorner")
+		local main = Instance.new("TextButton")
+		local UICorner_3 = Instance.new("UICorner")
+		local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+		local cmds = Instance.new("TextButton")
+		local UICorner_4 = Instance.new("UICorner")
+		local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+		local support = Instance.new("TextButton")
+		local UICorner_5 = Instance.new("UICorner")
+		local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+		local close = Instance.new("TextButton")
+		local UICorner_6 = Instance.new("UICorner")
+		local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+		local MainFrame = Instance.new("Frame")
+		local sparrowenabler = Instance.new("Frame")
+		local UICorner_7 = Instance.new("UICorner")
+		local TextButton = Instance.new("TextButton")
+		local UICorner_8 = Instance.new("UICorner")
+		local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+		local TextButton_2 = Instance.new("TextButton")
+		local UICorner_9 = Instance.new("UICorner")
+		local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel = Instance.new("TextLabel")
+		local Frame_3 = Instance.new("Frame")
+		local ScrollingFrame = Instance.new("ScrollingFrame")
+		local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+		local TextButton_3 = Instance.new("TextButton")
+		local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+		local TextButton_4 = Instance.new("TextButton")
+		local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+		local TextButton_5 = Instance.new("TextButton")
+		local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+		local TextButton_6 = Instance.new("TextButton")
+		local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+		local TextButton_7 = Instance.new("TextButton")
+		local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+		local TextButton_8 = Instance.new("TextButton")
+		local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+		local TextButton_9 = Instance.new("TextButton")
+		local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+		local TextButton_10 = Instance.new("TextButton")
+		local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
+		local TextButton_11 = Instance.new("TextButton")
+		local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
+		local TextButton_12 = Instance.new("TextButton")
+		local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
+		local TextButton_13 = Instance.new("TextButton")
+		local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+		local TextButton_14 = Instance.new("TextButton")
+		local UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
+		local TextButton_15 = Instance.new("TextButton")
+		local UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
+		local TextButton_16 = Instance.new("TextButton")
+		local UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
+		local TextButton_17 = Instance.new("TextButton")
+		local UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
+		local TextButton_18 = Instance.new("TextButton")
+		local UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
+		local TextButton_19 = Instance.new("TextButton")
+		local UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
+		local TextButton_20 = Instance.new("TextButton")
+		local UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
+		local TextButton_21 = Instance.new("TextButton")
+		local UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
+		local TextButton_22 = Instance.new("TextButton")
+		local UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
+		local TextButton_23 = Instance.new("TextButton")
+		local UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
+		local TextButton_24 = Instance.new("TextButton")
+		local UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
+		local UICorner_10 = Instance.new("UICorner")
+		local UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint")
+		local cmdsFrame = Instance.new("Frame")
+		local TextLabel_2 = Instance.new("TextLabel")
+		local UICorner_11 = Instance.new("UICorner")
+		local UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_3 = Instance.new("TextLabel")
+		local UICorner_12 = Instance.new("UICorner")
+		local UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_4 = Instance.new("TextLabel")
+		local UICorner_13 = Instance.new("UICorner")
+		local UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_5 = Instance.new("TextLabel")
+		local UICorner_14 = Instance.new("UICorner")
+		local UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_6 = Instance.new("TextLabel")
+		local UICorner_15 = Instance.new("UICorner")
+		local UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_7 = Instance.new("TextLabel")
+		local UICorner_16 = Instance.new("UICorner")
+		local UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_8 = Instance.new("TextLabel")
+		local UICorner_17 = Instance.new("UICorner")
+		local UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint")
+		local TextLabel_9 = Instance.new("TextLabel")
+		local UICorner_18 = Instance.new("UICorner")
+		local UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint")
+		local SupportFrame = Instance.new("Frame")
+		local ImageLabel = Instance.new("ImageLabel")
+		local UICorner_19 = Instance.new("UICorner")
+		local UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint")
+		local TextButton_25 = Instance.new("TextButton")
+		local UICorner_20 = Instance.new("UICorner")
+		local UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint")
+		local TextButton_26 = Instance.new("TextButton")
+		local UICorner_21 = Instance.new("UICorner")
+		local UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint")
+		local ImageLabel_2 = Instance.new("ImageLabel")
+		local UICorner_22 = Instance.new("UICorner")
+		local UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint")
+		local TextButton_27 = Instance.new("TextButton")
+		local UICorner_23 = Instance.new("UICorner")
+		local UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint")
+		local UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint")
+		local ImageLabel_3 = Instance.new("ImageLabel")
+		local UICorner_24 = Instance.new("UICorner")
+		local UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint")
+		local UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint")
+
+		-- Properties
+
+		ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+		ScreenGui.Parent = game.CoreGui
+		ScreenGui.DisplayOrder = 9999
+		ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+		Frame.Parent = ScreenGui
+		Frame.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		Frame.BorderColor3 = Color3.new(0, 0, 0)
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0.120129868, 0, 0.0676546395, 0)
+		Frame.Size = UDim2.new(0.758928597, 0, 0.862113416, 0)
+
+		UICorner.Parent = Frame
+		UICorner.CornerRadius = UDim.new(0, 5)
+
+		Frame_2.Parent = Frame
+		Frame_2.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+		Frame_2.BorderColor3 = Color3.new(0, 0, 0)
+		Frame_2.BorderSizePixel = 0
+		Frame_2.Size = UDim2.new(0.101604275, 0, 1, 0)
+
+		UICorner_2.Parent = Frame_2
+		UICorner_2.CornerRadius = UDim.new(0, 5)
+
+		main.Name = "main"
+		main.Parent = Frame_2
+		main.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		main.BorderColor3 = Color3.new(0, 0, 0)
+		main.BorderSizePixel = 0
+		main.Position = UDim2.new(0.147368416, 0, 0.0560538098, 0)
+		main.Size = UDim2.new(0.705263138, 0, 0.11210762, 0)
+		main.Font = Enum.Font.SourceSans
+		main.Text = "Main!"
+		main.TextColor3 = Color3.new(1, 1, 1)
+		main.TextScaled = true
+		main.TextSize = 14
+		main.TextWrapped = true
+
+		main.MouseButton1Click:Connect(function()
+			SupportFrame.Visible = false
+			cmdsFrame.Visible = false
+			MainFrame.Visible = true
+		end)
+
+		UICorner_3.Parent = main
+		UICorner_3.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint.Parent = main
+		UITextSizeConstraint.MaxTextSize = 34
+
+		UIAspectRatioConstraint.Parent = main
+		UIAspectRatioConstraint.AspectRatio = 1.340000033378601
+
+		cmds.Name = "cmds"
+		cmds.Parent = Frame_2
+		cmds.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		cmds.BorderColor3 = Color3.new(0, 0, 0)
+		cmds.BorderSizePixel = 0
+		cmds.Position = UDim2.new(0.147368416, 0, 0.199551567, 0)
+		cmds.Size = UDim2.new(0.705263138, 0, 0.11210762, 0)
+		cmds.Font = Enum.Font.SourceSans
+		cmds.Text = "Cmds!"
+		cmds.TextColor3 = Color3.new(1, 1, 1)
+		cmds.TextScaled = true
+		cmds.TextSize = 14
+		cmds.TextWrapped = true
+
+		cmds.MouseButton1Click:Connect(function()
+			SupportFrame.Visible = false
+			cmdsFrame.Visible = true
+			MainFrame.Visible = false
+		end)
+
+		UICorner_4.Parent = cmds
+		UICorner_4.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_2.Parent = cmds
+		UITextSizeConstraint_2.MaxTextSize = 30
+
+		UIAspectRatioConstraint_2.Parent = cmds
+		UIAspectRatioConstraint_2.AspectRatio = 1.340000033378601
+
+		support.Name = "support"
+		support.Parent = Frame_2
+		support.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		support.BorderColor3 = Color3.new(0, 0, 0)
+		support.BorderSizePixel = 0
+		support.Position = UDim2.new(0.147368416, 0, 0.349775791, 0)
+		support.Size = UDim2.new(0.705263138, 0, 0.11210762, 0)
+		support.Font = Enum.Font.SourceSans
+		support.Text = "Support!"
+		support.TextColor3 = Color3.new(1, 1, 1)
+		support.TextScaled = true
+		support.TextSize = 14
+		support.TextWrapped = true
+
+		support.MouseButton1Click:Connect(function()
+			SupportFrame.Visible = true
+			cmdsFrame.Visible = false
+			MainFrame.Visible = false
+		end)
+
+		UICorner_5.Parent = support
+		UICorner_5.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_3.Parent = support
+		UITextSizeConstraint_3.MaxTextSize = 22
+
+		UIAspectRatioConstraint_3.Parent = support
+		UIAspectRatioConstraint_3.AspectRatio = 1.340000033378601
+
+		close.Name = "close"
+		close.Parent = Frame_2
+		close.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		close.BorderColor3 = Color3.new(0, 0, 0)
+		close.BorderSizePixel = 0
+		close.Position = UDim2.new(0.147368416, 0, 0.874439478, 0)
+		close.Size = UDim2.new(0.705263138, 0, 0.11210762, 0)
+		close.Font = Enum.Font.SourceSans
+		close.Text = "X"
+		close.TextColor3 = Color3.new(1, 1, 1)
+		close.TextScaled = true
+		close.TextSize = 14
+		close.TextWrapped = true
+
+		close.MouseButton1Click:Connect(function()
+			ScreenGui:Destroy()
+		end)
+
+		UICorner_6.Parent = close
+		UICorner_6.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_4.Parent = close
+		UITextSizeConstraint_4.MaxTextSize = 50
+
+		UIAspectRatioConstraint_4.Parent = close
+		UIAspectRatioConstraint_4.AspectRatio = 1.340000033378601
+
+		UIAspectRatioConstraint_5.Parent = Frame_2
+		UIAspectRatioConstraint_5.AspectRatio = 0.2130044847726822
+
+		MainFrame.Name = "MainFrame"
+		MainFrame.Parent = Frame
+		MainFrame.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		MainFrame.BorderColor3 = Color3.new(0, 0, 0)
+		MainFrame.BorderSizePixel = 0
+		MainFrame.Position = UDim2.new(0.108021356, 0, 0.0156950671, 0)
+		MainFrame.Size = UDim2.new(0.883422434, 0, 0.970852017, 0)
+
+		sparrowenabler.Name = "sparrow enabler"
+		sparrowenabler.Parent = MainFrame
+		sparrowenabler.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+		sparrowenabler.BorderColor3 = Color3.new(0, 0, 0)
+		sparrowenabler.BorderSizePixel = 0
+		sparrowenabler.Position = UDim2.new(0.0121065453, 0, 0.0415704288, 0)
+		sparrowenabler.Size = UDim2.new(0.975786924, 0, 0.230946884, 0)
+
+		UICorner_7.Parent = sparrowenabler
+		UICorner_7.CornerRadius = UDim.new(0, 5)
+
+		TextButton.Parent = sparrowenabler
+		TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton.BorderSizePixel = 0
+		TextButton.Position = UDim2.new(0.554590583, 0, 0.140000001, 0)
+		TextButton.Size = UDim2.new(0.122828782, 0, 0.720000029, 0)
+		TextButton.Font = Enum.Font.SourceSans
+		TextButton.Text = "On"
+		TextButton.TextColor3 = Color3.new(0, 0, 0)
+		TextButton.TextScaled = true
+		TextButton.TextSize = 14
+		TextButton.TextWrapped = true
+
+		TextButton.MouseButton1Click:Connect(function()
+			-- Get the CoreGui and ScreenGui objects
+			local coreGui = game:GetService("CoreGui")
+			local SparrowGui = coreGui:FindFirstChild("Sparrow")
+
+			-- Check if SparrowGui exists and make it go invisible if found
+			if SparrowGui then
+				SparrowGui.Enabled = true
+				print("Sparrow ScreenGui has been set to invisible.")
+			else
+				print("Sparrow ScreenGui was not found in CoreGui.")
+			end
+		end)
+
+		UICorner_8.Parent = TextButton
+		UICorner_8.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_5.Parent = TextButton
+		UITextSizeConstraint_5.MaxTextSize = 72
+
+		UIAspectRatioConstraint_6.Parent = TextButton
+		UIAspectRatioConstraint_6.AspectRatio = 1.375
+
+		TextButton_2.Parent = sparrowenabler
+		TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_2.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_2.BorderSizePixel = 0
+		TextButton_2.Position = UDim2.new(0.834987581, 0, 0.140000001, 0)
+		TextButton_2.Size = UDim2.new(0.122828782, 0, 0.720000029, 0)
+		TextButton_2.Font = Enum.Font.SourceSans
+		TextButton_2.Text = "Off"
+		TextButton_2.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_2.TextScaled = true
+		TextButton_2.TextSize = 14
+		TextButton_2.TextWrapped = true
+
+		TextButton_2.MouseButton1Click:Connect(function()
+			-- Get the CoreGui and ScreenGui objects
+			local coreGui = game:GetService("CoreGui")
+			local SparrowGui = coreGui:FindFirstChild("Sparrow")
+
+			-- Check if SparrowGui exists and make it go invisible if found
+			if SparrowGui then
+				SparrowGui.Enabled = false
+				print("Sparrow ScreenGui has been set to invisible.")
+			else
+				print("Sparrow ScreenGui was not found in CoreGui.")
+			end
+		end)
+
+		UICorner_9.Parent = TextButton_2
+		UICorner_9.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_6.Parent = TextButton_2
+		UITextSizeConstraint_6.MaxTextSize = 72
+
+		UIAspectRatioConstraint_7.Parent = TextButton_2
+		UIAspectRatioConstraint_7.AspectRatio = 1.375
+
+		UIAspectRatioConstraint_8.Parent = sparrowenabler
+		UIAspectRatioConstraint_8.AspectRatio = 8.0600004196167
+
+		TextLabel.Parent = sparrowenabler
+		TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel.BorderSizePixel = 0
+		TextLabel.Position = UDim2.new(0.0621939562, 0, 0.231361523, 0)
+		TextLabel.Size = UDim2.new(0, 119, 0, 32)
+		TextLabel.Font = Enum.Font.SourceSans
+		TextLabel.Text = "Enable Sparrow Ui"
+		TextLabel.TextColor3 = Color3.new(0, 0, 0)
+		TextLabel.TextSize = 14
+
+		Frame_3.Parent = MainFrame
+		Frame_3.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+		Frame_3.BorderColor3 = Color3.new(0, 0, 0)
+		Frame_3.BorderSizePixel = 0
+		Frame_3.Position = UDim2.new(0.0121065006, 0, 0.304849893, 0)
+		Frame_3.Size = UDim2.new(0.975786924, 0, 0.674364924, 0)
+
+		ScrollingFrame.Parent = Frame_3
+		ScrollingFrame.Active = true
+		ScrollingFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+		ScrollingFrame.BackgroundTransparency = 0.8999999761581421
+		ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
+		ScrollingFrame.BorderSizePixel = 0
+		ScrollingFrame.Position = UDim2.new(0.0100148804, 0, 0.0308219865, 0)
+		ScrollingFrame.Size = UDim2.new(0.977667511, 0, 0.934931517, 0)
+		ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+		UIAspectRatioConstraint_9.Parent = ScrollingFrame
+		UIAspectRatioConstraint_9.AspectRatio = 2.886446952819824
+
+		TextButton_3.Parent = ScrollingFrame
+		TextButton_3.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_3.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_3.BorderSizePixel = 0
+		TextButton_3.Position = UDim2.new(0.0244671274, 0, -0.00338772684, 0)
+		TextButton_3.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_3.Font = Enum.Font.SourceSans
+		TextButton_3.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_3.TextScaled = true
+		TextButton_3.TextSize = 14
+		TextButton_3.TextWrapped = true
+
+		UITextSizeConstraint_7.Parent = TextButton_3
+		UITextSizeConstraint_7.MaxTextSize = 14
+
+		TextButton_4.Parent = ScrollingFrame
+		TextButton_4.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_4.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_4.BorderSizePixel = 0
+		TextButton_4.Position = UDim2.new(0.362114012, 0, -0.00655093044, 0)
+		TextButton_4.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_4.Font = Enum.Font.SourceSans
+		TextButton_4.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_4.TextScaled = true
+		TextButton_4.TextSize = 14
+		TextButton_4.TextWrapped = true
+
+		UITextSizeConstraint_8.Parent = TextButton_4
+		UITextSizeConstraint_8.MaxTextSize = 14
+
+		TextButton_5.Parent = ScrollingFrame
+		TextButton_5.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_5.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_5.BorderSizePixel = 0
+		TextButton_5.Position = UDim2.new(0.680187166, 0, -0.00378299924, 0)
+		TextButton_5.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_5.Font = Enum.Font.SourceSans
+		TextButton_5.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_5.TextScaled = true
+		TextButton_5.TextSize = 14
+		TextButton_5.TextWrapped = true
+
+		UITextSizeConstraint_9.Parent = TextButton_5
+		UITextSizeConstraint_9.MaxTextSize = 14
+
+		TextButton_6.Parent = ScrollingFrame
+		TextButton_6.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_6.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_6.BorderSizePixel = 0
+		TextButton_6.Position = UDim2.new(0.0244671274, 0, 0.0939740986, 0)
+		TextButton_6.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_6.Font = Enum.Font.SourceSans
+		TextButton_6.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_6.TextScaled = true
+		TextButton_6.TextSize = 14
+		TextButton_6.TextWrapped = true
+
+		UITextSizeConstraint_10.Parent = TextButton_6
+		UITextSizeConstraint_10.MaxTextSize = 14
+
+		TextButton_7.Parent = ScrollingFrame
+		TextButton_7.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_7.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_7.BorderSizePixel = 0
+		TextButton_7.Position = UDim2.new(0.362114012, 0, 0.094584249, 0)
+		TextButton_7.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_7.Font = Enum.Font.SourceSans
+		TextButton_7.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_7.TextScaled = true
+		TextButton_7.TextSize = 14
+		TextButton_7.TextWrapped = true
+
+		UITextSizeConstraint_11.Parent = TextButton_7
+		UITextSizeConstraint_11.MaxTextSize = 14
+
+		TextButton_8.Parent = ScrollingFrame
+		TextButton_8.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_8.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_8.BorderSizePixel = 0
+		TextButton_8.Position = UDim2.new(0.677740455, 0, 0.0962207317, 0)
+		TextButton_8.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_8.Font = Enum.Font.SourceSans
+		TextButton_8.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_8.TextScaled = true
+		TextButton_8.TextSize = 14
+		TextButton_8.TextWrapped = true
+
+		UITextSizeConstraint_12.Parent = TextButton_8
+		UITextSizeConstraint_12.MaxTextSize = 14
+
+		TextButton_9.Parent = ScrollingFrame
+		TextButton_9.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_9.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_9.BorderSizePixel = 0
+		TextButton_9.Position = UDim2.new(0.677740455, 0, 0.206008643, 0)
+		TextButton_9.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_9.Font = Enum.Font.SourceSans
+		TextButton_9.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_9.TextScaled = true
+		TextButton_9.TextSize = 14
+		TextButton_9.TextWrapped = true
+
+		UITextSizeConstraint_13.Parent = TextButton_9
+		UITextSizeConstraint_13.MaxTextSize = 14
+
+		TextButton_10.Parent = ScrollingFrame
+		TextButton_10.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_10.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_10.BorderSizePixel = 0
+		TextButton_10.Position = UDim2.new(0.362114012, 0, 0.209611997, 0)
+		TextButton_10.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_10.Font = Enum.Font.SourceSans
+		TextButton_10.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_10.TextScaled = true
+		TextButton_10.TextSize = 14
+		TextButton_10.TextWrapped = true
+
+		UITextSizeConstraint_14.Parent = TextButton_10
+		UITextSizeConstraint_14.MaxTextSize = 14
+
+		TextButton_11.Parent = ScrollingFrame
+		TextButton_11.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_11.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_11.BorderSizePixel = 0
+		TextButton_11.Position = UDim2.new(0.364560723, 0, 0.323639274, 0)
+		TextButton_11.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_11.Font = Enum.Font.SourceSans
+		TextButton_11.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_11.TextScaled = true
+		TextButton_11.TextSize = 14
+		TextButton_11.TextWrapped = true
+
+		UITextSizeConstraint_15.Parent = TextButton_11
+		UITextSizeConstraint_15.MaxTextSize = 14
+
+		TextButton_12.Parent = ScrollingFrame
+		TextButton_12.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_12.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_12.BorderSizePixel = 0
+		TextButton_12.Position = UDim2.new(0.0244671274, 0, 0.209629238, 0)
+		TextButton_12.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_12.Font = Enum.Font.SourceSans
+		TextButton_12.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_12.TextScaled = true
+		TextButton_12.TextSize = 14
+		TextButton_12.TextWrapped = true
+
+		UITextSizeConstraint_16.Parent = TextButton_12
+		UITextSizeConstraint_16.MaxTextSize = 14
+
+		TextButton_13.Parent = ScrollingFrame
+		TextButton_13.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_13.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_13.BorderSizePixel = 0
+		TextButton_13.Position = UDim2.new(0.0244671274, 0, 0.209629238, 0)
+		TextButton_13.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_13.Font = Enum.Font.SourceSans
+		TextButton_13.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_13.TextScaled = true
+		TextButton_13.TextSize = 14
+		TextButton_13.TextWrapped = true
+
+		UITextSizeConstraint_17.Parent = TextButton_13
+		UITextSizeConstraint_17.MaxTextSize = 14
+
+		TextButton_14.Parent = ScrollingFrame
+		TextButton_14.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_14.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_14.BorderSizePixel = 0
+		TextButton_14.Position = UDim2.new(0.677740455, 0, 0.323292285, 0)
+		TextButton_14.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_14.Font = Enum.Font.SourceSans
+		TextButton_14.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_14.TextScaled = true
+		TextButton_14.TextSize = 14
+		TextButton_14.TextWrapped = true
+
+		UITextSizeConstraint_18.Parent = TextButton_14
+		UITextSizeConstraint_18.MaxTextSize = 14
+
+		TextButton_15.Parent = ScrollingFrame
+		TextButton_15.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_15.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_15.BorderSizePixel = 0
+		TextButton_15.Position = UDim2.new(0.364560723, 0, -0.518093944, 0)
+		TextButton_15.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_15.Font = Enum.Font.SourceSans
+		TextButton_15.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_15.TextScaled = true
+		TextButton_15.TextSize = 14
+		TextButton_15.TextWrapped = true
+
+		UITextSizeConstraint_19.Parent = TextButton_15
+		UITextSizeConstraint_19.MaxTextSize = 14
+
+		TextButton_16.Parent = ScrollingFrame
+		TextButton_16.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_16.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_16.BorderSizePixel = 0
+		TextButton_16.Position = UDim2.new(0.0244671274, 0, 0.323292285, 0)
+		TextButton_16.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_16.Font = Enum.Font.SourceSans
+		TextButton_16.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_16.TextScaled = true
+		TextButton_16.TextSize = 14
+		TextButton_16.TextWrapped = true
+
+		UITextSizeConstraint_20.Parent = TextButton_16
+		UITextSizeConstraint_20.MaxTextSize = 14
+
+		TextButton_17.Parent = ScrollingFrame
+		TextButton_17.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_17.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_17.BorderSizePixel = 0
+		TextButton_17.Position = UDim2.new(0.364560723, 0, 0.323639274, 0)
+		TextButton_17.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_17.Font = Enum.Font.SourceSans
+		TextButton_17.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_17.TextScaled = true
+		TextButton_17.TextSize = 14
+		TextButton_17.TextWrapped = true
+
+		UITextSizeConstraint_21.Parent = TextButton_17
+		UITextSizeConstraint_21.MaxTextSize = 14
+
+		TextButton_18.Parent = ScrollingFrame
+		TextButton_18.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_18.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_18.BorderSizePixel = 0
+		TextButton_18.Position = UDim2.new(0.0244671274, 0, 0.423194379, 0)
+		TextButton_18.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_18.Font = Enum.Font.SourceSans
+		TextButton_18.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_18.TextScaled = true
+		TextButton_18.TextSize = 14
+		TextButton_18.TextWrapped = true
+
+		UITextSizeConstraint_22.Parent = TextButton_18
+		UITextSizeConstraint_22.MaxTextSize = 14
+
+		TextButton_19.Parent = ScrollingFrame
+		TextButton_19.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_19.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_19.BorderSizePixel = 0
+		TextButton_19.Position = UDim2.new(0.677740455, 0, 0.323292285, 0)
+		TextButton_19.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_19.Font = Enum.Font.SourceSans
+		TextButton_19.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_19.TextScaled = true
+		TextButton_19.TextSize = 14
+		TextButton_19.TextWrapped = true
+
+		UITextSizeConstraint_23.Parent = TextButton_19
+		UITextSizeConstraint_23.MaxTextSize = 14
+
+		TextButton_20.Parent = ScrollingFrame
+		TextButton_20.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_20.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_20.BorderSizePixel = 0
+		TextButton_20.Position = UDim2.new(0.364560723, 0, 0.420479655, 0)
+		TextButton_20.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_20.Font = Enum.Font.SourceSans
+		TextButton_20.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_20.TextScaled = true
+		TextButton_20.TextSize = 14
+		TextButton_20.TextWrapped = true
+
+		UITextSizeConstraint_24.Parent = TextButton_20
+		UITextSizeConstraint_24.MaxTextSize = 14
+
+		TextButton_21.Parent = ScrollingFrame
+		TextButton_21.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_21.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_21.BorderSizePixel = 0
+		TextButton_21.Position = UDim2.new(0.682633877, 0, 0.419578969, 0)
+		TextButton_21.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_21.Font = Enum.Font.SourceSans
+		TextButton_21.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_21.TextScaled = true
+		TextButton_21.TextSize = 14
+		TextButton_21.TextWrapped = true
+
+		UITextSizeConstraint_25.Parent = TextButton_21
+		UITextSizeConstraint_25.MaxTextSize = 14
+
+		TextButton_22.Parent = ScrollingFrame
+		TextButton_22.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_22.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_22.BorderSizePixel = 0
+		TextButton_22.Position = UDim2.new(0.0244671274, 0, 0.532969594, 0)
+		TextButton_22.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_22.Font = Enum.Font.SourceSans
+		TextButton_22.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_22.TextScaled = true
+		TextButton_22.TextSize = 14
+		TextButton_22.TextWrapped = true
+
+		UITextSizeConstraint_26.Parent = TextButton_22
+		UITextSizeConstraint_26.MaxTextSize = 14
+
+		TextButton_23.Parent = ScrollingFrame
+		TextButton_23.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_23.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_23.BorderSizePixel = 0
+		TextButton_23.Position = UDim2.new(0.364560723, 0, 0.526811182, 0)
+		TextButton_23.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_23.Font = Enum.Font.SourceSans
+		TextButton_23.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_23.TextScaled = true
+		TextButton_23.TextSize = 14
+		TextButton_23.TextWrapped = true
+
+		UITextSizeConstraint_27.Parent = TextButton_23
+		UITextSizeConstraint_27.MaxTextSize = 14
+
+		TextButton_24.Parent = ScrollingFrame
+		TextButton_24.BackgroundColor3 = Color3.new(1, 1, 1)
+		TextButton_24.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_24.BorderSizePixel = 0
+		TextButton_24.Position = UDim2.new(0.677740455, 0, 0.529187799, 0)
+		TextButton_24.Size = UDim2.new(0, 111, 0, 50)
+		TextButton_24.Font = Enum.Font.SourceSans
+		TextButton_24.TextColor3 = Color3.new(0, 0, 0)
+		TextButton_24.TextScaled = true
+		TextButton_24.TextSize = 14
+		TextButton_24.TextWrapped = true
+
+		UITextSizeConstraint_28.Parent = TextButton_24
+		UITextSizeConstraint_28.MaxTextSize = 14
+
+		UICorner_10.Parent = Frame_3
+		UICorner_10.CornerRadius = UDim.new(0, 5)
+
+		UIAspectRatioConstraint_10.Parent = Frame_3
+		UIAspectRatioConstraint_10.AspectRatio = 2.7602739334106445
+
+		UIAspectRatioConstraint_11.Parent = MainFrame
+		UIAspectRatioConstraint_11.AspectRatio = 1.9076212644577026
+
+		cmdsFrame.Name = "cmdsFrame"
+		cmdsFrame.Parent = Frame
+		cmdsFrame.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		cmdsFrame.BorderColor3 = Color3.new(0, 0, 0)
+		cmdsFrame.BorderSizePixel = 0
+		cmdsFrame.Position = UDim2.new(0.108021356, 0, 0.0156950671, 0)
+		cmdsFrame.Size = UDim2.new(0.883422434, 0, 0.970852017, 0)
+		cmdsFrame.Visible = false
+
+		TextLabel_2.Parent = cmdsFrame
+		TextLabel_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_2.BorderSizePixel = 0
+		TextLabel_2.Position = UDim2.new(0.0121065378, 0, 0.0415704399, 0)
+		TextLabel_2.Size = UDim2.new(0.966101706, 0, 0.0600461885, 0)
+		TextLabel_2.Font = Enum.Font.SourceSans
+		TextLabel_2.Text = "/enable/ disable Sparrow"
+		TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_2.TextScaled = true
+		TextLabel_2.TextSize = 14
+		TextLabel_2.TextWrapped = true
+
+		UICorner_11.Parent = TextLabel_2
+		UICorner_11.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_29.Parent = TextLabel_2
+		UITextSizeConstraint_29.MaxTextSize = 14
+
+		UIAspectRatioConstraint_12.Parent = TextLabel_2
+		UIAspectRatioConstraint_12.AspectRatio = 30.69230842590332
+
+		TextLabel_3.Parent = cmdsFrame
+		TextLabel_3.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_3.BorderSizePixel = 0
+		TextLabel_3.Position = UDim2.new(0.0121065378, 0, 0.12471132, 0)
+		TextLabel_3.Size = UDim2.new(0.966101706, 0, 0.115473442, 0)
+		TextLabel_3.Font = Enum.Font.SourceSans
+		TextLabel_3.Text = "What it does"
+		TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_3.TextScaled = true
+		TextLabel_3.TextSize = 14
+		TextLabel_3.TextWrapped = true
+
+		UICorner_12.Parent = TextLabel_3
+		UICorner_12.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_30.Parent = TextLabel_3
+		UITextSizeConstraint_30.MaxTextSize = 14
+
+		UIAspectRatioConstraint_13.Parent = TextLabel_3
+		UIAspectRatioConstraint_13.AspectRatio = 15.960000038146973
+
+		TextLabel_4.Parent = cmdsFrame
+		TextLabel_4.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_4.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_4.BorderSizePixel = 0
+		TextLabel_4.Position = UDim2.new(0.0121065378, 0, 0.272517323, 0)
+		TextLabel_4.Size = UDim2.new(0.966101706, 0, 0.0600461885, 0)
+		TextLabel_4.Font = Enum.Font.SourceSans
+		TextLabel_4.Text = "/"
+		TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_4.TextScaled = true
+		TextLabel_4.TextSize = 14
+		TextLabel_4.TextWrapped = true
+
+		UICorner_13.Parent = TextLabel_4
+		UICorner_13.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_31.Parent = TextLabel_4
+		UITextSizeConstraint_31.MaxTextSize = 14
+
+		UIAspectRatioConstraint_14.Parent = TextLabel_4
+		UIAspectRatioConstraint_14.AspectRatio = 30.69230842590332
+
+		TextLabel_5.Parent = cmdsFrame
+		TextLabel_5.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_5.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_5.BorderSizePixel = 0
+		TextLabel_5.Position = UDim2.new(0.0121065378, 0, 0.355658203, 0)
+		TextLabel_5.Size = UDim2.new(0.966101706, 0, 0.115473442, 0)
+		TextLabel_5.Font = Enum.Font.SourceSans
+		TextLabel_5.Text = "What it does"
+		TextLabel_5.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_5.TextScaled = true
+		TextLabel_5.TextSize = 14
+		TextLabel_5.TextWrapped = true
+
+		UICorner_14.Parent = TextLabel_5
+		UICorner_14.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_32.Parent = TextLabel_5
+		UITextSizeConstraint_32.MaxTextSize = 14
+
+		UIAspectRatioConstraint_15.Parent = TextLabel_5
+		UIAspectRatioConstraint_15.AspectRatio = 15.960000038146973
+
+		TextLabel_6.Parent = cmdsFrame
+		TextLabel_6.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_6.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_6.BorderSizePixel = 0
+		TextLabel_6.Position = UDim2.new(0.0121065378, 0, 0.515011549, 0)
+		TextLabel_6.Size = UDim2.new(0.966101706, 0, 0.0600461885, 0)
+		TextLabel_6.Font = Enum.Font.SourceSans
+		TextLabel_6.Text = "/"
+		TextLabel_6.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_6.TextScaled = true
+		TextLabel_6.TextSize = 14
+		TextLabel_6.TextWrapped = true
+
+		UICorner_15.Parent = TextLabel_6
+		UICorner_15.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_33.Parent = TextLabel_6
+		UITextSizeConstraint_33.MaxTextSize = 14
+
+		UIAspectRatioConstraint_16.Parent = TextLabel_6
+		UIAspectRatioConstraint_16.AspectRatio = 30.69230842590332
+
+		TextLabel_7.Parent = cmdsFrame
+		TextLabel_7.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_7.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_7.BorderSizePixel = 0
+		TextLabel_7.Position = UDim2.new(0.0121065378, 0, 0.598152399, 0)
+		TextLabel_7.Size = UDim2.new(0.966101706, 0, 0.115473442, 0)
+		TextLabel_7.Font = Enum.Font.SourceSans
+		TextLabel_7.Text = "What it does"
+		TextLabel_7.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_7.TextScaled = true
+		TextLabel_7.TextSize = 14
+		TextLabel_7.TextWrapped = true
+
+		UICorner_16.Parent = TextLabel_7
+		UICorner_16.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_34.Parent = TextLabel_7
+		UITextSizeConstraint_34.MaxTextSize = 14
+
+		UIAspectRatioConstraint_17.Parent = TextLabel_7
+		UIAspectRatioConstraint_17.AspectRatio = 15.960000038146973
+
+		TextLabel_8.Parent = cmdsFrame
+		TextLabel_8.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_8.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_8.BorderSizePixel = 0
+		TextLabel_8.Position = UDim2.new(0.0121065378, 0, 0.748267889, 0)
+		TextLabel_8.Size = UDim2.new(0.966101706, 0, 0.0600461885, 0)
+		TextLabel_8.Font = Enum.Font.SourceSans
+		TextLabel_8.Text = "/"
+		TextLabel_8.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_8.TextScaled = true
+		TextLabel_8.TextSize = 14
+		TextLabel_8.TextWrapped = true
+
+		UICorner_17.Parent = TextLabel_8
+		UICorner_17.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_35.Parent = TextLabel_8
+		UITextSizeConstraint_35.MaxTextSize = 14
+
+		UIAspectRatioConstraint_18.Parent = TextLabel_8
+		UIAspectRatioConstraint_18.AspectRatio = 30.69230842590332
+
+		TextLabel_9.Parent = cmdsFrame
+		TextLabel_9.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextLabel_9.BorderColor3 = Color3.new(0, 0, 0)
+		TextLabel_9.BorderSizePixel = 0
+		TextLabel_9.Position = UDim2.new(0.0121065378, 0, 0.831408799, 0)
+		TextLabel_9.Size = UDim2.new(0.966101706, 0, 0.115473442, 0)
+		TextLabel_9.Font = Enum.Font.SourceSans
+		TextLabel_9.Text = "What it does"
+		TextLabel_9.TextColor3 = Color3.new(1, 1, 1)
+		TextLabel_9.TextScaled = true
+		TextLabel_9.TextSize = 14
+		TextLabel_9.TextWrapped = true
+
+		UICorner_18.Parent = TextLabel_9
+		UICorner_18.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_36.Parent = TextLabel_9
+		UITextSizeConstraint_36.MaxTextSize = 14
+
+		UIAspectRatioConstraint_19.Parent = TextLabel_9
+		UIAspectRatioConstraint_19.AspectRatio = 15.960000038146973
+
+		UIAspectRatioConstraint_20.Parent = cmdsFrame
+		UIAspectRatioConstraint_20.AspectRatio = 1.9076212644577026
+
+		SupportFrame.Name = "SupportFrame"
+		SupportFrame.Parent = Frame
+		SupportFrame.BackgroundColor3 = Color3.new(0.215686, 0.215686, 0.215686)
+		SupportFrame.BorderColor3 = Color3.new(0, 0, 0)
+		SupportFrame.BorderSizePixel = 0
+		SupportFrame.Position = UDim2.new(0.108021356, 0, 0.0156950671, 0)
+		SupportFrame.Size = UDim2.new(0.883422434, 0, 0.970852017, 0)
+		SupportFrame.Visible = false
+
+		ImageLabel.Parent = SupportFrame
+		ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+		ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+		ImageLabel.BorderSizePixel = 0
+		ImageLabel.Position = UDim2.new(0.0242130756, 0, 0.0415704399, 0)
+		ImageLabel.Size = UDim2.new(0.121065378, 0, 0.230946884, 0)
+		ImageLabel.Image = "rbxassetid://1461403871"
+		ImageLabel.ImageColor3 = Color3.new(0, 0, 0)
+
+		UICorner_19.Parent = ImageLabel
+		UICorner_19.CornerRadius = UDim.new(0, 5)
+
+		UIAspectRatioConstraint_21.Parent = ImageLabel
+
+		TextButton_25.Parent = SupportFrame
+		TextButton_25.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextButton_25.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_25.BorderSizePixel = 0
+		TextButton_25.Position = UDim2.new(0.164648905, 0, 0.0993071571, 0)
+		TextButton_25.Size = UDim2.new(0.813559294, 0, 0.115473442, 0)
+		TextButton_25.Font = Enum.Font.SourceSans
+		TextButton_25.Text = "Copy Invite Link"
+		TextButton_25.TextColor3 = Color3.new(1, 1, 1)
+		TextButton_25.TextScaled = true
+		TextButton_25.TextSize = 14
+		TextButton_25.TextWrapped = true
+
+		TextButton_25.MouseButton1Click:Connect(function()
+			setclipboard("https://discord.gg/QTsD9ujvKz")
+		end)
+
+		UICorner_20.Parent = TextButton_25
+		UICorner_20.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_37.Parent = TextButton_25
+		UITextSizeConstraint_37.MaxTextSize = 14
+
+		UIAspectRatioConstraint_22.Parent = TextButton_25
+		UIAspectRatioConstraint_22.AspectRatio = 13.4399995803833
+
+		TextButton_26.Parent = SupportFrame
+		TextButton_26.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextButton_26.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_26.BorderSizePixel = 0
+		TextButton_26.Position = UDim2.new(0.164648905, 0, 0.38337183, 0)
+		TextButton_26.Size = UDim2.new(0.813559294, 0, 0.115473442, 0)
+		TextButton_26.Font = Enum.Font.SourceSans
+		TextButton_26.Text = "Copy Youtube Link"
+		TextButton_26.TextColor3 = Color3.new(1, 1, 1)
+		TextButton_26.TextScaled = true
+		TextButton_26.TextSize = 14
+		TextButton_26.TextWrapped = true
+
+		TextButton_26.MouseButton1Click:Connect(function()
+			setclipboard("https://youtube.com/@zhedihacks?si=c5Gq-rcRYMLRNTMD")
+		end)
+
+		UICorner_21.Parent = TextButton_26
+		UICorner_21.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_38.Parent = TextButton_26
+		UITextSizeConstraint_38.MaxTextSize = 14
+
+		UIAspectRatioConstraint_23.Parent = TextButton_26
+		UIAspectRatioConstraint_23.AspectRatio = 13.4399995803833
+
+		ImageLabel_2.Parent = SupportFrame
+		ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+		ImageLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+		ImageLabel_2.BorderSizePixel = 0
+		ImageLabel_2.Position = UDim2.new(0.0242130756, 0, 0.325635105, 0)
+		ImageLabel_2.Size = UDim2.new(0.121065378, 0, 0.230946884, 0)
+		ImageLabel_2.Image = "rbxassetid://1275974017"
+
+		UICorner_22.Parent = ImageLabel_2
+		UICorner_22.CornerRadius = UDim.new(0, 5)
+
+		UIAspectRatioConstraint_24.Parent = ImageLabel_2
+
+		TextButton_27.Parent = SupportFrame
+		TextButton_27.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+		TextButton_27.BorderColor3 = Color3.new(0, 0, 0)
+		TextButton_27.BorderSizePixel = 0
+		TextButton_27.Position = UDim2.new(0.164648905, 0, 0.658198595, 0)
+		TextButton_27.Size = UDim2.new(0.813559294, 0, 0.115473442, 0)
+		TextButton_27.Font = Enum.Font.SourceSans
+		TextButton_27.Text = "Copy Website Link"
+		TextButton_27.TextColor3 = Color3.new(1, 1, 1)
+		TextButton_27.TextScaled = true
+		TextButton_27.TextSize = 14
+		TextButton_27.TextWrapped = true
+
+		TextButton_27.MouseButton1Click:Connect(function()
+			setclipboard("https://sparrow-executor.vercel.app/")
+		end)
+
+		UICorner_23.Parent = TextButton_27
+		UICorner_23.CornerRadius = UDim.new(0, 5)
+
+		UITextSizeConstraint_39.Parent = TextButton_27
+		UITextSizeConstraint_39.MaxTextSize = 14
+
+		UIAspectRatioConstraint_25.Parent = TextButton_27
+		UIAspectRatioConstraint_25.AspectRatio = 13.4399995803833
+
+		ImageLabel_3.Parent = SupportFrame
+		ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+		ImageLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+		ImageLabel_3.BorderSizePixel = 0
+		ImageLabel_3.Position = UDim2.new(0.0242130756, 0, 0.6004619, 0)
+		ImageLabel_3.Size = UDim2.new(0.121065378, 0, 0.230946884, 0)
+		ImageLabel_3.Image = "rbxassetid://696398371"
+		ImageLabel_3.ImageColor3 = Color3.new(0, 0, 0)
+
+		UICorner_24.Parent = ImageLabel_3
+		UICorner_24.CornerRadius = UDim.new(0, 5)
+
+		UIAspectRatioConstraint_26.Parent = ImageLabel_3
+
+		UIAspectRatioConstraint_27.Parent = SupportFrame
+		UIAspectRatioConstraint_27.AspectRatio = 1.9076212644577026
+
+		UIAspectRatioConstraint_28.Parent = Frame
+		UIAspectRatioConstraint_28.AspectRatio = 2.0964126586914062
+	end
+end)
