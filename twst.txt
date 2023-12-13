@@ -1,0 +1,2246 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88 
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
+]=]
+
+-- Instances: 294 | Scripts: 8 | Modules: 0
+local G2L = {};
+
+-- StarterGui.sparrowlite
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"]["Name"] = [[sparrowlite]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.sparrowlite.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["2"]["Size"] = UDim2.new(0.48191824555397034, 0, 0.542397677898407, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Position"] = UDim2.new(0.17231009900569916, 0, 0.22292980551719666, 0);
+G2L["2"]["Draggable"] = true
+G2L["2"]["Active"] = true
+
+
+-- StarterGui.sparrowlite.Frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+
+
+-- StarterGui.sparrowlite.Frame.tabs
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["4"]["Size"] = UDim2.new(0.20880913734436035, 0, 0.5094339847564697, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Position"] = UDim2.new(0.022838499397039413, 0, 0.43000727891921997, 0);
+G2L["4"]["Name"] = [[tabs]];
+
+-- StarterGui.sparrowlite.Frame.tabs.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs
+G2L["6"] = Instance.new("Frame", G2L["4"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["6"]["Size"] = UDim2.new(0.9453125, 0, 0.7167474031448364, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Position"] = UDim2.new(0.054088592529296875, 0, 0.05434582754969597, 0);
+G2L["6"]["Name"] = [[tabs]];
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.h
+G2L["7"] = Instance.new("TextButton", G2L["6"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 30;
+G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["Size"] = UDim2.new(0.9090909361839294, 0, 0.18493150174617767, 0);
+G2L["7"]["Name"] = [[h]];
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Home]];
+G2L["7"]["Position"] = UDim2.new(0, 0, -0.027397260069847107, 0);
+G2L["7"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.h.ImageLabel
+G2L["8"] = Instance.new("ImageLabel", G2L["7"]);
+G2L["8"]["ZIndex"] = 2;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["Image"] = [[rbxassetid://15598611507]];
+G2L["8"]["Size"] = UDim2.new(0.13636364042758942, 0, 0.5555555820465088, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["BackgroundTransparency"] = 1;
+G2L["8"]["Position"] = UDim2.new(0, 0, 0.17391304671764374, 0);
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.h.ImageLabel.UIAspectRatioConstraint
+G2L["9"] = Instance.new("UIAspectRatioConstraint", G2L["8"]);
+G2L["9"]["AspectRatio"] = 1.077767014503479;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.h.UITextSizeConstraint
+G2L["a"] = Instance.new("UITextSizeConstraint", G2L["7"]);
+G2L["a"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.h.UIAspectRatioConstraint
+G2L["b"] = Instance.new("UIAspectRatioConstraint", G2L["7"]);
+G2L["b"]["AspectRatio"] = 4.2046074867248535;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.UIListLayout
+G2L["c"] = Instance.new("UIListLayout", G2L["6"]);
+G2L["c"]["Padding"] = UDim.new(0, 10);
+G2L["c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.e
+G2L["d"] = Instance.new("TextButton", G2L["6"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextScaled"] = true;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["TextSize"] = 30;
+G2L["d"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["Size"] = UDim2.new(0.9090909361839294, 0, 0.18493150174617767, 0);
+G2L["d"]["Name"] = [[e]];
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Executor]];
+G2L["d"]["Position"] = UDim2.new(0, 0, 0.22602739930152893, 0);
+G2L["d"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.e.ImageLabel
+G2L["e"] = Instance.new("ImageLabel", G2L["d"]);
+G2L["e"]["ZIndex"] = 2;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["Image"] = [[rbxassetid://15598625737]];
+G2L["e"]["Size"] = UDim2.new(0.13636364042758942, 0, 0.5555555820465088, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Position"] = UDim2.new(0, 0, 0.17391304671764374, 0);
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.e.ImageLabel.UIAspectRatioConstraint
+G2L["f"] = Instance.new("UIAspectRatioConstraint", G2L["e"]);
+G2L["f"]["AspectRatio"] = 1.032039999961853;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.e.UITextSizeConstraint
+G2L["10"] = Instance.new("UITextSizeConstraint", G2L["d"]);
+G2L["10"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.e.UIAspectRatioConstraint
+G2L["11"] = Instance.new("UIAspectRatioConstraint", G2L["d"]);
+G2L["11"]["AspectRatio"] = 4.390902996063232;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.hub
+G2L["12"] = Instance.new("TextButton", G2L["6"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 30;
+G2L["12"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["Size"] = UDim2.new(0.9090909361839294, 0, 0.18493150174617767, 0);
+G2L["12"]["Name"] = [[hub]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[        Sparrow Hub]];
+G2L["12"]["Position"] = UDim2.new(0, 0, 0.4794520437717438, 0);
+G2L["12"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.hub.ImageLabel
+G2L["13"] = Instance.new("ImageLabel", G2L["12"]);
+G2L["13"]["ZIndex"] = 2;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["Image"] = [[rbxassetid://15598653113]];
+G2L["13"]["Size"] = UDim2.new(0.13636364042758942, 0, 0.5555555820465088, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["Position"] = UDim2.new(0, 0, 0.17391304671764374, 0);
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.hub.ImageLabel.UIAspectRatioConstraint
+G2L["14"] = Instance.new("UIAspectRatioConstraint", G2L["13"]);
+G2L["14"]["AspectRatio"] = 1.032039999961853;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.hub.UITextSizeConstraint
+G2L["15"] = Instance.new("UITextSizeConstraint", G2L["12"]);
+G2L["15"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.hub.UIAspectRatioConstraint
+G2L["16"] = Instance.new("UIAspectRatioConstraint", G2L["12"]);
+G2L["16"]["AspectRatio"] = 4.390902996063232;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.search
+G2L["17"] = Instance.new("TextButton", G2L["6"]);
+G2L["17"]["TextWrapped"] = true;
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["TextScaled"] = true;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["TextSize"] = 30;
+G2L["17"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["17"]["Size"] = UDim2.new(0.9090909361839294, 0, 0.18493150174617767, 0);
+G2L["17"]["Name"] = [[search]];
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Text"] = [[Search]];
+G2L["17"]["Position"] = UDim2.new(0, 0, 0.732876718044281, 0);
+G2L["17"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.search.ImageLabel
+G2L["18"] = Instance.new("ImageLabel", G2L["17"]);
+G2L["18"]["ZIndex"] = 2;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["Image"] = [[rbxassetid://15598648827]];
+G2L["18"]["Size"] = UDim2.new(0.13636364042758942, 0, 0.5555555820465088, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["BackgroundTransparency"] = 3;
+G2L["18"]["Position"] = UDim2.new(0, 0, 0.17391304671764374, 0);
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.search.ImageLabel.UIAspectRatioConstraint
+G2L["19"] = Instance.new("UIAspectRatioConstraint", G2L["18"]);
+G2L["19"]["AspectRatio"] = 1.077767014503479;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.search.UITextSizeConstraint
+G2L["1a"] = Instance.new("UITextSizeConstraint", G2L["17"]);
+G2L["1a"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.search.UIAspectRatioConstraint
+G2L["1b"] = Instance.new("UIAspectRatioConstraint", G2L["17"]);
+G2L["1b"]["AspectRatio"] = 4.390902996063232;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.s
+G2L["1c"] = Instance.new("TextButton", G2L["6"]);
+G2L["1c"]["TextWrapped"] = true;
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextScaled"] = true;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["TextSize"] = 30;
+G2L["1c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["Size"] = UDim2.new(0.9090909361839294, 0, 0.18493150174617767, 0);
+G2L["1c"]["Name"] = [[s]];
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["Text"] = [[Settings]];
+G2L["1c"]["Position"] = UDim2.new(0, 0, 0.9863013625144958, 0);
+G2L["1c"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.s.ImageLabel
+G2L["1d"] = Instance.new("ImageLabel", G2L["1c"]);
+G2L["1d"]["ZIndex"] = 2;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["Image"] = [[rbxassetid://15624269266]];
+G2L["1d"]["Size"] = UDim2.new(0.13636364042758942, 0, 0.5555555820465088, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["BackgroundTransparency"] = 1;
+G2L["1d"]["Position"] = UDim2.new(0, 0, 0.17391304671764374, 0);
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.s.ImageLabel.UIAspectRatioConstraint
+G2L["1e"] = Instance.new("UIAspectRatioConstraint", G2L["1d"]);
+G2L["1e"]["AspectRatio"] = 1.032039999961853;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.s.UITextSizeConstraint
+G2L["1f"] = Instance.new("UITextSizeConstraint", G2L["1c"]);
+G2L["1f"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.s.UIAspectRatioConstraint
+G2L["20"] = Instance.new("UIAspectRatioConstraint", G2L["1c"]);
+G2L["20"]["AspectRatio"] = 4.390902996063232;
+
+-- StarterGui.sparrowlite.Frame.tabs.tabs.UIAspectRatioConstraint
+G2L["21"] = Instance.new("UIAspectRatioConstraint", G2L["6"]);
+G2L["21"]["AspectRatio"] = 0.8932178616523743;
+
+-- StarterGui.sparrowlite.Frame.tabs.UIAspectRatioConstraint
+G2L["22"] = Instance.new("UIAspectRatioConstraint", G2L["4"]);
+G2L["22"]["AspectRatio"] = 0.6772485971450806;
+
+-- StarterGui.sparrowlite.Frame.user
+G2L["23"] = Instance.new("Frame", G2L["2"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["23"]["Size"] = UDim2.new(0.20880913734436035, 0, 0.2884097099304199, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Position"] = UDim2.new(0.022838499397039413, 0, 0.13620677590370178, 0);
+G2L["23"]["Name"] = [[user]];
+
+-- StarterGui.sparrowlite.Frame.user.UICorner
+G2L["24"] = Instance.new("UICorner", G2L["23"]);
+
+
+-- StarterGui.sparrowlite.Frame.user.ImageLabel
+G2L["25"] = Instance.new("ImageLabel", G2L["23"]);
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["25"]["Size"] = UDim2.new(0.4296875, 0, 0.4953271150588989, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Position"] = UDim2.new(0.28125, 0, 0.09885969758033752, 0);
+
+-- StarterGui.sparrowlite.Frame.user.ImageLabel.UICorner
+G2L["26"] = Instance.new("UICorner", G2L["25"]);
+G2L["26"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.sparrowlite.Frame.user.ImageLabel.LocalScript
+G2L["27"] = Instance.new("LocalScript", G2L["25"]);
+
+
+-- StarterGui.sparrowlite.Frame.user.ImageLabel.UIAspectRatioConstraint
+G2L["28"] = Instance.new("UIAspectRatioConstraint", G2L["25"]);
+G2L["28"]["AspectRatio"] = 1.0377358198165894;
+
+-- StarterGui.sparrowlite.Frame.user.TextLabel
+G2L["29"] = Instance.new("TextLabel", G2L["23"]);
+G2L["29"]["TextWrapped"] = true;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextScaled"] = true;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["29"]["TextSize"] = 30;
+G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["Size"] = UDim2.new(0.9921875, 0, 0.1962616890668869, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[User1]];
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Position"] = UDim2.new(-0.007811546325683594, 0, 0.6039628386497498, 0);
+
+-- StarterGui.sparrowlite.Frame.user.TextLabel.UITextSizeConstraint
+G2L["2a"] = Instance.new("UITextSizeConstraint", G2L["29"]);
+G2L["2a"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.user.TextLabel.UIAspectRatioConstraint
+G2L["2b"] = Instance.new("UIAspectRatioConstraint", G2L["29"]);
+G2L["2b"]["AspectRatio"] = 6.047618865966797;
+
+-- StarterGui.sparrowlite.Frame.user.UIAspectRatioConstraint
+G2L["2c"] = Instance.new("UIAspectRatioConstraint", G2L["23"]);
+G2L["2c"]["AspectRatio"] = 1.1962616443634033;
+
+-- StarterGui.sparrowlite.Frame.exit
+G2L["2d"] = Instance.new("Frame", G2L["2"]);
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["2d"]["Size"] = UDim2.new(0.05057096108794212, 0, 0.06738544255495071, 0);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Position"] = UDim2.new(0.9320498704910278, 0, 0.025677209720015526, 0);
+G2L["2d"]["Name"] = [[exit]];
+
+-- StarterGui.sparrowlite.Frame.exit.UICorner
+G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
+G2L["2e"]["CornerRadius"] = UDim.new(0, 16);
+
+-- StarterGui.sparrowlite.Frame.exit.ImageButton
+G2L["2f"] = Instance.new("ImageButton", G2L["2d"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["Image"] = [[rbxassetid://15624850446]];
+G2L["2f"]["Size"] = UDim2.new(0.4838709533214569, 0, 0.6000000238418579, 0);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Position"] = UDim2.new(0.2315083146095276, 0, 0.20000000298023224, 0);
+G2L["2f"]["BackgroundTransparency"] = 0.9900000095367432;
+
+-- StarterGui.sparrowlite.Frame.exit.ImageButton.UIAspectRatioConstraint
+G2L["30"] = Instance.new("UIAspectRatioConstraint", G2L["2f"]);
+G2L["30"]["AspectRatio"] = 0.9999999403953552;
+
+-- StarterGui.sparrowlite.Frame.exit.UIAspectRatioConstraint
+G2L["31"] = Instance.new("UIAspectRatioConstraint", G2L["2d"]);
+G2L["31"]["AspectRatio"] = 1.2400000095367432;
+
+-- StarterGui.sparrowlite.Frame.TextLabel
+G2L["32"] = Instance.new("TextLabel", G2L["2"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextScaled"] = true;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["32"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["32"]["TextSize"] = 30;
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["Size"] = UDim2.new(0.4518760144710541, 0, 0.056603774428367615, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[Sparrow Lite]];
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["Position"] = UDim2.new(0.04078303277492523, 0, 0.03773584961891174, 0);
+
+-- StarterGui.sparrowlite.Frame.TextLabel.UITextSizeConstraint
+G2L["33"] = Instance.new("UITextSizeConstraint", G2L["32"]);
+G2L["33"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.TextLabel.UIAspectRatioConstraint
+G2L["34"] = Instance.new("UIAspectRatioConstraint", G2L["32"]);
+G2L["34"]["AspectRatio"] = 13.190476417541504;
+
+-- StarterGui.sparrowlite.Frame.home
+G2L["35"] = Instance.new("Frame", G2L["2"]);
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["35"]["Size"] = UDim2.new(0.7210440635681152, 0, 0.8005390763282776, 0);
+G2L["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["35"]["Position"] = UDim2.new(0.26427406072616577, 0, 0.13620677590370178, 0);
+G2L["35"]["Visible"] = false;
+G2L["35"]["Name"] = [[home]];
+
+-- StarterGui.sparrowlite.Frame.home.key
+G2L["36"] = Instance.new("Frame", G2L["35"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["36"]["Size"] = UDim2.new(0.3619910180568695, 0, 0.11600355803966522, 0);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Position"] = UDim2.new(0.6309155821800232, 0, -0.001840302487835288, 0);
+G2L["36"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.home.key.UICorner
+G2L["37"] = Instance.new("UICorner", G2L["36"]);
+G2L["37"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.key.ImageLabel
+G2L["38"] = Instance.new("ImageLabel", G2L["36"]);
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["Image"] = [[rbxassetid://15624498305]];
+G2L["38"]["Size"] = UDim2.new(0.0937499850988388, 0, 0.43537500500679016, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["Position"] = UDim2.new(0.07515066862106323, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.home.key.ImageLabel.UIAspectRatioConstraint
+G2L["39"] = Instance.new("UIAspectRatioConstraint", G2L["38"]);
+
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel
+G2L["3a"] = Instance.new("TextLabel", G2L["36"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextSize"] = 30;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["Size"] = UDim2.new(0.9937497973442078, 0, 0.6675750017166138, 0);
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[Key Status]];
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Position"] = UDim2.new(0, 0, 0.1404884308576584, 0);
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UITextSizeConstraint
+G2L["3b"] = Instance.new("UITextSizeConstraint", G2L["3a"]);
+G2L["3b"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UIAspectRatioConstraint
+G2L["3c"] = Instance.new("UIAspectRatioConstraint", G2L["3a"]);
+G2L["3c"]["AspectRatio"] = 6.91304349899292;
+
+-- StarterGui.sparrowlite.Frame.home.key.UIAspectRatioConstraint
+G2L["3d"] = Instance.new("UIAspectRatioConstraint", G2L["36"]);
+G2L["3d"]["AspectRatio"] = 4.644001007080078;
+
+-- StarterGui.sparrowlite.Frame.home.list
+G2L["3e"] = Instance.new("Frame", G2L["35"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["3e"]["Size"] = UDim2.new(0.5769230723381042, 0, 0.4511784613132477, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Position"] = UDim2.new(-0.0004318030260037631, 0, 0.5479347705841064, 0);
+G2L["3e"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.home.list.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["3f"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.list.TextLabel
+G2L["40"] = Instance.new("TextLabel", G2L["3e"]);
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["40"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["40"]["TextSize"] = 25;
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["Size"] = UDim2.new(0, 81, 0, 21);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[Keyless: true]];
+G2L["40"]["BackgroundTransparency"] = 1;
+G2L["40"]["Position"] = UDim2.new(0.5843847990036011, 0, 0.01597139798104763, 0);
+
+-- StarterGui.sparrowlite.Frame.home.list.list
+G2L["41"] = Instance.new("Frame", G2L["3e"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["41"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Position"] = UDim2.new(0.049040310084819794, 0, 0.19697867333889008, 0);
+G2L["41"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.home.list.list.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
+G2L["42"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.list.list
+G2L["43"] = Instance.new("Frame", G2L["3e"]);
+G2L["43"]["BorderSizePixel"] = 0;
+G2L["43"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["43"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["43"]["Position"] = UDim2.new(0.049040310084819794, 0, 0.44241833686828613, 0);
+G2L["43"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.home.list.list.UICorner
+G2L["44"] = Instance.new("UICorner", G2L["43"]);
+G2L["44"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.list.list
+G2L["45"] = Instance.new("Frame", G2L["3e"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["45"]["Size"] = UDim2.new(0, 219, 0, 27);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Position"] = UDim2.new(0.049040310084819794, 0, 0.689516007900238, 0);
+G2L["45"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.home.list.list.UICorner
+G2L["46"] = Instance.new("UICorner", G2L["45"]);
+G2L["46"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.list.list
+G2L["47"] = Instance.new("Frame", G2L["3e"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["47"]["Size"] = UDim2.new(0, 8, 0, 107);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Position"] = UDim2.new(0.9426621198654175, 0, 0.14130891859531403, 0);
+G2L["47"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.home.list.list.UICorner
+G2L["48"] = Instance.new("UICorner", G2L["47"]);
+G2L["48"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.list.UIAspectRatioConstraint
+G2L["49"] = Instance.new("UIAspectRatioConstraint", G2L["3e"]);
+G2L["49"]["AspectRatio"] = 1.9029850959777832;
+
+-- StarterGui.sparrowlite.Frame.home.tags
+G2L["4a"] = Instance.new("Frame", G2L["35"]);
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["4a"]["Size"] = UDim2.new(0.5769230723381042, 0, 0.10774410516023636, 0);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["Position"] = UDim2.new(-0.0004318030260037631, 0, 0.43946462869644165, 0);
+G2L["4a"]["Name"] = [[tags]];
+
+-- StarterGui.sparrowlite.Frame.home.tags.UICorner
+G2L["4b"] = Instance.new("UICorner", G2L["4a"]);
+G2L["4b"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.tags.ImageLabel
+G2L["4c"] = Instance.new("ImageLabel", G2L["4a"]);
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4c"]["Image"] = [[rbxassetid://15624516807]];
+G2L["4c"]["Size"] = UDim2.new(0.0784313753247261, 0, 0.625, 0);
+G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["BackgroundTransparency"] = 1;
+G2L["4c"]["Position"] = UDim2.new(0.04696451872587204, 0, 0.2417764663696289, 0);
+
+-- StarterGui.sparrowlite.Frame.home.tags.ImageLabel.UIAspectRatioConstraint
+G2L["4d"] = Instance.new("UIAspectRatioConstraint", G2L["4c"]);
+
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel
+G2L["4e"] = Instance.new("TextLabel", G2L["4a"]);
+G2L["4e"]["TextWrapped"] = true;
+G2L["4e"]["BorderSizePixel"] = 0;
+G2L["4e"]["TextScaled"] = true;
+G2L["4e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4e"]["TextSize"] = 30;
+G2L["4e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4e"]["Size"] = UDim2.new(0.3529411852359772, 0, 0.75, 0);
+G2L["4e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4e"]["Text"] = [[Social Media]];
+G2L["4e"]["BackgroundTransparency"] = 1;
+G2L["4e"]["Position"] = UDim2.new(0.13732598721981049, 0, 0.1792764663696289, 0);
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel.UITextSizeConstraint
+G2L["4f"] = Instance.new("UITextSizeConstraint", G2L["4e"]);
+G2L["4f"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel.UIAspectRatioConstraint
+G2L["50"] = Instance.new("UIAspectRatioConstraint", G2L["4e"]);
+G2L["50"]["AspectRatio"] = 3.5908963680267334;
+
+-- StarterGui.sparrowlite.Frame.home.tags.UIAspectRatioConstraint
+G2L["51"] = Instance.new("UIAspectRatioConstraint", G2L["4a"]);
+G2L["51"]["AspectRatio"] = 7.96875;
+
+-- StarterGui.sparrowlite.Frame.home.tags
+G2L["52"] = Instance.new("Frame", G2L["35"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["52"]["Size"] = UDim2.new(0.37556561827659607, 0, 0.12794612348079681, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Position"] = UDim2.new(0.6233898997306824, 0, 0.44619864225387573, 0);
+G2L["52"]["Name"] = [[tags]];
+
+-- StarterGui.sparrowlite.Frame.home.tags.UICorner
+G2L["53"] = Instance.new("UICorner", G2L["52"]);
+G2L["53"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel
+G2L["54"] = Instance.new("TextLabel", G2L["52"]);
+G2L["54"]["TextWrapped"] = true;
+G2L["54"]["BorderSizePixel"] = 0;
+G2L["54"]["TextScaled"] = true;
+G2L["54"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["54"]["TextSize"] = 30;
+G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["54"]["Size"] = UDim2.new(0.9698795080184937, 0, 0.6052631735801697, 0);
+G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["54"]["Text"] = [[Executor Team]];
+G2L["54"]["BackgroundTransparency"] = 1;
+G2L["54"]["Position"] = UDim2.new(0.007990090176463127, 0, 0.2302727997303009, 0);
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel.UITextSizeConstraint
+G2L["55"] = Instance.new("UITextSizeConstraint", G2L["54"]);
+G2L["55"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.tags.TextLabel.UIAspectRatioConstraint
+G2L["56"] = Instance.new("UIAspectRatioConstraint", G2L["54"]);
+G2L["56"]["AspectRatio"] = 6.703006744384766;
+
+-- StarterGui.sparrowlite.Frame.home.tags.ImageLabel
+G2L["57"] = Instance.new("ImageLabel", G2L["52"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["57"]["Image"] = [[rbxassetid://15624496117]];
+G2L["57"]["Size"] = UDim2.new(0.1204819306731224, 0, 0.5263158082962036, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"]["BackgroundTransparency"] = 1;
+G2L["57"]["Position"] = UDim2.new(0.05060255527496338, 0, 0.28289473056793213, 0);
+
+-- StarterGui.sparrowlite.Frame.home.tags.ImageLabel.UIAspectRatioConstraint
+G2L["58"] = Instance.new("UIAspectRatioConstraint", G2L["57"]);
+G2L["58"]["AspectRatio"] = 0.957572340965271;
+
+-- StarterGui.sparrowlite.Frame.home.tags.UIAspectRatioConstraint
+G2L["59"] = Instance.new("UIAspectRatioConstraint", G2L["52"]);
+G2L["59"]["AspectRatio"] = 4.3684210777282715;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist
+G2L["5a"] = Instance.new("Frame", G2L["35"]);
+G2L["5a"]["BorderSizePixel"] = 0;
+G2L["5a"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["5a"]["Size"] = UDim2.new(0.37556561827659607, 0, 0.4208754301071167, 0);
+G2L["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5a"]["Position"] = UDim2.new(0.6233898997306824, 0, 0.5755605697631836, 0);
+G2L["5a"]["Name"] = [[teamlist]];
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.UICorner
+G2L["5b"] = Instance.new("UICorner", G2L["5a"]);
+G2L["5b"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist
+G2L["5c"] = Instance.new("Frame", G2L["5a"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["5c"]["Size"] = UDim2.new(0.8253012299537659, 0, 0.24799999594688416, 0);
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["Position"] = UDim2.new(0.06015051528811455, 0, 0.39156055450439453, 0);
+G2L["5c"]["Name"] = [[teamlist]];
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UICorner
+G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
+G2L["5d"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel
+G2L["5e"] = Instance.new("ImageLabel", G2L["5c"]);
+G2L["5e"]["BorderSizePixel"] = 0;
+G2L["5e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5e"]["Image"] = [[rbxassetid://15607542625]];
+G2L["5e"]["Size"] = UDim2.new(0.20437955856323242, 0, 0.8387096524238586, 0);
+G2L["5e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5e"]["Position"] = UDim2.new(0.10319352149963379, 0, 0.016400737687945366, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UICorner
+G2L["5f"] = Instance.new("UICorner", G2L["5e"]);
+G2L["5f"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UIAspectRatioConstraint
+G2L["60"] = Instance.new("UIAspectRatioConstraint", G2L["5e"]);
+G2L["60"]["AspectRatio"] = 1.076923131942749;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame
+G2L["61"] = Instance.new("Frame", G2L["5c"]);
+G2L["61"]["BorderSizePixel"] = 0;
+G2L["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["61"]["Size"] = UDim2.new(0.029197080060839653, 0, 0.8387096524238586, 0);
+G2L["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["61"]["Position"] = UDim2.new(0.0462869256734848, 0, 0.03194304555654526, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame.UIAspectRatioConstraint
+G2L["62"] = Instance.new("UIAspectRatioConstraint", G2L["61"]);
+G2L["62"]["AspectRatio"] = 0.1538461595773697;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel
+G2L["63"] = Instance.new("TextLabel", G2L["5c"]);
+G2L["63"]["TextWrapped"] = true;
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["TextScaled"] = true;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["63"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["63"]["TextSize"] = 30;
+G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["Size"] = UDim2.new(0.6350364685058594, 0, 0.7419354915618896, 0);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Text"] = [[Ui: AnyaDEV]];
+G2L["63"]["BackgroundTransparency"] = 1;
+G2L["63"]["Position"] = UDim2.new(0.33095845580101013, 0, 0.06304045766592026, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UITextSizeConstraint
+G2L["64"] = Instance.new("UITextSizeConstraint", G2L["63"]);
+G2L["64"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UIAspectRatioConstraint
+G2L["65"] = Instance.new("UIAspectRatioConstraint", G2L["63"]);
+G2L["65"]["AspectRatio"] = 3.7826087474823;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UIAspectRatioConstraint
+G2L["66"] = Instance.new("UIAspectRatioConstraint", G2L["5c"]);
+G2L["66"]["AspectRatio"] = 4.4193549156188965;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist
+G2L["67"] = Instance.new("Frame", G2L["5a"]);
+G2L["67"]["BorderSizePixel"] = 0;
+G2L["67"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["67"]["Size"] = UDim2.new(0.8253012299537659, 0, 0.24799999594688416, 0);
+G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["67"]["Position"] = UDim2.new(0.06015051528811455, 0, 0.7035605311393738, 0);
+G2L["67"]["Name"] = [[teamlist]];
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UICorner
+G2L["68"] = Instance.new("UICorner", G2L["67"]);
+G2L["68"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel
+G2L["69"] = Instance.new("ImageLabel", G2L["67"]);
+G2L["69"]["BorderSizePixel"] = 0;
+G2L["69"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["69"]["Image"] = [[rbxassetid://15607452207]];
+G2L["69"]["Size"] = UDim2.new(0.20437955856323242, 0, 0.8387096524238586, 0);
+G2L["69"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["69"]["Position"] = UDim2.new(0.10319352149963379, 0, 0.016400737687945366, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UICorner
+G2L["6a"] = Instance.new("UICorner", G2L["69"]);
+G2L["6a"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UIAspectRatioConstraint
+G2L["6b"] = Instance.new("UIAspectRatioConstraint", G2L["69"]);
+G2L["6b"]["AspectRatio"] = 1.076923131942749;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame
+G2L["6c"] = Instance.new("Frame", G2L["67"]);
+G2L["6c"]["BorderSizePixel"] = 0;
+G2L["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6c"]["Size"] = UDim2.new(0.029197080060839653, 0, 0.8387096524238586, 0);
+G2L["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6c"]["Position"] = UDim2.new(0.0462869256734848, 0, 0.03194304555654526, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame.UIAspectRatioConstraint
+G2L["6d"] = Instance.new("UIAspectRatioConstraint", G2L["6c"]);
+G2L["6d"]["AspectRatio"] = 0.1538461595773697;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel
+G2L["6e"] = Instance.new("TextLabel", G2L["67"]);
+G2L["6e"]["TextWrapped"] = true;
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["TextScaled"] = true;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6e"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6e"]["TextSize"] = 20;
+G2L["6e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["Size"] = UDim2.new(0.6350364685058594, 0, 0.7419354915618896, 0);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Text"] = [[Powered: Nathan]];
+G2L["6e"]["BackgroundTransparency"] = 1;
+G2L["6e"]["Position"] = UDim2.new(0.33095845580101013, 0, 0.06304045766592026, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UITextSizeConstraint
+G2L["6f"] = Instance.new("UITextSizeConstraint", G2L["6e"]);
+G2L["6f"]["MaxTextSize"] = 20;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UIAspectRatioConstraint
+G2L["70"] = Instance.new("UIAspectRatioConstraint", G2L["6e"]);
+G2L["70"]["AspectRatio"] = 3.7826087474823;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UIAspectRatioConstraint
+G2L["71"] = Instance.new("UIAspectRatioConstraint", G2L["67"]);
+G2L["71"]["AspectRatio"] = 4.4193549156188965;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist
+G2L["72"] = Instance.new("Frame", G2L["5a"]);
+G2L["72"]["BorderSizePixel"] = 0;
+G2L["72"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["72"]["Size"] = UDim2.new(0.8253012299537659, 0, 0.24799999594688416, 0);
+G2L["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["72"]["Position"] = UDim2.new(0.06015051528811455, 0, 0.11156054586172104, 0);
+G2L["72"]["Name"] = [[teamlist]];
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UICorner
+G2L["73"] = Instance.new("UICorner", G2L["72"]);
+G2L["73"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame
+G2L["74"] = Instance.new("Frame", G2L["72"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["Size"] = UDim2.new(0.029197080060839653, 0, 0.8387096524238586, 0);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Position"] = UDim2.new(0.0462869256734848, 0, 0.03194304555654526, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.Frame.UIAspectRatioConstraint
+G2L["75"] = Instance.new("UIAspectRatioConstraint", G2L["74"]);
+G2L["75"]["AspectRatio"] = 0.14731884002685547;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel
+G2L["76"] = Instance.new("TextLabel", G2L["72"]);
+G2L["76"]["TextWrapped"] = true;
+G2L["76"]["BorderSizePixel"] = 0;
+G2L["76"]["TextScaled"] = true;
+G2L["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["76"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["76"]["TextSize"] = 18;
+G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["76"]["Size"] = UDim2.new(0.540145993232727, 0, 0.7419354915618896, 0);
+G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["76"]["Text"] = [[Owner: cluckmaster]];
+G2L["76"]["BackgroundTransparency"] = 1;
+G2L["76"]["Position"] = UDim2.new(0.33095845580101013, 0, 0.06304045766592026, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UITextSizeConstraint
+G2L["77"] = Instance.new("UITextSizeConstraint", G2L["76"]);
+G2L["77"]["MaxTextSize"] = 18;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.TextLabel.UIAspectRatioConstraint
+G2L["78"] = Instance.new("UIAspectRatioConstraint", G2L["76"]);
+G2L["78"]["AspectRatio"] = 3.2173912525177;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel
+G2L["79"] = Instance.new("ImageLabel", G2L["72"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["79"]["Image"] = [[rbxassetid://15599411994]];
+G2L["79"]["Size"] = UDim2.new(0.20437955856323242, 0, 0.8387096524238586, 0);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"]["Position"] = UDim2.new(0.10319352149963379, 0, 0.016400737687945366, 0);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UICorner
+G2L["7a"] = Instance.new("UICorner", G2L["79"]);
+G2L["7a"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.ImageLabel.UIAspectRatioConstraint
+G2L["7b"] = Instance.new("UIAspectRatioConstraint", G2L["79"]);
+G2L["7b"]["AspectRatio"] = 1.0312317609786987;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.teamlist.UIAspectRatioConstraint
+G2L["7c"] = Instance.new("UIAspectRatioConstraint", G2L["72"]);
+G2L["7c"]["AspectRatio"] = 4.4193549156188965;
+
+-- StarterGui.sparrowlite.Frame.home.teamlist.UIAspectRatioConstraint
+G2L["7d"] = Instance.new("UIAspectRatioConstraint", G2L["5a"]);
+G2L["7d"]["AspectRatio"] = 1.3279999494552612;
+
+-- StarterGui.sparrowlite.Frame.home.key
+G2L["7e"] = Instance.new("Frame", G2L["35"]);
+G2L["7e"]["BorderSizePixel"] = 0;
+G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["7e"]["Size"] = UDim2.new(0.36199095845222473, 0, 0.30639731884002686, 0);
+G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7e"]["Position"] = UDim2.new(0.6309154629707336, 0, 0.11416327953338623, 0);
+G2L["7e"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.home.key.UICorner
+G2L["7f"] = Instance.new("UICorner", G2L["7e"]);
+G2L["7f"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel
+G2L["80"] = Instance.new("TextLabel", G2L["7e"]);
+G2L["80"]["TextWrapped"] = true;
+G2L["80"]["BorderSizePixel"] = 0;
+G2L["80"]["TextScaled"] = true;
+G2L["80"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["80"]["TextSize"] = 30;
+G2L["80"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["80"]["Size"] = UDim2.new(0.5687500238418579, 0, 0.24175824224948883, 0);
+G2L["80"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["80"]["Text"] = [[999D]];
+G2L["80"]["BackgroundTransparency"] = 1;
+G2L["80"]["Position"] = UDim2.new(0.3812499940395355, 0, 0.3774682283401489, 0);
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UITextSizeConstraint
+G2L["81"] = Instance.new("UITextSizeConstraint", G2L["80"]);
+G2L["81"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UIAspectRatioConstraint
+G2L["82"] = Instance.new("UIAspectRatioConstraint", G2L["80"]);
+G2L["82"]["AspectRatio"] = 4.136363506317139;
+
+-- StarterGui.sparrowlite.Frame.home.key.ImageLabel
+G2L["83"] = Instance.new("ImageLabel", G2L["7e"]);
+G2L["83"]["BorderSizePixel"] = 0;
+G2L["83"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["83"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["83"]["Size"] = UDim2.new(0.34375, 0, 0.5824176073074341, 0);
+G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["83"]["Position"] = UDim2.new(0.08124999701976776, 0, 0.11210817098617554, 0);
+
+-- StarterGui.sparrowlite.Frame.home.key.ImageLabel.UICorner
+G2L["84"] = Instance.new("UICorner", G2L["83"]);
+G2L["84"]["CornerRadius"] = UDim.new(1, 8);
+
+-- StarterGui.sparrowlite.Frame.home.key.ImageLabel.UIAspectRatioConstraint
+G2L["85"] = Instance.new("UIAspectRatioConstraint", G2L["83"]);
+G2L["85"]["AspectRatio"] = 1.0377358198165894;
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel
+G2L["86"] = Instance.new("TextLabel", G2L["7e"]);
+G2L["86"]["TextWrapped"] = true;
+G2L["86"]["BorderSizePixel"] = 0;
+G2L["86"]["TextScaled"] = true;
+G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["86"]["TextSize"] = 30;
+G2L["86"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["86"]["Size"] = UDim2.new(0.2874999940395355, 0, 0.4175824224948883, 0);
+G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["86"]["Text"] = [[Time:]];
+G2L["86"]["BackgroundTransparency"] = 1;
+G2L["86"]["Position"] = UDim2.new(0.5280120968818665, 0, 0.02581988275051117, 0);
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UITextSizeConstraint
+G2L["87"] = Instance.new("UITextSizeConstraint", G2L["86"]);
+G2L["87"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.key.TextLabel.UIAspectRatioConstraint
+G2L["88"] = Instance.new("UIAspectRatioConstraint", G2L["86"]);
+G2L["88"]["AspectRatio"] = 1.2105263471603394;
+
+-- StarterGui.sparrowlite.Frame.home.key.UIAspectRatioConstraint
+G2L["89"] = Instance.new("UIAspectRatioConstraint", G2L["7e"]);
+G2L["89"]["AspectRatio"] = 1.7582417726516724;
+
+-- StarterGui.sparrowlite.Frame.home.fps
+G2L["8a"] = Instance.new("Frame", G2L["35"]);
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["8a"]["Size"] = UDim2.new(0.18099547922611237, 0, 0.24242424964904785, 0);
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Position"] = UDim2.new(0.4206410348415375, 0, 0.042612042278051376, 0);
+G2L["8a"]["Name"] = [[fps]];
+
+-- StarterGui.sparrowlite.Frame.home.fps.UICorner
+G2L["8b"] = Instance.new("UICorner", G2L["8a"]);
+G2L["8b"]["CornerRadius"] = UDim.new(0, 16);
+
+-- StarterGui.sparrowlite.Frame.home.fps.TextLabel
+G2L["8c"] = Instance.new("TextLabel", G2L["8a"]);
+G2L["8c"]["TextWrapped"] = true;
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["TextScaled"] = true;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8c"]["TextSize"] = 30;
+G2L["8c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8c"]["Size"] = UDim2.new(1, 0, 0.625, 0);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"]["Text"] = [[Fps: 0]];
+G2L["8c"]["BackgroundTransparency"] = 1;
+G2L["8c"]["Position"] = UDim2.new(0, 0, 0.3570946455001831, 0);
+
+-- StarterGui.sparrowlite.Frame.home.fps.TextLabel.UITextSizeConstraint
+G2L["8d"] = Instance.new("UITextSizeConstraint", G2L["8c"]);
+G2L["8d"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.fps.TextLabel.UIAspectRatioConstraint
+G2L["8e"] = Instance.new("UIAspectRatioConstraint", G2L["8c"]);
+G2L["8e"]["AspectRatio"] = 1.7777777910232544;
+
+-- StarterGui.sparrowlite.Frame.home.fps.ImageLabel
+G2L["8f"] = Instance.new("ImageLabel", G2L["8a"]);
+G2L["8f"]["BorderSizePixel"] = 0;
+G2L["8f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"]["Image"] = [[rbxassetid://15624471135]];
+G2L["8f"]["Size"] = UDim2.new(0.25, 0, 0.2777777910232544, 0);
+G2L["8f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8f"]["BackgroundTransparency"] = 1;
+G2L["8f"]["Position"] = UDim2.new(0.375, 0, 0.125, 0);
+
+-- StarterGui.sparrowlite.Frame.home.fps.ImageLabel.UIAspectRatioConstraint
+G2L["90"] = Instance.new("UIAspectRatioConstraint", G2L["8f"]);
+
+
+-- StarterGui.sparrowlite.Frame.home.fps.UIAspectRatioConstraint
+G2L["91"] = Instance.new("UIAspectRatioConstraint", G2L["8a"]);
+G2L["91"]["AspectRatio"] = 1.1111111640930176;
+
+-- StarterGui.sparrowlite.Frame.home.users
+G2L["92"] = Instance.new("Frame", G2L["35"]);
+G2L["92"]["BorderSizePixel"] = 0;
+G2L["92"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["92"]["Size"] = UDim2.new(0.18099547922611237, 0, 0.24242424964904785, 0);
+G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["92"]["Position"] = UDim2.new(0.2107357531785965, 0, 0.04328363761305809, 0);
+G2L["92"]["Name"] = [[users]];
+
+-- StarterGui.sparrowlite.Frame.home.users.UICorner
+G2L["93"] = Instance.new("UICorner", G2L["92"]);
+G2L["93"]["CornerRadius"] = UDim.new(0, 16);
+
+-- StarterGui.sparrowlite.Frame.home.users.TextLabel
+G2L["94"] = Instance.new("TextLabel", G2L["92"]);
+G2L["94"]["TextWrapped"] = true;
+G2L["94"]["BorderSizePixel"] = 0;
+G2L["94"]["TextScaled"] = true;
+G2L["94"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["94"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["94"]["TextSize"] = 30;
+G2L["94"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["94"]["Size"] = UDim2.new(1, 0, 0.625, 0);
+G2L["94"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["94"]["Text"] = [[Users: 0]];
+G2L["94"]["BackgroundTransparency"] = 1;
+G2L["94"]["Position"] = UDim2.new(0, 0, 0.3570946455001831, 0);
+
+-- StarterGui.sparrowlite.Frame.home.users.TextLabel.UITextSizeConstraint
+G2L["95"] = Instance.new("UITextSizeConstraint", G2L["94"]);
+G2L["95"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.users.TextLabel.UIAspectRatioConstraint
+G2L["96"] = Instance.new("UIAspectRatioConstraint", G2L["94"]);
+G2L["96"]["AspectRatio"] = 1.7777777910232544;
+
+-- StarterGui.sparrowlite.Frame.home.users.ImageLabel
+G2L["97"] = Instance.new("ImageLabel", G2L["92"]);
+G2L["97"]["BorderSizePixel"] = 0;
+G2L["97"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["97"]["Image"] = [[rbxassetid://15624503249]];
+G2L["97"]["Size"] = UDim2.new(0.1875, 0, 0.2083333283662796, 0);
+G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["97"]["BackgroundTransparency"] = 1;
+G2L["97"]["Position"] = UDim2.new(0.4000000059604645, 0, 0.125, 0);
+
+-- StarterGui.sparrowlite.Frame.home.users.ImageLabel.UIAspectRatioConstraint
+G2L["98"] = Instance.new("UIAspectRatioConstraint", G2L["97"]);
+
+
+-- StarterGui.sparrowlite.Frame.home.users.UIAspectRatioConstraint
+G2L["99"] = Instance.new("UIAspectRatioConstraint", G2L["92"]);
+G2L["99"]["AspectRatio"] = 1.1111111640930176;
+
+-- StarterGui.sparrowlite.Frame.home.ping
+G2L["9a"] = Instance.new("Frame", G2L["35"]);
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["9a"]["Size"] = UDim2.new(0.18099547922611237, 0, 0.24242424964904785, 0);
+G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Position"] = UDim2.new(-0.0004318030260037631, 0, 0.042612042278051376, 0);
+G2L["9a"]["Name"] = [[ping]];
+
+-- StarterGui.sparrowlite.Frame.home.ping.UICorner
+G2L["9b"] = Instance.new("UICorner", G2L["9a"]);
+G2L["9b"]["CornerRadius"] = UDim.new(0, 16);
+
+-- StarterGui.sparrowlite.Frame.home.ping.TextLabel
+G2L["9c"] = Instance.new("TextLabel", G2L["9a"]);
+G2L["9c"]["TextWrapped"] = true;
+G2L["9c"]["BorderSizePixel"] = 0;
+G2L["9c"]["TextScaled"] = true;
+G2L["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9c"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9c"]["TextSize"] = 30;
+G2L["9c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9c"]["Size"] = UDim2.new(1, 0, 0.625, 0);
+G2L["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9c"]["Text"] = [[Ping: 999]];
+G2L["9c"]["BackgroundTransparency"] = 1;
+G2L["9c"]["Position"] = UDim2.new(0, 0, 0.3570946455001831, 0);
+
+-- StarterGui.sparrowlite.Frame.home.ping.TextLabel.UITextSizeConstraint
+G2L["9d"] = Instance.new("UITextSizeConstraint", G2L["9c"]);
+G2L["9d"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.home.ping.TextLabel.UIAspectRatioConstraint
+G2L["9e"] = Instance.new("UIAspectRatioConstraint", G2L["9c"]);
+G2L["9e"]["AspectRatio"] = 1.7777777910232544;
+
+-- StarterGui.sparrowlite.Frame.home.ping.ImageLabel
+G2L["9f"] = Instance.new("ImageLabel", G2L["9a"]);
+G2L["9f"]["BorderSizePixel"] = 0;
+G2L["9f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9f"]["Image"] = [[rbxassetid://15624473300]];
+G2L["9f"]["Size"] = UDim2.new(0.25, 0, 0.2777777910232544, 0);
+G2L["9f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9f"]["BackgroundTransparency"] = 1;
+G2L["9f"]["Position"] = UDim2.new(0.375, 0, 0.125, 0);
+
+-- StarterGui.sparrowlite.Frame.home.ping.ImageLabel.UIAspectRatioConstraint
+G2L["a0"] = Instance.new("UIAspectRatioConstraint", G2L["9f"]);
+
+
+-- StarterGui.sparrowlite.Frame.home.ping.UIAspectRatioConstraint
+G2L["a1"] = Instance.new("UIAspectRatioConstraint", G2L["9a"]);
+G2L["a1"]["AspectRatio"] = 1.1111111640930176;
+
+-- StarterGui.sparrowlite.Frame.home.UIAspectRatioConstraint
+G2L["a2"] = Instance.new("UIAspectRatioConstraint", G2L["35"]);
+G2L["a2"]["AspectRatio"] = 1.488215446472168;
+
+-- StarterGui.sparrowlite.Frame.executor
+G2L["a3"] = Instance.new("Frame", G2L["2"]);
+G2L["a3"]["BorderSizePixel"] = 0;
+G2L["a3"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["a3"]["Size"] = UDim2.new(0.7210440635681152, 0, 0.8005390763282776, 0);
+G2L["a3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a3"]["Position"] = UDim2.new(0.26427406072616577, 0, 0.13620677590370178, 0);
+G2L["a3"]["Name"] = [[executor]];
+
+-- StarterGui.sparrowlite.Frame.executor.list
+G2L["a4"] = Instance.new("Frame", G2L["a3"]);
+G2L["a4"]["BorderSizePixel"] = 0;
+G2L["a4"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["a4"]["Size"] = UDim2.new(0.9864253401756287, 0, 0.7171717286109924, 0);
+G2L["a4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a4"]["Position"] = UDim2.new(-0.000432079192250967, 0, 0.14052748680114746, 0);
+G2L["a4"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.executor.list.UICorner
+G2L["a5"] = Instance.new("UICorner", G2L["a4"]);
+G2L["a5"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextLabel
+G2L["a6"] = Instance.new("TextLabel", G2L["a4"]);
+G2L["a6"]["TextWrapped"] = true;
+G2L["a6"]["BorderSizePixel"] = 0;
+G2L["a6"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["a6"]["TextScaled"] = true;
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a6"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["a6"]["TextSize"] = 30;
+G2L["a6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a6"]["Size"] = UDim2.new(0.029816513881087303, 0, 0.8685445785522461, 0);
+G2L["a6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a6"]["Text"] = [[1]];
+G2L["a6"]["BackgroundTransparency"] = 1;
+G2L["a6"]["Position"] = UDim2.new(0.015624860301613808, 0, 0.031046805903315544, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextLabel.UITextSizeConstraint
+G2L["a7"] = Instance.new("UITextSizeConstraint", G2L["a6"]);
+G2L["a7"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextLabel.UIAspectRatioConstraint
+G2L["a8"] = Instance.new("UIAspectRatioConstraint", G2L["a6"]);
+G2L["a8"]["AspectRatio"] = 0.07027027010917664;
+
+-- StarterGui.sparrowlite.Frame.executor.list.list
+G2L["a9"] = Instance.new("Frame", G2L["a4"]);
+G2L["a9"]["BorderSizePixel"] = 0;
+G2L["a9"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["a9"]["Size"] = UDim2.new(0.01834862306714058, 0, 0.5023474097251892, 0);
+G2L["a9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a9"]["Position"] = UDim2.new(0.9426621198654175, 0, 0.14130891859531403, 0);
+G2L["a9"]["Name"] = [[list]];
+
+-- StarterGui.sparrowlite.Frame.executor.list.list.UICorner
+G2L["aa"] = Instance.new("UICorner", G2L["a9"]);
+G2L["aa"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.list.list.UIAspectRatioConstraint
+G2L["ab"] = Instance.new("UIAspectRatioConstraint", G2L["a9"]);
+G2L["ab"]["AspectRatio"] = 0.07476635277271271;
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextBox
+G2L["ac"] = Instance.new("TextBox", G2L["a4"]);
+G2L["ac"]["CursorPosition"] = -1;
+G2L["ac"]["BorderSizePixel"] = 0;
+G2L["ac"]["TextSize"] = 25;
+G2L["ac"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["ac"]["TextWrapped"] = true;
+G2L["ac"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["ac"]["TextScaled"] = true;
+G2L["ac"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ac"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ac"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ac"]["BackgroundTransparency"] = 1;
+G2L["ac"]["PlaceholderText"] = [[Test Executor !]];
+G2L["ac"]["Size"] = UDim2.new(0.8623853325843811, 0, 0.9248826503753662, 0);
+G2L["ac"]["ClipsDescendants"] = true;
+G2L["ac"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ac"]["Text"] = [[]];
+G2L["ac"]["Position"] = UDim2.new(0.05733944848179817, 0, 0.028169013559818268, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextBox.UITextSizeConstraint
+G2L["ad"] = Instance.new("UITextSizeConstraint", G2L["ac"]);
+G2L["ad"]["MaxTextSize"] = 25;
+
+-- StarterGui.sparrowlite.Frame.executor.list.TextBox.UIAspectRatioConstraint
+G2L["ae"] = Instance.new("UIAspectRatioConstraint", G2L["ac"]);
+G2L["ae"]["AspectRatio"] = 1.9086294174194336;
+
+-- StarterGui.sparrowlite.Frame.executor.list.UIAspectRatioConstraint
+G2L["af"] = Instance.new("UIAspectRatioConstraint", G2L["a4"]);
+G2L["af"]["AspectRatio"] = 2.0469484329223633;
+
+-- StarterGui.sparrowlite.Frame.executor.tags
+G2L["b0"] = Instance.new("Frame", G2L["a3"]);
+G2L["b0"]["BorderSizePixel"] = 0;
+G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["b0"]["Size"] = UDim2.new(0.9864253401756287, 0, 0.10774410516023636, 0);
+G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["Position"] = UDim2.new(-0.0004318030260037631, 0, -0.001612807740457356, 0);
+G2L["b0"]["Name"] = [[tags]];
+
+-- StarterGui.sparrowlite.Frame.executor.tags.UICorner
+G2L["b1"] = Instance.new("UICorner", G2L["b0"]);
+G2L["b1"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.tags.ImageLabel
+G2L["b2"] = Instance.new("ImageLabel", G2L["b0"]);
+G2L["b2"]["BorderSizePixel"] = 0;
+G2L["b2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b2"]["Image"] = [[rbxassetid://15624820722]];
+G2L["b2"]["Size"] = UDim2.new(0.03440367057919502, 0, 0.46875, 0);
+G2L["b2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b2"]["BackgroundTransparency"] = 1;
+G2L["b2"]["Position"] = UDim2.new(0.04696451872587204, 0, 0.2417764663696289, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.tags.ImageLabel.UIAspectRatioConstraint
+G2L["b3"] = Instance.new("UIAspectRatioConstraint", G2L["b2"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.tags.TextLabel
+G2L["b4"] = Instance.new("TextLabel", G2L["b0"]);
+G2L["b4"]["TextWrapped"] = true;
+G2L["b4"]["BorderSizePixel"] = 0;
+G2L["b4"]["TextScaled"] = true;
+G2L["b4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b4"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b4"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b4"]["TextSize"] = 30;
+G2L["b4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b4"]["Size"] = UDim2.new(0.7614678740501404, 0, 0.9375, 0);
+G2L["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b4"]["Text"] = [[Welcome to Sparrow Executor! I 1# Executor]];
+G2L["b4"]["BackgroundTransparency"] = 1;
+G2L["b4"]["Position"] = UDim2.new(0.12556135654449463, 0, 0, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.tags.TextLabel.UITextSizeConstraint
+G2L["b5"] = Instance.new("UITextSizeConstraint", G2L["b4"]);
+G2L["b5"]["MaxTextSize"] = 29;
+
+-- StarterGui.sparrowlite.Frame.executor.tags.TextLabel.UIAspectRatioConstraint
+G2L["b6"] = Instance.new("UIAspectRatioConstraint", G2L["b4"]);
+G2L["b6"]["AspectRatio"] = 11.066666603088379;
+
+-- StarterGui.sparrowlite.Frame.executor.tags.UIAspectRatioConstraint
+G2L["b7"] = Instance.new("UIAspectRatioConstraint", G2L["b0"]);
+G2L["b7"]["AspectRatio"] = 13.625;
+
+-- StarterGui.sparrowlite.Frame.executor.key
+G2L["b8"] = Instance.new("Frame", G2L["a3"]);
+G2L["b8"]["BorderSizePixel"] = 0;
+G2L["b8"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["b8"]["Size"] = UDim2.new(0.26244351267814636, 0, 0.11600355803966522, 0);
+G2L["b8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b8"]["Position"] = UDim2.new(-0.0025685857981443405, 0, 0.887048602104187, 0);
+G2L["b8"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.executor.key.UICorner
+G2L["b9"] = Instance.new("UICorner", G2L["b8"]);
+G2L["b9"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel
+G2L["ba"] = Instance.new("ImageLabel", G2L["b8"]);
+G2L["ba"]["BorderSizePixel"] = 0;
+G2L["ba"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ba"]["Image"] = [[rbxassetid://15624820722]];
+G2L["ba"]["Size"] = UDim2.new(0.12931030988693237, 0, 0.43537500500679016, 0);
+G2L["ba"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ba"]["BackgroundTransparency"] = 1;
+G2L["ba"]["Position"] = UDim2.new(0.07515066862106323, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel.UIAspectRatioConstraint
+G2L["bb"] = Instance.new("UIAspectRatioConstraint", G2L["ba"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton
+G2L["bc"] = Instance.new("TextButton", G2L["b8"]);
+G2L["bc"]["TextWrapped"] = true;
+G2L["bc"]["BorderSizePixel"] = 0;
+G2L["bc"]["TextScaled"] = true;
+G2L["bc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bc"]["TextSize"] = 30;
+G2L["bc"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["bc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bc"]["Size"] = UDim2.new(0.7068963646888733, 0, 0.7836750149726868, 0);
+G2L["bc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["bc"]["Text"] = [[Execute]];
+G2L["bc"]["Position"] = UDim2.new(0.22899989783763885, 0, 0.11099883913993835, 0);
+G2L["bc"]["BackgroundTransparency"] = 0.9990000128746033;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+G2L["bd"] = Instance.new("LocalScript", G2L["bc"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UITextSizeConstraint
+G2L["be"] = Instance.new("UITextSizeConstraint", G2L["bc"]);
+G2L["be"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UIAspectRatioConstraint
+G2L["bf"] = Instance.new("UIAspectRatioConstraint", G2L["bc"]);
+G2L["bf"]["AspectRatio"] = 3.0370371341705322;
+
+-- StarterGui.sparrowlite.Frame.executor.key.UIAspectRatioConstraint
+G2L["c0"] = Instance.new("UIAspectRatioConstraint", G2L["b8"]);
+G2L["c0"]["AspectRatio"] = 3.36690092086792;
+
+-- StarterGui.sparrowlite.Frame.executor.key
+G2L["c1"] = Instance.new("Frame", G2L["a3"]);
+G2L["c1"]["BorderSizePixel"] = 0;
+G2L["c1"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["c1"]["Size"] = UDim2.new(0.17873312532901764, 0, 0.11600355803966522, 0);
+G2L["c1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c1"]["Position"] = UDim2.new(0.2802368402481079, 0, 0.887048602104187, 0);
+G2L["c1"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.executor.key.UICorner
+G2L["c2"] = Instance.new("UICorner", G2L["c1"]);
+G2L["c2"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel
+G2L["c3"] = Instance.new("ImageLabel", G2L["c1"]);
+G2L["c3"]["BorderSizePixel"] = 0;
+G2L["c3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c3"]["Image"] = [[rbxassetid://15624824527]];
+G2L["c3"]["Size"] = UDim2.new(0.1898733228445053, 0, 0.43537500500679016, 0);
+G2L["c3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c3"]["BackgroundTransparency"] = 1;
+G2L["c3"]["Position"] = UDim2.new(0.07515066862106323, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel.UIAspectRatioConstraint
+G2L["c4"] = Instance.new("UIAspectRatioConstraint", G2L["c3"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton
+G2L["c5"] = Instance.new("TextButton", G2L["c1"]);
+G2L["c5"]["TextWrapped"] = true;
+G2L["c5"]["BorderSizePixel"] = 0;
+G2L["c5"]["TextScaled"] = true;
+G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c5"]["TextSize"] = 30;
+G2L["c5"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["c5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c5"]["Size"] = UDim2.new(0.7594932913780212, 0, 0.7836750149726868, 0);
+G2L["c5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c5"]["Text"] = [[Copy]];
+G2L["c5"]["Position"] = UDim2.new(0.20368388295173645, 0, 0.11099883913993835, 0);
+G2L["c5"]["BackgroundTransparency"] = 0.9990000128746033;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+G2L["c6"] = Instance.new("LocalScript", G2L["c5"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UITextSizeConstraint
+G2L["c7"] = Instance.new("UITextSizeConstraint", G2L["c5"]);
+G2L["c7"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UIAspectRatioConstraint
+G2L["c8"] = Instance.new("UIAspectRatioConstraint", G2L["c5"]);
+G2L["c8"]["AspectRatio"] = 2.222222328186035;
+
+-- StarterGui.sparrowlite.Frame.executor.key.UIAspectRatioConstraint
+G2L["c9"] = Instance.new("UIAspectRatioConstraint", G2L["c1"]);
+G2L["c9"]["AspectRatio"] = 2.292976140975952;
+
+-- StarterGui.sparrowlite.Frame.executor.key
+G2L["ca"] = Instance.new("Frame", G2L["a3"]);
+G2L["ca"]["BorderSizePixel"] = 0;
+G2L["ca"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["ca"]["Size"] = UDim2.new(0.1790391057729721, 0, 0.11600355803966522, 0);
+G2L["ca"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ca"]["Position"] = UDim2.new(0.4725445508956909, 0, 0.887048602104187, 0);
+G2L["ca"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.executor.key.UICorner
+G2L["cb"] = Instance.new("UICorner", G2L["ca"]);
+G2L["cb"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel
+G2L["cc"] = Instance.new("ImageLabel", G2L["ca"]);
+G2L["cc"]["BorderSizePixel"] = 0;
+G2L["cc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["cc"]["Image"] = [[rbxassetid://15624828406]];
+G2L["cc"]["Size"] = UDim2.new(0.1895488202571869, 0, 0.43537500500679016, 0);
+G2L["cc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["cc"]["BackgroundTransparency"] = 1;
+G2L["cc"]["Position"] = UDim2.new(0.07515066862106323, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel.UIAspectRatioConstraint
+G2L["cd"] = Instance.new("UIAspectRatioConstraint", G2L["cc"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton
+G2L["ce"] = Instance.new("TextButton", G2L["ca"]);
+G2L["ce"]["TextWrapped"] = true;
+G2L["ce"]["BorderSizePixel"] = 0;
+G2L["ce"]["TextScaled"] = true;
+G2L["ce"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ce"]["TextSize"] = 50;
+G2L["ce"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ce"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ce"]["Size"] = UDim2.new(0.6950123310089111, 0, 0.8417250514030457, 0);
+G2L["ce"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ce"]["Text"] = [[Clear]];
+G2L["ce"]["Position"] = UDim2.new(0.25427353382110596, 0, 0.11099883913993835, 0);
+G2L["ce"]["BackgroundTransparency"] = 0.9990000128746033;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+G2L["cf"] = Instance.new("LocalScript", G2L["ce"]);
+
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UITextSizeConstraint
+G2L["d0"] = Instance.new("UITextSizeConstraint", G2L["ce"]);
+G2L["d0"]["MaxTextSize"] = 50;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UIAspectRatioConstraint
+G2L["d1"] = Instance.new("UIAspectRatioConstraint", G2L["ce"]);
+G2L["d1"]["AspectRatio"] = 1.8965517282485962;
+
+-- StarterGui.sparrowlite.Frame.executor.key.UIAspectRatioConstraint
+G2L["d2"] = Instance.new("UIAspectRatioConstraint", G2L["ca"]);
+G2L["d2"]["AspectRatio"] = 2.2969017028808594;
+
+-- StarterGui.sparrowlite.Frame.executor.key
+G2L["d3"] = Instance.new("Frame", G2L["a3"]);
+G2L["d3"]["BorderSizePixel"] = 0;
+G2L["d3"]["BackgroundColor3"] = Color3.fromRGB(19, 106, 173);
+G2L["d3"]["Size"] = UDim2.new(0.2600570023059845, 0, 0.11600355803966522, 0);
+G2L["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d3"]["Position"] = UDim2.new(0.7236753702163696, 0, 0.887048602104187, 0);
+G2L["d3"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.executor.key.UICorner
+G2L["d4"] = Instance.new("UICorner", G2L["d3"]);
+G2L["d4"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel
+G2L["d5"] = Instance.new("ImageLabel", G2L["d3"]);
+G2L["d5"]["BorderSizePixel"] = 0;
+G2L["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d5"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["d5"]["Size"] = UDim2.new(0.13049696385860443, 0, 0.43537500500679016, 0);
+G2L["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d5"]["Position"] = UDim2.new(0.07515066862106323, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.executor.key.ImageLabel.UIAspectRatioConstraint
+G2L["d6"] = Instance.new("UIAspectRatioConstraint", G2L["d5"]);
+G2L["d6"]["AspectRatio"] = 0.9999999403953552;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton
+G2L["d7"] = Instance.new("TextButton", G2L["d3"]);
+G2L["d7"]["TextWrapped"] = true;
+G2L["d7"]["BorderSizePixel"] = 0;
+G2L["d7"]["TextScaled"] = true;
+G2L["d7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d7"]["TextSize"] = 50;
+G2L["d7"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d7"]["Size"] = UDim2.new(0.852580189704895, 0, 0.9578250646591187, 0);
+G2L["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d7"]["Text"] = [[ClipBoard!]];
+G2L["d7"]["Position"] = UDim2.new(0.17900003492832184, 0, 8.85772749370517e-07, 0);
+G2L["d7"]["BackgroundTransparency"] = 0.9990000128746033;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UITextSizeConstraint
+G2L["d8"] = Instance.new("UITextSizeConstraint", G2L["d7"]);
+G2L["d8"]["MaxTextSize"] = 50;
+
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.UIAspectRatioConstraint
+G2L["d9"] = Instance.new("UIAspectRatioConstraint", G2L["d7"]);
+G2L["d9"]["AspectRatio"] = 2.9696969985961914;
+
+-- StarterGui.sparrowlite.Frame.executor.key.UIAspectRatioConstraint
+G2L["da"] = Instance.new("UIAspectRatioConstraint", G2L["d3"]);
+G2L["da"]["AspectRatio"] = 3.3362843990325928;
+
+-- StarterGui.sparrowlite.Frame.executor.UIAspectRatioConstraint
+G2L["db"] = Instance.new("UIAspectRatioConstraint", G2L["a3"]);
+G2L["db"]["AspectRatio"] = 1.488215446472168;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub
+G2L["dc"] = Instance.new("Frame", G2L["2"]);
+G2L["dc"]["BorderSizePixel"] = 0;
+G2L["dc"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["dc"]["Size"] = UDim2.new(0.7210440635681152, 0, 0.8005390763282776, 0);
+G2L["dc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["dc"]["Position"] = UDim2.new(0.26427406072616577, 0, 0.13620677590370178, 0);
+G2L["dc"]["Visible"] = false;
+G2L["dc"]["Name"] = [[sparrowhub]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key
+G2L["dd"] = Instance.new("Frame", G2L["dc"]);
+G2L["dd"]["BorderSizePixel"] = 0;
+G2L["dd"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["dd"]["Size"] = UDim2.new(0.9909504055976868, 0, 0.11600355803966522, 0);
+G2L["dd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["dd"]["Position"] = UDim2.new(0.0019561629742383957, 0, -0.001840302487835288, 0);
+G2L["dd"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.UICorner
+G2L["de"] = Instance.new("UICorner", G2L["dd"]);
+G2L["de"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.ImageLabel
+G2L["df"] = Instance.new("ImageLabel", G2L["dd"]);
+G2L["df"]["BorderSizePixel"] = 0;
+G2L["df"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["df"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["df"]["Size"] = UDim2.new(0.03424656763672829, 0, 0.43537500500679016, 0);
+G2L["df"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["df"]["Position"] = UDim2.new(0.02035619504749775, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.ImageLabel.UIAspectRatioConstraint
+G2L["e0"] = Instance.new("UIAspectRatioConstraint", G2L["df"]);
+
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel
+G2L["e1"] = Instance.new("TextLabel", G2L["dd"]);
+G2L["e1"]["TextWrapped"] = true;
+G2L["e1"]["BorderSizePixel"] = 0;
+G2L["e1"]["TextScaled"] = true;
+G2L["e1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e1"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e1"]["TextSize"] = 30;
+G2L["e1"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e1"]["Size"] = UDim2.new(0.19406388700008392, 0, 0.6675750017166138, 0);
+G2L["e1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e1"]["Text"] = [[Coming Soon!]];
+G2L["e1"]["BackgroundTransparency"] = 1;
+G2L["e1"]["Position"] = UDim2.new(0.07762555778026581, 0, 0.1404884308576584, 0);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel.UITextSizeConstraint
+G2L["e2"] = Instance.new("UITextSizeConstraint", G2L["e1"]);
+G2L["e2"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel.UIAspectRatioConstraint
+G2L["e3"] = Instance.new("UIAspectRatioConstraint", G2L["e1"]);
+G2L["e3"]["AspectRatio"] = 3.5388543605804443;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.UIAspectRatioConstraint
+G2L["e4"] = Instance.new("UIAspectRatioConstraint", G2L["dd"]);
+G2L["e4"]["AspectRatio"] = 12.173572540283203;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key
+G2L["e5"] = Instance.new("Frame", G2L["dc"]);
+G2L["e5"]["BorderSizePixel"] = 0;
+G2L["e5"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["e5"]["Size"] = UDim2.new(0.9909502267837524, 0, 0.8855218887329102, 0);
+G2L["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e5"]["Position"] = UDim2.new(0, 0, 0.11416327953338623, 0);
+G2L["e5"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.UICorner
+G2L["e6"] = Instance.new("UICorner", G2L["e5"]);
+G2L["e6"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel
+G2L["e7"] = Instance.new("TextLabel", G2L["e5"]);
+G2L["e7"]["TextWrapped"] = true;
+G2L["e7"]["BorderSizePixel"] = 0;
+G2L["e7"]["TextScaled"] = true;
+G2L["e7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e7"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e7"]["TextSize"] = 30;
+G2L["e7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e7"]["Size"] = UDim2.new(0.20776255428791046, 0, 0.08365018665790558, 0);
+G2L["e7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e7"]["Text"] = [[Soon..]];
+G2L["e7"]["BackgroundTransparency"] = 1;
+G2L["e7"]["Position"] = UDim2.new(0.38124996423721313, 0, 0.45351383090019226, 0);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel.UITextSizeConstraint
+G2L["e8"] = Instance.new("UITextSizeConstraint", G2L["e7"]);
+G2L["e8"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.TextLabel.UIAspectRatioConstraint
+G2L["e9"] = Instance.new("UIAspectRatioConstraint", G2L["e7"]);
+G2L["e9"]["AspectRatio"] = 3.960867166519165;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.animated
+G2L["ea"] = Instance.new("LocalScript", G2L["e5"]);
+G2L["ea"]["Name"] = [[animated]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper
+G2L["eb"] = Instance.new("Frame", G2L["e5"]);
+G2L["eb"]["BorderSizePixel"] = 0;
+G2L["eb"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["eb"]["BackgroundTransparency"] = 1;
+G2L["eb"]["Size"] = UDim2.new(0.27625569701194763, 0, 0.36882129311561584, 0);
+G2L["eb"]["ClipsDescendants"] = true;
+G2L["eb"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["eb"]["Position"] = UDim2.new(0.3401827812194824, 0, 0.029169118031859398, 0);
+G2L["eb"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper.Animated
+G2L["ec"] = Instance.new("ImageLabel", G2L["eb"]);
+G2L["ec"]["BorderSizePixel"] = 0;
+G2L["ec"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ec"]["Image"] = [[rbxassetid://15622699626]];
+G2L["ec"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["ec"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ec"]["Name"] = [[Animated]];
+G2L["ec"]["BackgroundTransparency"] = 1;
+G2L["ec"]["Position"] = UDim2.new(0.024793388321995735, 0, -0.04123711213469505, 0);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper.UIAspectRatioConstraint
+G2L["ed"] = Instance.new("UIAspectRatioConstraint", G2L["eb"]);
+G2L["ed"]["AspectRatio"] = 1.1944973468780518;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper
+G2L["ee"] = Instance.new("Frame", G2L["e5"]);
+G2L["ee"]["ZIndex"] = 0;
+G2L["ee"]["BorderSizePixel"] = 0;
+G2L["ee"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ee"]["Size"] = UDim2.new(0.2899543344974518, 0, 0.463878333568573, 0);
+G2L["ee"]["ClipsDescendants"] = true;
+G2L["ee"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ee"]["Position"] = UDim2.new(0.33333346247673035, 0, -0.025143815204501152, 0);
+G2L["ee"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper.UICorner
+G2L["ef"] = Instance.new("UICorner", G2L["ee"]);
+G2L["ef"]["CornerRadius"] = UDim.new(0, 28);
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper.UIStroke
+G2L["f0"] = Instance.new("UIStroke", G2L["ee"]);
+G2L["f0"]["Color"] = Color3.fromRGB(69, 69, 69);
+G2L["f0"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.Warper.UIAspectRatioConstraint
+G2L["f1"] = Instance.new("UIAspectRatioConstraint", G2L["ee"]);
+G2L["f1"]["AspectRatio"] = 0.9968169331550598;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.UIAspectRatioConstraint
+G2L["f2"] = Instance.new("UIAspectRatioConstraint", G2L["e5"]);
+G2L["f2"]["AspectRatio"] = 1.5947401523590088;
+
+-- StarterGui.sparrowlite.Frame.sparrowhub.UIAspectRatioConstraint
+G2L["f3"] = Instance.new("UIAspectRatioConstraint", G2L["dc"]);
+G2L["f3"]["AspectRatio"] = 1.488215446472168;
+
+-- StarterGui.sparrowlite.Frame.search
+G2L["f4"] = Instance.new("Frame", G2L["2"]);
+G2L["f4"]["BorderSizePixel"] = 0;
+G2L["f4"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["f4"]["Size"] = UDim2.new(0.7210440635681152, 0, 0.8005390763282776, 0);
+G2L["f4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f4"]["Position"] = UDim2.new(0.26427406072616577, 0, 0.13620677590370178, 0);
+G2L["f4"]["Visible"] = false;
+G2L["f4"]["Name"] = [[search]];
+
+-- StarterGui.sparrowlite.Frame.search.key
+G2L["f5"] = Instance.new("Frame", G2L["f4"]);
+G2L["f5"]["BorderSizePixel"] = 0;
+G2L["f5"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["f5"]["Size"] = UDim2.new(0.9909504055976868, 0, 0.11600355803966522, 0);
+G2L["f5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f5"]["Position"] = UDim2.new(0.0019561629742383957, 0, -0.001840302487835288, 0);
+G2L["f5"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.search.key.UICorner
+G2L["f6"] = Instance.new("UICorner", G2L["f5"]);
+G2L["f6"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.search.key.ImageLabel
+G2L["f7"] = Instance.new("ImageLabel", G2L["f5"]);
+G2L["f7"]["BorderSizePixel"] = 0;
+G2L["f7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f7"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["f7"]["Size"] = UDim2.new(0.03424656763672829, 0, 0.43537500500679016, 0);
+G2L["f7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f7"]["Position"] = UDim2.new(0.02035619504749775, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.search.key.ImageLabel.UIAspectRatioConstraint
+G2L["f8"] = Instance.new("UIAspectRatioConstraint", G2L["f7"]);
+G2L["f8"]["AspectRatio"] = 0.957572340965271;
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel
+G2L["f9"] = Instance.new("TextLabel", G2L["f5"]);
+G2L["f9"]["TextWrapped"] = true;
+G2L["f9"]["BorderSizePixel"] = 0;
+G2L["f9"]["TextScaled"] = true;
+G2L["f9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f9"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f9"]["TextSize"] = 30;
+G2L["f9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f9"]["Size"] = UDim2.new(0.19406388700008392, 0, 0.6675750017166138, 0);
+G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f9"]["Text"] = [[Coming Soon!]];
+G2L["f9"]["BackgroundTransparency"] = 1;
+G2L["f9"]["Position"] = UDim2.new(0.07762555778026581, 0, 0.1404884308576584, 0);
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel.UITextSizeConstraint
+G2L["fa"] = Instance.new("UITextSizeConstraint", G2L["f9"]);
+G2L["fa"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel.UIAspectRatioConstraint
+G2L["fb"] = Instance.new("UIAspectRatioConstraint", G2L["f9"]);
+G2L["fb"]["AspectRatio"] = 3.5388543605804443;
+
+-- StarterGui.sparrowlite.Frame.search.key.UIAspectRatioConstraint
+G2L["fc"] = Instance.new("UIAspectRatioConstraint", G2L["f5"]);
+G2L["fc"]["AspectRatio"] = 12.173572540283203;
+
+-- StarterGui.sparrowlite.Frame.search.key
+G2L["fd"] = Instance.new("Frame", G2L["f4"]);
+G2L["fd"]["BorderSizePixel"] = 0;
+G2L["fd"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["fd"]["Size"] = UDim2.new(0.9909502267837524, 0, 0.8855218887329102, 0);
+G2L["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["fd"]["Position"] = UDim2.new(0, 0, 0.11416327953338623, 0);
+G2L["fd"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.search.key.UICorner
+G2L["fe"] = Instance.new("UICorner", G2L["fd"]);
+G2L["fe"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel
+G2L["ff"] = Instance.new("TextLabel", G2L["fd"]);
+G2L["ff"]["TextWrapped"] = true;
+G2L["ff"]["BorderSizePixel"] = 0;
+G2L["ff"]["TextScaled"] = true;
+G2L["ff"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ff"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["ff"]["TextSize"] = 30;
+G2L["ff"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ff"]["Size"] = UDim2.new(0.20776255428791046, 0, 0.08365018665790558, 0);
+G2L["ff"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ff"]["Text"] = [[Soon..]];
+G2L["ff"]["BackgroundTransparency"] = 1;
+G2L["ff"]["Position"] = UDim2.new(0.38124996423721313, 0, 0.45351383090019226, 0);
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel.UITextSizeConstraint
+G2L["100"] = Instance.new("UITextSizeConstraint", G2L["ff"]);
+G2L["100"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.search.key.TextLabel.UIAspectRatioConstraint
+G2L["101"] = Instance.new("UIAspectRatioConstraint", G2L["ff"]);
+G2L["101"]["AspectRatio"] = 3.960867166519165;
+
+-- StarterGui.sparrowlite.Frame.search.key.animated
+G2L["102"] = Instance.new("LocalScript", G2L["fd"]);
+G2L["102"]["Name"] = [[animated]];
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper
+G2L["103"] = Instance.new("Frame", G2L["fd"]);
+G2L["103"]["BorderSizePixel"] = 0;
+G2L["103"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["103"]["BackgroundTransparency"] = 1;
+G2L["103"]["Size"] = UDim2.new(0.27625569701194763, 0, 0.36882129311561584, 0);
+G2L["103"]["ClipsDescendants"] = true;
+G2L["103"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["103"]["Position"] = UDim2.new(0.3401827812194824, 0, 0.029169118031859398, 0);
+G2L["103"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.Animated
+G2L["104"] = Instance.new("ImageLabel", G2L["103"]);
+G2L["104"]["BorderSizePixel"] = 0;
+G2L["104"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["104"]["Image"] = [[rbxassetid://15622699626]];
+G2L["104"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["104"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["104"]["Name"] = [[Animated]];
+G2L["104"]["BackgroundTransparency"] = 1;
+G2L["104"]["Position"] = UDim2.new(0.024793388321995735, 0, -0.04123711213469505, 0);
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.Animated.UIAspectRatioConstraint
+G2L["105"] = Instance.new("UIAspectRatioConstraint", G2L["104"]);
+G2L["105"]["AspectRatio"] = 1.1944973468780518;
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.UIAspectRatioConstraint
+G2L["106"] = Instance.new("UIAspectRatioConstraint", G2L["103"]);
+G2L["106"]["AspectRatio"] = 1.1944973468780518;
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper
+G2L["107"] = Instance.new("Frame", G2L["fd"]);
+G2L["107"]["ZIndex"] = 0;
+G2L["107"]["BorderSizePixel"] = 0;
+G2L["107"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["107"]["Size"] = UDim2.new(0.2899543344974518, 0, 0.463878333568573, 0);
+G2L["107"]["ClipsDescendants"] = true;
+G2L["107"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["107"]["Position"] = UDim2.new(0.33333346247673035, 0, -0.025143815204501152, 0);
+G2L["107"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.UICorner
+G2L["108"] = Instance.new("UICorner", G2L["107"]);
+G2L["108"]["CornerRadius"] = UDim.new(0, 28);
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.UIStroke
+G2L["109"] = Instance.new("UIStroke", G2L["107"]);
+G2L["109"]["Color"] = Color3.fromRGB(69, 69, 69);
+G2L["109"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.sparrowlite.Frame.search.key.Warper.UIAspectRatioConstraint
+G2L["10a"] = Instance.new("UIAspectRatioConstraint", G2L["107"]);
+G2L["10a"]["AspectRatio"] = 0.9968169331550598;
+
+-- StarterGui.sparrowlite.Frame.search.key.UIAspectRatioConstraint
+G2L["10b"] = Instance.new("UIAspectRatioConstraint", G2L["fd"]);
+G2L["10b"]["AspectRatio"] = 1.5947401523590088;
+
+-- StarterGui.sparrowlite.Frame.search.UIAspectRatioConstraint
+G2L["10c"] = Instance.new("UIAspectRatioConstraint", G2L["f4"]);
+G2L["10c"]["AspectRatio"] = 1.488215446472168;
+
+-- StarterGui.sparrowlite.Frame.settings
+G2L["10d"] = Instance.new("Frame", G2L["2"]);
+G2L["10d"]["BorderSizePixel"] = 0;
+G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(3, 3, 3);
+G2L["10d"]["Size"] = UDim2.new(0.7210440635681152, 0, 0.8005390763282776, 0);
+G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10d"]["Position"] = UDim2.new(0.26427406072616577, 0, 0.13620677590370178, 0);
+G2L["10d"]["Visible"] = false;
+G2L["10d"]["Name"] = [[settings]];
+
+-- StarterGui.sparrowlite.Frame.settings.key
+G2L["10e"] = Instance.new("Frame", G2L["10d"]);
+G2L["10e"]["BorderSizePixel"] = 0;
+G2L["10e"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["10e"]["Size"] = UDim2.new(0.9909504055976868, 0, 0.11600355803966522, 0);
+G2L["10e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10e"]["Position"] = UDim2.new(0.0019561629742383957, 0, -0.001840302487835288, 0);
+G2L["10e"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.settings.key.UICorner
+G2L["10f"] = Instance.new("UICorner", G2L["10e"]);
+G2L["10f"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.settings.key.ImageLabel
+G2L["110"] = Instance.new("ImageLabel", G2L["10e"]);
+G2L["110"]["BorderSizePixel"] = 0;
+G2L["110"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["110"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["110"]["Size"] = UDim2.new(0.03424656763672829, 0, 0.43537500500679016, 0);
+G2L["110"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["110"]["Position"] = UDim2.new(0.02035619504749775, 0, 0.2774762809276581, 0);
+
+-- StarterGui.sparrowlite.Frame.settings.key.ImageLabel.UIAspectRatioConstraint
+G2L["111"] = Instance.new("UIAspectRatioConstraint", G2L["110"]);
+
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel
+G2L["112"] = Instance.new("TextLabel", G2L["10e"]);
+G2L["112"]["TextWrapped"] = true;
+G2L["112"]["BorderSizePixel"] = 0;
+G2L["112"]["TextScaled"] = true;
+G2L["112"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["112"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["112"]["TextSize"] = 30;
+G2L["112"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["112"]["Size"] = UDim2.new(0.19406388700008392, 0, 0.6675750017166138, 0);
+G2L["112"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["112"]["Text"] = [[Coming Soon!]];
+G2L["112"]["BackgroundTransparency"] = 1;
+G2L["112"]["Position"] = UDim2.new(0.07762555778026581, 0, 0.1404884308576584, 0);
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel.UITextSizeConstraint
+G2L["113"] = Instance.new("UITextSizeConstraint", G2L["112"]);
+G2L["113"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel.UIAspectRatioConstraint
+G2L["114"] = Instance.new("UIAspectRatioConstraint", G2L["112"]);
+G2L["114"]["AspectRatio"] = 3.6956522464752197;
+
+-- StarterGui.sparrowlite.Frame.settings.key.UIAspectRatioConstraint
+G2L["115"] = Instance.new("UIAspectRatioConstraint", G2L["10e"]);
+G2L["115"]["AspectRatio"] = 12.712953567504883;
+
+-- StarterGui.sparrowlite.Frame.settings.key
+G2L["116"] = Instance.new("Frame", G2L["10d"]);
+G2L["116"]["BorderSizePixel"] = 0;
+G2L["116"]["BackgroundColor3"] = Color3.fromRGB(15, 15, 15);
+G2L["116"]["Size"] = UDim2.new(0.9909502267837524, 0, 0.8855218887329102, 0);
+G2L["116"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["116"]["Position"] = UDim2.new(0, 0, 0.11416327953338623, 0);
+G2L["116"]["Name"] = [[key]];
+
+-- StarterGui.sparrowlite.Frame.settings.key.UICorner
+G2L["117"] = Instance.new("UICorner", G2L["116"]);
+G2L["117"]["CornerRadius"] = UDim.new(0, 5);
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel
+G2L["118"] = Instance.new("TextLabel", G2L["116"]);
+G2L["118"]["TextWrapped"] = true;
+G2L["118"]["BorderSizePixel"] = 0;
+G2L["118"]["TextScaled"] = true;
+G2L["118"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["118"]["FontFace"] = Font.new([[rbxassetid://12187377099]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["118"]["TextSize"] = 30;
+G2L["118"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["118"]["Size"] = UDim2.new(0.20776255428791046, 0, 0.08365018665790558, 0);
+G2L["118"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["118"]["Text"] = [[Soon..]];
+G2L["118"]["BackgroundTransparency"] = 1;
+G2L["118"]["Position"] = UDim2.new(0.38124996423721313, 0, 0.45351383090019226, 0);
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel.UITextSizeConstraint
+G2L["119"] = Instance.new("UITextSizeConstraint", G2L["118"]);
+G2L["119"]["MaxTextSize"] = 30;
+
+-- StarterGui.sparrowlite.Frame.settings.key.TextLabel.UIAspectRatioConstraint
+G2L["11a"] = Instance.new("UIAspectRatioConstraint", G2L["118"]);
+G2L["11a"]["AspectRatio"] = 4.136363506317139;
+
+-- StarterGui.sparrowlite.Frame.settings.key.animated
+G2L["11b"] = Instance.new("LocalScript", G2L["116"]);
+G2L["11b"]["Name"] = [[animated]];
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper
+G2L["11c"] = Instance.new("Frame", G2L["116"]);
+G2L["11c"]["BorderSizePixel"] = 0;
+G2L["11c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11c"]["BackgroundTransparency"] = 1;
+G2L["11c"]["Size"] = UDim2.new(0.27625569701194763, 0, 0.36882129311561584, 0);
+G2L["11c"]["ClipsDescendants"] = true;
+G2L["11c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11c"]["Position"] = UDim2.new(0.3401827812194824, 0, 0.029169118031859398, 0);
+G2L["11c"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper.Animated
+G2L["11d"] = Instance.new("ImageLabel", G2L["11c"]);
+G2L["11d"]["BorderSizePixel"] = 0;
+G2L["11d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11d"]["Image"] = [[rbxassetid://15622699626]];
+G2L["11d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["11d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11d"]["Name"] = [[Animated]];
+G2L["11d"]["BackgroundTransparency"] = 1;
+G2L["11d"]["Position"] = UDim2.new(0.024793388321995735, 0, -0.04123711213469505, 0);
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper.UIAspectRatioConstraint
+G2L["11e"] = Instance.new("UIAspectRatioConstraint", G2L["11c"]);
+G2L["11e"]["AspectRatio"] = 1.2474225759506226;
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper
+G2L["11f"] = Instance.new("Frame", G2L["116"]);
+G2L["11f"]["ZIndex"] = 0;
+G2L["11f"]["BorderSizePixel"] = 0;
+G2L["11f"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11f"]["Size"] = UDim2.new(0.2899543344974518, 0, 0.463878333568573, 0);
+G2L["11f"]["ClipsDescendants"] = true;
+G2L["11f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11f"]["Position"] = UDim2.new(0.33333346247673035, 0, -0.025143815204501152, 0);
+G2L["11f"]["Name"] = [[Warper]];
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper.UICorner
+G2L["120"] = Instance.new("UICorner", G2L["11f"]);
+G2L["120"]["CornerRadius"] = UDim.new(0, 28);
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper.UIStroke
+G2L["121"] = Instance.new("UIStroke", G2L["11f"]);
+G2L["121"]["Color"] = Color3.fromRGB(69, 69, 69);
+G2L["121"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+
+-- StarterGui.sparrowlite.Frame.settings.key.Warper.UIAspectRatioConstraint
+G2L["122"] = Instance.new("UIAspectRatioConstraint", G2L["11f"]);
+G2L["122"]["AspectRatio"] = 1.0409835577011108;
+
+-- StarterGui.sparrowlite.Frame.settings.key.UIAspectRatioConstraint
+G2L["123"] = Instance.new("UIAspectRatioConstraint", G2L["116"]);
+G2L["123"]["AspectRatio"] = 1.665399193763733;
+
+-- StarterGui.sparrowlite.Frame.settings.UIAspectRatioConstraint
+G2L["124"] = Instance.new("UIAspectRatioConstraint", G2L["10d"]);
+G2L["124"]["AspectRatio"] = 1.488215446472168;
+
+-- StarterGui.sparrowlite.Frame.LocalScript
+G2L["125"] = Instance.new("LocalScript", G2L["2"]);
+
+
+-- StarterGui.sparrowlite.Frame.UIAspectRatioConstraint
+G2L["126"] = Instance.new("UIAspectRatioConstraint", G2L["2"]);
+G2L["126"]["AspectRatio"] = 1.6522910594940186;
+
+-- StarterGui.sparrowlite.Frame.user.ImageLabel.LocalScript
+local function C_27()
+local script = G2L["27"];
+	script.Parent.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userId=" .. game.Players.LocalPlayer.UserId
+end;
+task.spawn(C_27);
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+local function C_bd()
+local script = G2L["bd"];
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(	script.Parent.Parent.Parent.list.TextBox.Text)() 
+	end)
+end;
+task.spawn(C_bd);
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+local function C_c6()
+local script = G2L["c6"];
+	script.Parent.MouseButton1Click:Connect(function()
+		setclipboard(script.Parent.Parent.Parent.list.TextBox.Text)
+	end)
+end;
+task.spawn(C_c6);
+-- StarterGui.sparrowlite.Frame.executor.key.TextButton.LocalScript
+local function C_cf()
+local script = G2L["cf"];
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.list.TextBox.Text = ""
+	end)
+end;
+task.spawn(C_cf);
+-- StarterGui.sparrowlite.Frame.sparrowhub.key.animated
+local function C_ea()
+local script = G2L["ea"];
+	local warperFramerate = 25
+	local lastFrame = 1
+	local frames = 7*4+2
+	local rows = 8
+	local columns = 4
+	
+	local AnimationFrameWrapper = script.Parent.Warper
+	local AnimatedSprite = AnimationFrameWrapper.Animated
+	
+	local t = tick()
+	
+	AnimatedSprite.Size = UDim2.new(columns,-0.2,rows,-0.2)
+	
+	local function AnimationFunction()
+	end
+	
+	local function UpdateWarper(f)
+		if tick()-t >= 1/warperFramerate then
+			lastFrame = lastFrame + 1
+			if lastFrame > frames then lastFrame = 1 end
+			local CurrentColumn = lastFrame
+			local CurrentRow = 1
+			repeat
+				if CurrentColumn>columns then
+					CurrentColumn = CurrentColumn - columns
+					CurrentRow = CurrentRow + 1
+				end
+			until not(CurrentColumn>columns)
+	
+			AnimationFrameWrapper.Animated.Position = UDim2.new(-(CurrentColumn-1),0,-(CurrentRow-1),0)
+			f()
+			t = tick()
+		end
+	end
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		UpdateWarper(AnimationFunction)
+	end)
+	
+end;
+task.spawn(C_ea);
+-- StarterGui.sparrowlite.Frame.search.key.animated
+local function C_102()
+local script = G2L["102"];
+	local warperFramerate = 25
+	local lastFrame = 1
+	local frames = 7*4+2
+	local rows = 8
+	local columns = 4
+	
+	local AnimationFrameWrapper = script.Parent.Warper
+	local AnimatedSprite = AnimationFrameWrapper.Animated
+	
+	local t = tick()
+	
+	AnimatedSprite.Size = UDim2.new(columns,-0.2,rows,-0.2)
+	
+	local function AnimationFunction()
+	end
+	
+	local function UpdateWarper(f)
+		if tick()-t >= 1/warperFramerate then
+			lastFrame = lastFrame + 1
+			if lastFrame > frames then lastFrame = 1 end
+			local CurrentColumn = lastFrame
+			local CurrentRow = 1
+			repeat
+				if CurrentColumn>columns then
+					CurrentColumn = CurrentColumn - columns
+					CurrentRow = CurrentRow + 1
+				end
+			until not(CurrentColumn>columns)
+	
+			AnimationFrameWrapper.Animated.Position = UDim2.new(-(CurrentColumn-1),0,-(CurrentRow-1),0)
+			f()
+			t = tick()
+		end
+	end
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		UpdateWarper(AnimationFunction)
+	end)
+	
+end;
+task.spawn(C_102);
+-- StarterGui.sparrowlite.Frame.settings.key.animated
+local function C_11b()
+local script = G2L["11b"];
+	local warperFramerate = 25
+	local lastFrame = 1
+	local frames = 7*4+2
+	local rows = 8
+	local columns = 4
+	
+	local AnimationFrameWrapper = script.Parent.Warper
+	local AnimatedSprite = AnimationFrameWrapper.Animated
+	
+	local t = tick()
+	
+	AnimatedSprite.Size = UDim2.new(columns,-0.2,rows,-0.2)
+	
+	local function AnimationFunction()
+	end
+	
+	local function UpdateWarper(f)
+		if tick()-t >= 1/warperFramerate then
+			lastFrame = lastFrame + 1
+			if lastFrame > frames then lastFrame = 1 end
+			local CurrentColumn = lastFrame
+			local CurrentRow = 1
+			repeat
+				if CurrentColumn>columns then
+					CurrentColumn = CurrentColumn - columns
+					CurrentRow = CurrentRow + 1
+				end
+			until not(CurrentColumn>columns)
+	
+			AnimationFrameWrapper.Animated.Position = UDim2.new(-(CurrentColumn-1),0,-(CurrentRow-1),0)
+			f()
+			t = tick()
+		end
+	end
+	
+	game:GetService("RunService").RenderStepped:Connect(function()
+		UpdateWarper(AnimationFunction)
+	end)
+	
+end;
+task.spawn(C_11b);
+-- StarterGui.sparrowlite.Frame.LocalScript
+local function C_125()
+local script = G2L["125"];
+	local frames = script.Parent
+	local f1 = frames.home
+	local f2 = frames.executor
+	local f3 = frames.sparrowhub
+	local f4 = frames.search
+	local f5 = frames.settings
+	local tabs = frames.tabs.tabs
+	local b1 = tabs.h
+	local b2 = tabs.e
+	local b3 = tabs.hub
+	local b4 = tabs.search
+	local b5 = tabs.s
+	
+	b1.MouseButton1Click:Connect(function()
+		f1.Visible = true
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b2.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = true
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b3.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = true
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b4.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = true
+		f5.Visible = false
+	end)
+	b5.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = true
+	end)
+	
+	local exit = frames.exit.ImageButton
+	exit.MouseButton1Click:Connect(function()
+		frames.Visible = false
+	end)
+	
+	local ffps = f1.fps.TextLabel
+	local pping = f1.ping.TextLabel
+	local users = f1.users.TextLabel
+	local p = frames.user
+	local myname = p.TextLabel
+	local plrimage = p.ImageLabel
+	
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local function updateStats()
+		local fps = math.floor(1 / RunService.Heartbeat:Wait())
+	
+		local playerCount = #Players:GetPlayers()
+	
+		local ping = 0
+		for _, player in pairs(Players:GetPlayers()) do
+			if player ~= Players.LocalPlayer then
+				local connection = player:FindFirstChildOfClass("PlayerNetworkConnection")
+				if connection then
+					ping = math.max(ping, connection:GetPing())
+				end
+			end
+		end
+	
+		ffps.Text = "FPS: " .. fps
+		pping.Text = "Ping: " .. ping
+		users.Text = "Users: " .. playerCount
+	
+		for _, player in pairs(Players:GetPlayers()) do
+			myname.Text = player.Name
+		end
+	end
+	
+	while true do
+		updateStats()
+		wait(1)
+	end
+	
+	PlayerService = game:GetService('Players')
+end;
+task.spawn(C_125);
+
+return G2L["1"], require;
