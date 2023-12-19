@@ -254,10 +254,6 @@ local ScreenGui = {
 --Properties:
 
 ScreenGui.ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.Sparrow.Parent = game.CoreGui
-ScreenGui.DisplayOrder = 9999
-ScreenGui.Draggable = true
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ScreenGui.Frame.Parent = ScreenGui.ScreenGui
 ScreenGui.Frame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
@@ -265,6 +261,7 @@ ScreenGui.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScreenGui.Frame.BorderSizePixel = 0
 ScreenGui.Frame.Position = UDim2.new(0.110389613, 0, 0.0685185194, 0)
 ScreenGui.Frame.Size = UDim2.new(0.77922076, 0, 0.862962961, 0)
+ScreenGui.draggable = true
 
 ScreenGui.UICorner.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner.Parent = ScreenGui.Frame
@@ -1095,8 +1092,8 @@ ScreenGui.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
 ScreenGui.ScrollingFrame.BackgroundTransparency = 1.000
 ScreenGui.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScreenGui.ScrollingFrame.BorderSizePixel = 0
-ScreenGui.ScrollingFrame.Size = UDim2.new(0.998233199, 0, 1.00263155, 0)
-ScreenGui.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
+screenGui.ScrollingFrame.Size = UDim2.new(0.9, 0, 0.9, 0)
+screenGui.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 0) 
 
 ScreenGui.UIAspectRatioConstraint_42.Parent = ScreenGui.ScrollingFrame
 ScreenGui.UIAspectRatioConstraint_42.AspectRatio = 1.157
@@ -1105,8 +1102,8 @@ ScreenGui.Frame_2.Parent = ScreenGui.ScrollingFrame
 ScreenGui.Frame_2.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
 ScreenGui.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScreenGui.Frame_2.BorderSizePixel = 0
-ScreenGui.Frame_2.Position = UDim2.new(0, 10, 0, 9)
-ScreenGui.Frame_2.Size = UDim2.new(0, 265, 0, 45)
+screenGui.Frame_2.Position = UDim2.new(0, 10, 0, 10) -- Adjust the position accordingly
+screenGui.Frame_2.Size = UDim2.new(1, -20, 0, 45)
 
 ScreenGui.UICorner_33.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_33.Parent = ScreenGui.Frame_2
