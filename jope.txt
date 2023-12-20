@@ -349,6 +349,15 @@ ScreenGui.Home.TextScaled = true
 ScreenGui.Home.TextSize = 16.000
 ScreenGui.Home.TextWrapped = true
 
+ScreenGui.Home.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = true
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = false
+end)
+
 ScreenGui.UICorner_6.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_6.Parent = ScreenGui.Home
 
@@ -1634,13 +1643,4 @@ end)
 
 ScreenGui.Youtube.MouseButton1Click:Connect(function()
     setclipboard("https://discord.com/invite/tpGWjaXnTm")
-end)
-
-ScreenGui.Home.MouseButton1Click:Connect(function()
-    ScreenGui.HomeFrame.Visible = true
-    ScreenGui.ExecuterFrame.Visible = false
-    ScreenGui.SearchFrame.Visible = false
-    ScreenGui.ScriptHubFrame.Visible = false
-    ScreenGui.ConsoleFrame.Visible = false
-    ScreenGui.SettingsFrame.Visible = false
 end)
