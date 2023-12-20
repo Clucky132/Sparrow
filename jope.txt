@@ -381,6 +381,15 @@ ScreenGui.Executer.TextScaled = true
 ScreenGui.Executer.TextSize = 21.000
 ScreenGui.Executer.TextWrapped = true
 
+ScreenGui.Executer.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = false
+    ScreenGui.ExecuterFrame.Visible = true
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = false
+end)
+
 ScreenGui.UICorner_7.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_7.Parent = ScreenGui.Executer
 
@@ -403,6 +412,15 @@ ScreenGui.ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.ScriptHub.TextScaled = true
 ScreenGui.ScriptHub.TextSize = 16.000
 ScreenGui.ScriptHub.TextWrapped = true
+
+ScreenGui.ScriptHub.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = false
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = true
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = false
+end)
 
 ScreenGui.UICorner_8.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_8.Parent = ScreenGui.ScriptHub
@@ -427,6 +445,15 @@ ScreenGui.Search.TextScaled = true
 ScreenGui.Search.TextSize = 19.000
 ScreenGui.Search.TextWrapped = true
 
+ScreenGui.Search.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = false
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = true
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = false
+end)
+
 ScreenGui.UICorner_9.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_9.Parent = ScreenGui.Search
 
@@ -450,6 +477,15 @@ ScreenGui.Console.TextScaled = true
 ScreenGui.Console.TextSize = 19.000
 ScreenGui.Console.TextWrapped = true
 
+ScreenGui.Console.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = false
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = true
+    ScreenGui.SettingsFrame.Visible = false
+end)
+
 ScreenGui.UICorner_10.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_10.Parent = ScreenGui.Console
 
@@ -472,6 +508,15 @@ ScreenGui.Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.Settings.TextScaled = true
 ScreenGui.Settings.TextSize = 19.000
 ScreenGui.Settings.TextWrapped = true
+
+ScreenGui.Settings.MouseButton1Click:Connect(function()
+    ScreenGui.HomeFrame.Visible = false
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = true
+end)
 
 ScreenGui.UICorner_11.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_11.Parent = ScreenGui.Settings
@@ -812,6 +857,10 @@ ScreenGui.Discord.TextScaled = true
 ScreenGui.Discord.TextSize = 14.000
 ScreenGui.Discord.TextWrapped = true
 
+ScreenGui.Discord.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.com/invite/tpGWjaXnTm")
+end)
+
 ScreenGui.UICorner_21.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_21.Parent = ScreenGui.Discord
 
@@ -835,6 +884,10 @@ ScreenGui.Youtube.TextScaled = true
 ScreenGui.Youtube.TextSize = 14.000
 ScreenGui.Youtube.TextWrapped = true
 
+ScreenGui.Youtube.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.com/invite/tpGWjaXnTm")
+end)
+
 ScreenGui.UICorner_22.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_22.Parent = ScreenGui.Youtube
 
@@ -857,6 +910,10 @@ ScreenGui.TikTok.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.TikTok.TextScaled = true
 ScreenGui.TikTok.TextSize = 14.000
 ScreenGui.TikTok.TextWrapped = true
+
+ScreenGui.TikTok.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.com/invite/tpGWjaXnTm")
+end)
 
 ScreenGui.UICorner_23.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_23.Parent = ScreenGui.TikTok
@@ -988,6 +1045,25 @@ ScreenGui.Execute.TextScaled = true
 ScreenGui.Execute.TextSize = 14.000
 ScreenGui.Execute.TextWrapped = true
 
+local function ExecuteScript(script)
+	local f, err = loadstring(script)
+	if f then
+		f()
+	else
+		print("Script execution error:", err)
+	end
+end
+
+ScreenGui.Execute.MouseButton1Click:Connect(function()
+	local script = ScreenGui.ScriptInput
+	ExecuteScript(script)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Script";
+		Text = "Script Executed";
+		Duration = 3;
+	})
+end)
+
 ScreenGui.UICorner_27.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_27.Parent = ScreenGui.Execute
 
@@ -1013,6 +1089,10 @@ ScreenGui.Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.Clear.TextScaled = true
 ScreenGui.Clear.TextSize = 14.000
 ScreenGui.Clear.TextWrapped = true
+
+ScreenGui.Clear.MouseButton1Click:Connect(function()
+	ScreenGui.ScriprInput.Text = ""
+end)
 
 ScreenGui.UICorner_29.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_29.Parent = ScreenGui.Clear
@@ -1059,6 +1139,16 @@ ScreenGui.ExecuteCB.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.ExecuteCB.TextScaled = true
 ScreenGui.ExecuteCB.TextSize = 14.000
 ScreenGui.ExecuteCB.TextWrapped = true
+
+ScreenGui.ExecuteCB.MouseButton1Click:Connect(function()
+	local clipboardText = getclipboard()
+	if clipboardText then
+		local success, result = pcall(loadstring(clipboardText))
+		if not success then
+			print("Error executing clipboard content: " .. result)
+		end
+	end
+end)
 
 ScreenGui.UICorner_31.CornerRadius = UDim.new(0, 10)
 ScreenGui.UICorner_31.Parent = ScreenGui.ExecuteCB
@@ -1627,10 +1717,6 @@ ScreenGui.UIAspectRatioConstraint_69.AspectRatio = 1.612
 
 ScreenGui.UIAspectRatioConstraint_70.Parent = ScreenGui.Frame
 ScreenGui.UIAspectRatioConstraint_70.AspectRatio = 1.607
-
---Scripts
-
----HomeTab
 
 
 ScreenGui.Discord.MouseButton1Click:Connect(function()
