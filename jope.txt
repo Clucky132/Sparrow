@@ -701,7 +701,7 @@ ScreenGui.SeverPlayers.BorderSizePixel = 0
 ScreenGui.SeverPlayers.Position = UDim2.new(0, 0, 0.256249994, 0)
 ScreenGui.SeverPlayers.Size = UDim2.new(1, 0, 0.112499997, 0)
 ScreenGui.SeverPlayers.Font = Enum.Font.SourceSans
-ScreenGui.SeverPlayers.Text = "Players: " .. numberOfPlayers
+ScreenGui.SeverPlayers.Text = "Players: "
 ScreenGui.SeverPlayers.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.SeverPlayers.TextScaled = true
 ScreenGui.SeverPlayers.TextSize = 14.000
@@ -722,7 +722,7 @@ ScreenGui.Fps.BorderSizePixel = 0
 ScreenGui.Fps.Position = UDim2.new(0, 0, 0.493750006, 0)
 ScreenGui.Fps.Size = UDim2.new(1, 0, 0.112499997, 0)
 ScreenGui.Fps.Font = Enum.Font.SourceSans
-ScreenGui.Fps.Text = "Server FPS: " .. serverFPS
+ScreenGui.Fps.Text = "Server FPS: "
 ScreenGui.Fps.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScreenGui.Fps.TextScaled = true
 ScreenGui.Fps.TextSize = 14.000
@@ -1623,9 +1623,6 @@ ScreenGui.UIAspectRatioConstraint_70.AspectRatio = 1.607
 
 ---HomeTab
 
-local numberOfPlayers = #game.Players:GetPlayers()
-
-local serverFPS = math.floor(workspace:GetRealPhysicsFPS())
 
 ScreenGui.Discord.MouseButton1Click:Connect(function()
     setclipboard("https://discord.com/invite/tpGWjaXnTm")
