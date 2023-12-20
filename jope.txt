@@ -1637,10 +1637,10 @@ ScreenGui.Youtube.MouseButton1Click:Connect(function()
 end)
 
 ScreenGui.Home.MouseButton1Click:Connect(function()
-    HomeFrame.Visible = true
-    ExecuterFrame.Visible = false
-    SearchFrame.Visible = false
-    ScriptHubFrame.Visible = false
-    ConsoleFrame.Visible = false
-    SettingsFrame.Visible = false
+    ScreenGui.HomeFrame.Visible = true
+    ScreenGui.ExecuterFrame.Visible = false
+    ScreenGui.SearchFrame.Visible = false
+    ScreenGui.ScriptHubFrame.Visible = false
+    ScreenGui.ConsoleFrame.Visible = false
+    ScreenGui.SettingsFrame.Visible = false
 end)
