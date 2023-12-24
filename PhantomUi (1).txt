@@ -271,10 +271,20 @@ Phantom.UserAvataIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Phantom.UserAvataIcon.BorderSizePixel = 0
 Phantom.UserAvataIcon.Position = UDim2.new(0.119999997, 0, 0.119402982, 0)
 Phantom.UserAvataIcon.Size = UDim2.new(0.75999999, 0, 0.731343269, 0)
-Phantom.UserAvataIcon.Image = avatarImage
+Phantom.UserAvataIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
-local player = game.Players.LocalPlayer
-local avatarImage = player.CharacterAppearance:GetUserAppearanceAsync(player.UserId)
+-- Wait until the player's character is fully loaded
+repeat wait() until game.Players.LocalPlayer.Character ~= nil
+
+local Player = game.Players.LocalPlayer
+local UserId = Player.UserId
+local ThumbType = Enum.ThumbnailType.HeadShot
+local ThumbSize = Enum.ThumbnailSize.Size420x420
+
+-- Fetch and set the player's headshot thumbnail
+local image = game.Players:GetUserThumbnailAsync(UserId, ThumbType, ThumbSize)
+Phantom.UserAvataIcon.Image = image
+
 
 Phantom.UICorner_3.CornerRadius = UDim.new(0, 100)
 Phantom.UICorner_3.Parent = Phantom.UserAvataIcon
