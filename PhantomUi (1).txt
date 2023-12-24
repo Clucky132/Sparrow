@@ -1469,3 +1469,43 @@ local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript
 	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
 end
 coroutine.wrap(FIKF_fake_script)()
+
+
+local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local phantom = playerGui:WaitForChild("Phantom") -- Assuming 'Phantom' is your Frame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+    local delta = input.Position - dragStart
+    phantom.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+phantom.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = phantom.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+phantom.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+game:GetService("UserInputService").InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        update(input)
+    end
+end)
