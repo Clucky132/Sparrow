@@ -1,0 +1,1403 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Phantom = {
+	Phantom = Instance.new("ScreenGui"),
+	Frame = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	SideBar = Instance.new("Frame"),
+	ImageFrame = Instance.new("Frame"),
+	UICorner_2 = Instance.new("UICorner"),
+	UserAvataIcon = Instance.new("ImageLabel"),
+	UICorner_3 = Instance.new("UICorner"),
+	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
+	TabButtons = Instance.new("Frame"),
+	UICorner_4 = Instance.new("UICorner"),
+	Home = Instance.new("TextButton"),
+	UICorner_5 = Instance.new("UICorner"),
+	UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
+	Executer = Instance.new("TextButton"),
+	UICorner_6 = Instance.new("UICorner"),
+	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
+	ScriptHub = Instance.new("TextButton"),
+	UICorner_7 = Instance.new("UICorner"),
+	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint"),
+	Searcher = Instance.new("TextButton"),
+	UICorner_8 = Instance.new("UICorner"),
+	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint"),
+	Console = Instance.new("TextButton"),
+	UICorner_9 = Instance.new("UICorner"),
+	UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint"),
+	Settings = Instance.new("TextButton"),
+	UICorner_10 = Instance.new("UICorner"),
+	UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_11 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint"),
+	TopBar = Instance.new("Frame"),
+	UICorner_12 = Instance.new("UICorner"),
+	CloseUi = Instance.new("TextButton"),
+	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint"),
+	PhantomV1Text = Instance.new("TextLabel"),
+	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint"),
+	HomeFrame = Instance.new("Frame"),
+	UICorner_13 = Instance.new("UICorner"),
+	Devs = Instance.new("Frame"),
+	UICorner_14 = Instance.new("UICorner"),
+	DevLabel = Instance.new("TextLabel"),
+	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
+	Jext = Instance.new("TextLabel"),
+	UICorner_15 = Instance.new("UICorner"),
+	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
+	Wosh = Instance.new("TextLabel"),
+	UICorner_16 = Instance.new("UICorner"),
+	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
+	SocialsHolder = Instance.new("Frame"),
+	UICorner_17 = Instance.new("UICorner"),
+	TextLabel = Instance.new("TextLabel"),
+	UICorner_18 = Instance.new("UICorner"),
+	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint"),
+	Discord = Instance.new("TextButton"),
+	UICorner_19 = Instance.new("UICorner"),
+	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
+	TikTok = Instance.new("TextButton"),
+	UICorner_20 = Instance.new("UICorner"),
+	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
+	YouTube = Instance.new("TextButton"),
+	UICorner_21 = Instance.new("UICorner"),
+	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
+	Soon = Instance.new("Frame"),
+	UICorner_22 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint"),
+	ExecuterFrame = Instance.new("Frame"),
+	UICorner_23 = Instance.new("UICorner"),
+	ScriptInput = Instance.new("TextBox"),
+	UICorner_24 = Instance.new("UICorner"),
+	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint"),
+	ButtonsHolder = Instance.new("Frame"),
+	UICorner_25 = Instance.new("UICorner"),
+	Execute = Instance.new("TextButton"),
+	UICorner_26 = Instance.new("UICorner"),
+	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint"),
+	Clear = Instance.new("TextButton"),
+	UICorner_27 = Instance.new("UICorner"),
+	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint"),
+	ExecuteCB = Instance.new("TextButton"),
+	UICorner_28 = Instance.new("UICorner"),
+	UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_29 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_30 = Instance.new("UIAspectRatioConstraint"),
+	ScriptHubFrame = Instance.new("Frame"),
+	UICorner_29 = Instance.new("UICorner"),
+	ScrolingFrameHolder = Instance.new("Frame"),
+	UICorner_30 = Instance.new("UICorner"),
+	ScrollingFrame = Instance.new("ScrollingFrame"),
+	Frame_2 = Instance.new("Frame"),
+	UICorner_31 = Instance.new("UICorner"),
+	TextLabel_2 = Instance.new("TextLabel"),
+	UICorner_32 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_31 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint"),
+	TextButton = Instance.new("TextButton"),
+	UICorner_33 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_32 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_33 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_34 = Instance.new("UIAspectRatioConstraint"),
+	AddScrtipFrame = Instance.new("Frame"),
+	ScriptAdderTitle = Instance.new("TextLabel"),
+	UICorner_34 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_35 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint"),
+	CloseTHISFrame = Instance.new("TextButton"),
+	UICorner_35 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_36 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint"),
+	UICorner_36 = Instance.new("UICorner"),
+	ScriptAdderFrame = Instance.new("Frame"),
+	UICorner_37 = Instance.new("UICorner"),
+	ScriptNameLabel = Instance.new("TextLabel"),
+	UICorner_38 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_37 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint"),
+	ScriptName = Instance.new("TextBox"),
+	UICorner_39 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_38 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint"),
+	ScriptCodeLabel = Instance.new("TextLabel"),
+	UICorner_40 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_39 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint"),
+	ScriptCode = Instance.new("TextBox"),
+	UICorner_41 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_40 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint"),
+	AddScript = Instance.new("TextButton"),
+	UICorner_42 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_41 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_42 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_43 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_44 = Instance.new("UIAspectRatioConstraint"),
+	AddScriptOpen = Instance.new("TextButton"),
+	UICorner_43 = Instance.new("UICorner"),
+	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_45 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_46 = Instance.new("UIAspectRatioConstraint"),
+	SearcherFrame = Instance.new("Frame"),
+	UICorner_44 = Instance.new("UICorner"),
+	SearchBar = Instance.new("TextBox"),
+	UICorner_45 = Instance.new("UICorner"),
+	UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_47 = Instance.new("UIAspectRatioConstraint"),
+	Search = Instance.new("TextButton"),
+	UICorner_46 = Instance.new("UICorner"),
+	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_48 = Instance.new("UIAspectRatioConstraint"),
+	ResultsHolder = Instance.new("Frame"),
+	UICorner_47 = Instance.new("UICorner"),
+	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
+	Frame_3 = Instance.new("Frame"),
+	UICorner_48 = Instance.new("UICorner"),
+	Frame_4 = Instance.new("Frame"),
+	UICorner_49 = Instance.new("UICorner"),
+	ImageLabel = Instance.new("ImageLabel"),
+	UIAspectRatioConstraint_49 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_50 = Instance.new("UIAspectRatioConstraint"),
+	Frame_5 = Instance.new("Frame"),
+	UICorner_50 = Instance.new("UICorner"),
+	TextButton_2 = Instance.new("TextButton"),
+	UICorner_51 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_51 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint"),
+	TextButton_3 = Instance.new("TextButton"),
+	UICorner_52 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_52 = Instance.new("UIAspectRatioConstraint"),
+	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
+	UIAspectRatioConstraint_53 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_54 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_55 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_56 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_57 = Instance.new("UIAspectRatioConstraint"),
+	ConsoleFrame = Instance.new("Frame"),
+	UICorner_53 = Instance.new("UICorner"),
+	Frame_6 = Instance.new("Frame"),
+	ScrollingFrame_3 = Instance.new("ScrollingFrame"),
+	UIAspectRatioConstraint_58 = Instance.new("UIAspectRatioConstraint"),
+	UICorner_54 = Instance.new("UICorner"),
+	UIAspectRatioConstraint_59 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_60 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_61 = Instance.new("UIAspectRatioConstraint"),
+	UIAspectRatioConstraint_62 = Instance.new("UIAspectRatioConstraint"),
+}
+
+--Properties:
+
+Phantom.Phantom.Name = "Phantom"
+Phantom.Phantom.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Phantom.Phantom.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Phantom.Frame.Parent = Phantom.Phantom
+Phantom.Frame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame.BorderSizePixel = 0
+Phantom.Frame.Position = UDim2.new(0.018779343, 0, 0.0362116992, 0)
+Phantom.Frame.Size = UDim2.new(0.923423409, 0, 0.887700558, 0)
+
+Phantom.UICorner.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner.Parent = Phantom.Frame
+
+Phantom.SideBar.Name = "SideBar"
+Phantom.SideBar.Parent = Phantom.Frame
+Phantom.SideBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.SideBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.SideBar.BorderSizePixel = 0
+Phantom.SideBar.Size = UDim2.new(0.149593502, 0, 1, 0)
+
+Phantom.ImageFrame.Name = "ImageFrame"
+Phantom.ImageFrame.Parent = Phantom.SideBar
+Phantom.ImageFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ImageFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ImageFrame.BorderSizePixel = 0
+Phantom.ImageFrame.Position = UDim2.new(0.0869565234, 0, 0.183734939, 0)
+Phantom.ImageFrame.Size = UDim2.new(0.815217435, 0, 0.201807231, 0)
+
+Phantom.UICorner_2.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_2.Parent = Phantom.ImageFrame
+
+Phantom.UserAvataIcon.Name = "UserAvataIcon"
+Phantom.UserAvataIcon.Parent = Phantom.ImageFrame
+Phantom.UserAvataIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.UserAvataIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.UserAvataIcon.BorderSizePixel = 0
+Phantom.UserAvataIcon.Position = UDim2.new(0.119999997, 0, 0.119402982, 0)
+Phantom.UserAvataIcon.Size = UDim2.new(0.75999999, 0, 0.731343269, 0)
+Phantom.UserAvataIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Phantom.UICorner_3.CornerRadius = UDim.new(0, 100)
+Phantom.UICorner_3.Parent = Phantom.UserAvataIcon
+
+Phantom.UIAspectRatioConstraint.Parent = Phantom.UserAvataIcon
+Phantom.UIAspectRatioConstraint.AspectRatio = 1.490
+
+Phantom.UIAspectRatioConstraint_2.Parent = Phantom.ImageFrame
+Phantom.UIAspectRatioConstraint_2.AspectRatio = 1.119
+
+Phantom.TabButtons.Name = "TabButtons"
+Phantom.TabButtons.Parent = Phantom.SideBar
+Phantom.TabButtons.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.TabButtons.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TabButtons.BorderSizePixel = 0
+Phantom.TabButtons.Position = UDim2.new(0.0869565234, 0, 0.4246988, 0)
+Phantom.TabButtons.Size = UDim2.new(0.815217435, 0, 0.52409637, 0)
+
+Phantom.UICorner_4.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_4.Parent = Phantom.TabButtons
+
+Phantom.Home.Name = "Home"
+Phantom.Home.Parent = Phantom.TabButtons
+Phantom.Home.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Home.BorderSizePixel = 0
+Phantom.Home.Position = UDim2.new(0.0666666701, 0, 0.0919540226, 0)
+Phantom.Home.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.Home.Font = Enum.Font.SourceSans
+Phantom.Home.Text = "Home"
+Phantom.Home.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Home.TextScaled = true
+Phantom.Home.TextSize = 14.000
+Phantom.Home.TextWrapped = true
+
+Phantom.UICorner_5.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_5.Parent = Phantom.Home
+
+Phantom.UITextSizeConstraint.Parent = Phantom.Home
+Phantom.UITextSizeConstraint.MaxTextSize = 26
+
+Phantom.UIAspectRatioConstraint_3.Parent = Phantom.Home
+Phantom.UIAspectRatioConstraint_3.AspectRatio = 3.474
+
+Phantom.Executer.Name = "Executer"
+Phantom.Executer.Parent = Phantom.TabButtons
+Phantom.Executer.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Executer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Executer.BorderSizePixel = 0
+Phantom.Executer.Position = UDim2.new(0.0666666701, 0, 0.241379306, 0)
+Phantom.Executer.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.Executer.Font = Enum.Font.SourceSans
+Phantom.Executer.Text = "Executer"
+Phantom.Executer.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Executer.TextScaled = true
+Phantom.Executer.TextSize = 14.000
+Phantom.Executer.TextWrapped = true
+
+Phantom.UICorner_6.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_6.Parent = Phantom.Executer
+
+Phantom.UITextSizeConstraint_2.Parent = Phantom.Executer
+Phantom.UITextSizeConstraint_2.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_4.Parent = Phantom.Executer
+Phantom.UIAspectRatioConstraint_4.AspectRatio = 3.474
+
+Phantom.ScriptHub.Name = "ScriptHub"
+Phantom.ScriptHub.Parent = Phantom.TabButtons
+Phantom.ScriptHub.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptHub.BorderSizePixel = 0
+Phantom.ScriptHub.Position = UDim2.new(0.0666666701, 0, 0.390804589, 0)
+Phantom.ScriptHub.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.ScriptHub.Font = Enum.Font.SourceSans
+Phantom.ScriptHub.Text = "ScriptHub"
+Phantom.ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptHub.TextScaled = true
+Phantom.ScriptHub.TextSize = 14.000
+Phantom.ScriptHub.TextWrapped = true
+
+Phantom.UICorner_7.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_7.Parent = Phantom.ScriptHub
+
+Phantom.UITextSizeConstraint_3.Parent = Phantom.ScriptHub
+Phantom.UITextSizeConstraint_3.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_5.Parent = Phantom.ScriptHub
+Phantom.UIAspectRatioConstraint_5.AspectRatio = 3.474
+
+Phantom.Searcher.Name = "Searcher"
+Phantom.Searcher.Parent = Phantom.TabButtons
+Phantom.Searcher.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Searcher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Searcher.BorderSizePixel = 0
+Phantom.Searcher.Position = UDim2.new(0.0666666701, 0, 0.540229857, 0)
+Phantom.Searcher.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.Searcher.Font = Enum.Font.SourceSans
+Phantom.Searcher.Text = "Searcher"
+Phantom.Searcher.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Searcher.TextScaled = true
+Phantom.Searcher.TextSize = 14.000
+Phantom.Searcher.TextWrapped = true
+
+Phantom.UICorner_8.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_8.Parent = Phantom.Searcher
+
+Phantom.UITextSizeConstraint_4.Parent = Phantom.Searcher
+Phantom.UITextSizeConstraint_4.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_6.Parent = Phantom.Searcher
+Phantom.UIAspectRatioConstraint_6.AspectRatio = 3.474
+
+Phantom.Console.Name = "Console"
+Phantom.Console.Parent = Phantom.TabButtons
+Phantom.Console.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Console.BorderSizePixel = 0
+Phantom.Console.Position = UDim2.new(0.0666666701, 0, 0.689655185, 0)
+Phantom.Console.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.Console.Font = Enum.Font.SourceSans
+Phantom.Console.Text = "Console"
+Phantom.Console.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Console.TextScaled = true
+Phantom.Console.TextSize = 14.000
+Phantom.Console.TextWrapped = true
+
+Phantom.UICorner_9.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_9.Parent = Phantom.Console
+
+Phantom.UITextSizeConstraint_5.Parent = Phantom.Console
+Phantom.UITextSizeConstraint_5.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_7.Parent = Phantom.Console
+Phantom.UIAspectRatioConstraint_7.AspectRatio = 3.474
+
+Phantom.Settings.Name = "Settings"
+Phantom.Settings.Parent = Phantom.TabButtons
+Phantom.Settings.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Settings.BorderSizePixel = 0
+Phantom.Settings.Position = UDim2.new(0.0666666701, 0, 0.850574732, 0)
+Phantom.Settings.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
+Phantom.Settings.Font = Enum.Font.SourceSans
+Phantom.Settings.Text = "Soon!"
+Phantom.Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Settings.TextScaled = true
+Phantom.Settings.TextSize = 14.000
+Phantom.Settings.TextWrapped = true
+
+Phantom.UICorner_10.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_10.Parent = Phantom.Settings
+
+Phantom.UITextSizeConstraint_6.Parent = Phantom.Settings
+Phantom.UITextSizeConstraint_6.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_8.Parent = Phantom.Settings
+Phantom.UIAspectRatioConstraint_8.AspectRatio = 3.474
+
+Phantom.UIAspectRatioConstraint_9.Parent = Phantom.TabButtons
+Phantom.UIAspectRatioConstraint_9.AspectRatio = 0.431
+
+Phantom.UICorner_11.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_11.Parent = Phantom.SideBar
+
+Phantom.UIAspectRatioConstraint_10.Parent = Phantom.SideBar
+Phantom.UIAspectRatioConstraint_10.AspectRatio = 0.277
+
+Phantom.TopBar.Name = "TopBar"
+Phantom.TopBar.Parent = Phantom.Frame
+Phantom.TopBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TopBar.BorderSizePixel = 0
+Phantom.TopBar.Size = UDim2.new(1, 0, 0.147590354, 0)
+
+Phantom.UICorner_12.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_12.Parent = Phantom.TopBar
+
+Phantom.CloseUi.Name = "CloseUi"
+Phantom.CloseUi.Parent = Phantom.TopBar
+Phantom.CloseUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.CloseUi.BackgroundTransparency = 1.000
+Phantom.CloseUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.CloseUi.BorderSizePixel = 0
+Phantom.CloseUi.Position = UDim2.new(0.918339312, 0, 0, 0)
+Phantom.CloseUi.Size = UDim2.new(0.08130081, 0, 1.02040827, 0)
+Phantom.CloseUi.Font = Enum.Font.SourceSans
+Phantom.CloseUi.Text = "X"
+Phantom.CloseUi.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.CloseUi.TextScaled = true
+Phantom.CloseUi.TextSize = 14.000
+Phantom.CloseUi.TextWrapped = true
+
+Phantom.UITextSizeConstraint_7.Parent = Phantom.CloseUi
+Phantom.UITextSizeConstraint_7.MaxTextSize = 50
+
+Phantom.UIAspectRatioConstraint_11.Parent = Phantom.CloseUi
+Phantom.UIAspectRatioConstraint_11.AspectRatio = 1.281
+
+Phantom.PhantomV1Text.Name = "PhantomV1Text"
+Phantom.PhantomV1Text.Parent = Phantom.TopBar
+Phantom.PhantomV1Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.PhantomV1Text.BackgroundTransparency = 1.000
+Phantom.PhantomV1Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.PhantomV1Text.BorderSizePixel = 0
+Phantom.PhantomV1Text.Size = UDim2.new(0.713821113, 0, 1.02040827, 0)
+Phantom.PhantomV1Text.Font = Enum.Font.SourceSans
+Phantom.PhantomV1Text.Text = "Phantom V1"
+Phantom.PhantomV1Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.PhantomV1Text.TextScaled = true
+Phantom.PhantomV1Text.TextSize = 14.000
+Phantom.PhantomV1Text.TextWrapped = true
+
+Phantom.UITextSizeConstraint_8.Parent = Phantom.PhantomV1Text
+Phantom.UITextSizeConstraint_8.MaxTextSize = 72
+
+Phantom.UIAspectRatioConstraint_12.Parent = Phantom.PhantomV1Text
+Phantom.UIAspectRatioConstraint_12.AspectRatio = 8.780
+
+Phantom.UIAspectRatioConstraint_13.Parent = Phantom.TopBar
+Phantom.UIAspectRatioConstraint_13.AspectRatio = 12.551
+
+Phantom.HomeFrame.Name = "HomeFrame"
+Phantom.HomeFrame.Parent = Phantom.Frame
+Phantom.HomeFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.HomeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.HomeFrame.BorderSizePixel = 0
+Phantom.HomeFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
+Phantom.HomeFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
+
+Phantom.UICorner_13.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_13.Parent = Phantom.HomeFrame
+
+Phantom.Devs.Name = "Devs"
+Phantom.Devs.Parent = Phantom.HomeFrame
+Phantom.Devs.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Devs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Devs.BorderSizePixel = 0
+Phantom.Devs.Position = UDim2.new(0.017821813, 0, 0.0304182507, 0)
+Phantom.Devs.Size = UDim2.new(0.964356422, 0, 0.186311781, 0)
+
+Phantom.UICorner_14.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_14.Parent = Phantom.Devs
+
+Phantom.DevLabel.Name = "DevLabel"
+Phantom.DevLabel.Parent = Phantom.Devs
+Phantom.DevLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.DevLabel.BackgroundTransparency = 1.000
+Phantom.DevLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.DevLabel.BorderSizePixel = 0
+Phantom.DevLabel.Position = UDim2.new(0.293634504, 0, 0, 0)
+Phantom.DevLabel.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
+Phantom.DevLabel.Font = Enum.Font.SourceSans
+Phantom.DevLabel.Text = "Devs"
+Phantom.DevLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.DevLabel.TextScaled = true
+Phantom.DevLabel.TextSize = 14.000
+Phantom.DevLabel.TextWrapped = true
+
+Phantom.UITextSizeConstraint_9.Parent = Phantom.DevLabel
+Phantom.UITextSizeConstraint_9.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_14.Parent = Phantom.DevLabel
+Phantom.UIAspectRatioConstraint_14.AspectRatio = 11.111
+
+Phantom.Jext.Name = "Jext"
+Phantom.Jext.Parent = Phantom.Devs
+Phantom.Jext.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Jext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Jext.BorderSizePixel = 0
+Phantom.Jext.Position = UDim2.new(0.0205338802, 0, 0.367346942, 0)
+Phantom.Jext.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
+Phantom.Jext.Font = Enum.Font.SourceSans
+Phantom.Jext.Text = "Owner: jext1"
+Phantom.Jext.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Jext.TextScaled = true
+Phantom.Jext.TextSize = 14.000
+Phantom.Jext.TextWrapped = true
+
+Phantom.UICorner_15.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_15.Parent = Phantom.Jext
+
+Phantom.UITextSizeConstraint_10.Parent = Phantom.Jext
+Phantom.UITextSizeConstraint_10.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_15.Parent = Phantom.Jext
+Phantom.UIAspectRatioConstraint_15.AspectRatio = 11.111
+
+Phantom.Wosh.Name = "Wosh"
+Phantom.Wosh.Parent = Phantom.Devs
+Phantom.Wosh.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Wosh.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Wosh.BorderSizePixel = 0
+Phantom.Wosh.Position = UDim2.new(0.558521569, 0, 0.367346942, 0)
+Phantom.Wosh.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
+Phantom.Wosh.Font = Enum.Font.SourceSans
+Phantom.Wosh.Text = "Api Manger: woshdnwaop"
+Phantom.Wosh.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Wosh.TextScaled = true
+Phantom.Wosh.TextSize = 14.000
+Phantom.Wosh.TextWrapped = true
+
+Phantom.UICorner_16.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_16.Parent = Phantom.Wosh
+
+Phantom.UITextSizeConstraint_11.Parent = Phantom.Wosh
+Phantom.UITextSizeConstraint_11.MaxTextSize = 18
+
+Phantom.UIAspectRatioConstraint_16.Parent = Phantom.Wosh
+Phantom.UIAspectRatioConstraint_16.AspectRatio = 11.111
+
+Phantom.UIAspectRatioConstraint_17.Parent = Phantom.Devs
+Phantom.UIAspectRatioConstraint_17.AspectRatio = 9.939
+
+Phantom.SocialsHolder.Name = "SocialsHolder"
+Phantom.SocialsHolder.Parent = Phantom.HomeFrame
+Phantom.SocialsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.SocialsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.SocialsHolder.BorderSizePixel = 0
+Phantom.SocialsHolder.Position = UDim2.new(0.0178217813, 0, 0.254752845, 0)
+Phantom.SocialsHolder.Size = UDim2.new(0.479207933, 0, 0.711026609, 0)
+
+Phantom.UICorner_17.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_17.Parent = Phantom.SocialsHolder
+
+Phantom.TextLabel.Parent = Phantom.SocialsHolder
+Phantom.TextLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TextLabel.BorderSizePixel = 0
+Phantom.TextLabel.Position = UDim2.new(0.0867768601, 0, 0.0320855603, 0)
+Phantom.TextLabel.Size = UDim2.new(0.826446295, 0, 0.122994654, 0)
+Phantom.TextLabel.Font = Enum.Font.SourceSans
+Phantom.TextLabel.Text = "Socials:"
+Phantom.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TextLabel.TextScaled = true
+Phantom.TextLabel.TextSize = 14.000
+Phantom.TextLabel.TextWrapped = true
+
+Phantom.UICorner_18.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_18.Parent = Phantom.TextLabel
+
+Phantom.UITextSizeConstraint_12.Parent = Phantom.TextLabel
+Phantom.UITextSizeConstraint_12.MaxTextSize = 22
+
+Phantom.UIAspectRatioConstraint_18.Parent = Phantom.TextLabel
+Phantom.UIAspectRatioConstraint_18.AspectRatio = 8.696
+
+Phantom.Discord.Name = "Discord"
+Phantom.Discord.Parent = Phantom.SocialsHolder
+Phantom.Discord.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Discord.BorderSizePixel = 0
+Phantom.Discord.Position = UDim2.new(0.0867768601, 0, 0.256684482, 0)
+Phantom.Discord.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
+Phantom.Discord.Font = Enum.Font.SourceSans
+Phantom.Discord.Text = "Discord"
+Phantom.Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Discord.TextScaled = true
+Phantom.Discord.TextSize = 14.000
+Phantom.Discord.TextWrapped = true
+
+Phantom.UICorner_19.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_19.Parent = Phantom.Discord
+
+Phantom.UITextSizeConstraint_13.Parent = Phantom.Discord
+Phantom.UITextSizeConstraint_13.MaxTextSize = 26
+
+Phantom.UIAspectRatioConstraint_19.Parent = Phantom.Discord
+Phantom.UIAspectRatioConstraint_19.AspectRatio = 7.692
+
+Phantom.TikTok.Name = "TikTok"
+Phantom.TikTok.Parent = Phantom.SocialsHolder
+Phantom.TikTok.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.TikTok.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TikTok.BorderSizePixel = 0
+Phantom.TikTok.Position = UDim2.new(0.0867768601, 0, 0.465240628, 0)
+Phantom.TikTok.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
+Phantom.TikTok.Font = Enum.Font.SourceSans
+Phantom.TikTok.Text = "TikTok"
+Phantom.TikTok.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TikTok.TextScaled = true
+Phantom.TikTok.TextSize = 14.000
+Phantom.TikTok.TextWrapped = true
+
+Phantom.UICorner_20.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_20.Parent = Phantom.TikTok
+
+Phantom.UITextSizeConstraint_14.Parent = Phantom.TikTok
+Phantom.UITextSizeConstraint_14.MaxTextSize = 26
+
+Phantom.UIAspectRatioConstraint_20.Parent = Phantom.TikTok
+Phantom.UIAspectRatioConstraint_20.AspectRatio = 7.692
+
+Phantom.YouTube.Name = "YouTube"
+Phantom.YouTube.Parent = Phantom.SocialsHolder
+Phantom.YouTube.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.YouTube.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.YouTube.BorderSizePixel = 0
+Phantom.YouTube.Position = UDim2.new(0.0867768601, 0, 0.673796773, 0)
+Phantom.YouTube.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
+Phantom.YouTube.Font = Enum.Font.SourceSans
+Phantom.YouTube.Text = "Youtube"
+Phantom.YouTube.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.YouTube.TextScaled = true
+Phantom.YouTube.TextSize = 14.000
+Phantom.YouTube.TextWrapped = true
+
+Phantom.UICorner_21.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_21.Parent = Phantom.YouTube
+
+Phantom.UITextSizeConstraint_15.Parent = Phantom.YouTube
+Phantom.UITextSizeConstraint_15.MaxTextSize = 26
+
+Phantom.UIAspectRatioConstraint_21.Parent = Phantom.YouTube
+Phantom.UIAspectRatioConstraint_21.AspectRatio = 7.692
+
+Phantom.UIAspectRatioConstraint_22.Parent = Phantom.SocialsHolder
+Phantom.UIAspectRatioConstraint_22.AspectRatio = 1.294
+
+Phantom.Soon.Name = "Soon"
+Phantom.Soon.Parent = Phantom.HomeFrame
+Phantom.Soon.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Soon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Soon.BorderSizePixel = 0
+Phantom.Soon.Position = UDim2.new(0.52809602, 0, 0.250950575, 0)
+Phantom.Soon.Size = UDim2.new(0.453465343, 0, 0.711026609, 0)
+
+Phantom.UICorner_22.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_22.Parent = Phantom.Soon
+
+Phantom.UIAspectRatioConstraint_23.Parent = Phantom.Soon
+Phantom.UIAspectRatioConstraint_23.AspectRatio = 1.225
+
+Phantom.UIAspectRatioConstraint_24.Parent = Phantom.HomeFrame
+Phantom.UIAspectRatioConstraint_24.AspectRatio = 1.920
+
+Phantom.ExecuterFrame.Name = "ExecuterFrame"
+Phantom.ExecuterFrame.Parent = Phantom.Frame
+Phantom.ExecuterFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ExecuterFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ExecuterFrame.BorderSizePixel = 0
+Phantom.ExecuterFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
+Phantom.ExecuterFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
+
+Phantom.UICorner_23.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_23.Parent = Phantom.ExecuterFrame
+
+Phantom.ScriptInput.Name = "ScriptInput"
+Phantom.ScriptInput.Parent = Phantom.ExecuterFrame
+Phantom.ScriptInput.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ScriptInput.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptInput.BorderSizePixel = 0
+Phantom.ScriptInput.Position = UDim2.new(0.0178217813, 0, 0.0380228125, 0)
+Phantom.ScriptInput.Size = UDim2.new(0.962376237, 0, 0.722433448, 0)
+Phantom.ScriptInput.Font = Enum.Font.SourceSans
+Phantom.ScriptInput.Text = ""
+Phantom.ScriptInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptInput.TextScaled = true
+Phantom.ScriptInput.TextSize = 21.000
+Phantom.ScriptInput.TextWrapped = true
+Phantom.ScriptInput.TextXAlignment = Enum.TextXAlignment.Left
+Phantom.ScriptInput.TextYAlignment = Enum.TextYAlignment.Top
+
+Phantom.UICorner_24.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_24.Parent = Phantom.ScriptInput
+
+Phantom.UITextSizeConstraint_16.Parent = Phantom.ScriptInput
+Phantom.UITextSizeConstraint_16.MaxTextSize = 21
+
+Phantom.UIAspectRatioConstraint_25.Parent = Phantom.ScriptInput
+Phantom.UIAspectRatioConstraint_25.AspectRatio = 2.558
+
+Phantom.ButtonsHolder.Name = "ButtonsHolder"
+Phantom.ButtonsHolder.Parent = Phantom.ExecuterFrame
+Phantom.ButtonsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ButtonsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ButtonsHolder.BorderSizePixel = 0
+Phantom.ButtonsHolder.Position = UDim2.new(0.0178217813, 0, 0.79847908, 0)
+Phantom.ButtonsHolder.Size = UDim2.new(0.962376237, 0, 0.167300373, 0)
+
+Phantom.UICorner_25.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_25.Parent = Phantom.ButtonsHolder
+
+Phantom.Execute.Name = "Execute"
+Phantom.Execute.Parent = Phantom.ButtonsHolder
+Phantom.Execute.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Execute.BorderSizePixel = 0
+Phantom.Execute.Position = UDim2.new(0.0205761325, 0, 0.204545453, 0)
+Phantom.Execute.Size = UDim2.new(0.261316866, 0, 0.590909064, 0)
+Phantom.Execute.Font = Enum.Font.SourceSans
+Phantom.Execute.Text = "Execute"
+Phantom.Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Execute.TextScaled = true
+Phantom.Execute.TextSize = 14.000
+Phantom.Execute.TextWrapped = true
+
+Phantom.UICorner_26.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_26.Parent = Phantom.Execute
+
+Phantom.UITextSizeConstraint_17.Parent = Phantom.Execute
+Phantom.UITextSizeConstraint_17.MaxTextSize = 24
+
+Phantom.UIAspectRatioConstraint_26.Parent = Phantom.Execute
+Phantom.UIAspectRatioConstraint_26.AspectRatio = 4.885
+
+Phantom.Clear.Name = "Clear"
+Phantom.Clear.Parent = Phantom.ButtonsHolder
+Phantom.Clear.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Clear.BorderSizePixel = 0
+Phantom.Clear.Position = UDim2.new(0.310699582, 0, 0.204545453, 0)
+Phantom.Clear.Size = UDim2.new(0.261316866, 0, 0.590909064, 0)
+Phantom.Clear.Font = Enum.Font.SourceSans
+Phantom.Clear.Text = "Clear"
+Phantom.Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Clear.TextScaled = true
+Phantom.Clear.TextSize = 14.000
+Phantom.Clear.TextWrapped = true
+
+Phantom.UICorner_27.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_27.Parent = Phantom.Clear
+
+Phantom.UITextSizeConstraint_18.Parent = Phantom.Clear
+Phantom.UITextSizeConstraint_18.MaxTextSize = 24
+
+Phantom.UIAspectRatioConstraint_27.Parent = Phantom.Clear
+Phantom.UIAspectRatioConstraint_27.AspectRatio = 4.885
+
+Phantom.ExecuteCB.Name = "ExecuteCB"
+Phantom.ExecuteCB.Parent = Phantom.ButtonsHolder
+Phantom.ExecuteCB.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ExecuteCB.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ExecuteCB.BorderSizePixel = 0
+Phantom.ExecuteCB.Position = UDim2.new(0.639867067, 0, 0.204545453, 0)
+Phantom.ExecuteCB.Size = UDim2.new(0.331275731, 0, 0.590909064, 0)
+Phantom.ExecuteCB.Font = Enum.Font.SourceSans
+Phantom.ExecuteCB.Text = "Execute ClipBoard"
+Phantom.ExecuteCB.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ExecuteCB.TextScaled = true
+Phantom.ExecuteCB.TextSize = 14.000
+Phantom.ExecuteCB.TextWrapped = true
+
+Phantom.UICorner_28.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_28.Parent = Phantom.ExecuteCB
+
+Phantom.UITextSizeConstraint_19.Parent = Phantom.ExecuteCB
+Phantom.UITextSizeConstraint_19.MaxTextSize = 24
+
+Phantom.UIAspectRatioConstraint_28.Parent = Phantom.ExecuteCB
+Phantom.UIAspectRatioConstraint_28.AspectRatio = 6.192
+
+Phantom.UIAspectRatioConstraint_29.Parent = Phantom.ButtonsHolder
+Phantom.UIAspectRatioConstraint_29.AspectRatio = 11.045
+
+Phantom.UIAspectRatioConstraint_30.Parent = Phantom.ExecuterFrame
+Phantom.UIAspectRatioConstraint_30.AspectRatio = 1.920
+
+Phantom.ScriptHubFrame.Name = "ScriptHubFrame"
+Phantom.ScriptHubFrame.Parent = Phantom.Frame
+Phantom.ScriptHubFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptHubFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptHubFrame.BorderSizePixel = 0
+Phantom.ScriptHubFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
+Phantom.ScriptHubFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
+
+Phantom.UICorner_29.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_29.Parent = Phantom.ScriptHubFrame
+
+Phantom.ScrolingFrameHolder.Name = "ScrolingFrameHolder"
+Phantom.ScrolingFrameHolder.Parent = Phantom.ScriptHubFrame
+Phantom.ScrolingFrameHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ScrolingFrameHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScrolingFrameHolder.BorderSizePixel = 0
+Phantom.ScrolingFrameHolder.Position = UDim2.new(0.0178217813, 0, 0.0304182507, 0)
+Phantom.ScrolingFrameHolder.Size = UDim2.new(0.962376237, 0, 0.828897357, 0)
+
+Phantom.UICorner_30.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_30.Parent = Phantom.ScrolingFrameHolder
+
+Phantom.ScrollingFrame.Parent = Phantom.ScrolingFrameHolder
+Phantom.ScrollingFrame.Active = true
+Phantom.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScrollingFrame.BackgroundTransparency = 1.000
+Phantom.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScrollingFrame.BorderSizePixel = 0
+Phantom.ScrollingFrame.Size = UDim2.new(1.00205767, 0, 1, 0)
+Phantom.ScrollingFrame.CanvasPosition = Vector2.new(0, 750)
+Phantom.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
+
+Phantom.Frame_2.Parent = Phantom.ScrollingFrame
+Phantom.Frame_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame_2.BorderSizePixel = 0
+Phantom.Frame_2.Position = UDim2.new(0.0190000124, 0, 0.00275232154, 0)
+Phantom.Frame_2.Size = UDim2.new(0.936344981, 0, 0.233944967, 0)
+
+Phantom.UICorner_31.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_31.Parent = Phantom.Frame_2
+
+Phantom.TextLabel_2.Parent = Phantom.Frame_2
+Phantom.TextLabel_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TextLabel_2.BorderSizePixel = 0
+Phantom.TextLabel_2.Position = UDim2.new(0.0175438598, 0, 0.117647059, 0)
+Phantom.TextLabel_2.Size = UDim2.new(0.712719321, 0, 0.764705896, 0)
+Phantom.TextLabel_2.Font = Enum.Font.SourceSans
+Phantom.TextLabel_2.Text = "SName"
+Phantom.TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TextLabel_2.TextScaled = true
+Phantom.TextLabel_2.TextSize = 14.000
+Phantom.TextLabel_2.TextWrapped = true
+
+Phantom.UICorner_32.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_32.Parent = Phantom.TextLabel_2
+
+Phantom.UIAspectRatioConstraint_31.Parent = Phantom.TextLabel_2
+Phantom.UIAspectRatioConstraint_31.AspectRatio = 8.333
+
+Phantom.UITextSizeConstraint_20.Parent = Phantom.TextLabel_2
+Phantom.UITextSizeConstraint_20.MaxTextSize = 38
+
+Phantom.TextButton.Parent = Phantom.Frame_2
+Phantom.TextButton.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TextButton.BorderSizePixel = 0
+Phantom.TextButton.Position = UDim2.new(0.774518311, 0, 0.117647059, 0)
+Phantom.TextButton.Size = UDim2.new(0.164473683, 0, 0.745098054, 0)
+Phantom.TextButton.Font = Enum.Font.SourceSans
+Phantom.TextButton.Text = "Execute"
+Phantom.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TextButton.TextScaled = true
+Phantom.TextButton.TextSize = 14.000
+Phantom.TextButton.TextWrapped = true
+
+Phantom.UICorner_33.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_33.Parent = Phantom.TextButton
+
+Phantom.UIAspectRatioConstraint_32.Parent = Phantom.TextButton
+Phantom.UIAspectRatioConstraint_32.AspectRatio = 1.974
+
+Phantom.UITextSizeConstraint_21.Parent = Phantom.TextButton
+Phantom.UITextSizeConstraint_21.MaxTextSize = 28
+
+Phantom.UIAspectRatioConstraint_33.Parent = Phantom.Frame_2
+Phantom.UIAspectRatioConstraint_33.AspectRatio = 8.941
+
+Phantom.UIAspectRatioConstraint_34.Parent = Phantom.ScrollingFrame
+Phantom.UIAspectRatioConstraint_34.AspectRatio = 2.234
+
+Phantom.AddScrtipFrame.Name = "AddScrtipFrame"
+Phantom.AddScrtipFrame.Parent = Phantom.ScrolingFrameHolder
+Phantom.AddScrtipFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.AddScrtipFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.AddScrtipFrame.BorderSizePixel = 0
+Phantom.AddScrtipFrame.Position = UDim2.new(0.139917701, 0, -0.252293587, 0)
+Phantom.AddScrtipFrame.Size = UDim2.new(0.722222209, 0, 1.38990831, 0)
+Phantom.AddScrtipFrame.Visible = false
+
+Phantom.ScriptAdderTitle.Name = "ScriptAdderTitle"
+Phantom.ScriptAdderTitle.Parent = Phantom.AddScrtipFrame
+Phantom.ScriptAdderTitle.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ScriptAdderTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptAdderTitle.BorderSizePixel = 0
+Phantom.ScriptAdderTitle.Position = UDim2.new(0.0169999432, 0, 0.0233002976, 0)
+Phantom.ScriptAdderTitle.Size = UDim2.new(0.871794879, 0, 0.0693069324, 0)
+Phantom.ScriptAdderTitle.Font = Enum.Font.SourceSans
+Phantom.ScriptAdderTitle.Text = "Script Adder!"
+Phantom.ScriptAdderTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptAdderTitle.TextScaled = true
+Phantom.ScriptAdderTitle.TextSize = 14.000
+Phantom.ScriptAdderTitle.TextWrapped = true
+
+Phantom.UICorner_34.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_34.Parent = Phantom.ScriptAdderTitle
+
+Phantom.UIAspectRatioConstraint_35.Parent = Phantom.ScriptAdderTitle
+Phantom.UIAspectRatioConstraint_35.AspectRatio = 14.571
+
+Phantom.UITextSizeConstraint_22.Parent = Phantom.ScriptAdderTitle
+Phantom.UITextSizeConstraint_22.MaxTextSize = 30
+
+Phantom.CloseTHISFrame.Name = "CloseTHISFrame"
+Phantom.CloseTHISFrame.Parent = Phantom.AddScrtipFrame
+Phantom.CloseTHISFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.CloseTHISFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.CloseTHISFrame.BorderSizePixel = 0
+Phantom.CloseTHISFrame.Position = UDim2.new(0.900000095, 0, 0.0232013166, 0)
+Phantom.CloseTHISFrame.Size = UDim2.new(0.0797720775, 0, 0.0693069324, 0)
+Phantom.CloseTHISFrame.Font = Enum.Font.SourceSans
+Phantom.CloseTHISFrame.Text = "X"
+Phantom.CloseTHISFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.CloseTHISFrame.TextScaled = true
+Phantom.CloseTHISFrame.TextSize = 14.000
+Phantom.CloseTHISFrame.TextWrapped = true
+
+Phantom.UICorner_35.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_35.Parent = Phantom.CloseTHISFrame
+
+Phantom.UIAspectRatioConstraint_36.Parent = Phantom.CloseTHISFrame
+Phantom.UIAspectRatioConstraint_36.AspectRatio = 1.333
+
+Phantom.UITextSizeConstraint_23.Parent = Phantom.CloseTHISFrame
+Phantom.UITextSizeConstraint_23.MaxTextSize = 30
+
+Phantom.UICorner_36.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_36.Parent = Phantom.AddScrtipFrame
+
+Phantom.ScriptAdderFrame.Name = "ScriptAdderFrame"
+Phantom.ScriptAdderFrame.Parent = Phantom.AddScrtipFrame
+Phantom.ScriptAdderFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ScriptAdderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptAdderFrame.BorderSizePixel = 0
+Phantom.ScriptAdderFrame.Position = UDim2.new(0.0170940179, 0, 0.115511551, 0)
+Phantom.ScriptAdderFrame.Size = UDim2.new(0.962962985, 0, 0.854785502, 0)
+
+Phantom.UICorner_37.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_37.Parent = Phantom.ScriptAdderFrame
+
+Phantom.ScriptNameLabel.Name = "ScriptNameLabel"
+Phantom.ScriptNameLabel.Parent = Phantom.ScriptAdderFrame
+Phantom.ScriptNameLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptNameLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptNameLabel.BorderSizePixel = 0
+Phantom.ScriptNameLabel.Position = UDim2.new(0.186390534, 0, 0.0231660232, 0)
+Phantom.ScriptNameLabel.Size = UDim2.new(0.591715991, 0, 0.0617760606, 0)
+Phantom.ScriptNameLabel.Font = Enum.Font.SourceSans
+Phantom.ScriptNameLabel.Text = "Script Name"
+Phantom.ScriptNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptNameLabel.TextScaled = true
+Phantom.ScriptNameLabel.TextSize = 14.000
+Phantom.ScriptNameLabel.TextWrapped = true
+
+Phantom.UICorner_38.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_38.Parent = Phantom.ScriptNameLabel
+
+Phantom.UIAspectRatioConstraint_37.Parent = Phantom.ScriptNameLabel
+Phantom.UIAspectRatioConstraint_37.AspectRatio = 12.500
+
+Phantom.UITextSizeConstraint_24.Parent = Phantom.ScriptNameLabel
+Phantom.UITextSizeConstraint_24.MaxTextSize = 16
+
+Phantom.ScriptName.Name = "ScriptName"
+Phantom.ScriptName.Parent = Phantom.ScriptAdderFrame
+Phantom.ScriptName.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptName.BorderSizePixel = 0
+Phantom.ScriptName.Position = UDim2.new(0.0384615399, 0, 0.17760618, 0)
+Phantom.ScriptName.Size = UDim2.new(0.926035523, 0, 0.123552121, 0)
+Phantom.ScriptName.Font = Enum.Font.SourceSans
+Phantom.ScriptName.Text = ""
+Phantom.ScriptName.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptName.TextScaled = true
+Phantom.ScriptName.TextSize = 14.000
+Phantom.ScriptName.TextWrapped = true
+
+Phantom.UICorner_39.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_39.Parent = Phantom.ScriptName
+
+Phantom.UIAspectRatioConstraint_38.Parent = Phantom.ScriptName
+Phantom.UIAspectRatioConstraint_38.AspectRatio = 9.781
+
+Phantom.UITextSizeConstraint_25.Parent = Phantom.ScriptName
+Phantom.UITextSizeConstraint_25.MaxTextSize = 32
+
+Phantom.ScriptCodeLabel.Name = "ScriptCodeLabel"
+Phantom.ScriptCodeLabel.Parent = Phantom.ScriptAdderFrame
+Phantom.ScriptCodeLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptCodeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptCodeLabel.BorderSizePixel = 0
+Phantom.ScriptCodeLabel.Position = UDim2.new(0.186390534, 0, 0.378378391, 0)
+Phantom.ScriptCodeLabel.Size = UDim2.new(0.591715991, 0, 0.0617760606, 0)
+Phantom.ScriptCodeLabel.Font = Enum.Font.SourceSans
+Phantom.ScriptCodeLabel.Text = "Script Code"
+Phantom.ScriptCodeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptCodeLabel.TextScaled = true
+Phantom.ScriptCodeLabel.TextSize = 14.000
+Phantom.ScriptCodeLabel.TextWrapped = true
+
+Phantom.UICorner_40.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_40.Parent = Phantom.ScriptCodeLabel
+
+Phantom.UIAspectRatioConstraint_39.Parent = Phantom.ScriptCodeLabel
+Phantom.UIAspectRatioConstraint_39.AspectRatio = 12.500
+
+Phantom.UITextSizeConstraint_26.Parent = Phantom.ScriptCodeLabel
+Phantom.UITextSizeConstraint_26.MaxTextSize = 16
+
+Phantom.ScriptCode.Name = "ScriptCode"
+Phantom.ScriptCode.Parent = Phantom.ScriptAdderFrame
+Phantom.ScriptCode.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ScriptCode.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScriptCode.BorderSizePixel = 0
+Phantom.ScriptCode.Position = UDim2.new(0.035502959, 0, 0.540540516, 0)
+Phantom.ScriptCode.Size = UDim2.new(0.926035523, 0, 0.123552121, 0)
+Phantom.ScriptCode.Font = Enum.Font.SourceSans
+Phantom.ScriptCode.Text = ""
+Phantom.ScriptCode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScriptCode.TextScaled = true
+Phantom.ScriptCode.TextSize = 14.000
+Phantom.ScriptCode.TextWrapped = true
+
+Phantom.UICorner_41.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_41.Parent = Phantom.ScriptCode
+
+Phantom.UIAspectRatioConstraint_40.Parent = Phantom.ScriptCode
+Phantom.UIAspectRatioConstraint_40.AspectRatio = 9.781
+
+Phantom.UITextSizeConstraint_27.Parent = Phantom.ScriptCode
+Phantom.UITextSizeConstraint_27.MaxTextSize = 32
+
+Phantom.AddScript.Name = "AddScript"
+Phantom.AddScript.Parent = Phantom.ScriptAdderFrame
+Phantom.AddScript.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.AddScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.AddScript.BorderSizePixel = 0
+Phantom.AddScript.Position = UDim2.new(0.204142019, 0, 0.741312742, 0)
+Phantom.AddScript.Size = UDim2.new(0.591715991, 0, 0.193050191, 0)
+Phantom.AddScript.Font = Enum.Font.SourceSans
+Phantom.AddScript.Text = "Add Script"
+Phantom.AddScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.AddScript.TextScaled = true
+Phantom.AddScript.TextSize = 14.000
+Phantom.AddScript.TextWrapped = true
+
+Phantom.UICorner_42.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_42.Parent = Phantom.AddScript
+
+Phantom.UIAspectRatioConstraint_41.Parent = Phantom.AddScript
+Phantom.UIAspectRatioConstraint_41.AspectRatio = 4.000
+
+Phantom.UITextSizeConstraint_28.Parent = Phantom.AddScript
+Phantom.UITextSizeConstraint_28.MaxTextSize = 50
+
+Phantom.UIAspectRatioConstraint_42.Parent = Phantom.ScriptAdderFrame
+Phantom.UIAspectRatioConstraint_42.AspectRatio = 1.305
+
+Phantom.UIAspectRatioConstraint_43.Parent = Phantom.AddScrtipFrame
+Phantom.UIAspectRatioConstraint_43.AspectRatio = 1.484
+
+Phantom.UIAspectRatioConstraint_44.Parent = Phantom.ScrolingFrameHolder
+Phantom.UIAspectRatioConstraint_44.AspectRatio = 2.229
+
+Phantom.AddScriptOpen.Name = "AddScriptOpen"
+Phantom.AddScriptOpen.Parent = Phantom.ScriptHubFrame
+Phantom.AddScriptOpen.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.AddScriptOpen.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.AddScriptOpen.BorderSizePixel = 0
+Phantom.AddScriptOpen.Position = UDim2.new(0.200253993, 0, 0.889193237, 0)
+Phantom.AddScriptOpen.Size = UDim2.new(0.596039593, 0, 0.0722433478, 0)
+Phantom.AddScriptOpen.ZIndex = 0
+Phantom.AddScriptOpen.Font = Enum.Font.SourceSans
+Phantom.AddScriptOpen.Text = "Add Script!"
+Phantom.AddScriptOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.AddScriptOpen.TextScaled = true
+Phantom.AddScriptOpen.TextSize = 14.000
+Phantom.AddScriptOpen.TextWrapped = true
+
+Phantom.UICorner_43.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_43.Parent = Phantom.AddScriptOpen
+
+Phantom.UITextSizeConstraint_29.Parent = Phantom.AddScriptOpen
+Phantom.UITextSizeConstraint_29.MaxTextSize = 26
+
+Phantom.UIAspectRatioConstraint_45.Parent = Phantom.AddScriptOpen
+Phantom.UIAspectRatioConstraint_45.AspectRatio = 20.297
+
+Phantom.UIAspectRatioConstraint_46.Parent = Phantom.ScriptHubFrame
+Phantom.UIAspectRatioConstraint_46.AspectRatio = 1.920
+
+Phantom.SearcherFrame.Name = "SearcherFrame"
+Phantom.SearcherFrame.Parent = Phantom.Frame
+Phantom.SearcherFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.SearcherFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.SearcherFrame.BorderSizePixel = 0
+Phantom.SearcherFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
+Phantom.SearcherFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
+
+Phantom.UICorner_44.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_44.Parent = Phantom.SearcherFrame
+
+Phantom.SearchBar.Name = "SearchBar"
+Phantom.SearchBar.Parent = Phantom.SearcherFrame
+Phantom.SearchBar.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.SearchBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.SearchBar.BorderSizePixel = 0
+Phantom.SearchBar.Position = UDim2.new(0.00990098994, 0, 0.0304182507, 0)
+Phantom.SearchBar.Size = UDim2.new(0.86138612, 0, 0.136882126, 0)
+Phantom.SearchBar.Font = Enum.Font.SourceSans
+Phantom.SearchBar.Text = ""
+Phantom.SearchBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.SearchBar.TextScaled = true
+Phantom.SearchBar.TextSize = 14.000
+Phantom.SearchBar.TextWrapped = true
+
+Phantom.UICorner_45.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_45.Parent = Phantom.SearchBar
+
+Phantom.UITextSizeConstraint_30.Parent = Phantom.SearchBar
+Phantom.UITextSizeConstraint_30.MaxTextSize = 14
+
+Phantom.UIAspectRatioConstraint_47.Parent = Phantom.SearchBar
+Phantom.UIAspectRatioConstraint_47.AspectRatio = 12.083
+
+Phantom.Search.Name = "Search"
+Phantom.Search.Parent = Phantom.SearcherFrame
+Phantom.Search.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Search.BorderSizePixel = 0
+Phantom.Search.Position = UDim2.new(0.884026408, 0, 0.0304182507, 0)
+Phantom.Search.Size = UDim2.new(0.104950495, 0, 0.136882126, 0)
+Phantom.Search.Font = Enum.Font.SourceSans
+Phantom.Search.Text = "Search"
+Phantom.Search.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.Search.TextScaled = true
+Phantom.Search.TextSize = 14.000
+Phantom.Search.TextWrapped = true
+
+Phantom.UICorner_46.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_46.Parent = Phantom.Search
+
+Phantom.UITextSizeConstraint_31.Parent = Phantom.Search
+Phantom.UITextSizeConstraint_31.MaxTextSize = 22
+
+Phantom.UIAspectRatioConstraint_48.Parent = Phantom.Search
+Phantom.UIAspectRatioConstraint_48.AspectRatio = 1.472
+
+Phantom.ResultsHolder.Name = "ResultsHolder"
+Phantom.ResultsHolder.Parent = Phantom.SearcherFrame
+Phantom.ResultsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.ResultsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ResultsHolder.BorderSizePixel = 0
+Phantom.ResultsHolder.Position = UDim2.new(0.0178217813, 0, 0.216730043, 0)
+Phantom.ResultsHolder.Size = UDim2.new(0.962376237, 0, 0.749049425, 0)
+
+Phantom.UICorner_47.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_47.Parent = Phantom.ResultsHolder
+
+Phantom.ScrollingFrame_2.Parent = Phantom.ResultsHolder
+Phantom.ScrollingFrame_2.Active = true
+Phantom.ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScrollingFrame_2.BackgroundTransparency = 1.000
+Phantom.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScrollingFrame_2.BorderSizePixel = 0
+Phantom.ScrollingFrame_2.Size = UDim2.new(1, 0, 0.98984772, 0)
+Phantom.ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 20, 0)
+
+Phantom.Frame_3.Parent = Phantom.ScrollingFrame_2
+Phantom.Frame_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame_3.BorderSizePixel = 0
+Phantom.Frame_3.Position = UDim2.new(0.0299999993, 0, 0, 12)
+Phantom.Frame_3.Size = UDim2.new(0.915637851, 0, 0.512820542, 0)
+
+Phantom.UICorner_48.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_48.Parent = Phantom.Frame_3
+
+Phantom.Frame_4.Parent = Phantom.Frame_3
+Phantom.Frame_4.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame_4.BorderSizePixel = 0
+Phantom.Frame_4.Position = UDim2.new(0.0202247184, 0, 0.0500000007, 0)
+Phantom.Frame_4.Size = UDim2.new(0.530337095, 0, 0.899999976, 0)
+
+Phantom.UICorner_49.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_49.Parent = Phantom.Frame_4
+
+Phantom.ImageLabel.Parent = Phantom.Frame_4
+Phantom.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ImageLabel.BorderSizePixel = 0
+Phantom.ImageLabel.Position = UDim2.new(0.0550847463, 0, 0.088888891, 0)
+Phantom.ImageLabel.Size = UDim2.new(0.885593235, 0, 0.822222233, 0)
+Phantom.ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Phantom.UIAspectRatioConstraint_49.Parent = Phantom.ImageLabel
+Phantom.UIAspectRatioConstraint_49.AspectRatio = 2.824
+
+Phantom.UIAspectRatioConstraint_50.Parent = Phantom.Frame_4
+Phantom.UIAspectRatioConstraint_50.AspectRatio = 2.622
+
+Phantom.Frame_5.Parent = Phantom.Frame_3
+Phantom.Frame_5.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame_5.BorderSizePixel = 0
+Phantom.Frame_5.Position = UDim2.new(0.59775281, 0, 0.0500000007, 0)
+Phantom.Frame_5.Size = UDim2.new(0.379775286, 0, 0.899999976, 0)
+
+Phantom.UICorner_50.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_50.Parent = Phantom.Frame_5
+
+Phantom.TextButton_2.Parent = Phantom.Frame_5
+Phantom.TextButton_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TextButton_2.BorderSizePixel = 0
+Phantom.TextButton_2.Position = UDim2.new(0.0473372787, 0, 0.211111113, 0)
+Phantom.TextButton_2.Size = UDim2.new(0.905325472, 0, 0.244444445, 0)
+Phantom.TextButton_2.Font = Enum.Font.SourceSans
+Phantom.TextButton_2.Text = "Execute"
+Phantom.TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TextButton_2.TextScaled = true
+Phantom.TextButton_2.TextSize = 14.000
+Phantom.TextButton_2.TextWrapped = true
+
+Phantom.UICorner_51.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_51.Parent = Phantom.TextButton_2
+
+Phantom.UIAspectRatioConstraint_51.Parent = Phantom.TextButton_2
+Phantom.UIAspectRatioConstraint_51.AspectRatio = 6.955
+
+Phantom.UITextSizeConstraint_32.Parent = Phantom.TextButton_2
+Phantom.UITextSizeConstraint_32.MaxTextSize = 22
+
+Phantom.TextButton_3.Parent = Phantom.Frame_5
+Phantom.TextButton_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.TextButton_3.BorderSizePixel = 0
+Phantom.TextButton_3.Position = UDim2.new(0.0473372787, 0, 0.577777803, 0)
+Phantom.TextButton_3.Size = UDim2.new(0.905325472, 0, 0.244444445, 0)
+Phantom.TextButton_3.Font = Enum.Font.SourceSans
+Phantom.TextButton_3.Text = "Copy"
+Phantom.TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.TextButton_3.TextScaled = true
+Phantom.TextButton_3.TextSize = 14.000
+Phantom.TextButton_3.TextWrapped = true
+
+Phantom.UICorner_52.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_52.Parent = Phantom.TextButton_3
+
+Phantom.UIAspectRatioConstraint_52.Parent = Phantom.TextButton_3
+Phantom.UIAspectRatioConstraint_52.AspectRatio = 6.955
+
+Phantom.UITextSizeConstraint_33.Parent = Phantom.TextButton_3
+Phantom.UITextSizeConstraint_33.MaxTextSize = 22
+
+Phantom.UIAspectRatioConstraint_53.Parent = Phantom.Frame_5
+Phantom.UIAspectRatioConstraint_53.AspectRatio = 1.878
+
+Phantom.UIAspectRatioConstraint_54.Parent = Phantom.Frame_3
+Phantom.UIAspectRatioConstraint_54.AspectRatio = 4.450
+
+Phantom.UIAspectRatioConstraint_55.Parent = Phantom.ScrollingFrame_2
+Phantom.UIAspectRatioConstraint_55.AspectRatio = 2.492
+
+Phantom.UIAspectRatioConstraint_56.Parent = Phantom.ResultsHolder
+Phantom.UIAspectRatioConstraint_56.AspectRatio = 2.467
+
+Phantom.UIAspectRatioConstraint_57.Parent = Phantom.SearcherFrame
+Phantom.UIAspectRatioConstraint_57.AspectRatio = 1.920
+
+Phantom.ConsoleFrame.Name = "ConsoleFrame"
+Phantom.ConsoleFrame.Parent = Phantom.Frame
+Phantom.ConsoleFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Phantom.ConsoleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ConsoleFrame.BorderSizePixel = 0
+Phantom.ConsoleFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
+Phantom.ConsoleFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
+
+Phantom.UICorner_53.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_53.Parent = Phantom.ConsoleFrame
+
+Phantom.Frame_6.Parent = Phantom.ConsoleFrame
+Phantom.Frame_6.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+Phantom.Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.Frame_6.BorderSizePixel = 0
+Phantom.Frame_6.Position = UDim2.new(0.0178217813, 0, 0.0304182507, 0)
+Phantom.Frame_6.Size = UDim2.new(0.962376237, 0, 0.935361207, 0)
+
+Phantom.ScrollingFrame_3.Parent = Phantom.Frame_6
+Phantom.ScrollingFrame_3.Active = true
+Phantom.ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Phantom.ScrollingFrame_3.BackgroundTransparency = 1.000
+Phantom.ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Phantom.ScrollingFrame_3.BorderSizePixel = 0
+Phantom.ScrollingFrame_3.Position = UDim2.new(-0.00275436835, 0, 0.00602796581, 0)
+Phantom.ScrollingFrame_3.Size = UDim2.new(1, 0, 1, 0)
+Phantom.ScrollingFrame_3.CanvasPosition = Vector2.new(0, 150)
+Phantom.ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 20, 0)
+Phantom.ScrollingFrame_3.ScrollBarThickness = 13
+
+Phantom.UIAspectRatioConstraint_58.Parent = Phantom.ScrollingFrame_3
+Phantom.UIAspectRatioConstraint_58.AspectRatio = 1.976
+
+Phantom.UICorner_54.CornerRadius = UDim.new(0, 10)
+Phantom.UICorner_54.Parent = Phantom.Frame_6
+
+Phantom.UIAspectRatioConstraint_59.Parent = Phantom.Frame_6
+Phantom.UIAspectRatioConstraint_59.AspectRatio = 1.976
+
+Phantom.UIAspectRatioConstraint_60.Parent = Phantom.ConsoleFrame
+Phantom.UIAspectRatioConstraint_60.AspectRatio = 1.920
+
+Phantom.UIAspectRatioConstraint_61.Parent = Phantom.Frame
+Phantom.UIAspectRatioConstraint_61.AspectRatio = 1.852
+
+Phantom.UIAspectRatioConstraint_62.Parent = Phantom.Phantom
+Phantom.UIAspectRatioConstraint_62.AspectRatio = 2.281
+
+-- Scripts:
+
+local function VWTEP_fake_script() -- Phantom.ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', Phantom.ScrollingFrame)
+
+	-- Reference to the parent and child ScrollingFrames
+	local parentScrollingFrame = script.Parent
+	local childScrollingFrame = parentScrollingFrame:WaitForChild("ChildScrollingFrame")
+	
+	-- Disable automatic CanvasSize adjusting for the child ScrollingFrame
+	childScrollingFrame.ScrollingEnabled = false
+	
+	-- Function to update the size of the child ScrollingFrame when the parent size changes
+	local function updateChildSize()
+		local parentSize = parentScrollingFrame.AbsoluteSize
+		childScrollingFrame.Size = UDim2.new(1, 0, 0, parentSize.Y)
+	end
+	
+	updateChildSize()
+	
+	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
+end
+coroutine.wrap(VWTEP_fake_script)()
+local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript 
+	local script = Instance.new('LocalScript', Phantom.ScrollingFrame_2)
+
+	-- Reference to the parent and child ScrollingFrames
+	local parentScrollingFrame = script.Parent
+	local childScrollingFrame = parentScrollingFrame:WaitForChild("ChildScrollingFrame")
+	
+	-- Disable automatic CanvasSize adjusting for the child ScrollingFrame
+	childScrollingFrame.ScrollingEnabled = false
+	
+	-- Function to update the size of the child ScrollingFrame when the parent size changes
+	local function updateChildSize()
+		local parentSize = parentScrollingFrame.AbsoluteSize
+		childScrollingFrame.Size = UDim2.new(1, 0, 0, parentSize.Y)
+	end
+	
+	updateChildSize()
+	
+	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
+end
+coroutine.wrap(FIKF_fake_script)()
