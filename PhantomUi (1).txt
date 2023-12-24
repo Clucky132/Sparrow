@@ -307,6 +307,15 @@ Phantom.Home.TextScaled = true
 Phantom.Home.TextSize = 14.000
 Phantom.Home.TextWrapped = true
 
+Phantom.Home.MouseButton1Click:Connect(function()
+    Phantom.HomeFrame.Visible = true
+    Phantom.ExecuterFrame.Visible = false
+    Phantom.ScriptHubFrame.Visible = false
+    Phantom.SearcherFrame.Visible = false
+    Phantom.ConsoleFrame.Visible = false
+    Phantom.SettingsFrame.Visible = false
+end)
+
 Phantom.UICorner_5.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_5.Parent = Phantom.Home
 
