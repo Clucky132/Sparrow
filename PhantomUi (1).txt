@@ -430,9 +430,23 @@ Phantom.UIAspectRatioConstraint_10.AspectRatio = 0.277
 Phantom.TopBar.Name = "TopBar"
 Phantom.TopBar.Parent = Phantom.Frame
 Phantom.TopBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TopBar.BorderColor3 = Color3.fromRGB(0, 0, 1)
+Phantom.TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Phantom.TopBar.BorderSizePixel = 2
 Phantom.TopBar.Size = UDim2.new(1, 0, 0.147590354, 0)
+
+-- Assuming Phantom.SideBar is your UI element
+local sideBar = Phantom.SideBar
+
+-- Create a UIStroke instance
+local uiStroke = Instance.new("UIStroke")
+uiStroke.Color = Color3.fromRGB(0, 0, 0) -- Stroke color (black)
+uiStroke.Thickness = 2 -- Thickness of the stroke
+uiStroke.Transparency = 0 -- Set transparency (0 for fully opaque)
+uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border -- Apply as a border
+
+-- Parent the UIStroke to the SideBar
+uiStroke.Parent = sideBar
+
 
 Phantom.UICorner_12.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_12.Parent = Phantom.TopBar
