@@ -313,7 +313,6 @@ Phantom.Home.MouseButton1Click:Connect(function()
     Phantom.ScriptHubFrame.Visible = false
     Phantom.SearcherFrame.Visible = false
     Phantom.ConsoleFrame.Visible = false
-    Phantom.SettingsFrame.Visible = false
 end)
 
 Phantom.UICorner_5.CornerRadius = UDim.new(0, 10)
@@ -345,7 +344,6 @@ Phantom.Executer.MouseButton1Click:Connect(function()
     Phantom.ScriptHubFrame.Visible = false
     Phantom.SearcherFrame.Visible = false
     Phantom.ConsoleFrame.Visible = false
-    Phantom.SettingsFrame.Visible = false
 end)
 
 Phantom.UICorner_6.CornerRadius = UDim.new(0, 10)
@@ -377,7 +375,6 @@ Phantom.ScriptHub.MouseButton1Click:Connect(function()
     Phantom.ScriptHubFrame.Visible = true
     Phantom.SearcherFrame.Visible = false
     Phantom.ConsoleFrame.Visible = false
-    Phantom.SettingsFrame.Visible = false
 end)
 
 Phantom.UICorner_7.CornerRadius = UDim.new(0, 10)
@@ -409,7 +406,6 @@ Phantom.Searcher.MouseButton1Click:Connect(function()
     Phantom.ScriptHubFrame.Visible = false
     Phantom.SearcherFrame.Visible = true
     Phantom.ConsoleFrame.Visible = false
-    Phantom.SettingsFrame.Visible = false
 end)
 
 Phantom.UICorner_8.CornerRadius = UDim.new(0, 10)
@@ -441,7 +437,6 @@ Phantom.Console.MouseButton1Click:Connect(function()
     Phantom.ScriptHubFrame.Visible = false
     Phantom.SearcherFrame.Visible = false
     Phantom.ConsoleFrame.Visible = true
-    Phantom.SettingsFrame.Visible = false
 end)
 
 Phantom.UICorner_9.CornerRadius = UDim.new(0, 10)
