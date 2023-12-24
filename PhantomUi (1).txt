@@ -700,6 +700,10 @@ Phantom.Discord.TextScaled = true
 Phantom.Discord.TextSize = 14.000
 Phantom.Discord.TextWrapped = true
 
+Phantom.Discord.MouseButton1Click:Connect(function()
+    setclipboard("https://sparrow-executor.vercel.app/")
+end)
+
 Phantom.UICorner_19.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_19.Parent = Phantom.Discord
 
@@ -723,6 +727,10 @@ Phantom.TikTok.TextScaled = true
 Phantom.TikTok.TextSize = 14.000
 Phantom.TikTok.TextWrapped = true
 
+Phantom.TikTok.MouseButton1Click:Connect(function()
+    setclipboard("https://sparrow-executor.vercel.app/")
+end)
+
 Phantom.UICorner_20.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_20.Parent = Phantom.TikTok
 
@@ -745,6 +753,10 @@ Phantom.YouTube.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.YouTube.TextScaled = true
 Phantom.YouTube.TextSize = 14.000
 Phantom.YouTube.TextWrapped = true
+
+Phantom.YouTube.MouseButton1Click:Connect(function()
+    setclipboard("https://sparrow-executor.vercel.app/")
+end)
 
 Phantom.UICorner_21.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_21.Parent = Phantom.YouTube
