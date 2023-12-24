@@ -1482,3 +1482,12 @@ local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript
 	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
 end
 coroutine.wrap(FIKF_fake_script)()
+
+local function NKVUN_fake_script() -- Phantom.Frame.LocalScript 
+	local script = Instance.new('LocalScript', Phantom.Frame)
+
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+end
+coroutine.wrap(NKVUN_fake_script)()
