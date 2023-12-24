@@ -1470,42 +1470,44 @@ local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript
 end
 coroutine.wrap(FIKF_fake_script)()
 
-
-local playerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-local phantom = playerGui:WaitForChild("Phantom") -- Assuming 'Phantom' is your Frame
-
-local dragging
-local dragInput
-local dragStart
-local startPos
-
-local function update(input)
-    local delta = input.Position - dragStart
-    phantom.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+local Phantom = script.Parent:FindFirstChild("Phantom")
+if not Phantom then
+    error("Phantom GUI element not found")
+    return
 end
 
-phantom.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        dragging = true
-        dragStart = input.Position
-        startPos = phantom.Position
+Phantom.Selectable = true
+Phantom.Active = true
 
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
+local function makeDraggable(frame)
+    local dragging = false
+    local dragStart = nil
+    local startPos = nil
 
-phantom.InputChanged:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseMovement then
-        dragInput = input
+    local function onDragStart(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = frame.Position
+        end
     end
-end)
 
-game:GetService("UserInputService").InputChanged:Connect(function(input)
-    if input == dragInput and dragging then
-        update(input)
+    local function onDragEnd(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = false
+        end
     end
-end)
+
+    local function onDrag(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - dragStart
+            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+    end
+
+    frame.InputBegan:Connect(onDragStart)
+    frame.InputEnded:Connect(onDragEnd)
+    game:GetService("UserInputService").InputChanged:Connect(onDrag)
+end
+
+makeDraggable(Phantom)
