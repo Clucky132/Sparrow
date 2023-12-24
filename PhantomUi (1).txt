@@ -339,6 +339,15 @@ Phantom.Executer.TextScaled = true
 Phantom.Executer.TextSize = 14.000
 Phantom.Executer.TextWrapped = true
 
+Phantom.Executer.MouseButton1Click:Connect(function()
+    Phantom.HomeFrame.Visible = false
+    Phantom.ExecuterFrame.Visible = true
+    Phantom.ScriptHubFrame.Visible = false
+    Phantom.SearcherFrame.Visible = false
+    Phantom.ConsoleFrame.Visible = false
+    Phantom.SettingsFrame.Visible = false
+end)
+
 Phantom.UICorner_6.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_6.Parent = Phantom.Executer
 
@@ -361,6 +370,15 @@ Phantom.ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.ScriptHub.TextScaled = true
 Phantom.ScriptHub.TextSize = 14.000
 Phantom.ScriptHub.TextWrapped = true
+
+Phantom.ScriptHub.MouseButton1Click:Connect(function()
+    Phantom.HomeFrame.Visible = false
+    Phantom.ExecuterFrame.Visible = false
+    Phantom.ScriptHubFrame.Visible = true
+    Phantom.SearcherFrame.Visible = false
+    Phantom.ConsoleFrame.Visible = false
+    Phantom.SettingsFrame.Visible = false
+end)
 
 Phantom.UICorner_7.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_7.Parent = Phantom.ScriptHub
@@ -385,6 +403,15 @@ Phantom.Searcher.TextScaled = true
 Phantom.Searcher.TextSize = 14.000
 Phantom.Searcher.TextWrapped = true
 
+Phantom.Searcher.MouseButton1Click:Connect(function()
+    Phantom.HomeFrame.Visible = false
+    Phantom.ExecuterFrame.Visible = false
+    Phantom.ScriptHubFrame.Visible = false
+    Phantom.SearcherFrame.Visible = true
+    Phantom.ConsoleFrame.Visible = false
+    Phantom.SettingsFrame.Visible = false
+end)
+
 Phantom.UICorner_8.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_8.Parent = Phantom.Searcher
 
@@ -407,6 +434,15 @@ Phantom.Console.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.Console.TextScaled = true
 Phantom.Console.TextSize = 14.000
 Phantom.Console.TextWrapped = true
+
+Phantom.Console.MouseButton1Click:Connect(function()
+    Phantom.HomeFrame.Visible = false
+    Phantom.ExecuterFrame.Visible = false
+    Phantom.ScriptHubFrame.Visible = false
+    Phantom.SearcherFrame.Visible = false
+    Phantom.ConsoleFrame.Visible = true
+    Phantom.SettingsFrame.Visible = false
+end)
 
 Phantom.UICorner_9.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_9.Parent = Phantom.Console
