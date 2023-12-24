@@ -237,7 +237,7 @@ Phantom.SideBar.Name = "SideBar"
 Phantom.SideBar.Parent = Phantom.Frame
 Phantom.SideBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 Phantom.SideBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.SideBar.BorderSizePixel = 0
+Phantom.SideBar.BorderSizePixel = 1
 Phantom.SideBar.Size = UDim2.new(0.149593502, 0, 1, 0)
 
 Phantom.ImageFrame.Name = "ImageFrame"
@@ -431,7 +431,7 @@ Phantom.TopBar.Name = "TopBar"
 Phantom.TopBar.Parent = Phantom.Frame
 Phantom.TopBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 Phantom.TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TopBar.BorderSizePixel = 0
+Phantom.TopBar.BorderSizePixel = 1
 Phantom.TopBar.Size = UDim2.new(1, 0, 0.147590354, 0)
 
 Phantom.UICorner_12.CornerRadius = UDim.new(0, 10)
@@ -1310,6 +1310,7 @@ Phantom.UIAspectRatioConstraint_57.Parent = Phantom.SearcherFrame
 Phantom.UIAspectRatioConstraint_57.AspectRatio = 1.920
 
 Phantom.ConsoleFrame.Name = "ConsoleFrame"
+Phantom.ConsoleFrame.Visible = false
 Phantom.ConsoleFrame.Parent = Phantom.Frame
 Phantom.ConsoleFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 Phantom.ConsoleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
