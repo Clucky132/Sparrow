@@ -271,7 +271,10 @@ Phantom.UserAvataIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Phantom.UserAvataIcon.BorderSizePixel = 0
 Phantom.UserAvataIcon.Position = UDim2.new(0.119999997, 0, 0.119402982, 0)
 Phantom.UserAvataIcon.Size = UDim2.new(0.75999999, 0, 0.731343269, 0)
-Phantom.UserAvataIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+Phantom.UserAvataIcon.Image = avatarImage
+
+local player = game.Players.LocalPlayer
+local avatarImage = player.CharacterAppearance:GetUserAppearanceAsync(player.UserId)
 
 Phantom.UICorner_3.CornerRadius = UDim.new(0, 100)
 Phantom.UICorner_3.Parent = Phantom.UserAvataIcon
@@ -1469,45 +1472,3 @@ local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript
 	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
 end
 coroutine.wrap(FIKF_fake_script)()
-
-local Phantom = script.Parent:FindFirstChild("Phantom")
-if not Phantom then
-    error("Phantom GUI element not found")
-    return
-end
-
-Phantom.Selectable = true
-Phantom.Active = true
-
-local function makeDraggable(frame)
-    local dragging = false
-    local dragStart = nil
-    local startPos = nil
-
-    local function onDragStart(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragging = true
-            dragStart = input.Position
-            startPos = frame.Position
-        end
-    end
-
-    local function onDragEnd(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
-            dragging = false
-        end
-    end
-
-    local function onDrag(input)
-        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-            local delta = input.Position - dragStart
-            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        end
-    end
-
-    frame.InputBegan:Connect(onDragStart)
-    frame.InputEnded:Connect(onDragEnd)
-    game:GetService("UserInputService").InputChanged:Connect(onDrag)
-end
-
-makeDraggable(Phantom)
