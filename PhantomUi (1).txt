@@ -1043,7 +1043,6 @@ Phantom.AddScrtipFrame.BorderSizePixel = 0
 Phantom.AddScrtipFrame.Position = UDim2.new(0.139917701, 0, -0.252293587, 0)
 Phantom.AddScrtipFrame.Size = UDim2.new(0.722222209, 0, 1.38990831, 0)
 Phantom.AddScrtipFrame.Visible = true
-Phantom.AddScrtipFrame.Zindex = 4
 
 Phantom.ScriptAdderTitle.Name = "ScriptAdderTitle"
 Phantom.ScriptAdderTitle.Parent = Phantom.AddScrtipFrame
