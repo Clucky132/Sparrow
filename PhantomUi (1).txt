@@ -1081,6 +1081,10 @@ Phantom.CloseTHISFrame.TextScaled = true
 Phantom.CloseTHISFrame.TextSize = 14.000
 Phantom.CloseTHISFrame.TextWrapped = true
 
+Phantom.CloseTHISFrame.MouseButton1Click:Connect(function()
+	AddScrtipFrame.Visible = false
+end)
+
 Phantom.UICorner_35.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_35.Parent = Phantom.CloseTHISFrame
 
@@ -1209,6 +1213,10 @@ Phantom.AddScript.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.AddScript.TextScaled = true
 Phantom.AddScript.TextSize = 14.000
 Phantom.AddScript.TextWrapped = true
+
+Phantom.AddScript.MouseButton1Click:Connect(function()
+	AddScrtipFrame.Visible = true
+end)
 
 Phantom.UICorner_42.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_42.Parent = Phantom.AddScript
