@@ -1082,7 +1082,7 @@ Phantom.CloseTHISFrame.TextSize = 14.000
 Phantom.CloseTHISFrame.TextWrapped = true
 
 Phantom.CloseTHISFrame.MouseButton1Click:Connect(function()
-	AddScrtipFrame.Visible = false
+	Phantom.AddScrtipFrame.Visible = false
 end)
 
 Phantom.UICorner_35.CornerRadius = UDim.new(0, 10)
@@ -1215,7 +1215,7 @@ Phantom.AddScript.TextSize = 14.000
 Phantom.AddScript.TextWrapped = true
 
 Phantom.AddScript.MouseButton1Click:Connect(function()
-	AddScrtipFrame.Visible = true
+	Phantom.AddScrtipFrame.Visible = true
 end)
 
 Phantom.UICorner_42.CornerRadius = UDim.new(0, 10)
