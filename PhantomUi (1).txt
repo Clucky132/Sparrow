@@ -891,6 +891,10 @@ Phantom.Clear.TextScaled = true
 Phantom.Clear.TextSize = 14.000
 Phantom.Clear.TextWrapped = true
 
+Phantom.Clear.MouseButton1Click:Connect(function()
+	Phantom.ScriptInput.Text = ""
+end)
+
 Phantom.UICorner_27.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_27.Parent = Phantom.Clear
 
@@ -913,6 +917,16 @@ Phantom.ExecuteCB.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.ExecuteCB.TextScaled = true
 Phantom.ExecuteCB.TextSize = 14.000
 Phantom.ExecuteCB.TextWrapped = true
+
+Phantom.ExecuteCB.MouseButton1Click:Connect(function()
+	local clipboardText = getclipboard()
+	if clipboardText then
+		local success, result = pcall(loadstring(clipboardText))
+		if not success then
+			print("Error executing clipboard content: " .. result)
+		end
+	end
+end)
 
 Phantom.UICorner_28.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_28.Parent = Phantom.ExecuteCB
