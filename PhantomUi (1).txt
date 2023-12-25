@@ -848,6 +848,26 @@ Phantom.Execute.TextScaled = true
 Phantom.Execute.TextSize = 14.000
 Phantom.Execute.TextWrapped = true
 
+local function ExecuteScript(script)
+	local f, err = loadstring(script)
+	if f then
+		f()
+	else
+		print("Script execution error:", err)
+	end
+end
+
+-- Connect the execute button to the script execution function
+Phantom.Execute.MouseButton1Click:Connect(function()
+	local script = Phantom.ScriptInput.Text
+	ExecuteScript(script)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Script";
+		Text = "Script Executed";
+		Duration = 3;
+	})
+end)
+
 Phantom.UICorner_26.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_26.Parent = Phantom.Execute
 
