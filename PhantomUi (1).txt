@@ -1042,7 +1042,7 @@ Phantom.AddScrtipFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Phantom.AddScrtipFrame.BorderSizePixel = 0
 Phantom.AddScrtipFrame.Position = UDim2.new(0.139917701, 0, -0.252293587, 0)
 Phantom.AddScrtipFrame.Size = UDim2.new(0.722222209, 0, 1.38990831, 0)
-Phantom.AddScrtipFrame.Visible = true
+Phantom.AddScrtipFrame.Visible = false
 
 Phantom.ScriptAdderTitle.Name = "ScriptAdderTitle"
 Phantom.ScriptAdderTitle.Parent = Phantom.AddScrtipFrame
@@ -1214,10 +1214,6 @@ Phantom.AddScript.TextScaled = true
 Phantom.AddScript.TextSize = 14.000
 Phantom.AddScript.TextWrapped = true
 
-Phantom.AddScript.MouseButton1Click:Connect(function()
-	Phantom.AddScrtipFrame.Visible = true
-end)
-
 Phantom.UICorner_42.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_42.Parent = Phantom.AddScript
 
@@ -1250,6 +1246,22 @@ Phantom.AddScriptOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.AddScriptOpen.TextScaled = true
 Phantom.AddScriptOpen.TextSize = 14.000
 Phantom.AddScriptOpen.TextWrapped = true
+
+Phantom.AddScriptOpen.MouseButton1Click:Connect(function()
+			-- Get the CoreGui and ScreenGui objects
+			local coreGui = game:GetService("CoreGui")
+			local PhantomGUI = coreGui:FindFirstChild("Phantom")
+
+			-- Check if SparrowGui exists and make it go invisible if found
+			if PhantomGUI then
+				PhantomGUI.Enabled = false
+				print("Phantom ScreenGui has been set to invisible.")
+			else
+				print("Phantom ScreenGui was not found in CoreGui.")
+			end
+			
+			Phantom.ScriptAdderFrame.Visible = true
+		end)
 
 Phantom.UICorner_43.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_43.Parent = Phantom.AddScriptOpen
