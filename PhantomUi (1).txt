@@ -1249,6 +1249,9 @@ Phantom.AddScriptOpen.TextSize = 14.000
 Phantom.AddScriptOpen.TextWrapped = true
 
 Phantom.AddScriptOpen.MouseButton1Click:Connect(function()
+
+Phantom.AddScrtipFrame.Visible = false
+
 			-- Get the CoreGui and ScreenGui objects
 			local coreGui = game:GetService("CoreGui")
 			local PhantomGUI = coreGui:FindFirstChild("Phantom")
@@ -1260,8 +1263,6 @@ Phantom.AddScriptOpen.MouseButton1Click:Connect(function()
 			else
 				print("Phantom ScreenGui was not found in CoreGui.")
 			end
-			
-			Phantom.ScriptAdderFrame.Visible = true
 		end)
 
 Phantom.UICorner_43.CornerRadius = UDim.new(0, 10)
