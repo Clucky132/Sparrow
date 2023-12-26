@@ -1249,17 +1249,7 @@ Phantom.AddScriptOpen.TextSize = 14.000
 Phantom.AddScriptOpen.TextWrapped = true
 
 Phantom.AddScriptOpen.MouseButton1Click:Connect(function()
-			-- Get the CoreGui and ScreenGui objects
-			local coreGui = game:GetService("CoreGui")
-			local PhantomGUI = coreGui:FindFirstChild("Phantom")
-
-			-- Check if SparrowGui exists and make it go invisible if found
-			if PhantomGUI then
-				PhantomGUI.Enabled = false
-				print("Phantom ScreenGui has been set to invisible.")
-			else
-				print("Phantom ScreenGui was not found in CoreGui.")
-			end
+			Phantom.AddScrtipFrame.Visible = true
 		end)
 
 Phantom.UICorner_43.CornerRadius = UDim.new(0, 10)
