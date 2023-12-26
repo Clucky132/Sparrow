@@ -1547,34 +1547,48 @@ local function NKVUN_fake_script() -- Phantom.Frame.LocalScript
 end
 coroutine.wrap(NKVUN_fake_script)()
 
--- Function to add a script
-local function AddScript(name, source)
-    makefolder("Phantom")
-    writefile("Phantom/" .. name, source)
-    local parent = Phantom.ScriptList -- Assuming this is a container for scripts
-    local hub = parent.Folder.Frame -- Replace with actual template
-    local newhub = hub:Clone()
+local function QJCR_fake_script()
+    local function AddScript(name, source)
+        makefolder("Phantom")
+        writefile("Phantom/" .. name, source)
+        local parent = Phantom.ScrollingFrame
+        local hub = parent.Folder.Frame -- Adjust this path to match your template frame
+        local newhub = hub:Clone()
 
-    local scriptname = newhub.TextLabel
-    local execbutton = newhub.load
+        local scriptname = newhub.TextLabel
+        local execbutton = newhub.load
+        local delbutton = newhub.del
 
-    newhub.Parent = parent
-    newhub.Visible = true
-    scriptname.Text = name
+        newhub.Parent = parent
+        newhub.Visible = true
+        scriptname.Text = name
 
-    execbutton.MouseButton1Click:Connect(function()
-        local success, err = pcall(loadstring(source))
-        if not success then
-            warn("Error executing script:", err)
-        end
+        Phantom.TextButton.MouseButton1Click:Connect(function()
+            local success, err = pcall(loadstring(source))
+            if not success then
+                warn("Error executing script:", err)
+            end
+        end)
+
+        delbutton.MouseButton1Click:Connect(function()
+            newhub:Destroy()
+            delfile("Phantom/" .. name)
+        end)
+    end
+
+    for _, file in ipairs(listfiles("Phantom")) do
+        local name = file:sub(#"Phantom/" + 1)
+        local source = readfile(file)
+        AddScript(name, source)
+    end
+
+    Phantom.AddScript.MouseButton1Click:Connect(function()
+        local scriptName = Phantom.ScriptName.Text
+        local sourceCode = Phantom.ScriptCode.Text
+        AddScript(scriptName, sourceCode)
+        Phantom.ScriptCode.Text = ""
+        Phantom.ScriptName.Text = ""
     end)
 end
 
--- Event listener for the Add Script button
-Phantom.AddScript.MouseButton1Click:Connect(function()
-    local scriptName = Phantom.ScriptName.Text
-    local sourceCode = Phantom.ScriptCode.Text
-    AddScript(scriptName, sourceCode)
-    Phantom.ScriptCode.Text = ""
-    Phantom.ScriptName.Text = ""
-end)
+coroutine.wrap(QJCR_fake_script)()
