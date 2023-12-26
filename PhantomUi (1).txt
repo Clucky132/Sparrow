@@ -220,7 +220,8 @@ local Phantom = {
 --Properties:
 
 Phantom.Phantom.Name = "Phantom"
-Phantom.Phantom.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Phantom.Phantom.DisplayOrder = 9999
+Phantom.Phantom.Parent = game.CoreGui
 Phantom.Phantom.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Phantom.Frame.Parent = Phantom.Phantom
