@@ -1546,3 +1546,35 @@ local function NKVUN_fake_script() -- Phantom.Frame.LocalScript
 	script.Parent.Active = true
 end
 coroutine.wrap(NKVUN_fake_script)()
+
+-- Function to add a script
+local function AddScript(name, source)
+    makefolder("Phantom")
+    writefile("Phantom/" .. name, source)
+    local parent = Phantom.ScriptList -- Assuming this is a container for scripts
+    local hub = parent.Folder.Frame -- Replace with actual template
+    local newhub = hub:Clone()
+
+    local scriptname = newhub.TextLabel
+    local execbutton = newhub.load
+
+    newhub.Parent = parent
+    newhub.Visible = true
+    scriptname.Text = name
+
+    execbutton.MouseButton1Click:Connect(function()
+        local success, err = pcall(loadstring(source))
+        if not success then
+            warn("Error executing script:", err)
+        end
+    end)
+end
+
+-- Event listener for the Add Script button
+Phantom.AddScript.MouseButton1Click:Connect(function()
+    local scriptName = Phantom.ScriptName.Text
+    local sourceCode = Phantom.ScriptCode.Text
+    AddScript(scriptName, sourceCode)
+    Phantom.ScriptCode.Text = ""
+    Phantom.ScriptName.Text = ""
+end)
