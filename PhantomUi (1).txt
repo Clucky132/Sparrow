@@ -1548,30 +1548,39 @@ end
 coroutine.wrap(NKVUN_fake_script)()
 
 local function QJCR_fake_script()
+    -- Assuming Phantom is a table containing references to your UI elements
+    local Phantom = {
+        ScrollingFrame = Phantom.ScrollingFrame,
+        AddScriptButton = Phantom.AddScript,
+        ScriptNameInput = Phantom.ScriptName,
+        ScriptCodeInput = Phantom.ScriptCode,
+        ExecuteButton = Phantom.TextButton
+    }
+
     local function AddScript(name, source)
         makefolder("Phantom")
         writefile("Phantom/" .. name, source)
         local parent = Phantom.ScrollingFrame
-        local hub = parent.Folder.Frame -- Adjust this path to match your template frame
-        local newhub = hub:Clone()
+        local templateFrame = parent.Folder.Frame -- Adjust this to your actual template frame
+        local newScriptFrame = templateFrame:Clone()
 
-        local scriptname = newhub.TextLabel
-        local execbutton = newhub.load
-        local delbutton = newhub.del
+        local scriptNameLabel = newScriptFrame.TextLabel_2
+        local execButton = newScriptFrame.TextButton
+        local delButton = newScriptFrame.del
 
-        newhub.Parent = parent
-        newhub.Visible = true
-        scriptname.Text = name
+        newScriptFrame.Parent = parent
+        newScriptFrame.Visible = true
+        scriptNameLabel.Text = name
 
-        Phantom.TextButton.MouseButton1Click:Connect(function()
+        execButton.MouseButton1Click:Connect(function()
             local success, err = pcall(loadstring(source))
             if not success then
                 warn("Error executing script:", err)
             end
         end)
 
-        delbutton.MouseButton1Click:Connect(function()
-            newhub:Destroy()
+        delButton.MouseButton1Click:Connect(function()
+            newScriptFrame:Destroy()
             delfile("Phantom/" .. name)
         end)
     end
@@ -1582,12 +1591,12 @@ local function QJCR_fake_script()
         AddScript(name, source)
     end
 
-    Phantom.AddScript.MouseButton1Click:Connect(function()
-        local scriptName = Phantom.ScriptName.Text
-        local sourceCode = Phantom.ScriptCode.Text
+    Phantom.AddScriptButton.MouseButton1Click:Connect(function()
+        local scriptName = Phantom.ScriptNameInput.Text
+        local sourceCode = Phantom.ScriptCodeInput.Text
         AddScript(scriptName, sourceCode)
-        Phantom.ScriptCode.Text = ""
-        Phantom.ScriptName.Text = ""
+        Phantom.ScriptCodeInput.Text = ""
+        Phantom.ScriptNameInput.Text = ""
     end)
 end
 
