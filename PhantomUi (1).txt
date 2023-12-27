@@ -1664,8 +1664,8 @@ local function AONX_fake_script() -- Sparrow.search_2.LocalScript
 	local btn = script.Parent
 
 	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = script.Parent.Parent.Parent.scriptlist.ScrollingFrame
-		local newList = Frame_3.Frame:Clone()
+		local scriptFrame = script.Parent.Parent.Parent.ResultsHolder.ScrollingFrame_2
+		local newList = Phantom.Frame_3:Clone()
 
 		local execute = newList.TextButton_2
 		local copy = newList.TextButton_3
@@ -1692,14 +1692,13 @@ local function AONX_fake_script() -- Sparrow.search_2.LocalScript
 
 	local http = game:GetService("HttpService")
 	btn.MouseButton1Click:Connect(function()
-		for _, child in ipairs(script.Parent.Parent.Parent.scriptlist.ScrollingFrame:GetChildren()) do
+		for _, child in ipairs(script.Parent.Parent.Parent.ResultsHolder.ScrollingFrame_2:GetChildren()) do
 			if child:IsA("Frame") then
 				child:Destroy()
 			end
 		end
 
-
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.Parent.search.SearchBar.Text
+		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.Parent.SearchBar.Text
 		local response = game:HttpGetAsync(url)
 		local decoded = http:JSONDecode(response)
 		for _, script in pairs(decoded.result.scripts) do
@@ -1708,11 +1707,7 @@ local function AONX_fake_script() -- Sparrow.search_2.LocalScript
 			else
 				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
 			end
-
 		end
-
 	end)
-
-
 end
 coroutine.wrap(AONX_fake_script)()
