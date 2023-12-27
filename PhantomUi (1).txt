@@ -270,8 +270,8 @@ Phantom.UserAvataIcon.Parent = Phantom.ImageFrame
 Phantom.UserAvataIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Phantom.UserAvataIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Phantom.UserAvataIcon.BorderSizePixel = 0
-Phantom.UserAvataIcon.Position = UDim2.new(0.119999997, 0, 0.119402982, 0)
-Phantom.UserAvataIcon.Size = UDim2.new(0.75999999, 0, 0.731343269, 0)
+Phantom.UserAvataIcon.Size = UDim2.new(1, 0, 1, 0)
+Phantom.UserAvataIcon.Position = UDim2.new(0, 0, 0, 0)
 Phantom.UserAvataIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
 
 -- Wait until the player's character is fully loaded
@@ -287,7 +287,7 @@ local image = game.Players:GetUserThumbnailAsync(UserId, ThumbType, ThumbSize)
 Phantom.UserAvataIcon.Image = image
 
 
-Phantom.UICorner_3.CornerRadius = UDim.new(0, 100)
+Phantom.UICorner_3.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_3.Parent = Phantom.UserAvataIcon
 
 Phantom.UIAspectRatioConstraint.Parent = Phantom.UserAvataIcon
@@ -809,7 +809,7 @@ Phantom.ScriptInput.Size = UDim2.new(0.962376237, 0, 0.722433448, 0)
 Phantom.ScriptInput.Font = Enum.Font.SourceSans
 Phantom.ScriptInput.Text = ""
 Phantom.ScriptInput.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptInput.TextScaled = true
+Phantom.ScriptInput.TextScaled = false
 Phantom.ScriptInput.TextSize = 21.000
 Phantom.ScriptInput.TextWrapped = true
 Phantom.ScriptInput.TextXAlignment = Enum.TextXAlignment.Left
@@ -1475,6 +1475,62 @@ Phantom.ScrollingFrame_3.CanvasPosition = Vector2.new(0, 150)
 Phantom.ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 20, 0)
 Phantom.ScrollingFrame_3.ScrollBarThickness = 13
 
+local Frame = Instance.new("Frame")
+Frame.BackgroundTransparency = 1
+Frame.Size = UDim2.new(1, -10, 1, 0) -- Subtract 10 pixels for the width of the scroll bar
+Frame.Position = UDim2.new(0, 0, 0, 0)
+Frame.Parent = Phantom.ScrollingFrame_3
+
+local UIListLayout = Instance.new("UIListLayout")
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Parent = Frame
+
+local function AddTextLine(text, textColor)
+	local TextLabel = Instance.new("TextLabel")
+	TextLabel.Size = UDim2.new(1, 0, 0, 0) -- Set initial height to 0
+	TextLabel.BackgroundTransparency = 1
+	TextLabel.Text = text
+	TextLabel.TextWrapped = true
+	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+	TextLabel.TextYAlignment = Enum.TextYAlignment.Top
+	TextLabel.TextSize = 14
+	TextLabel.TextColor3 = textColor or Color3.new(255, 255, 255) -- Set text color to black by default
+	TextLabel.Parent = Frame
+
+	-- Function to update TextLabel size based on text bounds
+	local function UpdateTextLabelSize()
+		TextLabel.Size = UDim2.new(1, 0, 0, TextLabel.TextBounds.Y)
+		ScrollingFrame.CanvasSize = UDim2.new(0, UIListLayout.AbsoluteContentSize.X, 0, UIListLayout.AbsoluteContentSize.Y)
+	end
+
+	-- Update size initially
+	UpdateTextLabelSize()
+
+	-- Update size whenever text content changes
+	TextLabel:GetPropertyChangedSignal("Text"):Connect(UpdateTextLabelSize)
+
+	-- Update size whenever the UIListLayout resizes
+	UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(UpdateTextLabelSize)
+end
+
+-- Redirect console output to the ScrollingFrame
+local function ConsoleOutput(message, messageType)
+	local time = os.date("%H:%M:%S") -- Get the current time
+	local formattedMessage = "[" .. time .. "] " .. message
+
+	if messageType == Enum.MessageType.MessageOutput then
+		AddTextLine(formattedMessage) -- Add time prefix to the message
+	elseif messageType == Enum.MessageType.MessageInfo then
+		AddTextLine("[INFO] " .. formattedMessage, Color3.fromRGB(0, 255, 0)) -- Green text for INFO
+	elseif messageType == Enum.MessageType.MessageWarning then
+		AddTextLine("[WARNING] " .. formattedMessage, Color3.fromRGB(255, 255, 0)) -- Yellow text for WARNING
+	elseif messageType == Enum.MessageType.MessageError then
+		AddTextLine("[ERROR] " .. formattedMessage, Color3.fromRGB(255, 0, 0)) -- Red text for ERROR
+	end
+end
+
+game:GetService("LogService").MessageOut:Connect(ConsoleOutput)
+
 Phantom.UIAspectRatioConstraint_58.Parent = Phantom.ScrollingFrame_3
 Phantom.UIAspectRatioConstraint_58.AspectRatio = 1.976
 
@@ -1601,3 +1657,62 @@ local function QJCR_fake_script()
 end
 
 coroutine.wrap(QJCR_fake_script)()
+
+local function AONX_fake_script() -- Sparrow.search_2.LocalScript 
+	local script = Instance.new('LocalScript', Phantom.Search)
+
+	local btn = script.Parent
+
+	local function AddTab(imageTab, scriptname, source)
+		local scriptFrame = script.Parent.Parent.Parent.scriptlist.ScrollingFrame
+		local newList = Frame_3.Frame:Clone()
+
+		local execute = newList.TextButton_2
+		local copy = newList.TextButton_3
+
+		local scname = newList.TextLabel
+		local img = newList.ImageLabel
+
+		newList.Name = scriptname
+		newList.Parent = scriptFrame
+		newList.Visible = true
+
+		img.Image = imageTab
+
+		scname.Text = scriptname
+
+		execute.MouseButton1Click:Connect(function()
+			loadstring(source)()
+		end)
+		copy.MouseButton1Click:Connect(function()
+			setclipboard(source)
+		end)
+	end
+
+
+	local http = game:GetService("HttpService")
+	btn.MouseButton1Click:Connect(function()
+		for _, child in ipairs(script.Parent.Parent.Parent.scriptlist.ScrollingFrame:GetChildren()) do
+			if child:IsA("Frame") then
+				child:Destroy()
+			end
+		end
+
+
+		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.Parent.search.SearchBar.Text
+		local response = game:HttpGetAsync(url)
+		local decoded = http:JSONDecode(response)
+		for _, script in pairs(decoded.result.scripts) do
+			if(script.isUniversal == true) then
+				AddTab("rbxassetid://13987073344", script.title, script.script)
+			else
+				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+			end
+
+		end
+
+	end)
+
+
+end
+coroutine.wrap(AONX_fake_script)()
