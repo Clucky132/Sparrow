@@ -814,6 +814,8 @@ Phantom.ScriptInput.TextSize = 21.000
 Phantom.ScriptInput.TextWrapped = true
 Phantom.ScriptInput.TextXAlignment = Enum.TextXAlignment.Left
 Phantom.ScriptInput.TextYAlignment = Enum.TextYAlignment.Top
+Phantom.ScriptInput.Multiline = true
+Phantom.ScriptInput.ClearTextOnFocus = false
 
 Phantom.UICorner_24.CornerRadius = UDim.new(0, 10)
 Phantom.UICorner_24.Parent = Phantom.ScriptInput
