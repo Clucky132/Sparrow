@@ -1,1715 +1,2016 @@
 -- Gui to Lua
--- Version: 3.2
+-- Version: 3.6
 
 -- Instances:
 
-local Phantom = {
-	Phantom = Instance.new("ScreenGui"),
-	Frame = Instance.new("Frame"),
-	UICorner = Instance.new("UICorner"),
-	SideBar = Instance.new("Frame"),
-	ImageFrame = Instance.new("Frame"),
-	UICorner_2 = Instance.new("UICorner"),
-	UserAvataIcon = Instance.new("ImageLabel"),
-	UICorner_3 = Instance.new("UICorner"),
-	UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint"),
-	TabButtons = Instance.new("Frame"),
-	UICorner_4 = Instance.new("UICorner"),
-	Home = Instance.new("TextButton"),
-	UICorner_5 = Instance.new("UICorner"),
-	UITextSizeConstraint = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint"),
-	Executer = Instance.new("TextButton"),
-	UICorner_6 = Instance.new("UICorner"),
-	UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint"),
-	ScriptHub = Instance.new("TextButton"),
-	UICorner_7 = Instance.new("UICorner"),
-	UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint"),
-	Searcher = Instance.new("TextButton"),
-	UICorner_8 = Instance.new("UICorner"),
-	UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint"),
-	Console = Instance.new("TextButton"),
-	UICorner_9 = Instance.new("UICorner"),
-	UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint"),
-	Settings = Instance.new("TextButton"),
-	UICorner_10 = Instance.new("UICorner"),
-	UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint"),
-	UICorner_11 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_10 = Instance.new("UIAspectRatioConstraint"),
-	TopBar = Instance.new("Frame"),
-	UICorner_12 = Instance.new("UICorner"),
-	CloseUi = Instance.new("TextButton"),
-	UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_11 = Instance.new("UIAspectRatioConstraint"),
-	PhantomV1Text = Instance.new("TextLabel"),
-	UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_12 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_13 = Instance.new("UIAspectRatioConstraint"),
-	HomeFrame = Instance.new("Frame"),
-	UICorner_13 = Instance.new("UICorner"),
-	Devs = Instance.new("Frame"),
-	UICorner_14 = Instance.new("UICorner"),
-	DevLabel = Instance.new("TextLabel"),
-	UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_14 = Instance.new("UIAspectRatioConstraint"),
-	Jext = Instance.new("TextLabel"),
-	UICorner_15 = Instance.new("UICorner"),
-	UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_15 = Instance.new("UIAspectRatioConstraint"),
-	Wosh = Instance.new("TextLabel"),
-	UICorner_16 = Instance.new("UICorner"),
-	UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_16 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_17 = Instance.new("UIAspectRatioConstraint"),
-	SocialsHolder = Instance.new("Frame"),
-	UICorner_17 = Instance.new("UICorner"),
-	TextLabel = Instance.new("TextLabel"),
-	UICorner_18 = Instance.new("UICorner"),
-	UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_18 = Instance.new("UIAspectRatioConstraint"),
-	Discord = Instance.new("TextButton"),
-	UICorner_19 = Instance.new("UICorner"),
-	UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_19 = Instance.new("UIAspectRatioConstraint"),
-	TikTok = Instance.new("TextButton"),
-	UICorner_20 = Instance.new("UICorner"),
-	UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_20 = Instance.new("UIAspectRatioConstraint"),
-	YouTube = Instance.new("TextButton"),
-	UICorner_21 = Instance.new("UICorner"),
-	UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_21 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_22 = Instance.new("UIAspectRatioConstraint"),
-	Soon = Instance.new("Frame"),
-	UICorner_22 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_23 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_24 = Instance.new("UIAspectRatioConstraint"),
-	ExecuterFrame = Instance.new("Frame"),
-	UICorner_23 = Instance.new("UICorner"),
-	ScriptInput = Instance.new("TextBox"),
-	UICorner_24 = Instance.new("UICorner"),
-	UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_25 = Instance.new("UIAspectRatioConstraint"),
-	ButtonsHolder = Instance.new("Frame"),
-	UICorner_25 = Instance.new("UICorner"),
-	Execute = Instance.new("TextButton"),
-	UICorner_26 = Instance.new("UICorner"),
-	UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_26 = Instance.new("UIAspectRatioConstraint"),
-	Clear = Instance.new("TextButton"),
-	UICorner_27 = Instance.new("UICorner"),
-	UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_27 = Instance.new("UIAspectRatioConstraint"),
-	ExecuteCB = Instance.new("TextButton"),
-	UICorner_28 = Instance.new("UICorner"),
-	UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_28 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_29 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_30 = Instance.new("UIAspectRatioConstraint"),
-	ScriptHubFrame = Instance.new("Frame"),
-	UICorner_29 = Instance.new("UICorner"),
-	ScrolingFrameHolder = Instance.new("Frame"),
-	UICorner_30 = Instance.new("UICorner"),
-	ScrollingFrame = Instance.new("ScrollingFrame"),
-	Frame_2 = Instance.new("Frame"),
-	UICorner_31 = Instance.new("UICorner"),
-	TextLabel_2 = Instance.new("TextLabel"),
-	UICorner_32 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_31 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint"),
-	TextButton = Instance.new("TextButton"),
-	UICorner_33 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_32 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_33 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_34 = Instance.new("UIAspectRatioConstraint"),
-	AddScrtipFrame = Instance.new("Frame"),
-	ScriptAdderTitle = Instance.new("TextLabel"),
-	UICorner_34 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_35 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint"),
-	CloseTHISFrame = Instance.new("TextButton"),
-	UICorner_35 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_36 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint"),
-	UICorner_36 = Instance.new("UICorner"),
-	ScriptAdderFrame = Instance.new("Frame"),
-	UICorner_37 = Instance.new("UICorner"),
-	ScriptNameLabel = Instance.new("TextLabel"),
-	UICorner_38 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_37 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint"),
-	ScriptName = Instance.new("TextBox"),
-	UICorner_39 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_38 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint"),
-	ScriptCodeLabel = Instance.new("TextLabel"),
-	UICorner_40 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_39 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint"),
-	ScriptCode = Instance.new("TextBox"),
-	UICorner_41 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_40 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint"),
-	AddScript = Instance.new("TextButton"),
-	UICorner_42 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_41 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_42 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_43 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_44 = Instance.new("UIAspectRatioConstraint"),
-	AddScriptOpen = Instance.new("TextButton"),
-	UICorner_43 = Instance.new("UICorner"),
-	UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_45 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_46 = Instance.new("UIAspectRatioConstraint"),
-	SearcherFrame = Instance.new("Frame"),
-	UICorner_44 = Instance.new("UICorner"),
-	SearchBar = Instance.new("TextBox"),
-	UICorner_45 = Instance.new("UICorner"),
-	UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_47 = Instance.new("UIAspectRatioConstraint"),
-	Search = Instance.new("TextButton"),
-	UICorner_46 = Instance.new("UICorner"),
-	UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_48 = Instance.new("UIAspectRatioConstraint"),
-	ResultsHolder = Instance.new("Frame"),
-	UICorner_47 = Instance.new("UICorner"),
-	ScrollingFrame_2 = Instance.new("ScrollingFrame"),
-	Frame_3 = Instance.new("Frame"),
-	UICorner_48 = Instance.new("UICorner"),
-	Frame_4 = Instance.new("Frame"),
-	UICorner_49 = Instance.new("UICorner"),
-	ImageLabel = Instance.new("ImageLabel"),
-	UIAspectRatioConstraint_49 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_50 = Instance.new("UIAspectRatioConstraint"),
-	Frame_5 = Instance.new("Frame"),
-	UICorner_50 = Instance.new("UICorner"),
-	TextButton_2 = Instance.new("TextButton"),
-	UICorner_51 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_51 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint"),
-	TextButton_3 = Instance.new("TextButton"),
-	UICorner_52 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_52 = Instance.new("UIAspectRatioConstraint"),
-	UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint"),
-	UIAspectRatioConstraint_53 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_54 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_55 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_56 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_57 = Instance.new("UIAspectRatioConstraint"),
-	ConsoleFrame = Instance.new("Frame"),
-	UICorner_53 = Instance.new("UICorner"),
-	Frame_6 = Instance.new("Frame"),
-	ScrollingFrame_3 = Instance.new("ScrollingFrame"),
-	UIAspectRatioConstraint_58 = Instance.new("UIAspectRatioConstraint"),
-	UICorner_54 = Instance.new("UICorner"),
-	UIAspectRatioConstraint_59 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_60 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_61 = Instance.new("UIAspectRatioConstraint"),
-	UIAspectRatioConstraint_62 = Instance.new("UIAspectRatioConstraint"),
-}
-
---Properties:
-
-Phantom.Phantom.Name = "Phantom"
-Phantom.Phantom.DisplayOrder = 9999
-Phantom.Phantom.Parent = game.CoreGui
-Phantom.Phantom.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Phantom.Frame.Parent = Phantom.Phantom
-Phantom.Frame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame.BorderSizePixel = 0
-Phantom.Frame.Position = UDim2.new(0.018779343, 0, 0.0362116992, 0)
-Phantom.Frame.Size = UDim2.new(0.923423409, 0, 0.887700558, 0)
-
-Phantom.UICorner.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner.Parent = Phantom.Frame
-
-Phantom.SideBar.Name = "SideBar"
-Phantom.SideBar.Parent = Phantom.Frame
-Phantom.SideBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.SideBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.SideBar.BorderSizePixel = 2
-Phantom.SideBar.Size = UDim2.new(0.149593502, 0, 1, 0)
-
--- Assuming Phantom.SideBar is your UI element
-local sideBar = Phantom.SideBar
-
--- Create a UIStroke instance
-local uiStroke = Instance.new("UIStroke")
-uiStroke.Color = Color3.fromRGB(0, 0, 0) -- Stroke color (black)
-uiStroke.Thickness = 3 -- Thickness of the stroke
-uiStroke.Transparency = 0 -- Set transparency (0 for fully opaque)
-uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border -- Apply as a border
-
--- Parent the UIStroke to the SideBar
-uiStroke.Parent = sideBar
-
-Phantom.ImageFrame.Name = "ImageFrame"
-Phantom.ImageFrame.Parent = Phantom.SideBar
-Phantom.ImageFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ImageFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ImageFrame.BorderSizePixel = 0
-Phantom.ImageFrame.Position = UDim2.new(0.0869565234, 0, 0.183734939, 0)
-Phantom.ImageFrame.Size = UDim2.new(0.815217435, 0, 0.201807231, 0)
-
-Phantom.UICorner_2.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_2.Parent = Phantom.ImageFrame
-
-Phantom.UserAvataIcon.Name = "UserAvataIcon"
-Phantom.UserAvataIcon.Parent = Phantom.ImageFrame
-Phantom.UserAvataIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.UserAvataIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.UserAvataIcon.BorderSizePixel = 0
-Phantom.UserAvataIcon.Size = UDim2.new(1, 0, 1, 0)
-Phantom.UserAvataIcon.Position = UDim2.new(0, 0, 0, 0)
-Phantom.UserAvataIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
--- Wait until the player's character is fully loaded
-repeat wait() until game.Players.LocalPlayer.Character ~= nil
-
-local Player = game.Players.LocalPlayer
-local UserId = Player.UserId
-local ThumbType = Enum.ThumbnailType.HeadShot
-local ThumbSize = Enum.ThumbnailSize.Size420x420
-
--- Fetch and set the player's headshot thumbnail
-local image = game.Players:GetUserThumbnailAsync(UserId, ThumbType, ThumbSize)
-Phantom.UserAvataIcon.Image = image
-
-
-Phantom.UICorner_3.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_3.Parent = Phantom.UserAvataIcon
-
-Phantom.UIAspectRatioConstraint.Parent = Phantom.UserAvataIcon
-Phantom.UIAspectRatioConstraint.AspectRatio = 1.490
-
-Phantom.UIAspectRatioConstraint_2.Parent = Phantom.ImageFrame
-Phantom.UIAspectRatioConstraint_2.AspectRatio = 1.119
-
-Phantom.TabButtons.Name = "TabButtons"
-Phantom.TabButtons.Parent = Phantom.SideBar
-Phantom.TabButtons.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.TabButtons.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TabButtons.BorderSizePixel = 0
-Phantom.TabButtons.Position = UDim2.new(0.0869565234, 0, 0.4246988, 0)
-Phantom.TabButtons.Size = UDim2.new(0.815217435, 0, 0.52409637, 0)
-
-Phantom.UICorner_4.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_4.Parent = Phantom.TabButtons
-
-Phantom.Home.Name = "Home"
-Phantom.Home.Parent = Phantom.TabButtons
-Phantom.Home.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Home.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Home.BorderSizePixel = 0
-Phantom.Home.Position = UDim2.new(0.0666666701, 0, 0.0919540226, 0)
-Phantom.Home.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.Home.Font = Enum.Font.SourceSans
-Phantom.Home.Text = "Home"
-Phantom.Home.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Home.TextScaled = true
-Phantom.Home.TextSize = 14.000
-Phantom.Home.TextWrapped = true
-
-Phantom.Home.MouseButton1Click:Connect(function()
-    Phantom.HomeFrame.Visible = true
-    Phantom.ExecuterFrame.Visible = false
-    Phantom.ScriptHubFrame.Visible = false
-    Phantom.SearcherFrame.Visible = false
-    Phantom.ConsoleFrame.Visible = false
-end)
-
-Phantom.UICorner_5.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_5.Parent = Phantom.Home
-
-Phantom.UITextSizeConstraint.Parent = Phantom.Home
-Phantom.UITextSizeConstraint.MaxTextSize = 26
-
-Phantom.UIAspectRatioConstraint_3.Parent = Phantom.Home
-Phantom.UIAspectRatioConstraint_3.AspectRatio = 3.474
-
-Phantom.Executer.Name = "Executer"
-Phantom.Executer.Parent = Phantom.TabButtons
-Phantom.Executer.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Executer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Executer.BorderSizePixel = 0
-Phantom.Executer.Position = UDim2.new(0.0666666701, 0, 0.241379306, 0)
-Phantom.Executer.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.Executer.Font = Enum.Font.SourceSans
-Phantom.Executer.Text = "Executer"
-Phantom.Executer.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Executer.TextScaled = true
-Phantom.Executer.TextSize = 14.000
-Phantom.Executer.TextWrapped = true
-
-Phantom.Executer.MouseButton1Click:Connect(function()
-    Phantom.HomeFrame.Visible = false
-    Phantom.ExecuterFrame.Visible = true
-    Phantom.ScriptHubFrame.Visible = false
-    Phantom.SearcherFrame.Visible = false
-    Phantom.ConsoleFrame.Visible = false
-end)
-
-Phantom.UICorner_6.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_6.Parent = Phantom.Executer
-
-Phantom.UITextSizeConstraint_2.Parent = Phantom.Executer
-Phantom.UITextSizeConstraint_2.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_4.Parent = Phantom.Executer
-Phantom.UIAspectRatioConstraint_4.AspectRatio = 3.474
-
-Phantom.ScriptHub.Name = "ScriptHub"
-Phantom.ScriptHub.Parent = Phantom.TabButtons
-Phantom.ScriptHub.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptHub.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptHub.BorderSizePixel = 0
-Phantom.ScriptHub.Position = UDim2.new(0.0666666701, 0, 0.390804589, 0)
-Phantom.ScriptHub.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.ScriptHub.Font = Enum.Font.SourceSans
-Phantom.ScriptHub.Text = "ScriptHub"
-Phantom.ScriptHub.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptHub.TextScaled = true
-Phantom.ScriptHub.TextSize = 14.000
-Phantom.ScriptHub.TextWrapped = true
-
-Phantom.ScriptHub.MouseButton1Click:Connect(function()
-    Phantom.HomeFrame.Visible = false
-    Phantom.ExecuterFrame.Visible = false
-    Phantom.ScriptHubFrame.Visible = true
-    Phantom.SearcherFrame.Visible = false
-    Phantom.ConsoleFrame.Visible = false
-end)
-
-Phantom.UICorner_7.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_7.Parent = Phantom.ScriptHub
-
-Phantom.UITextSizeConstraint_3.Parent = Phantom.ScriptHub
-Phantom.UITextSizeConstraint_3.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_5.Parent = Phantom.ScriptHub
-Phantom.UIAspectRatioConstraint_5.AspectRatio = 3.474
-
-Phantom.Searcher.Name = "Searcher"
-Phantom.Searcher.Parent = Phantom.TabButtons
-Phantom.Searcher.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Searcher.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Searcher.BorderSizePixel = 0
-Phantom.Searcher.Position = UDim2.new(0.0666666701, 0, 0.540229857, 0)
-Phantom.Searcher.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.Searcher.Font = Enum.Font.SourceSans
-Phantom.Searcher.Text = "Searcher"
-Phantom.Searcher.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Searcher.TextScaled = true
-Phantom.Searcher.TextSize = 14.000
-Phantom.Searcher.TextWrapped = true
-
-Phantom.Searcher.MouseButton1Click:Connect(function()
-    Phantom.HomeFrame.Visible = false
-    Phantom.ExecuterFrame.Visible = false
-    Phantom.ScriptHubFrame.Visible = false
-    Phantom.SearcherFrame.Visible = true
-    Phantom.ConsoleFrame.Visible = false
-end)
-
-Phantom.UICorner_8.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_8.Parent = Phantom.Searcher
-
-Phantom.UITextSizeConstraint_4.Parent = Phantom.Searcher
-Phantom.UITextSizeConstraint_4.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_6.Parent = Phantom.Searcher
-Phantom.UIAspectRatioConstraint_6.AspectRatio = 3.474
-
-Phantom.Console.Name = "Console"
-Phantom.Console.Parent = Phantom.TabButtons
-Phantom.Console.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Console.BorderSizePixel = 0
-Phantom.Console.Position = UDim2.new(0.0666666701, 0, 0.689655185, 0)
-Phantom.Console.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.Console.Font = Enum.Font.SourceSans
-Phantom.Console.Text = "Console"
-Phantom.Console.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Console.TextScaled = true
-Phantom.Console.TextSize = 14.000
-Phantom.Console.TextWrapped = true
-
-Phantom.Console.MouseButton1Click:Connect(function()
-    Phantom.HomeFrame.Visible = false
-    Phantom.ExecuterFrame.Visible = false
-    Phantom.ScriptHubFrame.Visible = false
-    Phantom.SearcherFrame.Visible = false
-    Phantom.ConsoleFrame.Visible = true
-end)
-
-Phantom.UICorner_9.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_9.Parent = Phantom.Console
-
-Phantom.UITextSizeConstraint_5.Parent = Phantom.Console
-Phantom.UITextSizeConstraint_5.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_7.Parent = Phantom.Console
-Phantom.UIAspectRatioConstraint_7.AspectRatio = 3.474
-
-Phantom.Settings.Name = "Settings"
-Phantom.Settings.Parent = Phantom.TabButtons
-Phantom.Settings.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Settings.BorderSizePixel = 0
-Phantom.Settings.Position = UDim2.new(0.0666666701, 0, 0.850574732, 0)
-Phantom.Settings.Size = UDim2.new(0.879999995, 0, 0.109195404, 0)
-Phantom.Settings.Font = Enum.Font.SourceSans
-Phantom.Settings.Text = "Soon!"
-Phantom.Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Settings.TextScaled = true
-Phantom.Settings.TextSize = 14.000
-Phantom.Settings.TextWrapped = true
-
-Phantom.UICorner_10.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_10.Parent = Phantom.Settings
-
-Phantom.UITextSizeConstraint_6.Parent = Phantom.Settings
-Phantom.UITextSizeConstraint_6.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_8.Parent = Phantom.Settings
-Phantom.UIAspectRatioConstraint_8.AspectRatio = 3.474
-
-Phantom.UIAspectRatioConstraint_9.Parent = Phantom.TabButtons
-Phantom.UIAspectRatioConstraint_9.AspectRatio = 0.431
-
-Phantom.UICorner_11.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_11.Parent = Phantom.SideBar
-
-Phantom.UIAspectRatioConstraint_10.Parent = Phantom.SideBar
-Phantom.UIAspectRatioConstraint_10.AspectRatio = 0.277
-
-Phantom.TopBar.Name = "TopBar"
-Phantom.TopBar.Parent = Phantom.Frame
-Phantom.TopBar.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TopBar.BorderSizePixel = 2
-Phantom.TopBar.Size = UDim2.new(1, 0, 0.147590354, 0)
-
--- Assuming Phantom.SideBar is your UI element
-local TopBar = Phantom.TopBar
-
--- Create a UIStroke instance
-local uiStroke = Instance.new("UIStroke")
-uiStroke.Color = Color3.fromRGB(0, 0, 0) -- Stroke color (black)
-uiStroke.Thickness = 3 -- Thickness of the stroke
-uiStroke.Transparency = 0 -- Set transparency (0 for fully opaque)
-uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border -- Apply as a border
-
--- Parent the UIStroke to the SideBar
-uiStroke.Parent = TopBar
-
-
-Phantom.UICorner_12.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_12.Parent = Phantom.TopBar
-
-Phantom.CloseUi.Name = "CloseUi"
-Phantom.CloseUi.Parent = Phantom.TopBar
-Phantom.CloseUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.CloseUi.BackgroundTransparency = 1.000
-Phantom.CloseUi.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.CloseUi.BorderSizePixel = 0
-Phantom.CloseUi.Position = UDim2.new(0.918339312, 0, 0, 0)
-Phantom.CloseUi.Size = UDim2.new(0.08130081, 0, 1.02040827, 0)
-Phantom.CloseUi.Font = Enum.Font.SourceSans
-Phantom.CloseUi.Text = "X"
-Phantom.CloseUi.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.CloseUi.TextScaled = true
-Phantom.CloseUi.TextSize = 14.000
-Phantom.CloseUi.TextWrapped = true
-
-Phantom.UITextSizeConstraint_7.Parent = Phantom.CloseUi
-Phantom.UITextSizeConstraint_7.MaxTextSize = 50
-
-Phantom.UIAspectRatioConstraint_11.Parent = Phantom.CloseUi
-Phantom.UIAspectRatioConstraint_11.AspectRatio = 1.281
-
-Phantom.PhantomV1Text.Name = "PhantomV1Text"
-Phantom.PhantomV1Text.Parent = Phantom.TopBar
-Phantom.PhantomV1Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.PhantomV1Text.BackgroundTransparency = 1.000
-Phantom.PhantomV1Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.PhantomV1Text.BorderSizePixel = 0
-Phantom.PhantomV1Text.Size = UDim2.new(0.713821113, 0, 1.02040827, 0)
-Phantom.PhantomV1Text.Font = Enum.Font.SourceSans
-Phantom.PhantomV1Text.Text = "Phantom V1"
-Phantom.PhantomV1Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.PhantomV1Text.TextScaled = true
-Phantom.PhantomV1Text.TextSize = 14.000
-Phantom.PhantomV1Text.TextWrapped = true
-
-Phantom.UITextSizeConstraint_8.Parent = Phantom.PhantomV1Text
-Phantom.UITextSizeConstraint_8.MaxTextSize = 72
-
-Phantom.UIAspectRatioConstraint_12.Parent = Phantom.PhantomV1Text
-Phantom.UIAspectRatioConstraint_12.AspectRatio = 8.780
-
-Phantom.UIAspectRatioConstraint_13.Parent = Phantom.TopBar
-Phantom.UIAspectRatioConstraint_13.AspectRatio = 12.551
-
-Phantom.HomeFrame.Name = "HomeFrame"
-Phantom.HomeFrame.Parent = Phantom.Frame
-Phantom.HomeFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.HomeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.HomeFrame.BorderSizePixel = 0
-Phantom.HomeFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
-Phantom.HomeFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
-
-Phantom.UICorner_13.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_13.Parent = Phantom.HomeFrame
-
-Phantom.Devs.Name = "Devs"
-Phantom.Devs.Parent = Phantom.HomeFrame
-Phantom.Devs.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Devs.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Devs.BorderSizePixel = 0
-Phantom.Devs.Position = UDim2.new(0.017821813, 0, 0.0304182507, 0)
-Phantom.Devs.Size = UDim2.new(0.964356422, 0, 0.186311781, 0)
-
-Phantom.UICorner_14.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_14.Parent = Phantom.Devs
-
-Phantom.DevLabel.Name = "DevLabel"
-Phantom.DevLabel.Parent = Phantom.Devs
-Phantom.DevLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.DevLabel.BackgroundTransparency = 1.000
-Phantom.DevLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.DevLabel.BorderSizePixel = 0
-Phantom.DevLabel.Position = UDim2.new(0.293634504, 0, 0, 0)
-Phantom.DevLabel.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
-Phantom.DevLabel.Font = Enum.Font.SourceSans
-Phantom.DevLabel.Text = "Devs"
-Phantom.DevLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.DevLabel.TextScaled = true
-Phantom.DevLabel.TextSize = 14.000
-Phantom.DevLabel.TextWrapped = true
-
-Phantom.UITextSizeConstraint_9.Parent = Phantom.DevLabel
-Phantom.UITextSizeConstraint_9.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_14.Parent = Phantom.DevLabel
-Phantom.UIAspectRatioConstraint_14.AspectRatio = 11.111
-
-Phantom.Jext.Name = "Jext"
-Phantom.Jext.Parent = Phantom.Devs
-Phantom.Jext.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Jext.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Jext.BorderSizePixel = 0
-Phantom.Jext.Position = UDim2.new(0.0205338802, 0, 0.367346942, 0)
-Phantom.Jext.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
-Phantom.Jext.Font = Enum.Font.SourceSans
-Phantom.Jext.Text = "Owner: jext1"
-Phantom.Jext.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Jext.TextScaled = true
-Phantom.Jext.TextSize = 14.000
-Phantom.Jext.TextWrapped = true
-
-Phantom.UICorner_15.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_15.Parent = Phantom.Jext
-
-Phantom.UITextSizeConstraint_10.Parent = Phantom.Jext
-Phantom.UITextSizeConstraint_10.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_15.Parent = Phantom.Jext
-Phantom.UIAspectRatioConstraint_15.AspectRatio = 11.111
-
-Phantom.Wosh.Name = "Wosh"
-Phantom.Wosh.Parent = Phantom.Devs
-Phantom.Wosh.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Wosh.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Wosh.BorderSizePixel = 0
-Phantom.Wosh.Position = UDim2.new(0.558521569, 0, 0.367346942, 0)
-Phantom.Wosh.Size = UDim2.new(0.410677612, 0, 0.367346942, 0)
-Phantom.Wosh.Font = Enum.Font.SourceSans
-Phantom.Wosh.Text = "Api Manger: wosh"
-Phantom.Wosh.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Wosh.TextScaled = true
-Phantom.Wosh.TextSize = 14.000
-Phantom.Wosh.TextWrapped = true
-
-Phantom.UICorner_16.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_16.Parent = Phantom.Wosh
-
-Phantom.UITextSizeConstraint_11.Parent = Phantom.Wosh
-Phantom.UITextSizeConstraint_11.MaxTextSize = 18
-
-Phantom.UIAspectRatioConstraint_16.Parent = Phantom.Wosh
-Phantom.UIAspectRatioConstraint_16.AspectRatio = 11.111
-
-Phantom.UIAspectRatioConstraint_17.Parent = Phantom.Devs
-Phantom.UIAspectRatioConstraint_17.AspectRatio = 9.939
-
-Phantom.SocialsHolder.Name = "SocialsHolder"
-Phantom.SocialsHolder.Parent = Phantom.HomeFrame
-Phantom.SocialsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.SocialsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.SocialsHolder.BorderSizePixel = 0
-Phantom.SocialsHolder.Position = UDim2.new(0.0178217813, 0, 0.254752845, 0)
-Phantom.SocialsHolder.Size = UDim2.new(0.479207933, 0, 0.711026609, 0)
-
-Phantom.UICorner_17.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_17.Parent = Phantom.SocialsHolder
-
-Phantom.TextLabel.Parent = Phantom.SocialsHolder
-Phantom.TextLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TextLabel.BorderSizePixel = 0
-Phantom.TextLabel.Position = UDim2.new(0.0867768601, 0, 0.0320855603, 0)
-Phantom.TextLabel.Size = UDim2.new(0.826446295, 0, 0.122994654, 0)
-Phantom.TextLabel.Font = Enum.Font.SourceSans
-Phantom.TextLabel.Text = "Socials:"
-Phantom.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TextLabel.TextScaled = true
-Phantom.TextLabel.TextSize = 14.000
-Phantom.TextLabel.TextWrapped = true
-
-Phantom.UICorner_18.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_18.Parent = Phantom.TextLabel
-
-Phantom.UITextSizeConstraint_12.Parent = Phantom.TextLabel
-Phantom.UITextSizeConstraint_12.MaxTextSize = 22
-
-Phantom.UIAspectRatioConstraint_18.Parent = Phantom.TextLabel
-Phantom.UIAspectRatioConstraint_18.AspectRatio = 8.696
-
-Phantom.Discord.Name = "Discord"
-Phantom.Discord.Parent = Phantom.SocialsHolder
-Phantom.Discord.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Discord.BorderSizePixel = 0
-Phantom.Discord.Position = UDim2.new(0.0867768601, 0, 0.256684482, 0)
-Phantom.Discord.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
-Phantom.Discord.Font = Enum.Font.SourceSans
-Phantom.Discord.Text = "Discord"
-Phantom.Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Discord.TextScaled = true
-Phantom.Discord.TextSize = 14.000
-Phantom.Discord.TextWrapped = true
-
-Phantom.Discord.MouseButton1Click:Connect(function()
-    setclipboard("https://sparrow-executor.vercel.app/")
-end)
-
-Phantom.UICorner_19.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_19.Parent = Phantom.Discord
-
-Phantom.UITextSizeConstraint_13.Parent = Phantom.Discord
-Phantom.UITextSizeConstraint_13.MaxTextSize = 26
-
-Phantom.UIAspectRatioConstraint_19.Parent = Phantom.Discord
-Phantom.UIAspectRatioConstraint_19.AspectRatio = 7.692
-
-Phantom.TikTok.Name = "TikTok"
-Phantom.TikTok.Parent = Phantom.SocialsHolder
-Phantom.TikTok.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TikTok.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TikTok.BorderSizePixel = 0
-Phantom.TikTok.Position = UDim2.new(0.0867768601, 0, 0.465240628, 0)
-Phantom.TikTok.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
-Phantom.TikTok.Font = Enum.Font.SourceSans
-Phantom.TikTok.Text = "TikTok"
-Phantom.TikTok.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TikTok.TextScaled = true
-Phantom.TikTok.TextSize = 14.000
-Phantom.TikTok.TextWrapped = true
-
-Phantom.TikTok.MouseButton1Click:Connect(function()
-    setclipboard("https://sparrow-executor.vercel.app/")
-end)
-
-Phantom.UICorner_20.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_20.Parent = Phantom.TikTok
-
-Phantom.UITextSizeConstraint_14.Parent = Phantom.TikTok
-Phantom.UITextSizeConstraint_14.MaxTextSize = 26
-
-Phantom.UIAspectRatioConstraint_20.Parent = Phantom.TikTok
-Phantom.UIAspectRatioConstraint_20.AspectRatio = 7.692
-
-Phantom.YouTube.Name = "YouTube"
-Phantom.YouTube.Parent = Phantom.SocialsHolder
-Phantom.YouTube.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.YouTube.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.YouTube.BorderSizePixel = 0
-Phantom.YouTube.Position = UDim2.new(0.0867768601, 0, 0.673796773, 0)
-Phantom.YouTube.Size = UDim2.new(0.826446295, 0, 0.13903743, 0)
-Phantom.YouTube.Font = Enum.Font.SourceSans
-Phantom.YouTube.Text = "Youtube"
-Phantom.YouTube.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.YouTube.TextScaled = true
-Phantom.YouTube.TextSize = 14.000
-Phantom.YouTube.TextWrapped = true
-
-Phantom.YouTube.MouseButton1Click:Connect(function()
-    setclipboard("https://sparrow-executor.vercel.app/")
-end)
-
-Phantom.UICorner_21.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_21.Parent = Phantom.YouTube
-
-Phantom.UITextSizeConstraint_15.Parent = Phantom.YouTube
-Phantom.UITextSizeConstraint_15.MaxTextSize = 26
-
-Phantom.UIAspectRatioConstraint_21.Parent = Phantom.YouTube
-Phantom.UIAspectRatioConstraint_21.AspectRatio = 7.692
-
-Phantom.UIAspectRatioConstraint_22.Parent = Phantom.SocialsHolder
-Phantom.UIAspectRatioConstraint_22.AspectRatio = 1.294
-
-Phantom.Soon.Name = "Soon"
-Phantom.Soon.Parent = Phantom.HomeFrame
-Phantom.Soon.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Soon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Soon.BorderSizePixel = 0
-Phantom.Soon.Position = UDim2.new(0.52809602, 0, 0.250950575, 0)
-Phantom.Soon.Size = UDim2.new(0.453465343, 0, 0.711026609, 0)
-
-Phantom.UICorner_22.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_22.Parent = Phantom.Soon
-
-Phantom.UIAspectRatioConstraint_23.Parent = Phantom.Soon
-Phantom.UIAspectRatioConstraint_23.AspectRatio = 1.225
-
-Phantom.UIAspectRatioConstraint_24.Parent = Phantom.HomeFrame
-Phantom.UIAspectRatioConstraint_24.AspectRatio = 1.920
-
-Phantom.ExecuterFrame.Name = "ExecuterFrame"
-Phantom.ExecuterFrame.Parent = Phantom.Frame
-Phantom.ExecuterFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ExecuterFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ExecuterFrame.BorderSizePixel = 0
-Phantom.ExecuterFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
-Phantom.ExecuterFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
-
-Phantom.UICorner_23.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_23.Parent = Phantom.ExecuterFrame
-
-Phantom.ScriptInput.Name = "ScriptInput"
-Phantom.ScriptInput.Parent = Phantom.ExecuterFrame
-Phantom.ScriptInput.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ScriptInput.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptInput.BorderSizePixel = 0
-Phantom.ScriptInput.Position = UDim2.new(0.0178217813, 0, 0.0380228125, 0)
-Phantom.ScriptInput.Size = UDim2.new(0.962376237, 0, 0.722433448, 0)
-Phantom.ScriptInput.Font = Enum.Font.SourceSans
-Phantom.ScriptInput.Text = ""
-Phantom.ScriptInput.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptInput.TextScaled = false
-Phantom.ScriptInput.TextSize = 21.000
-Phantom.ScriptInput.TextWrapped = true
-Phantom.ScriptInput.TextXAlignment = Enum.TextXAlignment.Left
-Phantom.ScriptInput.TextYAlignment = Enum.TextYAlignment.Top
-Phantom.ScriptInput.MultiLine = true
-Phantom.ScriptInput.ClearTextOnFocus = false
-
-Phantom.UICorner_24.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_24.Parent = Phantom.ScriptInput
-
-Phantom.UITextSizeConstraint_16.Parent = Phantom.ScriptInput
-Phantom.UITextSizeConstraint_16.MaxTextSize = 21
-
-Phantom.UIAspectRatioConstraint_25.Parent = Phantom.ScriptInput
-Phantom.UIAspectRatioConstraint_25.AspectRatio = 2.558
-
-Phantom.ButtonsHolder.Name = "ButtonsHolder"
-Phantom.ButtonsHolder.Parent = Phantom.ExecuterFrame
-Phantom.ButtonsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ButtonsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ButtonsHolder.BorderSizePixel = 0
-Phantom.ButtonsHolder.Position = UDim2.new(0.0178217813, 0, 0.79847908, 0)
-Phantom.ButtonsHolder.Size = UDim2.new(0.962376237, 0, 0.167300373, 0)
-
-Phantom.UICorner_25.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_25.Parent = Phantom.ButtonsHolder
-
-Phantom.Execute.Name = "Execute"
-Phantom.Execute.Parent = Phantom.ButtonsHolder
-Phantom.Execute.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Execute.BorderSizePixel = 0
-Phantom.Execute.Position = UDim2.new(0.0205761325, 0, 0.204545453, 0)
-Phantom.Execute.Size = UDim2.new(0.261316866, 0, 0.590909064, 0)
-Phantom.Execute.Font = Enum.Font.SourceSans
-Phantom.Execute.Text = "Execute"
-Phantom.Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Execute.TextScaled = true
-Phantom.Execute.TextSize = 14.000
-Phantom.Execute.TextWrapped = true
-
-local function ExecuteScript(script)
-	local f, err = loadstring(script)
-	if f then
-		f()
-	else
-		print("Script execution error:", err)
-	end
-end
-
--- Connect the execute button to the script execution function
-Phantom.Execute.MouseButton1Click:Connect(function()
-	local script = Phantom.ScriptInput.Text
-	ExecuteScript(script)
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "Script";
-		Text = "Script Executed";
-		Duration = 3;
-	})
-end)
-
-Phantom.UICorner_26.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_26.Parent = Phantom.Execute
-
-Phantom.UITextSizeConstraint_17.Parent = Phantom.Execute
-Phantom.UITextSizeConstraint_17.MaxTextSize = 24
-
-Phantom.UIAspectRatioConstraint_26.Parent = Phantom.Execute
-Phantom.UIAspectRatioConstraint_26.AspectRatio = 4.885
-
-Phantom.Clear.Name = "Clear"
-Phantom.Clear.Parent = Phantom.ButtonsHolder
-Phantom.Clear.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Clear.BorderSizePixel = 0
-Phantom.Clear.Position = UDim2.new(0.310699582, 0, 0.204545453, 0)
-Phantom.Clear.Size = UDim2.new(0.261316866, 0, 0.590909064, 0)
-Phantom.Clear.Font = Enum.Font.SourceSans
-Phantom.Clear.Text = "Clear"
-Phantom.Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Clear.TextScaled = true
-Phantom.Clear.TextSize = 14.000
-Phantom.Clear.TextWrapped = true
-
-Phantom.Clear.MouseButton1Click:Connect(function()
-	Phantom.ScriptInput.Text = ""
-end)
-
-Phantom.UICorner_27.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_27.Parent = Phantom.Clear
-
-Phantom.UITextSizeConstraint_18.Parent = Phantom.Clear
-Phantom.UITextSizeConstraint_18.MaxTextSize = 24
-
-Phantom.UIAspectRatioConstraint_27.Parent = Phantom.Clear
-Phantom.UIAspectRatioConstraint_27.AspectRatio = 4.885
-
-Phantom.ExecuteCB.Name = "ExecuteCB"
-Phantom.ExecuteCB.Parent = Phantom.ButtonsHolder
-Phantom.ExecuteCB.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ExecuteCB.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ExecuteCB.BorderSizePixel = 0
-Phantom.ExecuteCB.Position = UDim2.new(0.639867067, 0, 0.204545453, 0)
-Phantom.ExecuteCB.Size = UDim2.new(0.331275731, 0, 0.590909064, 0)
-Phantom.ExecuteCB.Font = Enum.Font.SourceSans
-Phantom.ExecuteCB.Text = "Execute ClipBoard"
-Phantom.ExecuteCB.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ExecuteCB.TextScaled = true
-Phantom.ExecuteCB.TextSize = 14.000
-Phantom.ExecuteCB.TextWrapped = true
-
-Phantom.ExecuteCB.MouseButton1Click:Connect(function()
-	local clipboardText = getclipboard()
-	if clipboardText then
-		local success, result = pcall(loadstring(clipboardText))
-		if not success then
-			print("Error executing clipboard content: " .. result)
-		end
-	end
-end)
-
-Phantom.UICorner_28.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_28.Parent = Phantom.ExecuteCB
-
-Phantom.UITextSizeConstraint_19.Parent = Phantom.ExecuteCB
-Phantom.UITextSizeConstraint_19.MaxTextSize = 24
-
-Phantom.UIAspectRatioConstraint_28.Parent = Phantom.ExecuteCB
-Phantom.UIAspectRatioConstraint_28.AspectRatio = 6.192
-
-Phantom.UIAspectRatioConstraint_29.Parent = Phantom.ButtonsHolder
-Phantom.UIAspectRatioConstraint_29.AspectRatio = 11.045
-
-Phantom.UIAspectRatioConstraint_30.Parent = Phantom.ExecuterFrame
-Phantom.UIAspectRatioConstraint_30.AspectRatio = 1.920
-
-Phantom.ScriptHubFrame.Name = "ScriptHubFrame"
-Phantom.ScriptHubFrame.Parent = Phantom.Frame
-Phantom.ScriptHubFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptHubFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptHubFrame.BorderSizePixel = 0
-Phantom.ScriptHubFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
-Phantom.ScriptHubFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
-
-Phantom.UICorner_29.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_29.Parent = Phantom.ScriptHubFrame
-
-Phantom.ScrolingFrameHolder.Name = "ScrolingFrameHolder"
-Phantom.ScrolingFrameHolder.Parent = Phantom.ScriptHubFrame
-Phantom.ScrolingFrameHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ScrolingFrameHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScrolingFrameHolder.BorderSizePixel = 0
-Phantom.ScrolingFrameHolder.Position = UDim2.new(0.0178217813, 0, 0.0304182507, 0)
-Phantom.ScrolingFrameHolder.Size = UDim2.new(0.962376237, 0, 0.828897357, 0)
-
-Phantom.UICorner_30.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_30.Parent = Phantom.ScrolingFrameHolder
-
-Phantom.ScrollingFrame.Parent = Phantom.ScrolingFrameHolder
-Phantom.ScrollingFrame.Active = true
-Phantom.ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScrollingFrame.BackgroundTransparency = 1.000
-Phantom.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScrollingFrame.BorderSizePixel = 0
-Phantom.ScrollingFrame.Size = UDim2.new(1.00205767, 0, 1, 0)
-Phantom.ScrollingFrame.CanvasPosition = Vector2.new(0, 750)
-Phantom.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 20, 0)
-
-Phantom.Frame_2.Parent = Phantom.ScrollingFrame
-Phantom.Frame_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame_2.BorderSizePixel = 0
-Phantom.Frame_2.Position = UDim2.new(0.0190000124, 0, 0.00275232154, 0)
-Phantom.Frame_2.Size = UDim2.new(0.936344981, 0, 0.233944967, 0)
-
-Phantom.UICorner_31.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_31.Parent = Phantom.Frame_2
-
-Phantom.TextLabel_2.Parent = Phantom.Frame_2
-Phantom.TextLabel_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TextLabel_2.BorderSizePixel = 0
-Phantom.TextLabel_2.Position = UDim2.new(0.0175438598, 0, 0.117647059, 0)
-Phantom.TextLabel_2.Size = UDim2.new(0.712719321, 0, 0.764705896, 0)
-Phantom.TextLabel_2.Font = Enum.Font.SourceSans
-Phantom.TextLabel_2.Text = "SName"
-Phantom.TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TextLabel_2.TextScaled = true
-Phantom.TextLabel_2.TextSize = 14.000
-Phantom.TextLabel_2.TextWrapped = true
-
-Phantom.UICorner_32.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_32.Parent = Phantom.TextLabel_2
-
-Phantom.UIAspectRatioConstraint_31.Parent = Phantom.TextLabel_2
-Phantom.UIAspectRatioConstraint_31.AspectRatio = 8.333
-
-Phantom.UITextSizeConstraint_20.Parent = Phantom.TextLabel_2
-Phantom.UITextSizeConstraint_20.MaxTextSize = 38
-
-Phantom.TextButton.Parent = Phantom.Frame_2
-Phantom.TextButton.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TextButton.BorderSizePixel = 0
-Phantom.TextButton.Position = UDim2.new(0.774518311, 0, 0.117647059, 0)
-Phantom.TextButton.Size = UDim2.new(0.164473683, 0, 0.745098054, 0)
-Phantom.TextButton.Font = Enum.Font.SourceSans
-Phantom.TextButton.Text = "Execute"
-Phantom.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TextButton.TextScaled = true
-Phantom.TextButton.TextSize = 14.000
-Phantom.TextButton.TextWrapped = true
-
-Phantom.UICorner_33.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_33.Parent = Phantom.TextButton
-
-Phantom.UIAspectRatioConstraint_32.Parent = Phantom.TextButton
-Phantom.UIAspectRatioConstraint_32.AspectRatio = 1.974
-
-Phantom.UITextSizeConstraint_21.Parent = Phantom.TextButton
-Phantom.UITextSizeConstraint_21.MaxTextSize = 28
-
-Phantom.UIAspectRatioConstraint_33.Parent = Phantom.Frame_2
-Phantom.UIAspectRatioConstraint_33.AspectRatio = 8.941
-
-Phantom.UIAspectRatioConstraint_34.Parent = Phantom.ScrollingFrame
-Phantom.UIAspectRatioConstraint_34.AspectRatio = 2.234
-
-Phantom.AddScrtipFrame.Name = "AddScrtipFrame"
-Phantom.AddScrtipFrame.Parent = Phantom.ScrolingFrameHolder
-Phantom.AddScrtipFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.AddScrtipFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.AddScrtipFrame.BorderSizePixel = 0
-Phantom.AddScrtipFrame.Position = UDim2.new(0.139917701, 0, -0.252293587, 0)
-Phantom.AddScrtipFrame.Size = UDim2.new(0.722222209, 0, 1.38990831, 0)
-Phantom.AddScrtipFrame.Visible = false
-
-Phantom.ScriptAdderTitle.Name = "ScriptAdderTitle"
-Phantom.ScriptAdderTitle.Parent = Phantom.AddScrtipFrame
-Phantom.ScriptAdderTitle.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ScriptAdderTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptAdderTitle.BorderSizePixel = 0
-Phantom.ScriptAdderTitle.Position = UDim2.new(0.0169999432, 0, 0.0233002976, 0)
-Phantom.ScriptAdderTitle.Size = UDim2.new(0.871794879, 0, 0.0693069324, 0)
-Phantom.ScriptAdderTitle.Font = Enum.Font.SourceSans
-Phantom.ScriptAdderTitle.Text = "Script Adder!"
-Phantom.ScriptAdderTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptAdderTitle.TextScaled = true
-Phantom.ScriptAdderTitle.TextSize = 14.000
-Phantom.ScriptAdderTitle.TextWrapped = true
-
-Phantom.UICorner_34.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_34.Parent = Phantom.ScriptAdderTitle
-
-Phantom.UIAspectRatioConstraint_35.Parent = Phantom.ScriptAdderTitle
-Phantom.UIAspectRatioConstraint_35.AspectRatio = 14.571
-
-Phantom.UITextSizeConstraint_22.Parent = Phantom.ScriptAdderTitle
-Phantom.UITextSizeConstraint_22.MaxTextSize = 30
-
-Phantom.CloseTHISFrame.Name = "CloseTHISFrame"
-Phantom.CloseTHISFrame.Parent = Phantom.AddScrtipFrame
-Phantom.CloseTHISFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.CloseTHISFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.CloseTHISFrame.BorderSizePixel = 0
-Phantom.CloseTHISFrame.Position = UDim2.new(0.900000095, 0, 0.0232013166, 0)
-Phantom.CloseTHISFrame.Size = UDim2.new(0.0797720775, 0, 0.0693069324, 0)
-Phantom.CloseTHISFrame.Font = Enum.Font.SourceSans
-Phantom.CloseTHISFrame.Text = "X"
-Phantom.CloseTHISFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.CloseTHISFrame.TextScaled = true
-Phantom.CloseTHISFrame.TextSize = 14.000
-Phantom.CloseTHISFrame.TextWrapped = true
-
-Phantom.CloseTHISFrame.MouseButton1Click:Connect(function()
-	Phantom.AddScrtipFrame.Visible = false
-end)
-
-Phantom.UICorner_35.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_35.Parent = Phantom.CloseTHISFrame
-
-Phantom.UIAspectRatioConstraint_36.Parent = Phantom.CloseTHISFrame
-Phantom.UIAspectRatioConstraint_36.AspectRatio = 1.333
-
-Phantom.UITextSizeConstraint_23.Parent = Phantom.CloseTHISFrame
-Phantom.UITextSizeConstraint_23.MaxTextSize = 30
-
-Phantom.UICorner_36.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_36.Parent = Phantom.AddScrtipFrame
-
-Phantom.ScriptAdderFrame.Name = "ScriptAdderFrame"
-Phantom.ScriptAdderFrame.Parent = Phantom.AddScrtipFrame
-Phantom.ScriptAdderFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ScriptAdderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptAdderFrame.BorderSizePixel = 0
-Phantom.ScriptAdderFrame.Position = UDim2.new(0.0170940179, 0, 0.115511551, 0)
-Phantom.ScriptAdderFrame.Size = UDim2.new(0.962962985, 0, 0.854785502, 0)
-
-Phantom.UICorner_37.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_37.Parent = Phantom.ScriptAdderFrame
-
-Phantom.ScriptNameLabel.Name = "ScriptNameLabel"
-Phantom.ScriptNameLabel.Parent = Phantom.ScriptAdderFrame
-Phantom.ScriptNameLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptNameLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptNameLabel.BorderSizePixel = 0
-Phantom.ScriptNameLabel.Position = UDim2.new(0.186390534, 0, 0.0231660232, 0)
-Phantom.ScriptNameLabel.Size = UDim2.new(0.591715991, 0, 0.0617760606, 0)
-Phantom.ScriptNameLabel.Font = Enum.Font.SourceSans
-Phantom.ScriptNameLabel.Text = "Script Name"
-Phantom.ScriptNameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptNameLabel.TextScaled = true
-Phantom.ScriptNameLabel.TextSize = 14.000
-Phantom.ScriptNameLabel.TextWrapped = true
-
-Phantom.UICorner_38.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_38.Parent = Phantom.ScriptNameLabel
-
-Phantom.UIAspectRatioConstraint_37.Parent = Phantom.ScriptNameLabel
-Phantom.UIAspectRatioConstraint_37.AspectRatio = 12.500
-
-Phantom.UITextSizeConstraint_24.Parent = Phantom.ScriptNameLabel
-Phantom.UITextSizeConstraint_24.MaxTextSize = 16
-
-Phantom.ScriptName.Name = "ScriptName"
-Phantom.ScriptName.Parent = Phantom.ScriptAdderFrame
-Phantom.ScriptName.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptName.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptName.BorderSizePixel = 0
-Phantom.ScriptName.Position = UDim2.new(0.0384615399, 0, 0.17760618, 0)
-Phantom.ScriptName.Size = UDim2.new(0.926035523, 0, 0.123552121, 0)
-Phantom.ScriptName.Font = Enum.Font.SourceSans
-Phantom.ScriptName.Text = ""
-Phantom.ScriptName.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptName.TextScaled = true
-Phantom.ScriptName.TextSize = 14.000
-Phantom.ScriptName.TextWrapped = true
-
-Phantom.UICorner_39.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_39.Parent = Phantom.ScriptName
-
-Phantom.UIAspectRatioConstraint_38.Parent = Phantom.ScriptName
-Phantom.UIAspectRatioConstraint_38.AspectRatio = 9.781
-
-Phantom.UITextSizeConstraint_25.Parent = Phantom.ScriptName
-Phantom.UITextSizeConstraint_25.MaxTextSize = 32
-
-Phantom.ScriptCodeLabel.Name = "ScriptCodeLabel"
-Phantom.ScriptCodeLabel.Parent = Phantom.ScriptAdderFrame
-Phantom.ScriptCodeLabel.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptCodeLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptCodeLabel.BorderSizePixel = 0
-Phantom.ScriptCodeLabel.Position = UDim2.new(0.186390534, 0, 0.378378391, 0)
-Phantom.ScriptCodeLabel.Size = UDim2.new(0.591715991, 0, 0.0617760606, 0)
-Phantom.ScriptCodeLabel.Font = Enum.Font.SourceSans
-Phantom.ScriptCodeLabel.Text = "Script Code"
-Phantom.ScriptCodeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptCodeLabel.TextScaled = true
-Phantom.ScriptCodeLabel.TextSize = 14.000
-Phantom.ScriptCodeLabel.TextWrapped = true
-
-Phantom.UICorner_40.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_40.Parent = Phantom.ScriptCodeLabel
-
-Phantom.UIAspectRatioConstraint_39.Parent = Phantom.ScriptCodeLabel
-Phantom.UIAspectRatioConstraint_39.AspectRatio = 12.500
-
-Phantom.UITextSizeConstraint_26.Parent = Phantom.ScriptCodeLabel
-Phantom.UITextSizeConstraint_26.MaxTextSize = 16
-
-Phantom.ScriptCode.Name = "ScriptCode"
-Phantom.ScriptCode.Parent = Phantom.ScriptAdderFrame
-Phantom.ScriptCode.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ScriptCode.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScriptCode.BorderSizePixel = 0
-Phantom.ScriptCode.Position = UDim2.new(0.035502959, 0, 0.540540516, 0)
-Phantom.ScriptCode.Size = UDim2.new(0.926035523, 0, 0.123552121, 0)
-Phantom.ScriptCode.Font = Enum.Font.SourceSans
-Phantom.ScriptCode.Text = ""
-Phantom.ScriptCode.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScriptCode.TextScaled = true
-Phantom.ScriptCode.TextSize = 14.000
-Phantom.ScriptCode.TextWrapped = true
-
-Phantom.UICorner_41.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_41.Parent = Phantom.ScriptCode
-
-Phantom.UIAspectRatioConstraint_40.Parent = Phantom.ScriptCode
-Phantom.UIAspectRatioConstraint_40.AspectRatio = 9.781
-
-Phantom.UITextSizeConstraint_27.Parent = Phantom.ScriptCode
-Phantom.UITextSizeConstraint_27.MaxTextSize = 32
-
-Phantom.AddScript.Name = "AddScript"
-Phantom.AddScript.Parent = Phantom.ScriptAdderFrame
-Phantom.AddScript.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.AddScript.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.AddScript.BorderSizePixel = 0
-Phantom.AddScript.Position = UDim2.new(0.204142019, 0, 0.741312742, 0)
-Phantom.AddScript.Size = UDim2.new(0.591715991, 0, 0.193050191, 0)
-Phantom.AddScript.Font = Enum.Font.SourceSans
-Phantom.AddScript.Text = "Add Script"
-Phantom.AddScript.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.AddScript.TextScaled = true
-Phantom.AddScript.TextSize = 14.000
-Phantom.AddScript.TextWrapped = true
-
-Phantom.UICorner_42.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_42.Parent = Phantom.AddScript
-
-Phantom.UIAspectRatioConstraint_41.Parent = Phantom.AddScript
-Phantom.UIAspectRatioConstraint_41.AspectRatio = 4.000
-
-Phantom.UITextSizeConstraint_28.Parent = Phantom.AddScript
-Phantom.UITextSizeConstraint_28.MaxTextSize = 50
-
-Phantom.UIAspectRatioConstraint_42.Parent = Phantom.ScriptAdderFrame
-Phantom.UIAspectRatioConstraint_42.AspectRatio = 1.305
-
-Phantom.UIAspectRatioConstraint_43.Parent = Phantom.AddScrtipFrame
-Phantom.UIAspectRatioConstraint_43.AspectRatio = 1.484
-
-Phantom.UIAspectRatioConstraint_44.Parent = Phantom.ScrolingFrameHolder
-Phantom.UIAspectRatioConstraint_44.AspectRatio = 2.229
-
-Phantom.AddScriptOpen.Name = "AddScriptOpen"
-Phantom.AddScriptOpen.Parent = Phantom.ScriptHubFrame
-Phantom.AddScriptOpen.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.AddScriptOpen.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.AddScriptOpen.BorderSizePixel = 0
-Phantom.AddScriptOpen.Position = UDim2.new(0.200253993, 0, 0.889193237, 0)
-Phantom.AddScriptOpen.Size = UDim2.new(0.596039593, 0, 0.0722433478, 0)
-Phantom.AddScriptOpen.ZIndex = 0
-Phantom.AddScriptOpen.Font = Enum.Font.SourceSans
-Phantom.AddScriptOpen.Text = "Add Script!"
-Phantom.AddScriptOpen.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.AddScriptOpen.TextScaled = true
-Phantom.AddScriptOpen.TextSize = 14.000
-Phantom.AddScriptOpen.TextWrapped = true
-
-Phantom.AddScriptOpen.MouseButton1Click:Connect(function()
-			Phantom.AddScrtipFrame.Visible = true
-		end)
-
-Phantom.UICorner_43.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_43.Parent = Phantom.AddScriptOpen
-
-Phantom.UITextSizeConstraint_29.Parent = Phantom.AddScriptOpen
-Phantom.UITextSizeConstraint_29.MaxTextSize = 26
-
-Phantom.UIAspectRatioConstraint_45.Parent = Phantom.AddScriptOpen
-Phantom.UIAspectRatioConstraint_45.AspectRatio = 20.297
-
-Phantom.UIAspectRatioConstraint_46.Parent = Phantom.ScriptHubFrame
-Phantom.UIAspectRatioConstraint_46.AspectRatio = 1.920
-
-Phantom.SearcherFrame.Name = "SearcherFrame"
-Phantom.SearcherFrame.Parent = Phantom.Frame
-Phantom.SearcherFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.SearcherFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.SearcherFrame.BorderSizePixel = 0
-Phantom.SearcherFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
-Phantom.SearcherFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
-
-Phantom.UICorner_44.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_44.Parent = Phantom.SearcherFrame
-
-Phantom.SearchBar.Name = "SearchBar"
-Phantom.SearchBar.Parent = Phantom.SearcherFrame
-Phantom.SearchBar.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.SearchBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.SearchBar.BorderSizePixel = 0
-Phantom.SearchBar.Position = UDim2.new(0.00990098994, 0, 0.0304182507, 0)
-Phantom.SearchBar.Size = UDim2.new(0.86138612, 0, 0.136882126, 0)
-Phantom.SearchBar.Font = Enum.Font.SourceSans
-Phantom.SearchBar.Text = ""
-Phantom.SearchBar.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.SearchBar.TextScaled = true
-Phantom.SearchBar.TextSize = 14.000
-Phantom.SearchBar.TextWrapped = true
-
-Phantom.UICorner_45.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_45.Parent = Phantom.SearchBar
-
-Phantom.UITextSizeConstraint_30.Parent = Phantom.SearchBar
-Phantom.UITextSizeConstraint_30.MaxTextSize = 14
-
-Phantom.UIAspectRatioConstraint_47.Parent = Phantom.SearchBar
-Phantom.UIAspectRatioConstraint_47.AspectRatio = 12.083
-
-Phantom.Search.Name = "Search"
-Phantom.Search.Parent = Phantom.SearcherFrame
-Phantom.Search.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Search.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Search.BorderSizePixel = 0
-Phantom.Search.Position = UDim2.new(0.884026408, 0, 0.0304182507, 0)
-Phantom.Search.Size = UDim2.new(0.104950495, 0, 0.136882126, 0)
-Phantom.Search.Font = Enum.Font.SourceSans
-Phantom.Search.Text = "Search"
-Phantom.Search.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.Search.TextScaled = true
-Phantom.Search.TextSize = 14.000
-Phantom.Search.TextWrapped = true
-
-Phantom.UICorner_46.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_46.Parent = Phantom.Search
-
-Phantom.UITextSizeConstraint_31.Parent = Phantom.Search
-Phantom.UITextSizeConstraint_31.MaxTextSize = 22
-
-Phantom.UIAspectRatioConstraint_48.Parent = Phantom.Search
-Phantom.UIAspectRatioConstraint_48.AspectRatio = 1.472
-
-Phantom.ResultsHolder.Name = "ResultsHolder"
-Phantom.ResultsHolder.Parent = Phantom.SearcherFrame
-Phantom.ResultsHolder.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.ResultsHolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ResultsHolder.BorderSizePixel = 0
-Phantom.ResultsHolder.Position = UDim2.new(0.0178217813, 0, 0.216730043, 0)
-Phantom.ResultsHolder.Size = UDim2.new(0.962376237, 0, 0.749049425, 0)
-
-Phantom.UICorner_47.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_47.Parent = Phantom.ResultsHolder
-
-Phantom.ScrollingFrame_2.Parent = Phantom.ResultsHolder
-Phantom.ScrollingFrame_2.Active = true
-Phantom.ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScrollingFrame_2.BackgroundTransparency = 1.000
-Phantom.ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScrollingFrame_2.BorderSizePixel = 0
-Phantom.ScrollingFrame_2.Size = UDim2.new(1, 0, 0.98984772, 0)
-Phantom.ScrollingFrame_2.CanvasSize = UDim2.new(0, 0, 20, 0)
-
-Phantom.Frame_3.Parent = Phantom.ScrollingFrame_2
-Phantom.Frame_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame_3.BorderSizePixel = 0
-Phantom.Frame_3.Position = UDim2.new(0.0299999993, 0, 0, 12)
-Phantom.Frame_3.Size = UDim2.new(0.915637851, 0, 0.512820542, 0)
-
-Phantom.UICorner_48.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_48.Parent = Phantom.Frame_3
-
-Phantom.Frame_4.Parent = Phantom.Frame_3
-Phantom.Frame_4.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame_4.BorderSizePixel = 0
-Phantom.Frame_4.Position = UDim2.new(0.0202247184, 0, 0.0500000007, 0)
-Phantom.Frame_4.Size = UDim2.new(0.530337095, 0, 0.899999976, 0)
-
-Phantom.UICorner_49.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_49.Parent = Phantom.Frame_4
-
-Phantom.ImageLabel.Parent = Phantom.Frame_4
-Phantom.ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ImageLabel.BorderSizePixel = 0
-Phantom.ImageLabel.Position = UDim2.new(0.0550847463, 0, 0.088888891, 0)
-Phantom.ImageLabel.Size = UDim2.new(0.885593235, 0, 0.822222233, 0)
-Phantom.ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
-
-Phantom.UIAspectRatioConstraint_49.Parent = Phantom.ImageLabel
-Phantom.UIAspectRatioConstraint_49.AspectRatio = 2.824
-
-Phantom.UIAspectRatioConstraint_50.Parent = Phantom.Frame_4
-Phantom.UIAspectRatioConstraint_50.AspectRatio = 2.622
-
-Phantom.Frame_5.Parent = Phantom.Frame_3
-Phantom.Frame_5.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame_5.BorderSizePixel = 0
-Phantom.Frame_5.Position = UDim2.new(0.59775281, 0, 0.0500000007, 0)
-Phantom.Frame_5.Size = UDim2.new(0.379775286, 0, 0.899999976, 0)
-
-Phantom.UICorner_50.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_50.Parent = Phantom.Frame_5
-
-Phantom.TextButton_2.Parent = Phantom.Frame_5
-Phantom.TextButton_2.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TextButton_2.BorderSizePixel = 0
-Phantom.TextButton_2.Position = UDim2.new(0.0473372787, 0, 0.211111113, 0)
-Phantom.TextButton_2.Size = UDim2.new(0.905325472, 0, 0.244444445, 0)
-Phantom.TextButton_2.Font = Enum.Font.SourceSans
-Phantom.TextButton_2.Text = "Execute"
-Phantom.TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TextButton_2.TextScaled = true
-Phantom.TextButton_2.TextSize = 14.000
-Phantom.TextButton_2.TextWrapped = true
-
-Phantom.UICorner_51.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_51.Parent = Phantom.TextButton_2
-
-Phantom.UIAspectRatioConstraint_51.Parent = Phantom.TextButton_2
-Phantom.UIAspectRatioConstraint_51.AspectRatio = 6.955
-
-Phantom.UITextSizeConstraint_32.Parent = Phantom.TextButton_2
-Phantom.UITextSizeConstraint_32.MaxTextSize = 22
-
-Phantom.TextButton_3.Parent = Phantom.Frame_5
-Phantom.TextButton_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.TextButton_3.BorderSizePixel = 0
-Phantom.TextButton_3.Position = UDim2.new(0.0473372787, 0, 0.577777803, 0)
-Phantom.TextButton_3.Size = UDim2.new(0.905325472, 0, 0.244444445, 0)
-Phantom.TextButton_3.Font = Enum.Font.SourceSans
-Phantom.TextButton_3.Text = "Copy"
-Phantom.TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.TextButton_3.TextScaled = true
-Phantom.TextButton_3.TextSize = 14.000
-Phantom.TextButton_3.TextWrapped = true
-
-Phantom.UICorner_52.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_52.Parent = Phantom.TextButton_3
-
-Phantom.UIAspectRatioConstraint_52.Parent = Phantom.TextButton_3
-Phantom.UIAspectRatioConstraint_52.AspectRatio = 6.955
-
-Phantom.UITextSizeConstraint_33.Parent = Phantom.TextButton_3
-Phantom.UITextSizeConstraint_33.MaxTextSize = 22
-
-Phantom.UIAspectRatioConstraint_53.Parent = Phantom.Frame_5
-Phantom.UIAspectRatioConstraint_53.AspectRatio = 1.878
-
-Phantom.UIAspectRatioConstraint_54.Parent = Phantom.Frame_3
-Phantom.UIAspectRatioConstraint_54.AspectRatio = 4.450
-
-Phantom.UIAspectRatioConstraint_55.Parent = Phantom.ScrollingFrame_2
-Phantom.UIAspectRatioConstraint_55.AspectRatio = 2.492
-
-Phantom.UIAspectRatioConstraint_56.Parent = Phantom.ResultsHolder
-Phantom.UIAspectRatioConstraint_56.AspectRatio = 2.467
-
-Phantom.UIAspectRatioConstraint_57.Parent = Phantom.SearcherFrame
-Phantom.UIAspectRatioConstraint_57.AspectRatio = 1.920
-
-Phantom.ConsoleFrame.Name = "ConsoleFrame"
-Phantom.ConsoleFrame.Visible = false
-Phantom.ConsoleFrame.Parent = Phantom.Frame
-Phantom.ConsoleFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Phantom.ConsoleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ConsoleFrame.BorderSizePixel = 0
-Phantom.ConsoleFrame.Position = UDim2.new(0.16260165, 0, 0.183734939, 0)
-Phantom.ConsoleFrame.Size = UDim2.new(0.821138203, 0, 0.792168677, 0)
-
-Phantom.UICorner_53.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_53.Parent = Phantom.ConsoleFrame
-
-Phantom.Frame_6.Parent = Phantom.ConsoleFrame
-Phantom.Frame_6.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-Phantom.Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.Frame_6.BorderSizePixel = 0
-Phantom.Frame_6.Position = UDim2.new(0.0178217813, 0, 0.0304182507, 0)
-Phantom.Frame_6.Size = UDim2.new(0.962376237, 0, 0.935361207, 0)
-
-Phantom.ScrollingFrame_3.Parent = Phantom.Frame_6
-Phantom.ScrollingFrame_3.Active = true
-Phantom.ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Phantom.ScrollingFrame_3.BackgroundTransparency = 1.000
-Phantom.ScrollingFrame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Phantom.ScrollingFrame_3.BorderSizePixel = 0
-Phantom.ScrollingFrame_3.Position = UDim2.new(-0.00275436835, 0, 0.00602796581, 0)
-Phantom.ScrollingFrame_3.Size = UDim2.new(1, 0, 1, 0)
-Phantom.ScrollingFrame_3.CanvasPosition = Vector2.new(0, 150)
-Phantom.ScrollingFrame_3.CanvasSize = UDim2.new(0, 0, 20, 0)
-Phantom.ScrollingFrame_3.ScrollBarThickness = 13
-
+local UI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local close = Instance.new("Frame")
+local UIStroke_2 = Instance.new("UIStroke")
+local UICorner_2 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local up = Instance.new("Frame")
+local UIStroke_3 = Instance.new("UIStroke")
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local ImageLabel = Instance.new("ImageLabel")
+local all = Instance.new("Frame")
+local UIStroke_4 = Instance.new("UIStroke")
+local UICorner_4 = Instance.new("UICorner")
+local executor = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local exe = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local cle = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local co = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local p = Instance.new("TextButton")
+local UIStroke_5 = Instance.new("UIStroke")
+local UICorner_9 = Instance.new("UICorner")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_6 = Instance.new("UITextSizeConstraint")
+local Source = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local UITextSizeConstraint_7 = Instance.new("UITextSizeConstraint")
+local Globals_ = Instance.new("TextLabel")
+local UITextSizeConstraint_8 = Instance.new("UITextSizeConstraint")
+local Keywords_ = Instance.new("TextLabel")
+local UITextSizeConstraint_9 = Instance.new("UITextSizeConstraint")
+local RemoteHighlight_ = Instance.new("TextLabel")
+local UITextSizeConstraint_10 = Instance.new("UITextSizeConstraint")
+local Strings_ = Instance.new("TextLabel")
+local UITextSizeConstraint_11 = Instance.new("UITextSizeConstraint")
+local Tokens_ = Instance.new("TextLabel")
+local UITextSizeConstraint_12 = Instance.new("UITextSizeConstraint")
+local Numbers_ = Instance.new("TextLabel")
+local UITextSizeConstraint_13 = Instance.new("UITextSizeConstraint")
+local UITextSizeConstraint_14 = Instance.new("UITextSizeConstraint")
 local Frame = Instance.new("Frame")
-Frame.BackgroundTransparency = 1
-Frame.Size = UDim2.new(1, -10, 1, 0) -- Subtract 10 pixels for the width of the scroll bar
-Frame.Position = UDim2.new(0, 0, 0, 0)
-Frame.Parent = Phantom.ScrollingFrame_3
-
+local lol = Instance.new("TextLabel")
+local UITextSizeConstraint_15 = Instance.new("UITextSizeConstraint")
+local Comments__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_16 = Instance.new("UITextSizeConstraint")
+local Globals__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_17 = Instance.new("UITextSizeConstraint")
+local Keywords__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_18 = Instance.new("UITextSizeConstraint")
+local Numbers__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_19 = Instance.new("UITextSizeConstraint")
+local RemoteHighlight__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_20 = Instance.new("UITextSizeConstraint")
+local Strings__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_21 = Instance.new("UITextSizeConstraint")
+local Tokens__2 = Instance.new("TextLabel")
+local UITextSizeConstraint_22 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local console = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Console = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local UITextSizeConstraint_23 = Instance.new("UITextSizeConstraint")
+local Scroller = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
+local _Line_ = Instance.new("TextLabel")
+local UITextSizeConstraint_24 = Instance.new("UITextSizeConstraint")
+local Buttons = Instance.new("Folder")
+local Modes = Instance.new("Folder")
+local Warn = Instance.new("TextButton")
+local UITextSizeConstraint_25 = Instance.new("UITextSizeConstraint")
+local Print = Instance.new("TextButton")
+local UITextSizeConstraint_26 = Instance.new("UITextSizeConstraint")
+local Error = Instance.new("TextButton")
+local UITextSizeConstraint_27 = Instance.new("UITextSizeConstraint")
+local Info = Instance.new("TextButton")
+local UITextSizeConstraint_28 = Instance.new("UITextSizeConstraint")
+local BottomConsole = Instance.new("Folder")
+local Clear = Instance.new("TextButton")
+local UITextSizeConstraint_29 = Instance.new("UITextSizeConstraint")
+local Copy = Instance.new("TextButton")
+local UITextSizeConstraint_30 = Instance.new("UITextSizeConstraint")
+local Save = Instance.new("TextButton")
+local UITextSizeConstraint_31 = Instance.new("UITextSizeConstraint")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local search = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local settings = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local TextButton = Instance.new("TextButton")
+local UIStroke_6 = Instance.new("UIStroke")
+local UICorner_14 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UIStroke_7 = Instance.new("UIStroke")
+local UICorner_15 = Instance.new("UICorner")
+local home = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local plr = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_18 = Instance.new("UICorner")
+local UIStroke_8 = Instance.new("UIStroke")
+local ginfo = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UICorner_20 = Instance.new("UICorner")
+local UIStroke_9 = Instance.new("UIStroke")
+local gname = Instance.new("TextLabel")
+local UITextSizeConstraint_32 = Instance.new("UITextSizeConstraint")
+local UICorner_21 = Instance.new("UICorner")
+local guser = Instance.new("TextLabel")
+local UITextSizeConstraint_33 = Instance.new("UITextSizeConstraint")
+local UICorner_22 = Instance.new("UICorner")
+local fps = Instance.new("TextLabel")
+local UITextSizeConstraint_34 = Instance.new("UITextSizeConstraint")
+local UICorner_23 = Instance.new("UICorner")
+local ping = Instance.new("TextLabel")
+local UITextSizeConstraint_35 = Instance.new("UITextSizeConstraint")
+local UICorner_24 = Instance.new("UICorner")
+local plrs = Instance.new("TextLabel")
+local UITextSizeConstraint_36 = Instance.new("UITextSizeConstraint")
+local UICorner_25 = Instance.new("UICorner")
+local info = Instance.new("Frame")
+local UICorner_26 = Instance.new("UICorner")
+local u = Instance.new("TextLabel")
+local UITextSizeConstraint_37 = Instance.new("UITextSizeConstraint")
+local d = Instance.new("TextLabel")
+local UITextSizeConstraint_38 = Instance.new("UITextSizeConstraint")
+local t = Instance.new("TextLabel")
+local UITextSizeConstraint_39 = Instance.new("UITextSizeConstraint")
+local da = Instance.new("TextLabel")
+local UITextSizeConstraint_40 = Instance.new("UITextSizeConstraint")
+local c = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local cr = Instance.new("TextLabel")
+local UITextSizeConstraint_41 = Instance.new("UITextSizeConstraint")
+local UICorner_28 = Instance.new("UICorner")
+local c_2 = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local cr_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_42 = Instance.new("UITextSizeConstraint")
+local UICorner_30 = Instance.new("UICorner")
+local c_3 = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local cr_3 = Instance.new("TextLabel")
+local UITextSizeConstraint_43 = Instance.new("UITextSizeConstraint")
+local UICorner_32 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+local l8327558235238528 = Instance.new("Frame")
+local UIStroke_10 = Instance.new("UIStroke")
+local UICorner_33 = Instance.new("UICorner")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local left = Instance.new("Frame")
+local UIStroke_11 = Instance.new("UIStroke")
+local UICorner_34 = Instance.new("UICorner")
+local logo = Instance.new("Frame")
+local UIStroke_12 = Instance.new("UIStroke")
+local UICorner_35 = Instance.new("UICorner")
+local ImageLabel_7 = Instance.new("ImageLabel")
+local Executor = Instance.new("ImageButton")
+local Console_2 = Instance.new("ImageButton")
+local search_2 = Instance.new("ImageButton")
+local settings_2 = Instance.new("ImageButton")
+local home_2 = Instance.new("ImageButton")
+local UIAspectRatioConstraint_8 = Instance.new("UIAspectRatioConstraint")
+local ImageButton_2 = Instance.new("ImageButton")
+local UICorner_36 = Instance.new("UICorner")
+local UIStroke_13 = Instance.new("UIStroke")
+local UIAspectRatioConstraint_9 = Instance.new("UIAspectRatioConstraint")
+
+-- Properties:
+
+UI.Name = "UI"
+UI.Parent = game.CoreGui
+UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = UI
+main.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
+main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+main.BorderSizePixel = 0
+main.Position = UDim2.new(0.220244199, 0, 0.212656349, 0)
+main.Size = UDim2.new(0.559381962, 0, 0.607782364, 0)
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = main
+
+UIStroke.Thickness = 2
+UIStroke.Transparency = 0.5
+UIStroke.Parent = main
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(20, 21, 20)
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.948327482, 0, -0.12432494, 0)
+close.Size = UDim2.new(0.0515806973, 0, 0.0878186971, 0)
+
+UIStroke_2.Thickness = 2
+UIStroke_2.Transparency = 0.5
+UIStroke_2.Parent = close
+
+UICorner_2.Parent = close
+
+ImageButton.Parent = close
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 0.990
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Size = UDim2.new(1, 0, 1, 0)
+ImageButton.Image = "rbxassetid://15807981955"
+
+up.Name = "up"
+up.Parent = main
+up.BackgroundColor3 = Color3.fromRGB(20, 21, 20)
+up.BorderColor3 = Color3.fromRGB(0, 0, 0)
+up.BorderSizePixel = 0
+up.Position = UDim2.new(-0.000283239671, 0, -0.12432494, 0)
+up.Size = UDim2.new(0.891846895, 0, 0.0878186971, 0)
+
+UIStroke_3.Thickness = 2
+UIStroke_3.Transparency = 0.5
+UIStroke_3.Parent = up
+
+UICorner_3.Parent = up
+
+TextLabel.Parent = up
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.062000446, 0, 0, 0)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Test Executor I Beta"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 30.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 30
+
+ImageLabel.Parent = up
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.00632135198, 0, 0.0967741907, 0)
+ImageLabel.Size = UDim2.new(0.0482166335, 0, 0.806451619, 0)
+ImageLabel.Image = "rbxassetid://15782053121"
+
+all.Name = "all"
+all.Parent = main
+all.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+all.BorderColor3 = Color3.fromRGB(0, 0, 0)
+all.BorderSizePixel = 0
+all.Position = UDim2.new(0.0255820081, 0, 0.0327149741, 0)
+all.Size = UDim2.new(0.941763699, 0, 0.909348428, 0)
+
+UIStroke_4.Thickness = 2
+UIStroke_4.Transparency = 0.5
+UIStroke_4.Parent = all
+
+UICorner_4.Parent = all
+
+executor.Name = "executor"
+executor.Parent = all
+executor.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+executor.BorderSizePixel = 0
+executor.Size = UDim2.new(1.0010072, 0, 0.853595495, 0)
+executor.Visible = false
+
+UICorner_5.Parent = executor
+
+exe.Name = "exe"
+exe.Parent = executor
+exe.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+exe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exe.BorderSizePixel = 0
+exe.Position = UDim2.new(0.0282401089, 0, 1.04136467, 0)
+exe.Size = UDim2.new(0.183560699, 0, 0.0912394971, 0)
+exe.Font = Enum.Font.Unknown
+exe.Text = "Execute"
+exe.TextColor3 = Color3.fromRGB(255, 255, 255)
+exe.TextScaled = true
+exe.TextSize = 25.000
+exe.TextWrapped = true
+
+UICorner_6.Parent = exe
+
+UITextSizeConstraint_2.Parent = exe
+UITextSizeConstraint_2.MaxTextSize = 25
+
+cle.Name = "cle"
+cle.Parent = executor
+cle.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+cle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cle.BorderSizePixel = 0
+cle.Position = UDim2.new(0.270122349, 0, 1.04136467, 0)
+cle.Size = UDim2.new(0.137670532, 0, 0.0912394971, 0)
+cle.Font = Enum.Font.Unknown
+cle.Text = "Clear"
+cle.TextColor3 = Color3.fromRGB(255, 255, 255)
+cle.TextScaled = true
+cle.TextSize = 25.000
+cle.TextWrapped = true
+
+UICorner_7.Parent = cle
+
+UITextSizeConstraint_3.Parent = cle
+UITextSizeConstraint_3.MaxTextSize = 25
+
+co.Name = "co"
+co.Parent = executor
+co.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+co.BorderColor3 = Color3.fromRGB(0, 0, 0)
+co.BorderSizePixel = 0
+co.Position = UDim2.new(0.475268692, 0, 1.04136467, 0)
+co.Size = UDim2.new(0.141200542, 0, 0.0912394971, 0)
+co.Font = Enum.Font.Unknown
+co.Text = "Copy"
+co.TextColor3 = Color3.fromRGB(255, 255, 255)
+co.TextScaled = true
+co.TextSize = 25.000
+co.TextWrapped = true
+
+UICorner_8.Parent = co
+
+UITextSizeConstraint_4.Parent = co
+UITextSizeConstraint_4.MaxTextSize = 25
+
+p.Name = "p"
+p.Parent = executor
+p.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+p.BorderColor3 = Color3.fromRGB(0, 0, 0)
+p.BorderSizePixel = 0
+p.Position = UDim2.new(0.760917187, 0, 1.04046702, 0)
+p.Size = UDim2.new(0.210035801, 0, 0.0912394971, 0)
+p.Font = Enum.Font.Unknown
+p.Text = "ClipBoard"
+p.TextColor3 = Color3.fromRGB(255, 255, 255)
+p.TextScaled = true
+p.TextSize = 25.000
+p.TextWrapped = true
+
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_5.Thickness = 2
+UIStroke_5.Transparency = 0.5
+UIStroke_5.Parent = p
+
+UICorner_9.Parent = p
+
+UITextSizeConstraint_5.Parent = p
+UITextSizeConstraint_5.MaxTextSize = 25
+
+ScrollingFrame.Parent = executor
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(-0.00216590823, 0, 0.0111345463, 0)
+ScrollingFrame.Size = UDim2.new(0.999873936, 0, 0.97078979, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
+ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+
+UICorner_10.Parent = ScrollingFrame
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0.101999998, 0, 2, 0)
+TextLabel_2.Font = Enum.Font.Code
+TextLabel_2.Text = "1"
+TextLabel_2.TextColor3 = Color3.fromRGB(157, 155, 157)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 15.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_6.Parent = TextLabel_2
+UITextSizeConstraint_6.MaxTextSize = 15
+
+Source.Name = "Source"
+Source.Parent = ScrollingFrame
+Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Source.BackgroundTransparency = 1.000
+Source.ClipsDescendants = true
+Source.Position = UDim2.new(0.109447107, 0, 1.99896803e-07, 0)
+Source.Size = UDim2.new(0.694000006, 0, 2, 0)
+Source.ZIndex = 3
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
+Source.PlaceholderText = "Print(\"lol\")"
+Source.Text = ""
+Source.TextColor3 = Color3.fromRGB(255, 255, 255)
+Source.TextScaled = true
+Source.TextSize = 15.000
+Source.TextWrapped = true
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Comments_.Name = "Comments_"
+Comments_.Parent = Source
+Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments_.BackgroundTransparency = 1.000
+Comments_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Comments_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments_.TextScaled = true
+Comments_.TextSize = 15.000
+Comments_.TextWrapped = true
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_7.Parent = Comments_
+UITextSizeConstraint_7.MaxTextSize = 15
+
+Globals_.Name = "Globals_"
+Globals_.Parent = Source
+Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals_.BackgroundTransparency = 1.000
+Globals_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Globals_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = "Print"
+Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals_.TextScaled = true
+Globals_.TextSize = 15.000
+Globals_.TextWrapped = true
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_8.Parent = Globals_
+UITextSizeConstraint_8.MaxTextSize = 15
+
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = Source
+Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords_.BackgroundTransparency = 1.000
+Keywords_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Keywords_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords_.TextScaled = true
+Keywords_.TextSize = 15.000
+Keywords_.TextWrapped = true
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_9.Parent = Keywords_
+UITextSizeConstraint_9.MaxTextSize = 15
+
+RemoteHighlight_.Name = "RemoteHighlight_"
+RemoteHighlight_.Parent = Source
+RemoteHighlight_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoteHighlight_.BackgroundTransparency = 1.000
+RemoteHighlight_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+RemoteHighlight_.Size = UDim2.new(1, 0, 0.999999881, 0)
+RemoteHighlight_.ZIndex = 5
+RemoteHighlight_.Font = Enum.Font.Code
+RemoteHighlight_.Text = ""
+RemoteHighlight_.TextColor3 = Color3.fromRGB(0, 144, 255)
+RemoteHighlight_.TextScaled = true
+RemoteHighlight_.TextSize = 15.000
+RemoteHighlight_.TextWrapped = true
+RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_10.Parent = RemoteHighlight_
+UITextSizeConstraint_10.MaxTextSize = 15
+
+Strings_.Name = "Strings_"
+Strings_.Parent = Source
+Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings_.BackgroundTransparency = 1.000
+Strings_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Strings_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = "     (     )"
+Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings_.TextScaled = true
+Strings_.TextSize = 15.000
+Strings_.TextWrapped = true
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_11.Parent = Strings_
+UITextSizeConstraint_11.MaxTextSize = 15
+
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = Source
+Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.BackgroundTransparency = 1.000
+Tokens_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Tokens_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.TextScaled = true
+Tokens_.TextSize = 15.000
+Tokens_.TextWrapped = true
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_12.Parent = Tokens_
+UITextSizeConstraint_12.MaxTextSize = 15
+
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = Source
+Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers_.BackgroundTransparency = 1.000
+Numbers_.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Numbers_.Size = UDim2.new(1, 0, 0.999999881, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = "      \"lol\""
+Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers_.TextScaled = true
+Numbers_.TextSize = 15.000
+Numbers_.TextWrapped = true
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_13.Parent = Numbers_
+UITextSizeConstraint_13.MaxTextSize = 15
+
+UITextSizeConstraint_14.Parent = Source
+UITextSizeConstraint_14.MaxTextSize = 15
+
+Frame.Parent = ScrollingFrame
+Frame.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.802999973, 0, -0, 0)
+Frame.Size = UDim2.new(0.170000002, 0, 2, 0)
+
+lol.Name = "lol"
+lol.Parent = Frame
+lol.BackgroundColor3 = Color3.fromRGB(31, 30, 31)
+lol.BackgroundTransparency = 1.000
+lol.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lol.BorderSizePixel = 0
+lol.ClipsDescendants = true
+lol.Position = UDim2.new(0.000646353699, 0, 0, 0)
+lol.Size = UDim2.new(1, 0, 2, 0)
+lol.Font = Enum.Font.Code
+lol.Text = ""
+lol.TextColor3 = Color3.fromRGB(255, 252, 255)
+lol.TextScaled = true
+lol.TextSize = 5.000
+lol.TextWrapped = true
+lol.TextXAlignment = Enum.TextXAlignment.Left
+lol.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_15.Parent = lol
+UITextSizeConstraint_15.MaxTextSize = 5
+
+Comments__2.Name = "Comments_"
+Comments__2.Parent = Frame
+Comments__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments__2.BackgroundTransparency = 1.000
+Comments__2.ClipsDescendants = true
+Comments__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Comments__2.Size = UDim2.new(1, 0, 2, 0)
+Comments__2.ZIndex = 5
+Comments__2.Font = Enum.Font.Code
+Comments__2.Text = ""
+Comments__2.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments__2.TextScaled = true
+Comments__2.TextSize = 5.000
+Comments__2.TextWrapped = true
+Comments__2.TextXAlignment = Enum.TextXAlignment.Left
+Comments__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_16.Parent = Comments__2
+UITextSizeConstraint_16.MaxTextSize = 5
+
+Globals__2.Name = "Globals_"
+Globals__2.Parent = Frame
+Globals__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals__2.BackgroundTransparency = 1.000
+Globals__2.ClipsDescendants = true
+Globals__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Globals__2.Size = UDim2.new(1, 0, 2, 0)
+Globals__2.ZIndex = 5
+Globals__2.Font = Enum.Font.Code
+Globals__2.Text = ""
+Globals__2.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals__2.TextScaled = true
+Globals__2.TextSize = 5.000
+Globals__2.TextWrapped = true
+Globals__2.TextXAlignment = Enum.TextXAlignment.Left
+Globals__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_17.Parent = Globals__2
+UITextSizeConstraint_17.MaxTextSize = 5
+
+Keywords__2.Name = "Keywords_"
+Keywords__2.Parent = Frame
+Keywords__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords__2.BackgroundTransparency = 1.000
+Keywords__2.ClipsDescendants = true
+Keywords__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Keywords__2.Size = UDim2.new(1, 0, 2, 0)
+Keywords__2.ZIndex = 5
+Keywords__2.Font = Enum.Font.Code
+Keywords__2.Text = ""
+Keywords__2.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords__2.TextScaled = true
+Keywords__2.TextSize = 5.000
+Keywords__2.TextWrapped = true
+Keywords__2.TextXAlignment = Enum.TextXAlignment.Left
+Keywords__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_18.Parent = Keywords__2
+UITextSizeConstraint_18.MaxTextSize = 5
+
+Numbers__2.Name = "Numbers_"
+Numbers__2.Parent = Frame
+Numbers__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers__2.BackgroundTransparency = 1.000
+Numbers__2.ClipsDescendants = true
+Numbers__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Numbers__2.Size = UDim2.new(1, 0, 2, 0)
+Numbers__2.ZIndex = 5
+Numbers__2.Font = Enum.Font.Code
+Numbers__2.Text = ""
+Numbers__2.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers__2.TextScaled = true
+Numbers__2.TextSize = 5.000
+Numbers__2.TextWrapped = true
+Numbers__2.TextXAlignment = Enum.TextXAlignment.Left
+Numbers__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_19.Parent = Numbers__2
+UITextSizeConstraint_19.MaxTextSize = 5
+
+RemoteHighlight__2.Name = "RemoteHighlight_"
+RemoteHighlight__2.Parent = Frame
+RemoteHighlight__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoteHighlight__2.BackgroundTransparency = 1.000
+RemoteHighlight__2.ClipsDescendants = true
+RemoteHighlight__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+RemoteHighlight__2.Size = UDim2.new(1, 0, 2, 0)
+RemoteHighlight__2.ZIndex = 5
+RemoteHighlight__2.Font = Enum.Font.Code
+RemoteHighlight__2.Text = ""
+RemoteHighlight__2.TextColor3 = Color3.fromRGB(0, 144, 255)
+RemoteHighlight__2.TextScaled = true
+RemoteHighlight__2.TextSize = 5.000
+RemoteHighlight__2.TextWrapped = true
+RemoteHighlight__2.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_20.Parent = RemoteHighlight__2
+UITextSizeConstraint_20.MaxTextSize = 5
+
+Strings__2.Name = "Strings_"
+Strings__2.Parent = Frame
+Strings__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings__2.BackgroundTransparency = 1.000
+Strings__2.ClipsDescendants = true
+Strings__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Strings__2.Size = UDim2.new(1, 0, 2, 0)
+Strings__2.ZIndex = 5
+Strings__2.Font = Enum.Font.Code
+Strings__2.Text = ""
+Strings__2.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings__2.TextScaled = true
+Strings__2.TextSize = 5.000
+Strings__2.TextWrapped = true
+Strings__2.TextXAlignment = Enum.TextXAlignment.Left
+Strings__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_21.Parent = Strings__2
+UITextSizeConstraint_21.MaxTextSize = 5
+
+Tokens__2.Name = "Tokens_"
+Tokens__2.Parent = Frame
+Tokens__2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens__2.BackgroundTransparency = 1.000
+Tokens__2.ClipsDescendants = true
+Tokens__2.Position = UDim2.new(0, 0, 6.84239794e-08, 0)
+Tokens__2.Size = UDim2.new(1, 0, 2, 0)
+Tokens__2.ZIndex = 5
+Tokens__2.Font = Enum.Font.Code
+Tokens__2.Text = ""
+Tokens__2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens__2.TextScaled = true
+Tokens__2.TextSize = 5.000
+Tokens__2.TextWrapped = true
+Tokens__2.TextXAlignment = Enum.TextXAlignment.Left
+Tokens__2.TextYAlignment = Enum.TextYAlignment.Top
+
+UITextSizeConstraint_22.Parent = Tokens__2
+UITextSizeConstraint_22.MaxTextSize = 5
+
+UIAspectRatioConstraint.Parent = executor
+UIAspectRatioConstraint.AspectRatio = 2.060
+
+console.Name = "console"
+console.Parent = all
+console.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+console.BorderSizePixel = 0
+console.Position = UDim2.new(5.3917983e-08, 0, -4.75351669e-08, 0)
+console.Size = UDim2.new(1.00100708, 0, 1.00312829, 0)
+console.Visible = false
+
+UICorner_11.Parent = console
+
+Console.Name = "Console"
+Console.Parent = console
+Console.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Console.BackgroundTransparency = 1.000
+Console.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Console.BorderSizePixel = 0
+Console.Position = UDim2.new(0, 0, 4.73869299e-08, 0)
+Console.Size = UDim2.new(0.99991858, 0, 0.996881485, 0)
+
+Name.Name = "Name"
+Name.Parent = Console
+Name.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(1, 0, 0.155290961, 0)
+Name.Font = Enum.Font.JosefinSans
+Name.Text = "Console Logs"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 15.000
+Name.TextWrapped = true
+
+UITextSizeConstraint_23.Parent = Name
+UITextSizeConstraint_23.MaxTextSize = 15
+
+Scroller.Name = "Scroller"
+Scroller.Parent = Console
+Scroller.Active = true
+Scroller.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Scroller.BackgroundTransparency = 1.000
+Scroller.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scroller.BorderSizePixel = 0
+Scroller.Position = UDim2.new(0, 0, 0.155290976, 0)
+Scroller.Size = UDim2.new(1, 0, 0.700478256, 0)
+Scroller.AutomaticCanvasSize = Enum.AutomaticSize.XY
+Scroller.CanvasSize = UDim2.new(0, 0, 0, 0)
+Scroller.ScrollBarThickness = 10
+
+UIListLayout.Parent = Scroller
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Parent = Frame
 
-local function AddTextLine(text, textColor)
-	local TextLabel = Instance.new("TextLabel")
-	TextLabel.Size = UDim2.new(1, 0, 0, 0) -- Set initial height to 0
-	TextLabel.BackgroundTransparency = 1
-	TextLabel.Text = text
-	TextLabel.TextWrapped = true
-	TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-	TextLabel.TextYAlignment = Enum.TextYAlignment.Top
-	TextLabel.TextSize = 14
-	TextLabel.TextColor3 = textColor or Color3.new(255, 255, 255) -- Set text color to black by default
-	TextLabel.Parent = Frame
+_Line_.Name = "_Line_"
+_Line_.Parent = Scroller
+_Line_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_Line_.BackgroundTransparency = 1.000
+_Line_.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_Line_.BorderSizePixel = 0
+_Line_.Size = UDim2.new(1, 0, 0.125, 0)
+_Line_.Font = Enum.Font.Code
+_Line_.Text = "-- All Consoles errors logs here"
+_Line_.TextColor3 = Color3.fromRGB(255, 255, 255)
+_Line_.TextScaled = true
+_Line_.TextSize = 15.000
+_Line_.TextWrapped = true
+_Line_.TextXAlignment = Enum.TextXAlignment.Left
 
-	-- Function to update TextLabel size based on text bounds
-	local function UpdateTextLabelSize()
-		TextLabel.Size = UDim2.new(1, 0, 0, TextLabel.TextBounds.Y)
-		ScrollingFrame.CanvasSize = UDim2.new(0, UIListLayout.AbsoluteContentSize.X, 0, UIListLayout.AbsoluteContentSize.Y)
-	end
+UITextSizeConstraint_24.Parent = _Line_
+UITextSizeConstraint_24.MaxTextSize = 15
 
-	-- Update size initially
-	UpdateTextLabelSize()
+Buttons.Name = "Buttons"
+Buttons.Parent = Console
 
-	-- Update size whenever text content changes
-	TextLabel:GetPropertyChangedSignal("Text"):Connect(UpdateTextLabelSize)
+Modes.Name = "Modes"
+Modes.Parent = Buttons
 
-	-- Update size whenever the UIListLayout resizes
-	UIListLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(UpdateTextLabelSize)
-end
+Warn.Name = "Warn"
+Warn.Parent = Modes
+Warn.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Warn.BackgroundTransparency = 0.900
+Warn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Warn.BorderSizePixel = 0
+Warn.Position = UDim2.new(1.05859554, 0, 0.530914605, 0)
+Warn.Size = UDim2.new(0.211999997, 0, 0.143999994, 0)
+Warn.Text = "warn: on"
+Warn.TextColor3 = Color3.fromRGB(255, 255, 255)
+Warn.TextScaled = true
+Warn.TextSize = 15.000
+Warn.TextWrapped = true
 
--- Redirect console output to the ScrollingFrame
-local function ConsoleOutput(message, messageType)
-	local time = os.date("%H:%M:%S") -- Get the current time
-	local formattedMessage = "[" .. time .. "] " .. message
+UITextSizeConstraint_25.Parent = Warn
+UITextSizeConstraint_25.MaxTextSize = 15
 
-	if messageType == Enum.MessageType.MessageOutput then
-		AddTextLine(formattedMessage) -- Add time prefix to the message
-	elseif messageType == Enum.MessageType.MessageInfo then
-		AddTextLine("[INFO] " .. formattedMessage, Color3.fromRGB(0, 255, 0)) -- Green text for INFO
-	elseif messageType == Enum.MessageType.MessageWarning then
-		AddTextLine("[WARNING] " .. formattedMessage, Color3.fromRGB(255, 255, 0)) -- Yellow text for WARNING
-	elseif messageType == Enum.MessageType.MessageError then
-		AddTextLine("[ERROR] " .. formattedMessage, Color3.fromRGB(255, 0, 0)) -- Red text for ERROR
-	end
-end
+Print.Name = "Print"
+Print.Parent = Modes
+Print.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Print.BackgroundTransparency = 0.900
+Print.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Print.BorderSizePixel = 0
+Print.Position = UDim2.new(1.05859554, 0, 0.386683762, 0)
+Print.Size = UDim2.new(0.211999997, 0, 0.143999994, 0)
+Print.Text = "print: on"
+Print.TextColor3 = Color3.fromRGB(255, 255, 255)
+Print.TextScaled = true
+Print.TextSize = 15.000
+Print.TextWrapped = true
 
-game:GetService("LogService").MessageOut:Connect(ConsoleOutput)
+UITextSizeConstraint_26.Parent = Print
+UITextSizeConstraint_26.MaxTextSize = 15
 
-Phantom.UIAspectRatioConstraint_58.Parent = Phantom.ScrollingFrame_3
-Phantom.UIAspectRatioConstraint_58.AspectRatio = 1.976
+Error.Name = "Error"
+Error.Parent = Modes
+Error.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Error.BackgroundTransparency = 0.900
+Error.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Error.BorderSizePixel = 0
+Error.Position = UDim2.new(1.05859554, 0, 0.675145328, 0)
+Error.Size = UDim2.new(0.211999997, 0, 0.143999994, 0)
+Error.Text = "error: on"
+Error.TextColor3 = Color3.fromRGB(255, 255, 255)
+Error.TextScaled = true
+Error.TextSize = 15.000
+Error.TextWrapped = true
 
-Phantom.UICorner_54.CornerRadius = UDim.new(0, 10)
-Phantom.UICorner_54.Parent = Phantom.Frame_6
+UITextSizeConstraint_27.Parent = Error
+UITextSizeConstraint_27.MaxTextSize = 15
 
-Phantom.UIAspectRatioConstraint_59.Parent = Phantom.Frame_6
-Phantom.UIAspectRatioConstraint_59.AspectRatio = 1.976
+Info.Name = "Info"
+Info.Parent = Modes
+Info.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Info.BackgroundTransparency = 0.900
+Info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Info.BorderSizePixel = 0
+Info.Position = UDim2.new(1.05859554, 0, 0.242453039, 0)
+Info.Size = UDim2.new(0.211999997, 0, 0.143999994, 0)
+Info.Text = "info: on"
+Info.TextColor3 = Color3.fromRGB(255, 255, 255)
+Info.TextScaled = true
+Info.TextSize = 15.000
+Info.TextWrapped = true
 
-Phantom.UIAspectRatioConstraint_60.Parent = Phantom.ConsoleFrame
-Phantom.UIAspectRatioConstraint_60.AspectRatio = 1.920
+UITextSizeConstraint_28.Parent = Info
+UITextSizeConstraint_28.MaxTextSize = 15
 
-Phantom.UIAspectRatioConstraint_61.Parent = Phantom.Frame
-Phantom.UIAspectRatioConstraint_61.AspectRatio = 1.852
+BottomConsole.Name = "BottomConsole"
+BottomConsole.Parent = Buttons
 
-Phantom.UIAspectRatioConstraint_62.Parent = Phantom.Phantom
-Phantom.UIAspectRatioConstraint_62.AspectRatio = 2.281
+Clear.Name = "Clear"
+Clear.Parent = BottomConsole
+Clear.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Clear.BackgroundTransparency = 1.000
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0, 0, 0.856000006, 0)
+Clear.Size = UDim2.new(0.333000004, 0, 0.143999994, 0)
+Clear.Text = "clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 15.000
+Clear.TextWrapped = true
+
+UITextSizeConstraint_29.Parent = Clear
+UITextSizeConstraint_29.MaxTextSize = 15
+
+Copy.Name = "Copy"
+Copy.Parent = BottomConsole
+Copy.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Copy.BackgroundTransparency = 1.000
+Copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Copy.BorderSizePixel = 0
+Copy.Position = UDim2.new(0.332868904, 0, 0.855769157, 0)
+Copy.Size = UDim2.new(0.333000004, 0, 0.143999994, 0)
+Copy.Text = "copy"
+Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Copy.TextScaled = true
+Copy.TextSize = 15.000
+Copy.TextWrapped = true
+
+UITextSizeConstraint_30.Parent = Copy
+UITextSizeConstraint_30.MaxTextSize = 15
+
+Save.Name = "Save"
+Save.Parent = BottomConsole
+Save.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Save.BackgroundTransparency = 1.000
+Save.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Save.BorderSizePixel = 0
+Save.Position = UDim2.new(0.666000009, 0, 0.856000006, 0)
+Save.Size = UDim2.new(0.333999991, 0, 0.143999994, 0)
+Save.Text = "save"
+Save.TextColor3 = Color3.fromRGB(255, 255, 255)
+Save.TextScaled = true
+Save.TextSize = 15.000
+Save.TextWrapped = true
+
+UITextSizeConstraint_31.Parent = Save
+UITextSizeConstraint_31.MaxTextSize = 15
+
+UIAspectRatioConstraint_2.Parent = console
+UIAspectRatioConstraint_2.AspectRatio = 1.753
+
+search.Name = "search"
+search.Parent = all
+search.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+search.BorderColor3 = Color3.fromRGB(0, 0, 0)
+search.BorderSizePixel = 0
+search.Position = UDim2.new(5.3917983e-08, 0, -4.75351669e-08, 0)
+search.Size = UDim2.new(1.00100708, 0, 1.00312829, 0)
+search.Visible = false
+
+UICorner_12.Parent = search
+
+UIAspectRatioConstraint_3.Parent = search
+UIAspectRatioConstraint_3.AspectRatio = 1.753
+
+settings.Name = "settings"
+settings.Parent = all
+settings.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+settings.BorderSizePixel = 0
+settings.Position = UDim2.new(5.3917983e-08, 0, -4.75351669e-08, 0)
+settings.Size = UDim2.new(1.00100708, 0, 1.00312829, 0)
+settings.Visible = false
+
+UICorner_13.Parent = settings
+
+UIAspectRatioConstraint_4.Parent = settings
+UIAspectRatioConstraint_4.AspectRatio = 1.753
+
+TextButton.Parent = all
+TextButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(-0.836158216, 0, 0.789215684, 0)
+TextButton.Size = UDim2.new(0, 80, 0, 32)
+TextButton.Visible = false
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Dev Kit"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 25.000
+
+UIStroke_6.Thickness = 2
+UIStroke_6.Transparency = 0.5
+UIStroke_6.Parent = TextButton
+
+UICorner_14.Parent = TextButton
+
+TextBox.Parent = all
+TextBox.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(-0.858757079, 0, 0.524509788, 0)
+TextBox.Size = UDim2.new(0, 164, 0, 23)
+TextBox.Visible = false
+TextBox.Font = Enum.Font.Unknown
+TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.PlaceholderText = "devkit"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 20.000
+
+UIStroke_7.Thickness = 2
+UIStroke_7.Transparency = 0.5
+UIStroke_7.Parent = TextBox
+
+UICorner_15.Parent = TextBox
+
+home.Name = "home"
+home.Parent = all
+home.BackgroundColor3 = Color3.fromRGB(16, 15, 16)
+home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+home.BorderSizePixel = 0
+home.Position = UDim2.new(5.3917983e-08, 0, -4.75351669e-08, 0)
+home.Size = UDim2.new(1.00100708, 0, 1.00312829, 0)
+
+UICorner_16.Parent = home
+
+plr.Name = "plr "
+plr.Parent = home
+plr.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+plr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+plr.BorderSizePixel = 0
+plr.Position = UDim2.new(0.0141200013, 0, 0.0434777439, 0)
+plr.Size = UDim2.new(0.234994128, 0, 0.363349319, 0)
+
+UICorner_17.Parent = plr
+
+ImageLabel_2.Parent = plr
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.28125, 0, 0.244158879, 0)
+ImageLabel_2.Size = UDim2.new(0.4296875, 0, 0.495327115, 0)
+ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_18.Parent = ImageLabel_2
+
+UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_8.Color = Color3.fromRGB(29, 29, 29)
+UIStroke_8.Thickness = 10
+UIStroke_8.Parent = ImageLabel_2
+
+ginfo.Name = "ginfo"
+ginfo.Parent = home
+ginfo.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ginfo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ginfo.BorderSizePixel = 0
+ginfo.Position = UDim2.new(0.261220962, 0, 0.0434777439, 0)
+ginfo.Size = UDim2.new(0.717598975, 0, 0.577632248, 0)
+
+UICorner_19.Parent = ginfo
+
+ImageLabel_3.Parent = ginfo
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ImageLabel_3.BackgroundTransparency = 9.000
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(0.618215322, 0, 0.125879347, 0)
+ImageLabel_3.Size = UDim2.new(0.333763063, 0, 0.73093617, 0)
+
+UICorner_20.Parent = ImageLabel_3
+
+UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_9.Color = Color3.fromRGB(29, 29, 29)
+UIStroke_9.Thickness = 10
+UIStroke_9.Parent = ImageLabel_3
+
+gname.Name = "gname"
+gname.Parent = ginfo
+gname.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+gname.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gname.BorderSizePixel = 0
+gname.Position = UDim2.new(0.0471426956, 0, 0.0970668197, 0)
+gname.Size = UDim2.new(0.500400305, 0, 0.196261659, 0)
+gname.Font = Enum.Font.Unknown
+gname.Text = "Game Name"
+gname.TextColor3 = Color3.fromRGB(255, 255, 255)
+gname.TextScaled = true
+gname.TextSize = 25.000
+gname.TextWrapped = true
+gname.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_32.Parent = gname
+UITextSizeConstraint_32.MaxTextSize = 30
+
+UICorner_21.Parent = gname
+
+guser.Name = "guser"
+guser.Parent = ginfo
+guser.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+guser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+guser.BorderSizePixel = 0
+guser.Position = UDim2.new(0.0471422449, 0, 0.339002311, 0)
+guser.Size = UDim2.new(0.500400543, 0, 0.196261659, 0)
+guser.Font = Enum.Font.Unknown
+guser.Text = "Game UserID"
+guser.TextColor3 = Color3.fromRGB(255, 255, 255)
+guser.TextSize = 25.000
+guser.TextWrapped = true
+guser.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_33.Parent = guser
+UITextSizeConstraint_33.MaxTextSize = 30
+
+UICorner_22.Parent = guser
+
+fps.Name = "fps"
+fps.Parent = ginfo
+fps.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+fps.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fps.BorderSizePixel = 0
+fps.Position = UDim2.new(0.0205266457, 0, 0.709970117, 0)
+fps.Size = UDim2.new(0.177089706, 0, 0.196261659, 0)
+fps.Font = Enum.Font.Unknown
+fps.Text = "Fps:"
+fps.TextColor3 = Color3.fromRGB(255, 255, 255)
+fps.TextScaled = true
+fps.TextSize = 25.000
+fps.TextWrapped = true
+
+UITextSizeConstraint_34.Parent = fps
+UITextSizeConstraint_34.MaxTextSize = 30
+
+UICorner_23.Parent = fps
+
+ping.Name = "ping"
+ping.Parent = ginfo
+ping.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ping.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ping.BorderSizePixel = 0
+ping.Position = UDim2.new(0.215718567, 0, 0.709970117, 0)
+ping.Size = UDim2.new(0.206630468, 0, 0.195999965, 0)
+ping.Font = Enum.Font.Unknown
+ping.Text = "Ping:"
+ping.TextColor3 = Color3.fromRGB(255, 255, 255)
+ping.TextScaled = true
+ping.TextSize = 25.000
+ping.TextWrapped = true
+
+UITextSizeConstraint_35.Parent = ping
+UITextSizeConstraint_35.MaxTextSize = 30
+
+UICorner_24.Parent = ping
+
+plrs.Name = "plrs"
+plrs.Parent = ginfo
+plrs.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+plrs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+plrs.BorderSizePixel = 0
+plrs.Position = UDim2.new(0.460791111, 0, 0.709970117, 0)
+plrs.Size = UDim2.new(0.113165647, 0, 0.195999965, 0)
+plrs.Font = Enum.Font.Unknown
+plrs.Text = "Players:"
+plrs.TextColor3 = Color3.fromRGB(255, 255, 255)
+plrs.TextScaled = true
+plrs.TextSize = 20.000
+plrs.TextWrapped = true
+
+UITextSizeConstraint_36.Parent = plrs
+UITextSizeConstraint_36.MaxTextSize = 30
+
+UICorner_25.Parent = plrs
+
+info.Name = "info"
+info.Parent = home
+info.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+info.BorderColor3 = Color3.fromRGB(0, 0, 0)
+info.BorderSizePixel = 0
+info.Position = UDim2.new(0.0141200013, 0, 0.422354817, 0)
+info.Size = UDim2.new(0.233987093, 0, 0.55278784, 0)
+
+UICorner_26.Parent = info
+
+u.Name = "u"
+u.Parent = info
+u.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+u.BackgroundTransparency = 1.000
+u.BorderColor3 = Color3.fromRGB(0, 0, 0)
+u.BorderSizePixel = 0
+u.Position = UDim2.new(0.0525016263, 0, -0.00508374861, 0)
+u.Size = UDim2.new(0.946928382, 0, 0.196261689, 0)
+u.Font = Enum.Font.Unknown
+u.Text = "User1"
+u.TextColor3 = Color3.fromRGB(255, 255, 255)
+u.TextSize = 25.000
+u.TextWrapped = true
+u.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_37.Parent = u
+UITextSizeConstraint_37.MaxTextSize = 30
+
+d.Name = "d"
+d.Parent = info
+d.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+d.BackgroundTransparency = 1.000
+d.BorderColor3 = Color3.fromRGB(0, 0, 0)
+d.BorderSizePixel = 0
+d.Position = UDim2.new(0.0449585579, 0, 0.163455576, 0)
+d.Size = UDim2.new(0.947000027, 0, 0.19600001, 0)
+d.Font = Enum.Font.Unknown
+d.Text = "Disname"
+d.TextColor3 = Color3.fromRGB(255, 255, 255)
+d.TextSize = 25.000
+d.TextWrapped = true
+d.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_38.Parent = d
+UITextSizeConstraint_38.MaxTextSize = 30
+
+t.Name = "t"
+t.Parent = info
+t.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+t.BackgroundTransparency = 1.000
+t.BorderColor3 = Color3.fromRGB(0, 0, 0)
+t.BorderSizePixel = 0
+t.Position = UDim2.new(0.0449585579, 0, 0.354466826, 0)
+t.Size = UDim2.new(0.947000027, 0, 0.19600001, 0)
+t.Font = Enum.Font.Unknown
+t.Text = "Time"
+t.TextColor3 = Color3.fromRGB(255, 255, 255)
+t.TextSize = 25.000
+t.TextWrapped = true
+t.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_39.Parent = t
+UITextSizeConstraint_39.MaxTextSize = 30
+
+da.Name = "da"
+da.Parent = info
+da.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+da.BackgroundTransparency = 1.000
+da.BorderColor3 = Color3.fromRGB(0, 0, 0)
+da.BorderSizePixel = 0
+da.Position = UDim2.new(0.0449585579, 0, 0.556713998, 0)
+da.Size = UDim2.new(0.947000027, 0, 0.19600001, 0)
+da.Font = Enum.Font.Unknown
+da.Text = "Date"
+da.TextColor3 = Color3.fromRGB(255, 255, 255)
+da.TextSize = 25.000
+da.TextWrapped = true
+da.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_40.Parent = da
+UITextSizeConstraint_40.MaxTextSize = 30
+
+c.Name = "c"
+c.Parent = home
+c.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+c.BorderColor3 = Color3.fromRGB(0, 0, 0)
+c.BorderSizePixel = 0
+c.Position = UDim2.new(0.261221021, 0, 0.64595437, 0)
+c.Size = UDim2.new(0.717598975, 0, 0.117578007, 0)
+
+UICorner_27.Parent = c
+
+ImageLabel_4.Parent = c
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Position = UDim2.new(0.0196768045, 0, 0.0666663945, 0)
+ImageLabel_4.Size = UDim2.new(0.0885456204, 0, 0.977268934, 0)
+ImageLabel_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+cr.Name = "cr"
+cr.Parent = c
+cr.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cr.BorderSizePixel = 0
+cr.Position = UDim2.new(0.128748924, 0, 0.156881243, 0)
+cr.Size = UDim2.new(0.851254225, 0, 0.659134567, 0)
+cr.Font = Enum.Font.Unknown
+cr.Text = "USER: JEXT         I         ROLE: OWNER "
+cr.TextColor3 = Color3.fromRGB(255, 255, 255)
+cr.TextSize = 25.000
+cr.TextWrapped = true
+cr.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_41.Parent = cr
+UITextSizeConstraint_41.MaxTextSize = 30
+
+UICorner_28.Parent = cr
+
+c_2.Name = "c"
+c_2.Parent = home
+c_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+c_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+c_2.BorderSizePixel = 0
+c_2.Position = UDim2.new(0.261221021, 0, 0.765740991, 0)
+c_2.Size = UDim2.new(0.717598975, 0, 0.117578007, 0)
+
+UICorner_29.Parent = c_2
+
+ImageLabel_5.Parent = c_2
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_5.BorderSizePixel = 0
+ImageLabel_5.Position = UDim2.new(0.0196768045, 0, 0.0666663945, 0)
+ImageLabel_5.Size = UDim2.new(0.0885456204, 0, 0.977268934, 0)
+ImageLabel_5.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+cr_2.Name = "cr"
+cr_2.Parent = c_2
+cr_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cr_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cr_2.BorderSizePixel = 0
+cr_2.Position = UDim2.new(0.128748924, 0, 0.156881243, 0)
+cr_2.Size = UDim2.new(0.851254225, 0, 0.659134567, 0)
+cr_2.Font = Enum.Font.Unknown
+cr_2.Text = "USER: AnyaDEV       I      ROLE: UI Designer "
+cr_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+cr_2.TextSize = 20.000
+cr_2.TextWrapped = true
+cr_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_42.Parent = cr_2
+UITextSizeConstraint_42.MaxTextSize = 30
+
+UICorner_30.Parent = cr_2
+
+c_3.Name = "c"
+c_3.Parent = home
+c_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+c_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+c_3.BorderSizePixel = 0
+c_3.Position = UDim2.new(0.261221021, 0, 0.885527492, 0)
+c_3.Size = UDim2.new(0.717598975, 0, 0.117578007, 0)
+
+UICorner_31.Parent = c_3
+
+ImageLabel_6.Parent = c_3
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_6.BorderSizePixel = 0
+ImageLabel_6.Position = UDim2.new(0.0196768045, 0, 0.0666663945, 0)
+ImageLabel_6.Size = UDim2.new(0.0885456204, 0, 0.977268934, 0)
+ImageLabel_6.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+cr_3.Name = "cr"
+cr_3.Parent = c_3
+cr_3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+cr_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cr_3.BorderSizePixel = 0
+cr_3.Position = UDim2.new(0.128748924, 0, 0.156881243, 0)
+cr_3.Size = UDim2.new(0.851254225, 0, 0.659134567, 0)
+cr_3.Font = Enum.Font.Unknown
+cr_3.Text = "USER: IMNathan      I      ROLE: LIbShared Dev "
+cr_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+cr_3.TextSize = 20.000
+cr_3.TextWrapped = true
+cr_3.TextXAlignment = Enum.TextXAlignment.Left
+
+UITextSizeConstraint_43.Parent = cr_3
+UITextSizeConstraint_43.MaxTextSize = 30
+
+UICorner_32.Parent = cr_3
+
+UIAspectRatioConstraint_5.Parent = home
+UIAspectRatioConstraint_5.AspectRatio = 1.753
+
+UIAspectRatioConstraint_6.Parent = all
+UIAspectRatioConstraint_6.AspectRatio = 1.757
+
+l8327558235238528.Name = "l8327558235238528"
+l8327558235238528.Parent = main
+l8327558235238528.BackgroundColor3 = Color3.fromRGB(20, 21, 20)
+l8327558235238528.BorderColor3 = Color3.fromRGB(0, 0, 0)
+l8327558235238528.BorderSizePixel = 0
+l8327558235238528.Position = UDim2.new(0.916496992, 0, -0.124000005, 0)
+l8327558235238528.Size = UDim2.new(0.00831946731, 0, 0.0878186971, 0)
+
+UIStroke_10.Thickness = 2
+UIStroke_10.Transparency = 0.5
+UIStroke_10.Parent = l8327558235238528
+
+UICorner_33.Parent = l8327558235238528
+
+UIAspectRatioConstraint_7.Parent = main
+UIAspectRatioConstraint_7.AspectRatio = 1.696
+
+left.Name = "left"
+left.Parent = UI
+left.BackgroundColor3 = Color3.fromRGB(20, 21, 20)
+left.BorderColor3 = Color3.fromRGB(0, 0, 0)
+left.BorderSizePixel = 0
+left.Position = UDim2.new(0.0118960468, 0, 0.256644636, 0)
+left.Size = UDim2.new(0.0642218888, 0, 0.519972444, 0)
+
+UIStroke_11.Thickness = 2
+UIStroke_11.Transparency = 0.5
+UIStroke_11.Parent = left
+
+UICorner_34.Parent = left
+
+logo.Name = "logo"
+logo.Parent = left
+logo.BackgroundColor3 = Color3.fromRGB(20, 21, 20)
+logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+logo.BorderSizePixel = 0
+logo.Position = UDim2.new(0.271115631, 0, 0.0380772464, 0)
+logo.Size = UDim2.new(0.449275374, 0, 0.102649003, 0)
+
+UIStroke_12.Thickness = 2
+UIStroke_12.Transparency = 0.5
+UIStroke_12.Parent = logo
+
+UICorner_35.Parent = logo
+
+ImageLabel_7.Parent = logo
+ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_7.BackgroundTransparency = 1.000
+ImageLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_7.BorderSizePixel = 0
+ImageLabel_7.Position = UDim2.new(-0.106686749, 0, -0.160783827, 0)
+ImageLabel_7.Size = UDim2.new(1.12903225, 0, 1.12903225, 0)
+ImageLabel_7.Image = "rbxassetid://15782053121"
+
+Executor.Name = "Executor"
+Executor.Parent = left
+Executor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Executor.BackgroundTransparency = 1.000
+Executor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Executor.BorderSizePixel = 0
+Executor.Position = UDim2.new(0.229636818, 0, 0.347196966, 0)
+Executor.Size = UDim2.new(0.507246375, 0, 0.115894042, 0)
+Executor.Image = "rbxassetid://15808237787"
+
+Console_2.Name = "Console"
+Console_2.Parent = left
+Console_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Console_2.BackgroundTransparency = 1.000
+Console_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Console_2.BorderSizePixel = 0
+Console_2.Position = UDim2.new(0.229636818, 0, 0.497414708, 0)
+Console_2.Size = UDim2.new(0.507246375, 0, 0.115894042, 0)
+Console_2.Image = "rbxassetid://15808240009"
+
+search_2.Name = "search"
+search_2.Parent = left
+search_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+search_2.BackgroundTransparency = 1.000
+search_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+search_2.BorderSizePixel = 0
+search_2.Position = UDim2.new(0.229636818, 0, 0.647632599, 0)
+search_2.Size = UDim2.new(0.507246375, 0, 0.115894042, 0)
+search_2.Image = "rbxassetid://15808243254"
+
+settings_2.Name = "settings"
+settings_2.Parent = left
+settings_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+settings_2.BackgroundTransparency = 1.000
+settings_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+settings_2.BorderSizePixel = 0
+settings_2.Position = UDim2.new(0.229636818, 0, 0.79785037, 0)
+settings_2.Size = UDim2.new(0.507246375, 0, 0.115894042, 0)
+settings_2.Image = "rbxassetid://15810173870"
+
+home_2.Name = "home"
+home_2.Parent = left
+home_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+home_2.BackgroundTransparency = 1.000
+home_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+home_2.BorderSizePixel = 0
+home_2.Position = UDim2.new(0.229636818, 0, 0.19697915, 0)
+home_2.Size = UDim2.new(0.507246375, 0, 0.115894042, 0)
+home_2.Image = "rbxassetid://15808235684"
+
+UIAspectRatioConstraint_8.Parent = left
+UIAspectRatioConstraint_8.AspectRatio = 0.228
+
+ImageButton_2.Parent = UI
+ImageButton_2.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+ImageButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_2.BorderSizePixel = 0
+ImageButton_2.Position = UDim2.new(0.0202728137, 0, 0.145449713, 0)
+ImageButton_2.Size = UDim2.new(0.0469999984, 0, 0.0869999975, 0)
+ImageButton_2.ZIndex = 999999999
+ImageButton_2.Image = "rbxassetid://15782053121"
+
+UICorner_36.Parent = ImageButton_2
+
+UIStroke_13.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_13.Thickness = 3
+UIStroke_13.Parent = ImageButton_2
+
+UIAspectRatioConstraint_9.Parent = ImageButton_2
+UIAspectRatioConstraint_9.AspectRatio = 0.996
 
 -- Scripts:
 
-local function VWTEP_fake_script() -- Phantom.ScrollingFrame.LocalScript 
-	local script = Instance.new('LocalScript', Phantom.ScrollingFrame)
+local function LEGR_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
 
-	-- Reference to the parent and child ScrollingFrames
-	local parentScrollingFrame = script.Parent
-	local childScrollingFrame = parentScrollingFrame:WaitForChild("ChildScrollingFrame")
-	
-	-- Disable automatic CanvasSize adjusting for the child ScrollingFrame
-	childScrollingFrame.ScrollingEnabled = false
-	
-	-- Function to update the size of the child ScrollingFrame when the parent size changes
-	local function updateChildSize()
-		local parentSize = parentScrollingFrame.AbsoluteSize
-		childScrollingFrame.Size = UDim2.new(1, 0, 0, parentSize.Y)
+	local textLabel = script.Parent.lol
+	local txtbox = script.Parent.Parent.Source
+	while wait() do
+		textLabel.Text = txtbox.Text
 	end
-	
-	updateChildSize()
-	
-	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
 end
-coroutine.wrap(VWTEP_fake_script)()
-local function FIKF_fake_script() -- Phantom.ScrollingFrame_2.LocalScript 
-	local script = Instance.new('LocalScript', Phantom.ScrollingFrame_2)
+coroutine.wrap(LEGR_fake_script)()
+local function NRLNY_fake_script() -- executor.LocalScript 
+	local script = Instance.new('LocalScript', executor)
 
-	-- Reference to the parent and child ScrollingFrames
-	local parentScrollingFrame = script.Parent
-	local childScrollingFrame = parentScrollingFrame:WaitForChild("ChildScrollingFrame")
 	
-	-- Disable automatic CanvasSize adjusting for the child ScrollingFrame
-	childScrollingFrame.ScrollingEnabled = false
+	local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while", "is_synapse_function","is_protosmasher_caller", "execute","foreach","foreachi","insert","syn","HttpGet","HttpPost","__index","__namecall","__add","__call","__tostring","__tonumber","__div"}
+	local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16","run_secure_function","create_secure_function","hookfunc","hookfunction","newcclosure","replaceclosure","islclosure","getgc","gcinfo","rconsolewarn","rconsoleprint","rconsoleinfo","rconsoleinput","rconsoleinputasync","rconsoleclear","rconsoleerr", "gethui", "Distroy", "getclipboard","setclipboard",}
+	local exeframe = script.Parent
+	local Source = exeframe.ScrollingFrame.Source
+	local Lines = exeframe.ScrollingFrame.TextLabel
+	local src = Source
+	local lin = Lines
 	
-	-- Function to update the size of the child ScrollingFrame when the parent size changes
-	local function updateChildSize()
-		local parentSize = parentScrollingFrame.AbsoluteSize
-		childScrollingFrame.Size = UDim2.new(1, 0, 0, parentSize.Y)
-	end
-	
-	updateChildSize()
-	
-	parentScrollingFrame:GetPropertyChangedSignal("AbsoluteSize"):Connect(updateChildSize)
-end
-coroutine.wrap(FIKF_fake_script)()
-
-local function NKVUN_fake_script() -- Phantom.Frame.LocalScript 
-	local script = Instance.new('LocalScript', Phantom.Frame)
-
-	script.Parent.Selectable = true
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-end
-coroutine.wrap(NKVUN_fake_script)()
-
-local function QJCR_fake_script()
-    -- Assuming Phantom is a table containing references to your UI elements
-    local Phantom = {
-        ScrollingFrame = Phantom.ScrollingFrame,
-        AddScriptButton = Phantom.AddScript,
-        ScriptNameInput = Phantom.ScriptName,
-        ScriptCodeInput = Phantom.ScriptCode,
-        ExecuteButton = Phantom.TextButton
-    }
-
-    local function AddScript(name, source)
-        makefolder("Phantom")
-        writefile("Phantom/" .. name, source)
-        local parent = Phantom.ScrollingFrame
-        local templateFrame = parent.Folder.Frame -- Adjust this to your actual template frame
-        local newScriptFrame = templateFrame:Clone()
-
-        local scriptNameLabel = newScriptFrame.TextLabel_2
-        local execButton = newScriptFrame.TextButton
-        local delButton = newScriptFrame.del
-
-        newScriptFrame.Parent = parent
-        newScriptFrame.Visible = true
-        scriptNameLabel.Text = name
-
-        execButton.MouseButton1Click:Connect(function()
-            local success, err = pcall(loadstring(source))
-            if not success then
-                warn("Error executing script:", err)
-            end
-        end)
-
-        delButton.MouseButton1Click:Connect(function()
-            newScriptFrame:Destroy()
-            delfile("Phantom/" .. name)
-        end)
-    end
-
-    for _, file in ipairs(listfiles("Phantom")) do
-        local name = file:sub(#"Phantom/" + 1)
-        local source = readfile(file)
-        AddScript(name, source)
-    end
-
-    Phantom.AddScriptButton.MouseButton1Click:Connect(function()
-        local scriptName = Phantom.ScriptNameInput.Text
-        local sourceCode = Phantom.ScriptCodeInput.Text
-        AddScript(scriptName, sourceCode)
-        Phantom.ScriptCodeInput.Text = ""
-        Phantom.ScriptNameInput.Text = ""
-    end)
-end
-
-coroutine.wrap(QJCR_fake_script)()
-
-local function AONX_fake_script() -- Sparrow.search_2.LocalScript 
-	local script = Instance.new('LocalScript', Phantom.Search)
-
-	local btn = script.Parent
-
-	local function AddTab(imageTab, scriptname, source)
-		local scriptFrame = script.Parent.Parent.Parent.ResultsHolder.ScrollingFrame_2
-		local newList = Phantom.Frame_3:Clone()
-
-		local execute = newList.TextButton_2
-		local copy = newList.TextButton_3
-
-		local scname = newList.TextLabel
-		local img = newList.ImageLabel
-
-		newList.Name = scriptname
-		newList.Parent = scriptFrame
-		newList.Visible = true
-
-		img.Image = imageTab
-
-		scname.Text = scriptname
-
-		execute.MouseButton1Click:Connect(function()
-			loadstring(source)()
+	local Highlight = function(string, keywords)
+		local K = {}
+		local S = string
+		local Token =
+			{
+				["="] = true,
+				["."] = true,
+				[","] = true,
+				["("] = true,
+				[")"] = true,
+				["["] = true,
+				["]"] = true,
+				["{"] = true,
+				["}"] = true,
+				[":"] = true,
+				["*"] = true,
+				["/"] = true,
+				["+"] = true,
+				["-"] = true,
+				["--"] = true,
+				["[["] = true,
+				["]]"] = true,
+				["%"] = true,
+				[";"] = true,
+				["~"] = true
+			}
+		for i, v in pairs(keywords) do
+			K[v] = true
+		end
+		S = S:gsub(".", function(c)
+			if Token[c] ~= nil then
+				return "\32"
+			else
+				return c
+			end
 		end)
-		copy.MouseButton1Click:Connect(function()
-			setclipboard(source)
+		S = S:gsub("%S+", function(c)
+			if K[c] ~= nil then
+				return c
+			else
+				return (" "):rep(#c)
+			end
 		end)
+	
+		return S
 	end
-
-
-	local http = game:GetService("HttpService")
-	btn.MouseButton1Click:Connect(function()
-		for _, child in ipairs(script.Parent.Parent.Parent.ResultsHolder.ScrollingFrame_2:GetChildren()) do
-			if child:IsA("Frame") then
-				child:Destroy()
+	
+	local strings = function(string)
+		local highlight = ""
+		local quote = false
+		string:gsub(".", function(c)
+			if quote == false and c == "\"" then
+				quote = true
+			elseif quote == true and c == "\"" then
+				quote = false
+			end
+			if quote == false and c == "\"" then
+				highlight = highlight .. "\""
+			elseif c == "\n" then
+				highlight = highlight .. "\n"
+			elseif c == "\t" then
+				highlight = highlight .. "\t"
+			elseif quote == true then
+				highlight = highlight .. c
+			elseif quote == false then
+				highlight = highlight .. "\32"
+			end
+		end)
+	
+		return highlight
+	end
+	
+	local comments = function(string)
+		local ret = ""
+		string:gsub("[^\r\n]+", function(c)
+			local comm = false
+			local i = 0
+			c:gsub(".", function(n)
+				i = i + 1
+				if c:sub(i, i + 1) == "--" then
+					comm = true
+				end
+				if comm == true then
+					ret = ret .. n
+				else
+					ret = ret .. "\32"
+				end
+			end)
+			ret = ret
+		end)
+	
+		return ret
+	end
+	
+	local numbers = function(string)
+		local A = ""
+		string:gsub(".", function(c)
+			if tonumber(c) ~= nil then
+				A = A .. c
+			elseif c == "\n" then
+				A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+			else
+				A = A .. "\32"
+			end
+		end)
+	
+		return A
+	end
+	
+	local highlight_source = function(type)
+		if type == "Text" then
+			src.Text = Source.Text:gsub("\13", "")
+			src.Text = Source.Text:gsub("\t", "      ")
+			local s = src.Text
+			src.Keywords_.Text = Highlight(s, lua_keywords)
+			src.Globals_.Text = Highlight(s, global_env)
+			src.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+			src.Numbers_.Text = numbers(s)
+			src.Strings_.Text = strings(s)
+		end
+	end
+	
+	highlight_source("Text")
+	src.Changed:Connect(highlight_source)
+	local exeframe = exeframe
+	
+	local frame = exeframe.ScrollingFrame
+	local textbox = frame.Source
+	local textlab1 = frame.Frame.lol
+	
+	local function updateScrollFrameSize()
+		frame.CanvasSize = UDim2.new(0, 0, 0, textbox.TextBounds.Y)
+	end
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(updateScrollFrameSize)
+	updateScrollFrameSize()
+	
+	local frame = exeframe.ScrollingFrame
+	local src = frame.Frame.lol
+	local sr = frame.Frame
+	
+	local highlight_source = function(type)
+		if type == "Text" then
+			src.Text = Source.Text:gsub("\13", "")
+			src.Text = Source.Text:gsub("\t", "      ")
+			local s = src.Text
+			sr.Keywords_.Text = Highlight(s, lua_keywords)
+			sr.Globals_.Text = Highlight(s, global_env)
+			sr.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+			sr.Numbers_.Text = numbers(s)
+			sr.Strings_.Text = strings(s)
+			local lin = 1
+			s:gsub("\n", function()
+				lin = lin + 1
+			end)
+			Lines.Text = ""
+			for i = 1, lin do
+				Lines.Text = Lines.Text .. i .. "\n"
 			end
 		end
-
-		local url = "https://scriptblox.com/api/script/search?filters=free&q="..script.Parent.Parent.Parent.SearchBar.Text
-		local response = game:HttpGetAsync(url)
-		local decoded = http:JSONDecode(response)
-		for _, script in pairs(decoded.result.scripts) do
-			if(script.isUniversal == true) then
-				AddTab("rbxassetid://13987073344", script.title, script.script)
-			else
-				AddTab("https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..script.game.gameId.."&fmt=png&wd=420&ht=420", script.title, script.script)
+	end
+	
+	highlight_source("Text")
+	src.Changed:Connect(highlight_source)
+	
+	--llllllllllllllllllllllllllllllllllllllll
+	
+	print("No Errors From Roblox Studio!")
+	
+	
+	local execute = script.Parent.exe
+	local clear = script.Parent.cle
+	local copy = script.Parent.co
+	local clip = script.Parent.p
+	local txtbox = script.Parent.ScrollingFrame.Source
+	
+	execute.MouseButton1Click:Connect(function()
+		loadstring(txtbox.Text)()
+	end)
+	--clear
+	clear.MouseButton1Click:Connect(function()
+		txtbox.Text = ""
+	end)
+	copy.MouseButton1Click:Connect(function()
+		setclipboard(txtbox.Text)
+	end)
+	clip.MouseButton1Click:Connect(function()
+		local clipboardText = getclipboard()
+		if clipboardText then
+			local success, result = pcall(loadstring(clipboardText))
+			if not success then
+				print("Error executing clipboard content: " .. result)
 			end
 		end
 	end)
 end
-coroutine.wrap(AONX_fake_script)()
+coroutine.wrap(NRLNY_fake_script)()
+local function EJFJO_fake_script() -- console.LocalScript 
+	local script = Instance.new('LocalScript', console)
+
+	local function randomstr()
+		local str = ""
+		for i = 1, math.random(3,7) do
+			str = str .. math.random(32,126)
+		end
+		return str
+	end
+	
+	local function setnotif(title, info)
+		local sgui = game:GetService("StarterGui")
+		sgui:SetCore("SendNotification", {
+			Title = title,
+			Text = info
+		})
+	end
+	local function MessageOutFunction(str, type)
+		local offset = 0
+		local bolden = false
+		local color = BrickColor.White()
+		if str:len() > 26 then
+			offset += (1/25)*(str:len()-26)
+		end
+	
+		if type == Enum.MessageType.MessageWarning then -- funny statement
+	
+			if warnExcluded then return end
+			color = BrickColor.Yellow()
+			bolden = true
+	
+		elseif type == Enum.MessageType.MessageInfo then
+	
+			if infoExcluded then return end
+			color = BrickColor.Blue()
+	
+		elseif type == Enum.MessageType.MessageError then
+	
+			if errorExcluded then return end
+			color = BrickColor.Red()
+			bolden = true
+	
+			if str:find("\n") then
+				str = string.split(str, "\n")[1]
+			end
+	
+		elseif printExcluded then return end
+		
+		local scroller = script.Parent.Console.Scroller
+		
+		local newline = scroller._Line_:Clone()
+		newline.Parent = scroller
+		newline.Name = "Line"
+		newline.BackgroundTransparency = 1
+		newline.TextXAlignment = Enum.TextXAlignment.Left
+		newline.Size = UDim2.new(1+offset, 0, 0.125, 0)
+		newline.TextColor = color
+		newline.Text = str
+		if bolden == true then
+			newline.FontFace.Weight = Enum.FontWeight.Bold
+		end
+	end
+	
+		local gui = script.Parent
+		local console = gui.Console
+		local logservice = game:GetService("LogService")
+	
+		local scroller = console.Scroller
+		scroller.AutomaticCanvasSize = Enum.AutomaticSize.XY
+	
+		local layout = Instance.new("UIListLayout", scroller)
+		layout.SortOrder = Enum.SortOrder.LayoutOrder
+	
+		coroutine.resume(coroutine.create(function() -- drag
+			local UIS = game:GetService('UserInputService')
+			local frame = console
+			local dragToggle = nil
+			local dragSpeed = 0.01
+			local dragStart = nil
+			local startPos = nil
+	
+			local function updateInput(input)
+				local delta = input.Position - dragStart
+				local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+					startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+				game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+			end
+	
+			frame.InputBegan:Connect(function(input)
+				if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+					dragToggle = true
+					dragStart = input.Position
+					startPos = frame.Position
+					input.Changed:Connect(function()
+						if input.UserInputState == Enum.UserInputState.End then
+							dragToggle = false
+						end
+					end)
+				end
+			end)
+	
+			UIS.InputChanged:Connect(function(input)
+				if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+					if dragToggle then
+						updateInput(input)
+					end
+				end
+			end)
+		end))
+	
+		logservice.MessageOut:Connect(MessageOutFunction)
+	
+		local buttons = console.Buttons
+		local modes = buttons.Modes
+		local bottom = buttons.BottomConsole
+	
+		local function changething(btn, bool)
+			if bool == false then -- because if it isnt excluded
+				btn.Text = btn.Name:gsub("^%u", string.lower) .. ": on"
+			else
+				btn.Text = btn.Name:gsub("^%u", string.lower) .. ": off"
+			end
+		end
+	
+		modes.Info.MouseButton1Click:Connect(function() infoExcluded = not infoExcluded changething(modes.Info, infoExcluded) end)
+		modes.Print.MouseButton1Click:Connect(function() printExcluded = not printExcluded changething(modes.Print, printExcluded) end)
+		modes.Warn.MouseButton1Click:Connect(function() warnExcluded = not warnExcluded changething(modes.Warn, warnExcluded) end)
+		modes.Error.MouseButton1Click:Connect(function() errorExcluded = not errorExcluded changething(modes.Error, errorExcluded) end)
+	
+		bottom.Clear.MouseButton1Click:Connect(function()
+			for i, v in pairs(scroller:GetChildren()) do
+				if v:IsA("TextLabel") and v.Name ~= "_Line_" then v:Destroy() end
+			end
+			setnotif("Cleared!")
+		end)
+		bottom.Copy.MouseButton1Click:Connect(function()
+			if not setclipboard then setnotif("Error", "Your executor does not have method 'setclipboard'") return end
+			local str = ""
+			for i, v in pairs(scroller:GetChildren()) do
+				if v:IsA("TextLabel") and v.Name ~= "_Line_" then str = str .. v.Text .. "\n" end
+			end
+			setclipboard(str)
+			setnotif("setclipboard", "Operation success")
+		end)
+	
+		bottom.Save.MouseButton1Click:Connect(function()
+			if not writefile then setnotif("Error", "Your executor does not have method 'writefile'") return end
+			local str = ""
+			for i, v in pairs(scroller:GetChildren()) do
+				if v:IsA("TextLabel") and v.Name ~= "_Line_" then str = str .. v.Text .. "\n" end
+			end
+			writefile("Log_" .. tostring(game.PlaceId) .. "_" .. randomstr(), str)
+		end)
+end
+coroutine.wrap(EJFJO_fake_script)()
+local function USSZHB_fake_script() -- ImageLabel_2.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel_2)
+
+	repeat wait() until game.Players.LocalPlayer.Character ~= nil
+	
+	local Player = game.Players.LocalPlayer
+	
+	local UserId = game.Players.LocalPlayer.UserId
+	local ThumbType = Enum.ThumbnailType.HeadShot
+	local ThumbSize = Enum.ThumbnailSize.Size420x420
+	
+	script.Parent.Image = game.Players:GetUserThumbnailAsync(UserId,ThumbType,ThumbSize)
+end
+coroutine.wrap(USSZHB_fake_script)()
+local function BHQWYQU_fake_script() -- ping.LocalScript 
+	local script = Instance.new('LocalScript', ping)
+
+	local PingLabel = script.Parent
+	while wait(1) do
+		local Ping = 300-((1/wait())*10)
+		if Ping < 1 then
+			Ping = 1
+		end
+		PingLabel.Text = 'Ping: '..math.floor(Ping)
+	end
+	
+end
+coroutine.wrap(BHQWYQU_fake_script)()
+local function EHCE_fake_script() -- home.LocalScript 
+	local script = Instance.new('LocalScript', home)
+
+	local imageLabel = script.Parent.ginfo.ImageLabel
+	
+	function updateGameInfo()
+		local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+	
+		local gameId = game.PlaceId
+	
+		local playerCount = #game.Players:GetPlayers()
+	
+		script.Parent.ginfo.gname.Text = "Game Name: " .. gameName
+		script.Parent.ginfo.guser.Text = "Game ID: " .. gameId
+		script.Parent.ginfo.plrs.Text = "Players: " .. playerCount
+		local gameId = game.PlaceId
+		local PLACEID = gameId
+		script.Parent.ginfo.ImageLabel.Image = "https://assetgame.roblox.com/Game/Tools/ThumbnailAsset.ashx?aid="..PLACEID.."&fmt=png&wd=420&ht=420"
+	end
+	
+	updateGameInfo()
+	
+	game.Players.PlayerAdded:Connect(updateGameInfo)
+	game.Players.PlayerRemoving:Connect(updateGameInfo)
+	
+	local RunService = game:GetService("RunService")
+	RunService.RenderStepped:Connect(function(frame)
+		script.Parent.ginfo.fps.Text = ("FPS: "..math.round(1/frame)) 
+	end)
+	script.Parent.info.u.Text = game:GetService("Players").LocalPlayer.Name
+	script.Parent.info.d.Text = game:GetService("Players").LocalPlayer.DisplayName
+	
+	local Date = os.date("*t")
+	local Month = Date.month
+	local Day = Date.day
+	local Year = Date.year
+	local Hour = (Date.hour) % 24
+	local AmOrPm = Hour < 12 and "AM" or "PM"
+	local Time = string.format("%02i:%02i %s", ((Hour - 1) % 12) + 1, Date.min, AmOrPm)
+	local DateAndTime = Day.."/"..Month.."/"..Year.." "
+	script.Parent.info.da.Text = "Date: "..(DateAndTime)
+	script.Parent.info.t.Text = "Time: "..Time
+	while wait(60) do
+	script.Parent.info.da.Text = "Date: "..(DateAndTime)
+	script.Parent.info.t.Text = "Time: "..Time
+	end
+	
+end
+coroutine.wrap(EHCE_fake_script)()
+local function NIJIID_fake_script() -- main.LocalScript 
+	local script = Instance.new('LocalScript', main)
+
+	local main = script.Parent
+	local bruh = script.Parent.Parent
+	
+	local all = main.all
+	local left = bruh.left
+	local up = main.up
+	
+	local f1 = all.home
+	local f2 = all.executor
+	local f3 = all.console
+	local f4 = all.search
+	local f5 = all.settings
+	local b1 = left.home
+	local b2 = left.Executor
+	local b3 = left.Console
+	local b4 = left.search
+	local b5 = left.settings
+	local close = script.Parent.close.ImageButton
+	local show = bruh.ImageButton
+	
+	main.Position = UDim2.new(0.22, 0,3, 0)
+	show.Position = UDim2.new(0.012, 0,0.145, 0)
+	left.Position = UDim2.new(-1.0, 0,0.257, 0)
+	b1.MouseButton1Click:Connect(function()
+		f1.Visible =  true
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b2.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = true
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b3.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = true
+		f4.Visible = false
+		f5.Visible = false
+	end)
+	b4.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = true
+		f5.Visible = false
+	end)
+	b5.MouseButton1Click:Connect(function()
+		f1.Visible = false
+		f2.Visible = false
+		f3.Visible = false
+		f4.Visible = false
+		f5.Visible = true
+	end)
+	close.MouseButton1Click:Connect(function()
+		game.TweenService:Create(main, TweenInfo.new(1), {Position = UDim2.new(0.22, 0,3, 0)}):Play()
+		game.TweenService:Create(show, TweenInfo.new(1), {Position = UDim2.new(0.012, 0,0.145, 0)}):Play()
+		game.TweenService:Create(left, TweenInfo.new(1), {Position = UDim2.new(-1.0, 0,0.257, 0)}):Play()
+	end)
+	show.MouseButton1Click:Connect(function()
+		game.TweenService:Create(main, TweenInfo.new(1), {Position = UDim2.new(0.22, 0,0.195, 0)}):Play()
+		game.TweenService:Create(show, TweenInfo.new(1), {Position = UDim2.new(-1.0, 0,0.145, 0)}):Play()
+		game.TweenService:Create(left, TweenInfo.new(1), {Position = UDim2.new(0.011, 0,0.257, 0)}):Play()
+	end)
+end
+coroutine.wrap(NIJIID_fake_script)()
